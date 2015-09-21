@@ -1,0 +1,5 @@
+Django==1.8
+dj-static
+mysqlclient
+django-reversion
+markdown

@@ -1,0 +1,35 @@
+{# This file defines the front page and is a own kind of master page #}
+{% load staticfiles %}
+{% load article_tags %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include "stylesheets.html" %}
+
+    <title>I-portalen - {% block page_subtitle %} {% endblock %}</title>
+{% block head %} {% endblock %}
+</head>
+
+<body>
+{% include "header.html" %}
+
+{% block content %}
+
+    {% block sponsors %}
+        <section id="sponsors">
+            <h4>Sponsorer</h4>
+        </section>
+    {% endblock %}
+
+{% endblock %}
+
+{% include "footer.html" %}
+
+{% include "modal.html" %}
+
+{% include "scripts.html" %}
+{% block after_scripts %}{% endblock %}
+</body>
+</html>

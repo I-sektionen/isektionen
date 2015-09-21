@@ -1,0 +1,83 @@
+{% load staticfiles %}
+<header role="banner">
+    <nav role="navigation">
+        <img src=" {% static "logo.svg" %}" alt="logo">
+        <div id="menu-toggle">
+            <span>MENU</span>
+        </div>
+        <ul id="navigation-menu" class="show">
+            <li><a href="#">Start</a>
+            </li>
+            <li><a href="#">Kalender</a>
+            </li>
+            <li class="more"><a href="#">Om sektionen</a>
+                <!-- A WRAPPER TO CONTROL FLEX DIRECTION FOR SUBMENUS -->
+                <div class="submenu-wrapper">
+                    <ul class="submenu">
+                        <li>Sektionen</li>
+                        <li><a href="#">Styret</a></li>
+                        <li><a href="#">Historia</a></li>
+                        <li><a href="#">Valberedningen</a></li>
+                    </ul>
+                    <ul class="submenu">
+                        <li>Utskott</li>
+                        <li><a href="#">Informationsutskottet</a></li>
+                        <li><a href="#">Marknadsföringsutskottet</a></li>
+                        <li><a href="#">Näringslivsutskottet</a></li>
+                        <li><a href="#">Studienämnden</a></li>
+                        <li><a href="#">Intendentutskottet</a></li>
+                        <li><a href="#">Informationsutskottet</a></li>
+                        <li><a href="#">Alumniutskottet</a></li>
+                        <li><a href="#">Börsgruppen</a></li>
+                    </ul>
+                    <ul class="submenu">
+                        <li>Föreningar</li>
+                        <li><a href="#">IQ</a></li>
+                        <li><a href="#">Clubmästeriet</a></li>
+                        <li><a href="#">ESTEIM</a></li>
+                        <li><a href="#">Case-gruppen</a></li>
+                        <li><a href="#">PUBis</a></li>
+                        <li><a href="#">Integrera</a></li>
+                        <li><a href="#">Börsgruppen</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">Studier</a>
+            </li>
+            <li><a href="#">Tjänster</a>
+            </li>
+            {% if request.user.is_authenticated %}
+                <li class="more">
+                    <a href="#">{{ request.user }}</a>
+                    <div class="submenu-wrapper">
+                        <ul class="submenu">
+                            <li>{{ request.user }}</li>
+                            <a href="/user/logout"><li>Logga ut</li></a>
+                            <form action="/user/logout" method="get">
+                                {% csrf_token %}
+                                <li><input type="submit" name="Logga ut" value="Logga ut"></li>
+                            </form>
+                        </ul>
+                    </div>
+                </li>
+            {% else %}
+                <li class="more">
+                    <a href="#">Logga in</a>
+                    <div class="submenu-wrapper">
+                        <ul class="submenu">
+                        <li>Logga in</li>
+                            <form action="/user/login?next={{ request.get_full_path }}" method="post">
+                                {% csrf_token %}
+                                <li><input type="text" name="username" placeholder="ABCDE123">
+                                <li><input type="password" name="password" placeholder="********"></li>
+                                <li><input type="submit" name="Logga in" value="Logga in"></li>
+                            </form>
+                        </ul>
+                    </div>
+                </li>
+            {% endif %}
+
+
+        </ul>
+    </nav>
+</header>
