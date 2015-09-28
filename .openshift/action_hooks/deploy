@@ -8,10 +8,10 @@
 source $OPENSHIFT_PYTHON_DIR"virtenv/venv/bin/activate"
 
 echo "Migrating database... " -ne
-python $OPENSHIFT_REPO_DIR"wsgi/iportalen_django/manage.py" migrate --noinput
+python $OPENSHIFT_REPO_DIR"wsgi/isektionen_django/manage.py" migrate --noinput
 echo "[Done]"
 
 echo "Collecting static... " -ne
-python $OPENSHIFT_REPO_DIR"wsgi/iportalen_django/manage.py" collectstatic --noinput
+python $OPENSHIFT_REPO_DIR"wsgi/isektionen_django/manage.py" collectstatic --noinput
 echo "[Done]"
 
