@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 from setuptools import setup
 
-setup(name='I-Portalen',
+setup(name='isektionen.se',
       version='0.1',
-      description='I-sektionens anslagstavla tillika hemsida',
+      description='Landingssida för Industriell Ekonomi i Linköping',
       author='Webgroup',
       author_email='webmaster@isektionen.se',
-      url='http://www.i-portalen.se',
+      url='http://www.isektionen.se',
       install_requires=['Django>=1.8', 'PyMySQL', 'dj-static', 'django-reversion', 'markdown'],  #This should match requirements.txt!
       )
