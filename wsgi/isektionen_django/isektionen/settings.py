@@ -36,7 +36,7 @@ else:
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '^+^i^1i94%j-hikdsaflö324+107xw(vf^mz4hg--#w0mw93+kc#&4vc=#=@'  # TODO: Make use of os.envion on openshift.
+SECRET_KEY = '^+^i^1i94%j-hikdsafl324+107xw(vf^mz4hg--#w0mw93+kc#&4vc=#=@'  # TODO: Make use of os.envion on openshift.
 
 # Application definition
 
