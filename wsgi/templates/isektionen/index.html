@@ -4,3 +4,17 @@
 <a href={% url 'test2' %}>testlänk 2</a>
 <a href={% url 'test3' %}>testlänk 3</a>
 <a href={% url 'test4' %}>testlänk 4</a>
+
+
+<div>
+<p>Artiklar:</p>
+    {% for article in articles %}
+        <a href="{% url 'articles:article' article.id %}"><h1>{{ article.headline }}</h1></a>
+        <p>{{ article.lead }}</p>
+        <p>{{ article.body }}</p>
+        <p>{{ article.created }}</p>
+    {% endfor %}
+
+</div>
+
+<a href="{% url 'articles:articles' %}"><p>Visa alla artiklar</p></a>

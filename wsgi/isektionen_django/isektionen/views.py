@@ -1,12 +1,18 @@
 __author__ = 'MagnusForzelius'
 
 from django.shortcuts import render
+from articles.models import Article
+
 
 def index(request):
     a = "Hello World"
+    articles = Article.objects.all().order_by('created')
     return render(request, "isektionen/index.html", {
         'text': a,
+        'articles': articles,
     })
+
+
 def test1(request):
     a = "första testet osv nice hej"
     return render(request, "isektionen/test1.html", {
