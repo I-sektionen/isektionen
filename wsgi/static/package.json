@@ -1,8 +1,8 @@
 {
-  "name": "iportalen",
+  "name": "isektionen",
   "version": "0.10.0",
   "private": true,
-  "description": "Nya I-portalen",
+  "description": "Nya I-sektionen",
   "main": "gruntfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

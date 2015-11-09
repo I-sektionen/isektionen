@@ -1,6 +1,5 @@
 {# This file defines the front page and is a own kind of master page #}
 {% load staticfiles %}
-{% load article_tags %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,21 +12,14 @@
 </head>
 
 <body>
+
+<!-- include gör att vi kan importera andra filer -->
 {% include "header.html" %}
 
+<!-- Ett block gör att vi kan använda vår master på flera sidor, men byta ut innehållet som ligger i blocket -->
 {% block content %}
-
-    {% block sponsors %}
-        <section id="sponsors">
-            <h4>Sponsorer</h4>
-        </section>
-    {% endblock %}
-
+    <h1>Content on master.html</h1>
 {% endblock %}
-
-{% include "footer.html" %}
-
-{% include "modal.html" %}
 
 {% include "scripts.html" %}
 {% block after_scripts %}{% endblock %}
