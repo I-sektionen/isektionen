@@ -1,3 +1,10 @@
+#blog-entry-container{
+  @include outer-container();
+  padding: 1em;
+}
+
+
+
 article.single_blog_entry {
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
@@ -9,6 +16,9 @@ article.single_blog_entry {
   $base-font-color: $dark-gray !default;
   $sans-serif: 'PT Sans', sans-serif;
   $sans-serif-2: 'Titillium Web', sans-serif;
+
+  @include span-columns(8);
+  @include shift(1);
 
   @include clearfix;
   font-family: $sans-serif;

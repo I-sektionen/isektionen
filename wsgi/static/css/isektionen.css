@@ -1001,9 +1001,29 @@ picture {
   width: 100%;
 }
 
+#blog-entry-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+#blog-entry-container::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
 article.single_blog_entry {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 8.5298%;
   font-family: "PT Sans", sans-serif;
   text-align: left;
+}
+article.single_blog_entry:last-child {
+  margin-right: 0;
 }
 article.single_blog_entry::after {
   clear: both;

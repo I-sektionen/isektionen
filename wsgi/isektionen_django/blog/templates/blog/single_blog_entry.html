@@ -1,8 +1,8 @@
 {% extends 'master.html' %}
 
 {% block content %}
-
-    <article class="single_blog_entry">
+<section id="blog-entry-container">
+<article class="single_blog_entry">
   <p class="type">Blogginlägg </p>
   <h1>{{ blog_entry.title }}</h1>
   <h2>{{ blog_entry.lead }}</h2>
@@ -15,6 +15,8 @@
   <hr>
   <p class="author">{{ blog_entry.author }}</p>
 </article>
+</section>
+    
 
 
 {% endblock %}
