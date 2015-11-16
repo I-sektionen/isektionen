@@ -7,5 +7,5 @@ setup(name='isektionen.se',
       author='Webgroup',
       author_email='webmaster@isektionen.se',
       url='http://www.isektionen.se',
-      install_requires=['Django>=1.8', 'PyMySQL', 'dj-static', 'django-reversion', 'markdown'],  #This should match requirements.txt!
+      install_requires=['Django>=1.8,<1.8.99', 'PyMySQL', 'dj-static', 'django-reversion', 'markdown'],  #This should match requirements.txt!
       )
