@@ -695,6 +695,15 @@ picture {
   }
 }
 
+#instagramPics {
+  background-color: yellow;
+}
+#instagramPics img {
+  height: 150px;
+  width: 150px;
+  margin: 40px;
+}
+
 .parallax-window {
   max-height: 30em;
   overflow: hidden;
@@ -720,6 +729,26 @@ picture {
   position: absolute;
   top: -10em;
   width: 100%;
+}
+
+#box-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#box-container::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+#box-container .box {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+}
+#box-container .box:last-child {
+  margin-right: 0;
 }
 
 /*# sourceMappingURL=isektionen.css.map */
