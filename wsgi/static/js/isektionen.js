@@ -47,7 +47,7 @@ $(document).ready(function(){
 
                 // this is where we do what we want with the instagram pics
                 number = 0;
-                while (number < 5) {
+                while (number < 6) {
                     $("#instagramPics").append('<img src="' + picture_array[number].images.standard_resolution.url + '">');
                     number++;
                 }

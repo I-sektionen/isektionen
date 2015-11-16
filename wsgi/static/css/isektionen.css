@@ -696,12 +696,29 @@ picture {
 }
 
 #instagramPics {
-  background-color: yellow;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f2f1eb;
+  text-align: center;
+  padding: auto;
+}
+#instagramPics::after {
+  clear: both;
+  content: "";
+  display: table;
 }
 #instagramPics img {
-  height: 150px;
-  width: 150px;
-  margin: 40px;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  margin-right: 0px;
+  text-align: center;
+  width: 400px;
+}
+#instagramPics img:last-child {
+  margin-right: 0;
 }
 
 .parallax-window {
