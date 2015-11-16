@@ -4,5 +4,12 @@
   .box
     +span-columns(4)
 
-
-// Based on http://codepen.io/skeurentjes/
+#new-student-presentation
+  +outer-container()
+  .student-presentation-content-box
+    +span-columns(5)
+    &:first-child
+      +shift(1)
+#latest-blog-entry
+  background-color: $light-gray
+  padding: 1em
