@@ -704,10 +704,23 @@ picture {
 }
 
 .parallax-static-content {
-  color: #9A9A8A;
+  color: green;
   padding: 8em 0;
   position: relative;
   z-index: 9;
+  margin-bottom: 70px;
+}
+.parallax-static-content .box-parallax {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+}
+.parallax-static-content .box-parallax:last-child {
+  margin-right: 0;
+}
+.parallax-static-content .box-parallax:first-child {
+  margin-left: 25.58941%;
 }
 
 .parallax-background {
