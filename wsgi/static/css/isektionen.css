@@ -715,4 +715,13 @@ picture {
   margin-right: 0;
 }
 
+#instagramFeed {
+  background-color: yellow;
+}
+#instagramFeed img {
+  height: 150px;
+  width: 150px;
+  margin: 40px;
+}
+
 /*# sourceMappingURL=isektionen.css.map */
