@@ -744,6 +744,87 @@ picture {
   width: 100%;
 }
 
+.footer {
+  background: green;
+  padding: 3em 1.618em;
+  width: 100%;
+}
+.footer .footer-logo {
+  margin-bottom: 2em;
+  text-align: center;
+}
+.footer .footer-logo img {
+  height: 3em;
+}
+.footer .footer-links {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 1.5em;
+}
+.footer ul {
+  -webkit-flex-basis: 13em;
+  -moz-flex-basis: 13em;
+  flex-basis: 13em;
+  -ms-flex-preferred-size: 13em;
+  -webkit-flex-shrink: 0;
+  -moz-flex-shrink: 0;
+  flex-shrink: 0;
+  -ms-flex-negative: 0;
+  margin-bottom: 3em;
+  padding: 0;
+}
+.footer li {
+  line-height: 1.5em;
+  list-style: none;
+  text-align: center;
+}
+.footer li a {
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+}
+.footer li a:focus, .footer li a:hover {
+  color: white;
+}
+.footer li h3 {
+  color: white;
+  font-size: 1em;
+  margin-bottom: 0.4em;
+}
+.footer hr {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0 auto 1.5em;
+  width: 12em;
+}
+.footer p {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.9em;
+  line-height: 1.5em;
+  margin: auto;
+  max-width: 35em;
+  text-align: center;
+}
+
 #box-container {
   max-width: 1200px;
   margin-left: auto;
