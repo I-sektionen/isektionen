@@ -695,24 +695,31 @@ picture {
   }
 }
 
-#box-container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+.parallax-window {
+  max-height: 30em;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
 }
-#box-container::after {
-  clear: both;
-  content: "";
-  display: table;
+
+.parallax-static-content {
+  color: #9A9A8A;
+  padding: 8em 0;
+  position: relative;
+  z-index: 9;
 }
-#box-container .box {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%;
-}
-#box-container .box:last-child {
-  margin-right: 0;
+
+.parallax-background {
+  background: url("http://blog.liu.se/utbildningsbloggen/files/2012/07/liu_campusvalla.jpg") repeat;
+  background-position: top;
+  background-size: cover;
+  background-color: beige;
+  height: 60em;
+  left: 0;
+  position: absolute;
+  top: -10em;
+  width: 100%;
 }
 
 /*# sourceMappingURL=isektionen.css.map */

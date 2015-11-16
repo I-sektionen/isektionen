@@ -1,7 +1,7 @@
 /*global $*/
-$(document).ready(function () {
 
-    $(document).ready(function() {
+
+$(document).ready(function() {
   var menuToggle = $('#js-centered-navigation-mobile-menu').unbind();
   $('#js-centered-navigation-menu').removeClass("show");
 
@@ -13,6 +13,10 @@ $(document).ready(function () {
       }
     });
   });
-});
+
+  if ($("#js-parallax-window").length) {
+    parallax();
+  }
 
 });
+
