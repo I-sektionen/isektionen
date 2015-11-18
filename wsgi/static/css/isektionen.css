@@ -790,18 +790,50 @@ picture {
 }
 
 .footer {
-  background: green;
+  background: #52D017;
   padding: 3em 1.618em;
   width: 100%;
+ /* .footer-logo {
+    @include span-columns(4);
+    margin-bottom: 2em;
+    text-align: center;
+
+    img {
+     margin-top: 2 em;
+      margin-left: 1em;
+      height: 10em;
+      width: 15em;
+    }
+  }   */
 }
-.footer .footer-logo {
-  margin-bottom: 2em;
+.footer .footertext {
+  background-color: yellow;
   text-align: center;
+  color: rgba(255, 255, 255, 0.4);
 }
-.footer .footer-logo img {
-  height: 3em;
+.footer .adress {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+}
+.footer .adress:last-child {
+  margin-right: 0;
+}
+.footer .studieledare {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+}
+.footer .studieledare:last-child {
+  margin-right: 0;
 }
 .footer .footer-links {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -826,6 +858,9 @@ picture {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-bottom: 1.5em;
+}
+.footer .footer-links:last-child {
+  margin-right: 0;
 }
 .footer ul {
   -webkit-flex-basis: 13em;

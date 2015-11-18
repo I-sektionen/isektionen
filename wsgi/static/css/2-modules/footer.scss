@@ -3,7 +3,7 @@
   $action-color: #477DCA !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
-  $footer-background: green;
+  $footer-background: #52D017;
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, 0.6);
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
@@ -12,16 +12,31 @@
   padding: ($base-spacing * 2) $gutter;
   width: 100%;
 
-  .footer-logo {
+ /* .footer-logo {
+    @include span-columns(4);
     margin-bottom: 2em;
     text-align: center;
 
     img {
-      height: 3em;
+     margin-top: 2 em;
+      margin-left: 1em;
+      height: 10em;
+      width: 15em;
     }
+  }   */
+  .footertext {
+      background-color: yellow;
+      text-align: center;
+      color:transparentize($footer-color, 0.6);
   }
-
+  .adress {
+    @include span-columns(4);
+  }
+   .studieledare {
+     @include span-columns(4);
+   }
   .footer-links {
+    @include span-columns(4);
     @include display(flex);
     @include justify-content(center);
     @include flex-wrap(wrap);
