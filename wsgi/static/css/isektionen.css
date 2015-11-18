@@ -699,25 +699,53 @@ picture {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #f2f1eb;
+  max-width: 600px;
+  margin: auto;
   text-align: center;
-  padding: auto;
 }
 #instagramPics::after {
   clear: both;
   content: "";
   display: table;
 }
-#instagramPics img {
+#instagramPics #first-row {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+#instagramPics #first-row:last-child {
+  margin-right: 0;
+}
+#instagramPics #first-row img {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%;
-  margin-right: 0px;
-  text-align: center;
-  width: 400px;
+  margin: auto;
+  width: 200px;
 }
-#instagramPics img:last-child {
+#instagramPics #first-row img:last-child {
+  margin-right: 0;
+}
+#instagramPics #second-row {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+#instagramPics #second-row:last-child {
+  margin-right: 0;
+}
+#instagramPics #second-row img {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  margin: auto;
+  width: 200px;
+}
+#instagramPics #second-row img:last-child {
   margin-right: 0;
 }
 

@@ -1,11 +1,20 @@
 #instagramPics
   +outer-container()
-  background-color: #f2f1eb
+  max-width: 600px
+  margin: auto
   text-align: center
-  padding: auto
-  img
-    +span-columns(4 of 12)
-    margin-right: 0px
-    text-align: center
-    width: 400px
+  #first-row
+    +span-columns(12)
+    img
+      +span-columns(4 of 12)
+      margin: auto
+      width: 200px
+  #second-row
+    +span-columns(12)
+    img
+      +span-columns(4 of 12)
+      margin: auto
+      width: 200px
+
+
 

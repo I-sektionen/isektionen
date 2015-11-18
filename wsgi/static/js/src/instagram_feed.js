@@ -22,8 +22,12 @@ $(document).ready(function(){
                 // this is where we do what we want with the instagram pics
                 number = 0;
                 while (number < 6) {
-                    $("#instagramPics").append('<img src="' + picture_array[number].images.standard_resolution.url + '">');
-                    number++;
+                    if (number < 3) {
+                        $("#first-row").append('<img src="' + picture_array[number].images.standard_resolution.url + '">');
+                    } else {
+                        $("#second-row").append('<img src="' + picture_array[number].images.standard_resolution.url + '">');
+                    }
+                   number++;
                 }
 
 
