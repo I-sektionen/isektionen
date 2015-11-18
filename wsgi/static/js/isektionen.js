@@ -45,14 +45,11 @@ $(document).ready(function(){
                 var picture_array = myjsonObject.data;
                 console.log(picture_array[0].images.low_resolution.url);
 
-                // this is where we do what we want with the instagram pics
+                // this is where we do what we want with the instagram pics,
+                // -Elon; Changed to show 5 pictures in 1 row
                 number = 0;
-                while (number < 6) {
-                    if (number < 3) {
+                while (number < 4) {
                         $("#first-row").append('<img src="' + picture_array[number].images.standard_resolution.url + '">');
-                    } else {
-                        $("#second-row").append('<img src="' + picture_array[number].images.standard_resolution.url + '">');
-                    }
                    number++;
                 }
 
@@ -83,3 +80,36 @@ $(document).ready(function() {
 
 });
 
+;/**
+ * Created by elonbrange on 15-11-10.
+ */
+$(document).ready(function() {
+  if ($("#js-parallax-window").length) {
+    parallax();
+  }
+});
+
+$(window).scroll(function(e) {
+  if ($("#js-parallax-window").length) {
+    parallax();
+  }
+});
+
+function parallax(){
+  if( $("#js-parallax-window").length > 0 ) {
+    var plxBackground = $("#js-parallax-background");
+    var plxWindow = $("#js-parallax-window");
+
+    var plxWindowTopToPageTop = $(plxWindow).offset().top;
+    var windowTopToPageTop = $(window).scrollTop();
+    var plxWindowTopToWindowTop = plxWindowTopToPageTop - windowTopToPageTop;
+
+    var plxBackgroundTopToPageTop = $(plxBackground).offset().top;
+    var windowInnerHeight = window.innerHeight;
+    var plxBackgroundTopToWindowTop = plxBackgroundTopToPageTop - windowTopToPageTop;
+    var plxBackgroundTopToWindowBottom = windowInnerHeight - plxBackgroundTopToWindowTop;
+    var plxSpeed = 0.35;
+
+    plxBackground.css('top', - (plxWindowTopToWindowTop * plxSpeed) + 'px');
+  }
+}
