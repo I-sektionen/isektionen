@@ -1,6 +1,20 @@
 #instagramPics
-  background-color: yellow
-  img
-    height: 150px
-    width: 150px
-    margin: 40px
+  +outer-container()
+  max-width: 600px
+  margin: auto
+  text-align: center
+  #first-row
+    +span-columns(12)
+    img
+      +span-columns(4 of 12)
+      margin: auto
+      width: 200px
+  #second-row
+    +span-columns(12)
+    img
+      +span-columns(4 of 12)
+      margin: auto
+      width: 200px
+
+
+
