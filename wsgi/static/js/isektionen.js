@@ -49,13 +49,21 @@ $(document).ready(function(){
                 // -Elon; Changed to show 5 pictures in 1 row
                 number = 0;
                 while (number < 4) {
-                        $("#first-row").append('<img src="' + picture_array[number].images.standard_resolution.url + '">');
+                        $("#first-row").append('<img class="instagram-picture" id="' + number + '" src="' + picture_array[number].images.standard_resolution.url + '">');
                    number++;
                 }
 
 
+                // -Jesper; Added mouseon and mouseoff functionallity to append the caption text
+                $("#instagramPics > #first-row > img").hover(function(){
+                    var picNumber = $(this).attr('id');
+                    console.log("Mouse on picture! and with number: " + picNumber);
+                    $("#caption > p").text(picture_array[picNumber].caption.text);
+                }, function(){
+                    console.log("Mouse out of picture!");
+                    $("#caption > p").text('Håll musen över bilden för att se texten.');
+                });
         });
-
 
 
 });;/*global $*/
