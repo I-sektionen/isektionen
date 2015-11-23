@@ -723,30 +723,29 @@ picture {
   margin-right: 2.35765%;
   width: 31.76157%;
   margin: auto;
-  width: 100px;
+  width: 117px;
 }
 #instagramPics #first-row img:last-child {
   margin-right: 0;
 }
-#instagramPics #second-row {
+#instagramPics #caption {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%;
+  text-align: center;
 }
-#instagramPics #second-row:last-child {
+#instagramPics #caption:last-child {
   margin-right: 0;
 }
-#instagramPics #second-row img {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%;
-  margin: auto;
-  width: 100px;
-}
-#instagramPics #second-row img:last-child {
-  margin-right: 0;
+#instagramPics #caption .caption-text {
+  margin: 1em;
+  padding: 1em;
+  font-size: 0.8em;
+  font-family: monospace;
+  border: solid;
+  border-color: #bcbabb;
+  border-width: 1px;
 }
 
 .parallax-window {
