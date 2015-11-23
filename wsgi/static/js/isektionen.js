@@ -58,10 +58,15 @@ $(document).ready(function(){
                 $("#instagramPics > #first-row > img").hover(function(){
                     var picNumber = $(this).attr('id');
                     console.log("Mouse on picture! and with number: " + picNumber);
-                    $("#caption > p").text(picture_array[picNumber].caption.text);
-                }, function(){
+                    $("#caption > p").text(picture_array[picNumber].caption.text).show(300);
+                });               /* }, function(){
                     console.log("Mouse out of picture!");
-                    $("#caption > p").text('Håll musen över bilden för att se texten.');
+                    //$("#caption > p").text('Håll musen över bilden för att se texten.').show('slow');
+                    $("#caption > p").hide('slow');*/
+
+
+                $("#instagramPics").mouseleave(function(){
+                    $("#caption > p").hide('slow');
                 });
         });
 
