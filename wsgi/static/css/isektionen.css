@@ -728,6 +728,7 @@ picture {
 #instagramPics #first-row img:last-child {
   margin-right: 0;
 }
+<<<<<<< HEAD
 #instagramPics #second-row {
   float: left;
   display: block;
@@ -747,6 +748,26 @@ picture {
 }
 #instagramPics #second-row img:last-child {
   margin-right: 0;
+=======
+#instagramPics #caption {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%;
+  text-align: center;
+}
+#instagramPics #caption:last-child {
+  margin-right: 0;
+}
+#instagramPics #caption .caption-text {
+  margin: 1em;
+  padding: 1em;
+  font-size: 0.8em;
+  font-family: monospace;
+  border: solid;
+  border-color: #bcbabb;
+  border-width: 1px;
+>>>>>>> instagram-caption
 }
 
 .parallax-window {
