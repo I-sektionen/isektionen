@@ -723,37 +723,16 @@ picture {
   margin-right: 2.35765%;
   width: 31.76157%;
   margin: auto;
-  width: 100px;
+  width: 117px;
 }
 #instagramPics #first-row img:last-child {
   margin-right: 0;
 }
-<<<<<<< HEAD
-#instagramPics #second-row {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%;
-}
-#instagramPics #second-row:last-child {
-  margin-right: 0;
-}
-#instagramPics #second-row img {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%;
-  margin: auto;
-  width: 100px;
-}
-#instagramPics #second-row img:last-child {
-  margin-right: 0;
-=======
 #instagramPics #caption {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 82.94039%;
+  width: 100%;
   text-align: center;
 }
 #instagramPics #caption:last-child {
@@ -767,7 +746,6 @@ picture {
   border: solid;
   border-color: #bcbabb;
   border-width: 1px;
->>>>>>> instagram-caption
 }
 
 .parallax-window {
