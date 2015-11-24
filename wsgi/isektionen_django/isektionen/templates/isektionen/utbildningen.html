@@ -1,4 +1,19 @@
 {% extends 'master.html' %}
+
+{% block sublinks %}
+    <li class="submenu-link"><a href="#teknisk-inrikning" class="smoothScroll"> Tekniska inrikningar </a></li>
+    <li class="submenu-link"><a href="#ekonomiska-profiler" class="smoothScroll"> Ekonomiska profiler </a></li>
+    <li class="submenu-link"><a href="#utlandsstudier" class="smoothScroll"> Utlandsstudier </a></li>
+    <li class="submenu-link"><a href="#"> Årskurs 1 </a></li>
+    <li class="submenu-link"><a href="#"> Årskurs 2 </a></li>
+    <li class="submenu-link"><a href="#"> Årskurs 3 </a></li>
+    <li class="submenu-link"><a href="#"> Årskurs 4 </a></li>
+    <li class="submenu-link"><a href="#"> Årskurs 5 </a></li>
+{% endblock %}
+
+
+
+
 {% block content %}
     <div id="js-parallax-window" class="parallax-window">
         <div class="parallax-static-content">
@@ -16,7 +31,7 @@
   <section id="intro-page">
         <div class="intro-page-content">
             <div class="intro-page-content-header">
-                <h1>Tjenare! Detta är en finfin rubrik</h1>
+                <h1 id="teknisk-inrikning">Teknisk inrikning</h1>
             </div>
             <div class="intro-page-text-left">
                 <p>
@@ -47,7 +62,7 @@
 
         <div class="intro-page-content">
             <div class="intro-page-content-header">
-                <h1>Tjenare! Detta är en finfin rubrik</h1>
+                <h1 id="ekonomiska-profiler">Ekonomiska profiler</h1>
             </div>
             <div class="intro-page-img-left">
                 <img src="http://www.lifetimetv.co.uk/sites/default/files/assets/landscape/Morgan%20Freeman.jpg?itok=tUAJUY-3">
@@ -72,7 +87,7 @@
 
         <div class="intro-page-content">
             <div class="intro-page-content-header">
-                <h1>Tjenare! Detta är en finfin rubrik</h1>
+                <h1 id="utlandsstudier">Utlandsstudier</h1>
             </div>
 
             <div class="intro-page-text-left">
