@@ -1,7 +1,111 @@
 {% extends 'master.html' %}
 {% block content %}
-        <div><p>Lite random text för att knuffa ner</p></div>
-        <div><p>sidan så att inte menyn blockar allt</p></div>
+
+    <div id="js-parallax-window" class="parallax-window">
+        <div class="parallax-static-content">
+            <div class="box-parallax">
+                <h1>Intro</h1>
+                <h4>Ska stylas till lite så den ligger i mitten + storlek + färg + annat</h4>
+            </div>
+            <div class="box-parallax">
+                <h4>Ska vi ens ha en parallax hero här?</h4>
+            </div>
+        </div>
+        <div id="js-parallax-background" class="parallax-background"></div>
+    </div>
+
+    <section id="intro-page">
+        <div class="intro-page-content">
+            <div class="intro-page-content-header">
+                <h1>Tjenare! Detta är en finfin rubrik</h1>
+            </div>
+            <div class="intro-page-text-left">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egestas ex non lectus lobortis bibendum.
+                    Maecenas metus lorem, tristique fringilla sem a, mattis fringilla urna. Mauris posuere pretium sagittis.
+                    Proin euismod, metus et eleifend facilisis, justo felis aliquam mi
+                </p>
+            </div>
+            <div class="intro-page-img-right">
+
+            </div>
+
+        </div>
+
+        <div class="intro-page-content">
+            <div class="intro-page-content-header">
+                <h1>Tjenare! Detta är en finfin rubrik</h1>
+            </div>
+            <div class="intro-page-img-left">
+
+            </div>
+            <div class="intro-page-text-right">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egestas ex non lectus lobortis bibendum.
+                    Maecenas metus lorem, tristique fringilla sem a, mattis fringilla urna. Mauris posuere pretium sagittis.
+                    Proin euismod, metus et eleifend facilisis, justo felis aliquam mi
+                </p>
+            </div>
+
+        </div>
+
+        <div class="intro-page-content">
+            <div class="intro-page-content-header">
+                <h1>Tjenare! Detta är en finfin rubrik</h1>
+            </div>
+
+            <div class="intro-page-text-left">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egestas ex non lectus lobortis bibendum.
+                    Maecenas metus lorem, tristique fringilla sem a, mattis fringilla urna. Mauris posuere pretium sagittis.
+                    Proin euismod, metus et eleifend facilisis, justo felis aliquam mi
+                </p>
+            </div>
+            <div class="intro-page-img-right">
+
+            </div>
+        </div>
+
+        <div class="intro-page-content">
+            <div class="intro-page-content-header">
+                <h1>Tjenare! Detta är en finfin rubrik</h1>
+            </div>
+            <div class="intro-page-img-left">
+
+            </div>
+            <div class="intro-page-text-right">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egestas ex non lectus lobortis bibendum.
+                    Maecenas metus lorem, tristique fringilla sem a, mattis fringilla urna. Mauris posuere pretium sagittis.
+                    Proin euismod, metus et eleifend facilisis, justo felis aliquam mi
+                </p>
+            </div>
+        </div>
+
+        <div class="intro-page-content">
+            <div class="intro-page-content-header">
+                <h1>Tjenare! Detta är en finfin rubrik</h1>
+            </div>
+
+            <div class="intro-page-text-left">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egestas ex non lectus lobortis bibendum.
+                    Maecenas metus lorem, tristique fringilla sem a, mattis fringilla urna. Mauris posuere pretium sagittis.
+                    Proin euismod, metus et eleifend facilisis, justo felis aliquam mi
+                </p>
+            </div>
+            <div class="intro-page-img-right">
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <div><p>Lite random text för att knuffa ner</p></div>
+    <div><p>sidan så att inte menyn blockar allt</p></div>
 
     <div><h2>Intro</h2>
     </div>
@@ -9,7 +113,7 @@
         <p>Intressant info om intro</p>
     </div>
 
-{% block links %}
-              <li class="nav-link"><a href="{% url 'index' %}">I-Sektionen</a></li>
-{% endblock %}
+    {% block links %}
+        <li class="nav-link"><a href="{% url 'index' %}">I-Sektionen</a></li>
+    {% endblock %}
 {% endblock %}
