@@ -42,23 +42,26 @@
                     <!-- end slipsum code -->
 
                 </div>
-                <div class="student-presentation-content-box">
+                <div class="student-presentation-content-box blog-box">
                     <h1>Senaste blogginlägget</h1>
                     <div id="latest-blog-entry">
                         {% get_last_entry as blog_entry %}
                         {% for entry in blog_entry %}
-                            <h2>{{ entry.title }}</h2>
-                            <p>{{ entry.lead }}</p>
-                            <a href="{{ entry.get_absolute_url }}"> läs mer </a>
+                            <h2 class="blog-title">{{ entry.title }}</h2>
+                            <p class="blog-lead">{{ entry.lead }}</p>
+                            <p class="blog-bread">{{ entry.body|truncatewords:15 }}</p>
+                            <a href="{{ entry.get_absolute_url }}">Läs mer...</a>
                         {% endfor %}
-                        <h2>Instagram</h2>
                     </div>
                     <div id="instagramPics">
-                        <div id="first-row">
+
+                        <h2 class="instagram-header">Instagram</h2>
+                        <div id="first-row" class="img-row">
+                        </div>
+                        <div id="second-row" class="img-row">
                         </div>
                         <div id="caption">
-                            <p class="caption-text">
-                            </p>
+                            <p class="caption-text"></p>
                         </div>
                     </div>
                 </div>
