@@ -870,56 +870,74 @@ picture {
   text-align: center;
 }
 
-#box-container {
+#container {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
-#box-container::after {
+#container::after {
   clear: both;
   content: "";
   display: table;
 }
-#box-container .box {
+
+.front-page {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin-top: 2em;
+  background-color: #f7f7f7;
+  padding: 3em;
+}
+.front-page:last-child {
+  margin-right: 0;
+}
+.front-page #box-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.front-page #box-container::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.front-page #box-container .box {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%;
 }
-#box-container .box:last-child {
+.front-page #box-container .box:last-child {
   margin-right: 0;
 }
-
-#new-student-presentation {
+.front-page #new-student-presentation {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
-#new-student-presentation::after {
+.front-page #new-student-presentation::after {
   clear: both;
   content: "";
   display: table;
 }
-#new-student-presentation .student-presentation-content-box {
+.front-page #new-student-presentation .student-presentation-content-box {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 40.29137%;
 }
-#new-student-presentation .student-presentation-content-box:last-child {
+.front-page #new-student-presentation .student-presentation-content-box:last-child {
   margin-right: 0;
 }
-#new-student-presentation .student-presentation-content-box:first-child {
+.front-page #new-student-presentation .student-presentation-content-box:first-child {
   margin-left: 8.5298%;
 }
-
-#latest-blog-entry {
-  background-color: #f7f7f7;
+.front-page #latest-blog-entry {
   padding: 1em;
 }
-
-#new-student-presentation {
-  background-color: #f7f7f7;
+.front-page #new-student-presentation {
   padding: 1em;
 }
 

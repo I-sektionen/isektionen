@@ -1,66 +1,100 @@
 {% extends 'master.html' %}
 {% load blog_tags %}
 
+{% block above_content %}
+    <div id="js-parallax-window" class="parallax-window">
+        <div class="parallax-static-content">
+            <div class="box-parallax">
+                <h1>Sökande</h1>
+                <h4>Om du är sökande, möt mig aldrig!</h4>
+            </div>
+            <div class="box-parallax">
+                <h1>Företag</h1>
+                <h4>Företag, ge mig en god lunchföreläsnings-lunch!!!!</h4>
+            </div>
+        </div>
+        <div id="js-parallax-background" class="parallax-background">
+        </div>
+    </div>
+{% endblock %}
+
+
 {% block content %}
-<div id="js-parallax-window" class="parallax-window">
-  <div class="parallax-static-content">
-     <div class="box-parallax">
-         <h1>Sökande</h1>
-         <h4>Om du är sökande, möt mig aldrig!</h4>
-     </div>
-     <div class="box-parallax">
-         <h1>Företag</h1>
-         <h4>Företag, ge mig en god lunchföreläsnings-lunch!!!!</h4>
-     </div>
 
+    {% comment %}
+    This is the parallax window on the top
+    {% endcomment %}
 
+    <section class="front-page">
+        <div id="box-container">
+            <div id="new-student-presentation">
+                <div class="student-presentation-content-box">
+                    <h1>Ny student?</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egestas ex non lectus lobortis bibendum.
+                        Maecenas metus lorem, tristique fringilla sem a, mattis fringilla urna. Mauris posuere pretium sagittis.
+                        Proin euismod, metus et eleifend facilisis, justo felis aliquam mi
+                    </p>
+                </div>
+                <div class="student-presentation-content-box">
+                    <h1>Senaste blogginlägget</h1>
+                    <div id="latest-blog-entry">
+                        {% get_last_entry as blog_entry %}
+                        {% for entry in blog_entry %}
+                            <h2>{{ entry.title }}</h2>
+                            <p>{{ entry.lead }}</p>
+                            <a href="{{ entry.get_absolute_url }}"> läs mer </a>
+                        {% endfor %}
+                        <h2>Instagram</h2>
+                    </div>
+                    <section id="instagramPics">
+                        <section id="first-row">
+                        </section>
+                        <section id="caption">
+                            <p class="caption-text">
+                                Håll musen över bilden för att se texten.
+                            </p>
+                        </section>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  </div>
-  <div id="js-parallax-background" class="parallax-background"></div>
-</div>
-
-
-    <div id="box-container">
-
-
-
-    <section id="new-student-presentation">
-    <div class="student-presentation-content-box">
-        <h1>Ny student?</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egestas ex non lectus lobortis bibendum.
+    <section class="front-page">
+        <h2>Nästa sektion</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egestas ex non lectus lobortis bibendum.
             Maecenas metus lorem, tristique fringilla sem a, mattis fringilla urna. Mauris posuere pretium sagittis.
             Proin euismod, metus et eleifend facilisis, justo felis aliquam mi
         </p>
-    </div>
-
-    <div class="student-presentation-content-box">
-    <h1>Senaste blogginlägget</h1>
-      <div id="latest-blog-entry">
-    {% get_last_entry as blog_entry %}
-    {% for entry in blog_entry %}
-    <h2>{{ entry.title }}</h2>
-        <p>{{ entry.lead }}</p>
-    <a href="{{ entry.get_absolute_url }}"> läs mer </a>
-    {% endfor %}
-
-      <h2>Instagram</h2>
-
-    </div>
-      <section id="instagramPics">
-        <section id="first-row">
-
-        </section>
-        <section id="caption">
-            <p class="caption-text">
-                Håll musen över bilden för att se texten.
-            </p>
-        </section>
     </section>
-    </div>
-    </div>
-<section>
 
-    </div>
+    <section class="front-page">
+        <h2>Nästa sektion</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egestas ex non lectus lobortis bibendum.
+            Maecenas metus lorem, tristique fringilla sem a, mattis fringilla urna. Mauris posuere pretium sagittis.
+            Proin euismod, metus et eleifend facilisis, justo felis aliquam mi
+        </p>
+    </section>
 
+    <section class="front-page">
+        <h2>Nästa sektion</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egestas ex non lectus lobortis bibendum.
+            Maecenas metus lorem, tristique fringilla sem a, mattis fringilla urna. Mauris posuere pretium sagittis.
+            Proin euismod, metus et eleifend facilisis, justo felis aliquam mi
+        </p>
+    </section>
 
+    <section class="front-page">
+        <h2>Nästa sektion</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egestas ex non lectus lobortis bibendum.
+            Maecenas metus lorem, tristique fringilla sem a, mattis fringilla urna. Mauris posuere pretium sagittis.
+            Proin euismod, metus et eleifend facilisis, justo felis aliquam mi
+        </p>
+    </section>
+</div>
 {% endblock %}
