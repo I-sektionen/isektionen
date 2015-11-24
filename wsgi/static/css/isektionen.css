@@ -878,6 +878,30 @@ picture {
   text-align: center;
 }
 
+.section-header {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 91.4702%;
+}
+.section-header:last-child {
+  margin-right: 0;
+}
+
+.top-arrow {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 6.17215%;
+  float: right;
+  position: relative;
+  top: 0px;
+  right: 0px;
+}
+.top-arrow:last-child {
+  margin-right: 0;
+}
+
 #container {
   max-width: 1200px;
   margin-left: auto;
@@ -1028,7 +1052,7 @@ picture {
   min-height: 60px;
   width: 100%;
   z-index: 9999;
-  position: fixed;
+  position: relative;
 }
 .centered-navigation .mobile-logo {
   display: inline;
