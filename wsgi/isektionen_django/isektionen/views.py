@@ -31,5 +31,8 @@ def show_contact_page(request):
 def show_gymnasiecase_iresan_page(request):
     return render(request, "isektionen/gymnasiecase_iresan.html", {})
 
+def show_foretag_page(request):
+    return render(request, "isektionen/foretag.html", {})
+
 
 
