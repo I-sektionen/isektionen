@@ -1,5 +1,14 @@
 {% extends 'master.html' %}
 
+{% block links %}
+    <li class="nav-link"><a href="{% url 'index' %}">I-sektionen</a></li>
+    <li class="nav-link"><a href="#foretag-caption-1" class="smoothScroll">Fin rubrik 1</a></li>
+    <li class="nav-link"><a href="#foretag-caption-2" class="smoothScroll">Finare rubrik</a></li>
+    <li class="nav-link"><a href="#foretag-caption-3" class="smoothScroll">Ännu finare rubrik</a></li>
+    <li class="nav-link"><a href="#foretag-caption-4" class="smoothScroll">Den finaste rubriken</a></li>
+    <li class="nav-link"><a href="#foretag-caption-5" class="smoothScroll">Wow, vilken rubrik!!! </a></li>
+{% endblock %}
+
 {% block above_content %}
     <div id="js-parallax-window" class="parallax-window">
         <div class="parallax-static-content">
@@ -16,7 +25,7 @@
 
     <div id="foretag-page">
         <section class="foretag-class">
-            <div class="foretag-caption">
+            <div class="foretag-caption" id="foretag-caption-1">
                 <h1>Tjenaretjenare!</h1>
             </div>
             <div class="foretag-text-left">
@@ -48,7 +57,7 @@
 
 
         <section class="foretag-class">
-            <div class="foretag-caption">
+            <div class="foretag-caption" id="foretag-caption-2">
                 <h1>Tjenaretjenare!</h1>
             </div>
             <div class="foretag-img-left">
@@ -71,7 +80,7 @@
         </section>
 
         <section class="foretag-class">
-            <div class="foretag-caption">
+            <div class="foretag-caption" id="foretag-caption-3">
                 <h1>Tjenaretjenare!</h1>
             </div>
             <div class="foretag-text-left">
@@ -94,7 +103,7 @@
         </section>
 
         <section class="foretag-class">
-            <div class="foretag-caption">
+            <div class="foretag-caption" id="foretag-caption-4">
                 <h1>Tjenaretjenare!</h1>
             </div>
             <div class="foretag-img-left">
@@ -116,7 +125,7 @@
         </section>
 
         <section class="foretag-class">
-            <div class="foretag-caption">
+            <div class="foretag-caption" id="foretag-caption-5">
                 <h1>Tjenaretjenare!</h1>
             </div>
             <div class="foretag-text-left">
