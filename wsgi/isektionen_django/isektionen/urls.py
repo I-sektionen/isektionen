@@ -14,6 +14,7 @@ urlpatterns = [
     url(r'^studentliv/$', view=views.show_student_life_page, name='studentliv'),
     url(r'^efter_studier/$', view=views.show_after_education_page, name='efter_studier'),
     url(r'^kontakt/$', view=views.show_contact_page, name='kontakt'),
-    url(r'^gymnasiecase_iresan/$', view=views.show_gymnasiecase_iresan_page, name='gymnasiecase_iresan')
+    url(r'^gymnasiecase_iresan/$', view=views.show_gymnasiecase_iresan_page, name='gymnasiecase_iresan'),
+    url(r'^foretag/$', view=views.show_foretag_page, name='foretag')
 ]
 
