@@ -97,24 +97,7 @@
       margin-left: $centered-navigation-item-nudge;
     }
   }
- .submenu-link {
-   background: $centered-navigation-background;
-    display: block;
-    line-height: $centered-navigation-height;
-    overflow: hidden;
-    padding-right: $centered-navigation-submenu-padding;
-    text-align: right;
-    width: 100%;
-    z-index: 9999;
-   a {
-     color: $centered-navigation-color;
-     display: inline-block;
-     outline: none;
-     text-decoration: none;
 
-   }
-
- }
 
   ul li.nav-link {
     background: $centered-navigation-background;
@@ -148,6 +131,31 @@
       }
     }
   }
+
+  #header-submenu{
+     @include outer-container;
+  }
+  ul li.submenu-link {
+   /*background: $centered-navigation-background;
+    display: block;
+    line-height: $centered-navigation-height;
+    overflow: hidden;
+    padding-right: $centered-navigation-submenu-padding;
+    text-align: right;
+    width: 100%;
+    z-index: 9999;
+
+   a {
+     color: $isektionen-yellow;
+     display: inline-block;
+     outline: none;
+     text-decoration: none;
+   }*/
+
+
+    @include span-columns(1.5);
+
+ }
 
   li.logo.nav-link {
     display: none;
