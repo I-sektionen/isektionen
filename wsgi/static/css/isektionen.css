@@ -709,10 +709,18 @@ picture {
   display: table;
 }
 #instagramPics #first-row {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%;
+}
+#instagramPics #first-row::after {
+  clear: both;
+  content: "";
+  display: table;
 }
 #instagramPics #first-row:last-child {
   margin-right: 0;
@@ -723,7 +731,7 @@ picture {
   margin-right: 2.35765%;
   width: 31.76157%;
   margin: auto;
-  width: 117px;
+  width: 100px;
 }
 #instagramPics #first-row img:last-child {
   margin-right: 0;
@@ -886,7 +894,8 @@ picture {
   display: block;
   margin-right: 2.35765%;
   width: 100%;
-  margin-top: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
   background-color: #f7f7f7;
   padding: 3em;
 }
@@ -939,6 +948,84 @@ picture {
 }
 .front-page #new-student-presentation {
   padding: 1em;
+}
+
+.intro-page {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  background-color: lightgray;
+}
+.intro-page::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+#intro-page-content-header {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  text-align: center;
+}
+#intro-page-content-header:last-child {
+  margin-right: 0;
+}
+
+#intro-page-img-left {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+}
+#intro-page-img-left:last-child {
+  margin-right: 0;
+}
+
+#intro-page-img-right {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  margin-right: 0;
+}
+#intro-page-img-right:last-child {
+  margin-right: 0;
+}
+
+#intro-page-text-left {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+}
+#intro-page-text-left:last-child {
+  margin-right: 0;
+}
+
+#intro-page-text-right {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-right: 0;
+}
+#intro-page-text-right:last-child {
+  margin-right: 0;
+}
+
+#intro-page-content {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+#intro-page-content:last-child {
+  margin-right: 0;
 }
 
 .centered-navigation {
