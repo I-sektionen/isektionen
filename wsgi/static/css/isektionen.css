@@ -771,18 +771,10 @@ picture {
   position: relative;
   z-index: 9;
   margin-bottom: 70px;
+  text-align: center;
 }
 .parallax-static-content .box-parallax {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%;
-}
-.parallax-static-content .box-parallax:last-child {
-  margin-right: 0;
-}
-.parallax-static-content .box-parallax:first-child {
-  margin-left: 25.58941%;
+  margin: auto;
 }
 
 .parallax-background {
@@ -795,6 +787,20 @@ picture {
   position: absolute;
   top: -10em;
   width: 100%;
+}
+
+.parallax-header {
+  color: #ffffff;
+  font-size: 3.5em;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+  box-sizing: inherit;
+}
+
+.parallax-text {
+  color: #ffffff;
+  font-size: 1.2em;
+  box-sizing: inherit;
 }
 
 .footer {
@@ -977,11 +983,13 @@ picture {
 .front-page-img {
   max-width: 1200px;
   margin-left: auto;
-  margin-right: auto; }
-  .front-page-img::after {
-    clear: both;
-    content: "";
-    display: table; }
+  margin-right: auto;
+}
+.front-page-img::after {
+  clear: both;
+  content: "";
+  display: table;
+}
 
 #intro-page {
   max-width: 1200px;

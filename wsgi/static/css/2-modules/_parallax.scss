@@ -16,15 +16,10 @@ $parallax-background-height: $parallax-window-height * 2;
   position: relative;
   z-index: 9;
   margin-bottom: 70px;
+  text-align: center;
 
   .box-parallax {
-    @include span-columns(3);
-
-
-    &:first-child {
-      @include shift(3);
-    }
-
+    margin: auto;
   }
 
 }
@@ -39,4 +34,18 @@ $parallax-background-height: $parallax-window-height * 2;
   position: absolute;
   top: - $parallax-window-height / 3;
   width: 100%;
+}
+
+.parallax-header {
+  color: #ffffff;
+  font-size: 3.5em;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+  box-sizing: inherit;
+}
+
+.parallax-text {
+  color: #ffffff;
+  font-size: 1.2em;
+  box-sizing: inherit;
 }
