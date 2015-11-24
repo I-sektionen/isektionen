@@ -764,6 +764,15 @@ picture {
   .front-page #new-student-presentation {
     padding: 1em; }
 
+.front-page-img {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+  .front-page-img::after {
+    clear: both;
+    content: "";
+    display: table; }
+
 #intro-page {
   max-width: 1200px;
   margin-left: auto;
