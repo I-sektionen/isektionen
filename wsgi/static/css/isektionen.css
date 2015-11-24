@@ -1493,4 +1493,74 @@ article.single_blog_entry p.author {
   font-style: italic;
 }
 
+#foretag-page {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#foretag-page::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+#foretag-page .foretag-class {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background-color: #f7f7f7;
+  padding: 3em;
+}
+#foretag-page .foretag-class:last-child {
+  margin-right: 0;
+}
+#foretag-page .foretag-caption {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  text-align: center;
+}
+#foretag-page .foretag-caption:last-child {
+  margin-right: 0;
+}
+#foretag-page .foretag-text-left {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+}
+#foretag-page .foretag-text-left:last-child {
+  margin-right: 0;
+}
+#foretag-page .foretag-img-right {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+}
+#foretag-page .foretag-img-right:last-child {
+  margin-right: 0;
+}
+#foretag-page .foretag-text-right {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+}
+#foretag-page .foretag-text-right:last-child {
+  margin-right: 0;
+}
+#foretag-page .foretag-img-left {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+}
+#foretag-page .foretag-img-left:last-child {
+  margin-right: 0;
+}
+
 /*# sourceMappingURL=isektionen.css.map */
