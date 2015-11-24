@@ -1142,6 +1142,22 @@ picture {
     margin-left: 2.2em;
   }
 }
+.centered-navigation ul li.submenu-link {
+  background: #ffffff;
+  display: block;
+  line-height: 60px;
+  overflow: hidden;
+  padding-right: 1em;
+  text-align: right;
+  width: 100%;
+  z-index: 9999;
+}
+.centered-navigation ul li.submenu-link a {
+  color: rgba(51, 51, 51, 0.7);
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+}
 .centered-navigation ul li.nav-link {
   background: #ffffff;
   display: block;
@@ -1157,8 +1173,6 @@ picture {
   display: inline-block;
   outline: none;
   text-decoration: none;
-  border: dotted;
-  border-width: 1px;
 }
 .centered-navigation ul li.nav-link a:focus, .centered-navigation ul li.nav-link a:hover {
   color: #333;

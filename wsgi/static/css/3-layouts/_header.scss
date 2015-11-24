@@ -97,7 +97,11 @@
       margin-left: $centered-navigation-item-nudge;
     }
   }
- .submenu-link {
+
+
+ ul li.submenu-link
+ {
+
    background: $centered-navigation-background;
     display: block;
     line-height: $centered-navigation-height;
@@ -111,6 +115,7 @@
      display: inline-block;
      outline: none;
      text-decoration: none;
+
 
    }
 
