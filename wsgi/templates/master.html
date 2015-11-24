@@ -15,11 +15,15 @@
 
 <!-- include gör att vi kan importera andra filer -->
 {% include "header.html" %}
+{% block above_content %}
+{% endblock %}
 
 <!-- Ett block gör att vi kan använda vår master på flera sidor, men byta ut innehållet som ligger i blocket -->
+<div id="container">
 {% block content %}
 
 {% endblock %}
+</div>
 
 {% block footer %}
  <footer class="footer" role="contentinfo">
