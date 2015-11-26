@@ -6,13 +6,32 @@ class BlogEntry(models.Model):
 
     title = models.CharField(verbose_name='Titel',
                                 max_length=255,
-                                help_text="Rubriken till artikeln")
+                                help_text="Rubriken till artikeln",
+                                null=True,
+                                blank=False)
     lead = models.TextField(verbose_name='ingress',
-                            help_text="Ingressen är den text som syns i nyhetsflödet. Max 160 tecken.")
+                            help_text="Ingressen är den text som syns i nyhetsflödet. Max 160 tecken.",
+                            null=True,
+                            blank=False)
     body = models.TextField(verbose_name='brödtext',
-                            help_text="Brödtext syns när en artikel visas enskilt.")
+                            help_text="Brödtext syns när en artikel visas enskilt.",
+                            null=True,
+                            blank=False)
 
-    created = models.DateTimeField(editable=False)
+    created = models.DateTimeField(editable=False,
+                                   null=True,
+                                    blank=False)
+
+    publishedDate = models.DateTimeField(verbose_name="Publicerings datum"
+                                        ,editable=True,
+                                         null=True,
+                                        blank=False)
+
+    author = models.CharField(verbose_name="Författare",
+                                max_length=255,
+                                help_text="Författare",
+                              null=True,
+                                blank=False)
 
     def save(self, *args, **kwargs):
         self.created = timezone.now()

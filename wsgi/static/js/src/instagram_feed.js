@@ -19,11 +19,12 @@ $(document).ready(function(){
                 var picture_array = myjsonObject.data;
                 console.log(picture_array[0].images.low_resolution.url);
 
-                // this is where we do what we want with the instagram pics
+                // this is where we do what we want with the instagram pics,
+                // -Elon; Changed to show 5 pictures in 1 row
                 number = 0;
-                while (number < 5) {
-                    $("#instagramPics").append('<img src="' + picture_array[number].images.standard_resolution.url + '">');
-                    number++;
+                while (number < 4) {
+                        $("#first-row").append('<img src="' + picture_array[number].images.standard_resolution.url + '">');
+                   number++;
                 }
 
 

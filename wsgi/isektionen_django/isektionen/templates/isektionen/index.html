@@ -1,4 +1,5 @@
 {% extends 'master.html' %}
+{% load blog_tags %}
 
 {% block content %}
 <div id="js-parallax-window" class="parallax-window">
@@ -22,54 +23,38 @@
     <div id="box-container">
     <h1>Content on index.html</h1>
 
-        <section class="box">
 
 
-        <div id="instagramPics">
-            Här kommer mina bilder, eller? <br>
-        </div>
-        <br>
-    <section class="box">
-    <p>
-        Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper.
-        Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus.
-        Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit.
-        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.
-    </p>
-    </section>
-        <section class="box">
-    <p>
-        Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper.
-        Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus.
-        Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit.
-        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.
-    </p>
-            <a href="{% url 'education' %}"><p>Utbildningen</p></a>
-    </section>
-        <section class="box">
-    <p>
-        Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper.
-        Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus.
-        Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit.
-        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.
-    </p>
-    </section>
+    <section id="new-student-presentation">
+    <div class="student-presentation-content-box">
+        <h1>Ny student?</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egestas ex non lectus lobortis bibendum.
+            Maecenas metus lorem, tristique fringilla sem a, mattis fringilla urna. Mauris posuere pretium sagittis.
+            Proin euismod, metus et eleifend facilisis, justo felis aliquam mi
+        </p>
     </div>
 
+    <div class="student-presentation-content-box">
+    <h1>Senaste blogginlägget</h1>
+      <div id="latest-blog-entry">
+    {% get_last_entry as blog_entry %}
+    {% for entry in blog_entry %}
+    <h2>{{ entry.title }}</h2>
+        <p>{{ entry.lead }}</p>
+    <a href="{{ entry.get_absolute_url }}"> läs mer </a>
+    {% endfor %}
 
-    <div id="instagramFeed" >
-    Our instagram feed. Here, we show the latest photos from the instagram of i-sektionen.
+      <h2>Instagram</h2>
 
-    <img src="http://www.indianagrown.org/wp-content/uploads/2015/08/cow1.png">
+    </div>
+      <section id="instagramPics">
+        <section id="first-row">
 
-    <img src="http://www.indianagrown.org/wp-content/uploads/2015/08/cow1.png">
-
-    <img src="http://www.indianagrown.org/wp-content/uploads/2015/08/cow1.png">
-
-    <img src="http://www.indianagrown.org/wp-content/uploads/2015/08/cow1.png">
-
-    <img src="http://www.indianagrown.org/wp-content/uploads/2015/08/cow1.png">
-
+        </section>
+    </section>
+    </div>
+    </div>
+<section>
 
     </div>
 
