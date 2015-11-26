@@ -7,5 +7,6 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', view=views.index, name='index'),
     url(r'^test_page/$', view=views.show_test_page, name='page-1'),
+    url(r'^utbildningen/$', view=views.education, name='education'),
 ]
 
