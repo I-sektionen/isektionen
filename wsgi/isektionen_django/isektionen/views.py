@@ -13,7 +13,6 @@ def show_test_page(request):
     return render(request, "isektionen/test_page.html", {})
 
 
-def education(request):
-    return render(request, "isektionen/utbildningen.html", {
+def show_education_page(request):
+    return render(request, "isektionen/utbildningen.html", {})
 
-    })
