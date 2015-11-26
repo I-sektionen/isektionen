@@ -1019,6 +1019,8 @@ picture {
   display: inline-block;
   outline: none;
   text-decoration: none;
+  border: dotted;
+  border-width: 1px;
 }
 .centered-navigation ul li.nav-link a:focus, .centered-navigation ul li.nav-link a:hover {
   color: #333;

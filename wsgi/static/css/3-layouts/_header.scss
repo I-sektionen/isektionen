@@ -112,6 +112,8 @@
       display: inline-block;
       outline: none;
       text-decoration: none;
+      border: dotted;
+      border-width: 1px;
 
       &:focus,
       &:hover {

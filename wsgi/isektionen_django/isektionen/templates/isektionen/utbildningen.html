@@ -21,5 +21,18 @@
 
     <div class="education-content"><h2>Årskurs 5</h2></div>
 
+{% block links %}
+              <li class="nav-link"><a href="{% url 'index' %}">I-Sektionen</a></li>
+        <li class="nav-link logo">
+          <a href="javascript:void(0)" class="logo">
+            <img src="http://www.cam.liu.se/cam-dagen/industriell-ekonomi/1.336211/IndustriellEkonomiJPEG.jpg" alt="Logo image">
+          </a>
+        </li>
 
+           <li class="nav-link"> <a href={% url 'page-1' %}> Test page</a> </li>
+           <li class="nav-link"> <a href={% url 'utbildningen' %}> Utbildningen </a> </li>
+           <li class="nav-link"> <a href="#"> Link 3</a> </li>
+           <li class="nav-link"> <a href="#"> Link 545654654</a> </li>
+
+{% endblock %}
 {% endblock %}
