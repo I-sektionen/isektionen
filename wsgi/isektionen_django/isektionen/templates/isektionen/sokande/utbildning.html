@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>ksddasd</title>
-    <p>sadlasadk lk</p>
-
-</head>
-<body>
-
-</body>
-</html>
+{% extends 'master.html' %}
+{% block content %}
+    <h3>här ska det vara kanske ett block med en bildoch text som visar vilken sida man är på</h3>
+{% include 'isektionen/sokande/utbildning/inledning.html' %}
+{% include 'isektionen/sokande/utbildning/profiler.html' %}
+{% include 'isektionen/sokande/utbildning/tidslinje.html' %}
+{% include 'isektionen/sokande/utbildning/utlandsstudier.html' %}
+{% endblock %}
