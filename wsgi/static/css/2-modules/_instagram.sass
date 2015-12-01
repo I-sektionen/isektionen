@@ -6,21 +6,34 @@
   #first-row
     +outer-container()
     +span-columns(12)
+    text-align: center
+    margin-bottom: 0px
     img
-      +span-columns(4 of 12)
-      margin: auto
-      width: 100px
+      position: relative
+      margin: 0.1em
+      width: 130px
+  #second-row
+    +outer-container()
+    +span-columns(12)
+    text-align: center
+    img
+      margin: 0.1em
+      margin-top: 0
+      width: 130px
+      
   #caption
     +span-columns(12)
     text-align: center
     .caption-text
       margin: 1em
       padding: 1em
-      font-size: 0.8em
+      font-size: 1.0em
       font-family: monospace
       border: solid
       border-color: #bcbabb
       border-width: 1px
       display: none
 
-
+.instagram-header
+  font-size: 2.0em
+  font-family: monospace
