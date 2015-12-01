@@ -6,7 +6,8 @@ from blog import urls as blog_urls
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', view=views.index, name='index'),
+    url(r'^$', view=views.show_landing_page, name='landing'),
+    url(r'^landing/$', view=views.show_landing_page, name='landing'),
     url(r'^test_page/$', view=views.show_test_page, name='page-1'),
     url(r'^blog/', include(blog_urls)),
     url(r'^utbildningen/$',view=views.show_education_page, name='utbildningen'),

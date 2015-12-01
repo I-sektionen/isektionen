@@ -3,6 +3,9 @@ __author__ = 'MagnusForzelius'
 from django.shortcuts import render
 from blog.models import BlogEntry
 
+def show_landing_page(request):
+    return render(request, "isektionen/landing.html", {})
+
 
 def index(request):
     return render(request, "isektionen/index.html", {
