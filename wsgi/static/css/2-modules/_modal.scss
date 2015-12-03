@@ -1,0 +1,51 @@
+$parallax-window-height: 30em;
+$parallax-background-height: $parallax-window-height * 2;
+
+.parallax-window {
+  max-height: $parallax-window-height;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+}
+
+.parallax-static-content {
+  color: green;
+  padding: 8em 0;
+  position: relative;
+  z-index: 9;
+  margin-bottom: 70px;
+  text-align: center;
+
+  .box-parallax {
+    margin: auto;
+  }
+
+}
+
+.parallax-background {
+  background: url("http://blog.liu.se/utbildningsbloggen/files/2012/07/liu_campusvalla.jpg") repeat;
+  background-position: top;
+  background-size: cover;
+  background-color: beige;
+  height: $parallax-background-height;
+  left: 0;
+  position: absolute;
+  top: - $parallax-window-height / 3;
+  width: 100%;
+}
+
+.parallax-header {
+  color: #ffffff;
+  font-size: 3.5em;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+  box-sizing: inherit;
+}
+
+.parallax-text {
+  color: #ffffff;
+  font-size: 1.2em;
+  box-sizing: inherit;
+}
