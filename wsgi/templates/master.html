@@ -13,6 +13,18 @@
 
 <body>
 
+<!-- A modal that could be used in any subpage with different content -->
+    <div class="modal">
+        <input class="modal-state" id="modal-1" type="checkbox" />
+        <div class="modal-fade-screen">
+            <div class="modal-inner">
+                <div class="modal-close" for="modal-1"></div>
+                <div class="modal-content" for="modal-1"></div>
+            </div>
+        </div>
+    </div>
+
+
 <!-- include gör att vi kan importera andra filer -->
 
 <!--
@@ -28,14 +40,7 @@ Denna fil innehåller navigationen för sidan. Den är klippt från Refills prec
         <nav role="navigation" id="header-anchor">
             <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
                 {% block links %}
-                    <li class="nav-link"><a href="{% url 'index' %}">I-Sektionen</a></li>
-                    <li class="nav-link"><a href="{% url 'intro' %}">Intro</a></li>
-                    <li class="nav-link"><a href="{% url 'utbildningen' %}">Utbildning</a></li>
-                    <li class="nav-link"><a href="{% url 'studentliv' %}">Studentliv</a></li>
-                    <li class="nav-link"><a href="{% url 'efter_studier' %}">Efter studietiden</a></li>
-                    <li class="nav-link"><a href="{% url 'gymnasiecase_iresan' %}">Gymnasiecaset och I-resan</a></li>
-                    <li class="nav-link"><a href="{% url 'kontakt' %}">Kontakt och FAQ</a></li>
-                    <li class="nav-link"><a href="{% url 'foretag' %}">Företag</a></li>
+
                 {% endblock %}
             </ul>
         </nav>
@@ -59,6 +64,7 @@ Parralax/Hero klippt från Refills
 
 <!-- Ett block gör att vi kan använda vår master på flera sidor, men byta ut innehållet som ligger i blocket -->
 <div id="container">
+
     {% block content %}
 
     {% endblock %}
