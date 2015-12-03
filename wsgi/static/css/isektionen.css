@@ -1325,4 +1325,36 @@ article.single_blog_entry p.author {
   font-style: italic;
 }
 
+.education-content {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+.education-content:last-child {
+  margin-right: 0;
+}
+.education-content img {
+  height: 200px;
+  width: 200px;
+}
+.education-content .left {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+}
+.education-content .left:last-child {
+  margin-right: 0;
+}
+.education-content .right {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+}
+.education-content .right:last-child {
+  margin-right: 0;
+}
+
 /*# sourceMappingURL=isektionen.css.map */

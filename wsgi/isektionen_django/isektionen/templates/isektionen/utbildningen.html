@@ -1,27 +1,5 @@
 {% extends 'master.html' %}
-{% block content %}
-    <div><h2>Tekniska Inriktningar</h2>
-    </div>
-    <div class="education-content">
-
-        <p>Intressant info om teknisk inriktning</p>
-
-    </div>
-    <div class="education-content" >
-        <h2>Ekonomiska profiler</h2>
-    </div>
-
-    <div class="education-content"><h2>Årskurs 1</h2></div>
-
-    <div class="education-content"><h2>Årskurs 2</h2></div>
-
-    <div class="education-content"><h2>Årskurs 3</h2></div>
-
-    <div class="education-content"><h2>Årskurs 4</h2></div>
-
-    <div class="education-content"><h2>Årskurs 5</h2></div>
-
-
+{% include 'header.html' %}
 {% block links %}
               <li class="nav-link"><a href="{% url 'index' %}">I-Sektionen</a></li>
         <li class="nav-link logo">
@@ -36,4 +14,58 @@
            <li class="nav-link"> <a href="#"> Link 545654654</a> </li>
 
 {% endblock %}
+{% block content %}
+    <div><h2>Tekniska Inriktningar</h2>
+    </div>
+    <div class="education-content">
+        <div class = "left"><p>Intressant info om teknisk inriktning</p></div>
+        <div class = "right"><img src="http://www.cam.liu.se/cam-dagen/industriell-ekonomi/1.336211/IndustriellEkonomiJPEG.jpg"></div>
+
+
+    </div>
+    <div class="education-content" >
+        <h2>Ekonomiska profiler</h2>
+
+        <div class = "left"><img src="http://www.cam.liu.se/cam-dagen/industriell-ekonomi/1.336211/IndustriellEkonomiJPEG.jpg"></div>
+        <div class = "right">Text</div>
+    </div>
+
+    <div class="education-content">
+        <h2>Årskurs 1</h2>
+        <div class ="left">Text</div>
+        <div class ="right"><img src="http://www.cam.liu.se/cam-dagen/industriell-ekonomi/1.336211/IndustriellEkonomiJPEG.jpg"></div>
+
+    </div>
+
+    <div class="education-content">
+        <h2>Årskurs 2</h2>
+
+
+        <div class = "left"><img src="http://www.cam.liu.se/cam-dagen/industriell-ekonomi/1.336211/IndustriellEkonomiJPEG.jpg"></div>
+        <div class = "right">Text</div>
+    </div>
+
+    <div class="education-content">
+        <h2>Årskurs 3</h2>
+        <div class = "left">Text</div>
+        <div class = "right"><img src="http://www.cam.liu.se/cam-dagen/industriell-ekonomi/1.336211/IndustriellEkonomiJPEG.jpg"></div>
+
+    </div>
+
+    <div class="education-content">
+        <h2>Årskurs 4</h2>
+
+        <div class = "left"><img src="http://www.cam.liu.se/cam-dagen/industriell-ekonomi/1.336211/IndustriellEkonomiJPEG.jpg"></div>
+        <div class = "right">Text</div>
+    </div>
+
+    <div class="education-content">
+        <h2>Årskurs 5</h2>
+        <div class = "left">Text</div>
+        <div class = "right"><img src="http://www.cam.liu.se/cam-dagen/industriell-ekonomi/1.336211/IndustriellEkonomiJPEG.jpg"></div>
+
+    </div>
+
+
+
 {% endblock %}
