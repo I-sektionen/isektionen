@@ -13,6 +13,18 @@
 
 <body>
 
+<!-- A modal that could be used in any subpage with different content -->
+    <div class="modal">
+        <input class="modal-state" id="modal-1" type="checkbox" />
+        <div class="modal-fade-screen">
+            <div class="modal-inner">
+                <div class="modal-close" for="modal-1"></div>
+                <div class="modal-content" for="modal-1"></div>
+            </div>
+        </div>
+    </div>
+
+
 <!-- include gör att vi kan importera andra filer -->
 
 <!--
@@ -59,6 +71,7 @@ Parralax/Hero klippt från Refills
 
 <!-- Ett block gör att vi kan använda vår master på flera sidor, men byta ut innehållet som ligger i blocket -->
 <div id="container">
+
     {% block content %}
 
     {% endblock %}
