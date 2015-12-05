@@ -1942,4 +1942,40 @@ article.single_blog_entry p.author {
   margin-right: 0;
 }
 
+.IIi {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.IIi::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.info {
+  border-top: solid;
+  border-bottom: solid;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+}
+.info:last-child {
+  margin-right: 0;
+}
+.info .text {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+.info .text:last-child {
+  margin-right: 0;
+}
+.info .img {
+  height: 50%;
+  width: 50%;
+}
+
 /*# sourceMappingURL=isektionen.css.map */
