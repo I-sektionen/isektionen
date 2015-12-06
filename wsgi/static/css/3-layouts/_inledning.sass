@@ -4,10 +4,17 @@
 .info
   border-top: solid
   border-bottom: solid
+  margin-bottom: 10px
   +span-columns(6)
+  +media(max-width $large-screen, 8)
+    +span-columns(8)
 
   .text
+    padding: 10px
     +span-columns(12)
 
   .img
-    +size(50%)
+    padding: 10px
+    +size(60%)
+    +media(max-width $large-screen, 8)
+      +size(50%)

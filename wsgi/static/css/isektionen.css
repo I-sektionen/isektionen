@@ -1956,6 +1956,7 @@ article.single_blog_entry p.author {
 .info {
   border-top: solid;
   border-bottom: solid;
+  margin-bottom: 10px;
   float: left;
   display: block;
   margin-right: 2.35765%;
@@ -1964,7 +1965,19 @@ article.single_blog_entry p.author {
 .info:last-child {
   margin-right: 0;
 }
+@media screen and (max-width: 900px) {
+  .info {
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 100%;
+  }
+  .info:last-child {
+    margin-right: 0;
+  }
+}
 .info .text {
+  padding: 10px;
   float: left;
   display: block;
   margin-right: 2.35765%;
@@ -1974,8 +1987,15 @@ article.single_blog_entry p.author {
   margin-right: 0;
 }
 .info .img {
-  height: 50%;
-  width: 50%;
+  padding: 10px;
+  height: 60%;
+  width: 60%;
+}
+@media screen and (max-width: 900px) {
+  .info .img {
+    height: 50%;
+    width: 50%;
+  }
 }
 
 /*# sourceMappingURL=isektionen.css.map */
