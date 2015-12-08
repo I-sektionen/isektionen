@@ -1942,18 +1942,17 @@ article.single_blog_entry p.author {
   margin-right: 0;
 }
 
-.IIi {
+#IIi {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
-.IIi::after {
+#IIi::after {
   clear: both;
   content: "";
   display: table;
 }
-
-.info {
+#IIi .info {
   border-top: solid;
   border-bottom: solid;
   margin-bottom: 10px;
@@ -1962,40 +1961,104 @@ article.single_blog_entry p.author {
   margin-right: 2.35765%;
   width: 48.82117%;
 }
-.info:last-child {
+#IIi .info:last-child {
   margin-right: 0;
 }
 @media screen and (max-width: 900px) {
-  .info {
+  #IIi .info {
     float: left;
     display: block;
     margin-right: 3.57866%;
     width: 100%;
   }
-  .info:last-child {
+  #IIi .info:last-child {
     margin-right: 0;
   }
 }
-.info .text {
+#IIi .info .text {
   padding: 10px;
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%;
 }
-.info .text:last-child {
+#IIi .info .text:last-child {
   margin-right: 0;
 }
-.info .img {
+#IIi .info .img {
   padding: 10px;
   height: 60%;
   width: 60%;
 }
 @media screen and (max-width: 900px) {
-  .info .img {
+  #IIi .info .img {
     height: 50%;
     width: 50%;
   }
+}
+
+#bostad {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#bostad::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+#bostad #info {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+#bostad #info:last-child {
+  margin-right: 0;
+}
+#bostad #omrade {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 57.35098%;
+}
+#bostad #omrade:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 900px) {
+  #bostad #omrade {
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 100%;
+  }
+  #bostad #omrade:last-child {
+    margin-right: 0;
+  }
+}
+#bostad #hyresvardar {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 40.29137%;
+}
+#bostad #hyresvardar:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 900px) {
+  #bostad #hyresvardar {
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 74.10533%;
+  }
+  #bostad #hyresvardar:last-child {
+    margin-right: 0;
+  }
+}
+#bostad #hyresvardar #links {
+  margin-left: 20px;
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=isektionen.css.map */
