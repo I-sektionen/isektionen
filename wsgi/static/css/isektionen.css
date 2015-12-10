@@ -1942,17 +1942,18 @@ article.single_blog_entry p.author {
   margin-right: 0;
 }
 
-#IIi {
+.IIi {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
-#IIi::after {
+.IIi::after {
   clear: both;
   content: "";
   display: table;
 }
-#IIi .info {
+
+.info {
   border-top: solid;
   border-bottom: solid;
   margin-bottom: 10px;
@@ -1961,37 +1962,37 @@ article.single_blog_entry p.author {
   margin-right: 2.35765%;
   width: 48.82117%;
 }
-#IIi .info:last-child {
+.info:last-child {
   margin-right: 0;
 }
 @media screen and (max-width: 900px) {
-  #IIi .info {
+  .info {
     float: left;
     display: block;
     margin-right: 3.57866%;
     width: 100%;
   }
-  #IIi .info:last-child {
+  .info:last-child {
     margin-right: 0;
   }
 }
-#IIi .info .text {
+.info .text {
   padding: 10px;
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%;
 }
-#IIi .info .text:last-child {
+.info .text:last-child {
   margin-right: 0;
 }
-#IIi .info .img {
+.info .img {
   padding: 10px;
   height: 60%;
   width: 60%;
 }
 @media screen and (max-width: 900px) {
-  #IIi .info .img {
+  .info .img {
     height: 50%;
     width: 50%;
   }
@@ -2011,28 +2012,19 @@ article.single_blog_entry p.author {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 100%;
+  width: 57.35098%;
 }
 #bostad #info:last-child {
   margin-right: 0;
 }
-#bostad #omrade {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 57.35098%;
-}
-#bostad #omrade:last-child {
-  margin-right: 0;
-}
 @media screen and (max-width: 900px) {
-  #bostad #omrade {
+  #bostad #info {
     float: left;
     display: block;
     margin-right: 3.57866%;
     width: 100%;
   }
-  #bostad #omrade:last-child {
+  #bostad #info:last-child {
     margin-right: 0;
   }
 }
@@ -2040,7 +2032,7 @@ article.single_blog_entry p.author {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 40.29137%;
+  width: 31.76157%;
 }
 #bostad #hyresvardar:last-child {
   margin-right: 0;
@@ -2058,7 +2050,15 @@ article.single_blog_entry p.author {
 }
 #bostad #hyresvardar #links {
   margin-left: 20px;
-  margin-bottom: 10px;
+}
+#bostad #omrade {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+#bostad #omrade:last-child {
+  margin-right: 0;
 }
 
 /*# sourceMappingURL=isektionen.css.map */
