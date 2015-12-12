@@ -1,49 +1,44 @@
+#container
+  background-image: url("http://images6.fanpop.com/image/photos/36000000/Frodo-Sam-image-frodo-and-sam-36089900-1908-798.jpg")
+  width: 100%
+  max-width: 2500px
+
 #landing_content
   +outer-container()
 
+
+  .logo
+    width: 30%
+    height: 30%
+
+
   .landing_section
     +span-columns(12)
-    border-style: dotted
-    border-width: 3px
-    border-color: black
+    color: white
 
-    margin-top: 1.0em
-    margin-bottom: 1.0em
-    background-color: $light-gray
-    padding: 3em
+    margin-top: 0em
+    margin-bottom: 0em
+    padding: 1em
 
   .welcome
     +span-columns(8)
     +shift(2)
-
-    border-style: dotted
-    border-width: 3px
-    border-color: yellow
     text-align: center
 
 
-  .choice_box
-    +span-columns(8)
+  .first_choice
+    +span-columns(4)
     +shift(2)
 
-    border-style: dotted
-    border-width: 3px
-    border-color: green
-
   .choice
-    +span-columns(4 of 8)
+    +span-columns(4)
+    +shift(1)
 
-    text-align: center
-    border-style: dotted
-    border-width: 3px
-    border-color: black
 
   .landing_usp
     +span-columns(8)
     +shift(2)
 
-    border-style: dotted
-    border-width: 3px
-    border-color: red
+
 
 

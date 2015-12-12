@@ -43,19 +43,15 @@ $(document).ready(function(){
                 var picture_array = myjsonObject.data;
 
                 // this is where we do what we want with the instagram pics,
-                // -Elon; Changed to show 8 pictures in 2 rows
+                // -Elon; Changed to show 5 pictures in 1 row
                 number = 0;
-                while (number < 6) {
-                    if (number < 3) {
-                        $("#first-row").append('<a href="' + picture_array[number].link + '" target="_blank"><div class="tooltip-item"><img class="instagram-picture" id="' + number + '" src="' + picture_array[number].images.standard_resolution.url + '"><div class="tooltip"><p>' + picture_array[number].caption.text + '</p></div></div></a>');
-                    } else {
-                        $("#second-row").append('<a href="' + picture_array[number].link + '" target="_blank"><div class="tooltip-item"><img class="instagram-picture" id="' + number + '" src="' + picture_array[number].images.standard_resolution.url + '"><div class="tooltip"><p>' + picture_array[number].caption.text + '</p></div></div></a>');
-                    }
-                    number++;
+                while (number < 4) {
+                        $("#first-row").append('<a href="' + picture_array[number].link + '" target="_blank"><img class="instagram-picture" id="' + number + '" src="' + picture_array[number].images.standard_resolution.url + '"></a>');
+                   number++;
                 }
-/*
+
                 // -Jesper; Added mouseon and mouseoff functionallity to append the caption text
-                $("#instagramPics > .img-row > a > img").hover(function(){
+                $("#instagramPics > #first-row > a > img").hover(function(){
                     var picNumber = $(this).attr('id');
                     $("#caption > p").text(picture_array[picNumber].caption.text).show(300);
                 });
@@ -63,7 +59,7 @@ $(document).ready(function(){
                 //-Jesper; Added a nice scroll when mouse leaves either the image or the caption-text
                 $("#instagramPics").mouseleave(function(){
                     $("#caption > p").hide('slow');
-                });*/
+                });
         });
 
 
@@ -90,6 +86,34 @@ $(document).ready(function() {
 });
 
 ;/**
+ * Created by MagnusForzelius on 2015-12-01.
+ */
+$(document).ready(function() {
+
+  $("#modal-1").on("change", function() {
+    if ($(this).is(":checked")) {
+      $("body").addClass("modal-open");
+      //var uid = $(this).data('id');
+      //modal-1 is the checkbox
+      //insert html page with uid in modal-inner
+    } else {
+      $("body").removeClass("modal-open");
+    }
+  });
+
+  $(".modal-fade-screen, .modal-close").on("click", function() {
+    $(".modal-state:checked").prop("checked", false).change();
+  });
+
+  $(".modal-inner").on("click", function(e) {
+    e.stopPropagation();
+  });
+
+  $(".modal-trigger").on("click", function(e) {
+    $(".modal-content").html(this.nextElementSibling.innerHTML)
+  });
+
+});;/**
  * Created by elonbrange on 15-11-10.
  */
 $(document).ready(function() {
