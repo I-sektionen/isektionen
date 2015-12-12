@@ -1,9 +1,16 @@
 .education-content {
-  @include span_columns(5);
+  @include span_columns(12);
+
 
   img {
         height: 200px;
         width: 200px;
+  }
+  .left {
+    @include span_columns(6);
+  }
+  .right {
+    @include span_columns(6);
   }
 }
 
