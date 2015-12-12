@@ -1499,8 +1499,9 @@ article.single_blog_entry {
     #foretag-page .foretag-img-left:last-child {
       margin-right: 0; }
 
-body {
-  background-image: url("http://images6.fanpop.com/image/photos/36000000/Frodo-Sam-image-frodo-and-sam-36089900-1908-798.jpg"); }
+#container {
+  background-image: url("http://images6.fanpop.com/image/photos/36000000/Frodo-Sam-image-frodo-and-sam-36089900-1908-798.jpg");
+  width: 100%; }
 
 #landing_content {
   max-width: 1200px;
