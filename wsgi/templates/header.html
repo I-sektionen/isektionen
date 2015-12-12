@@ -1,36 +1,21 @@
-{% load staticfiles %}
-
-<!--
-Denna fil innehåller navigationen för sidan. Den är klippt från Refills precis som jag visade på vår demo-session.
--->
-
 <header class="centered-navigation" role="banner">
   <div class="centered-navigation-wrapper">
     <a href="javascript:void(0)" class="mobile-logo">
-      <img src="http://www.cam.liu.se/cam-dagen/industriell-ekonomi/1.336211/IndustriellEkonomiJPEG.jpg" alt="Logo image">
+      <img src="https://www.google.se/imgres?imgurl=http%3A%2F%2Fres.cloudinary.com%2Faidbuilder%2Fimage%2Fupload%2Fc_limit%2Ch_300%2Cw_300%2Fv20151030095441%2Fcollection_images%2FLIVE%2FCOL-8-6183.jpg&imgrefurl=http%3A%2F%2Fegeninsamling.redcross.se%2Fpa-flykt%2F8-6183&docid=HDsiH7dXdTL9QM&tbnid=YCCyGaPYzwq_6M%3A&w=300&h=300&ved=0ahUKEwjdztuBxNbJAhUDjiwKHWg6CCUQxiAIAg&iact=c&ictx=1">
     </a>
     <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
-    <nav role="navigation" id="header-anchor">
+    <nav role="navigation">
       <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
-          {% block links %}
-              <li class="nav-link"><a href="{% url 'index' %}">I-Sektionen</a></li>
-
-          <li class="nav-link"><a href="{% url 'intro' %}">Intro</a></li>
-          <li class="nav-link"><a href="{% url 'utbildningen' %}">Utbildning</a></li>
-          <li class="nav-link"><a href="{% url 'studentliv' %}">Studentliv</a></li>
-          <li class="nav-link"><a href="{% url 'efter_studier' %}">Efter studietiden</a></li>
-          <li class="nav-link"><a href="{% url 'gymnasiecase_iresan' %}">Gymnasiecaset och I-resan</a></li>
-          <li class="nav-link"><a href="{% url 'kontakt' %}">Kontakt och FAQ</a></li>
-
-          {% endblock %}
+        <li class="nav-link logo">
+          <a href="{% url 'sokande' %}" class="logo">
+            <img src="http://res.cloudinary.com/aidbuilder/image/upload/c_limit,h_300,w_300/v20151030095441/collection_images/LIVE/COL-8-6183.jpg">
+          </a>
+          </li>
+        <li class="nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
+        <li class="nav-link"><a href="{% url 'studentliv' %}">Studentliv</a></li>
+        <li class="nav-link"><a href="{% url 'efterstudier' %}">Efter studier</a></li>
+        <li class="nav-link" class="toggle-button"><a href="#">Företag</a></li>
       </ul>
     </nav>
   </div>
-
-    <!--
-Parralax/Hero klippt från Refills
--->
-
-
-
 </header>

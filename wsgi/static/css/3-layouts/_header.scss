@@ -5,7 +5,7 @@
   $base-font-color: $dark-gray !default;
   $centered-navigation-padding: 1em;
   $centered-navigation-logo-height: 2em;
-  $centered-navigation-background: #ffffff;
+  $centered-navigation-background: #E7F1EC;
   $centered-navigation-color: transparentize($base-font-color, 0.3);
   $centered-navigation-color-hover: $base-font-color;
   $centered-navigation-height: 60px;
@@ -20,9 +20,12 @@
   min-height: $centered-navigation-height;
   width: 100%;
   z-index: 9999;
-  position: relative;
 
   // Mobile view
+
+  .toggle-button {
+
+  }
 
   .mobile-logo {
     display: inline;
@@ -42,7 +45,7 @@
   }
 
   .centered-navigation-mobile-menu {
-    color: $isektionen-green;
+    color: $centered-navigation-color;
     display: block;
     float: right;
     line-height: $centered-navigation-height;
@@ -57,7 +60,7 @@
 
     &:focus,
     &:hover {
-      color: $isektionen-green;
+      color: $centered-navigation-color-hover;
     }
   }
 
@@ -86,7 +89,7 @@
 
     @include media ($horizontal-bar-mode) {
       display: block;
-      text-align: left;
+      text-align: center;
     }
   }
 
@@ -97,7 +100,6 @@
       margin-left: $centered-navigation-item-nudge;
     }
   }
-
 
   ul li.nav-link {
     background: $centered-navigation-background;
@@ -115,7 +117,6 @@
       outline: none;
       text-decoration: none;
 
-
       &:focus,
       &:hover {
         color: $centered-navigation-color-hover;
@@ -123,6 +124,7 @@
     }
 
     @include media($horizontal-bar-mode) {
+      background: transparent;
       display: inline;
       line-height: $centered-navigation-height;
 
@@ -132,34 +134,10 @@
     }
   }
 
-  #header-submenu{
-     @include outer-container;
-  }
-  ul li.submenu-link {
-   /*background: $centered-navigation-background;
-    display: block;
-    line-height: $centered-navigation-height;
-    overflow: hidden;
-    padding-right: $centered-navigation-submenu-padding;
-    text-align: right;
-    width: 100%;
-    z-index: 9999;
-
-   a {
-     color: $isektionen-yellow;
-     display: inline-block;
-     outline: none;
-     text-decoration: none;
-   }*/
-
-
-    @include span-columns(1.5);
-
- }
-
   li.logo.nav-link {
     display: none;
     line-height: 0;
+
     @include media($large-screen) {
       display: inline;
     }
@@ -168,7 +146,7 @@
   .logo img {
     margin-bottom: -$centered-navigation-logo-height / 3;
     max-height: $centered-navigation-logo-height;
-    opacity: 0;
+    opacity: 0.6;
   }
 
   // Sub menus
@@ -286,38 +264,6 @@
       }
     }
   }
-$parallax-window-height: 30em;
-$parallax-background-height: $parallax-window-height * 1;
-
-.parallax-window {
-  max-height: $parallax-window-height;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  font-size: xx-large;
-  width: 100%;
 }
 
-.parallax-static-content {
-  color: $isektionen-yellow;
-  padding: 8em 0;
-  position: relative;
-  font-size: 55%;
-  z-index: 9;
-}
 
-.parallax-background {
-  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png") repeat;
-  background-position: top;
-  background-size: cover;
-  background-color: $isektionen-green;
-  height: $parallax-background-height;
-  left: 0;
-  position: absolute;
-  top: - $parallax-window-height / 3;
-  width: 100%;
-}
-
-// Based on http://codepen.io/skeurentjes/
-
-}
