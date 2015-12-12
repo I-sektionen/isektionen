@@ -2,7 +2,6 @@
 
 {% block content %}
 
-
     <div id="landing_content">
         <section class="landing_section">
 
@@ -14,7 +13,7 @@
             </div>
         </section>
 
-        <body class=background background="http://images6.fanpop.com/image/photos/36000000/Frodo-Sam-image-frodo-and-sam-36089900-1908-798.jpg">
+
 
         <section class="landing_section">
             <div class="landing_usp">
@@ -26,16 +25,19 @@
 
 
         <section class="landing_section">
-            <div class="choice_box">
-                <div class="choice">
+
+                <div class="first_choice">
+                    <a href="{% url "sokande" %}">
                     <button type="button">JAG ÄR EN SÖKANDE STUDENT</button>
-
+                    </a>
                 </div>
 
                 <div class="choice">
+                    <a href ="{% url "foretag" %}">
                     <button type="button">JAG ÄR ETT FÖRETAG</button>
+                        </a>
                 </div>
-            </div>
+
         </section>
     </div>
 
