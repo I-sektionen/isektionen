@@ -1872,6 +1872,10 @@ article.single_blog_entry p.author {
   content: "";
   display: table;
 }
+#landing_content .logo {
+  width: 30%;
+  height: 30%;
+}
 #landing_content .landing_section {
   float: left;
   display: block;
@@ -1880,10 +1884,10 @@ article.single_blog_entry p.author {
   border-style: dotted;
   border-width: 3px;
   border-color: black;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  background-color: #f7f7f7;
-  padding: 3em;
+  color: white;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  padding: 1em;
 }
 #landing_content .landing_section:last-child {
   margin-right: 0;
