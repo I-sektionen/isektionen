@@ -1996,4 +1996,67 @@ article.single_blog_entry p.author {
   }
 }
 
+#bostad {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#bostad::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+#bostad #info {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 57.35098%;
+}
+#bostad #info:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 900px) {
+  #bostad #info {
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 100%;
+  }
+  #bostad #info:last-child {
+    margin-right: 0;
+  }
+}
+#bostad #hyresvardar {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+}
+#bostad #hyresvardar:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 900px) {
+  #bostad #hyresvardar {
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 74.10533%;
+  }
+  #bostad #hyresvardar:last-child {
+    margin-right: 0;
+  }
+}
+#bostad #hyresvardar #links {
+  margin-left: 20px;
+}
+#bostad #omrade {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+#bostad #omrade:last-child {
+  margin-right: 0;
+}
+
 /*# sourceMappingURL=isektionen.css.map */
