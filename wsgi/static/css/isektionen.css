@@ -1250,6 +1250,109 @@ picture {
   overflow: hidden;
 }
 
+.vertical-tabs-container {
+  border-radius: 3px;
+  border: 1px solid #f7f7f7;
+  margin-bottom: 1.5em;
+  overflow: hidden;
+}
+.vertical-tabs-container::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.vertical-tabs-container li {
+  list-style: none;
+}
+.vertical-tabs-container a {
+  color: #f9d026;
+  text-decoration: none;
+}
+.vertical-tabs-container .vertical-tabs {
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  .vertical-tabs-container .vertical-tabs {
+    background-color: #fff;
+    display: inline;
+    float: left;
+    height: 18.75em;
+    width: 20%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .vertical-tabs-container .vertical-tab {
+    border-bottom: 1px solid #f7f7f7;
+    display: block;
+    font-weight: bold;
+    margin-right: -1px;
+    padding: 0.75em 0.809em;
+  }
+  .vertical-tabs-container .vertical-tab.is-active {
+    background-color: white;
+    margin-right: -1px;
+  }
+}
+.vertical-tabs-container a.vertical-tab-accordion-heading,
+.vertical-tabs-container a.vertical-tab {
+  color: #333;
+}
+.vertical-tabs-container .vertical-tab:focus {
+  outline: none;
+}
+.vertical-tabs-container .vertical-tab-content-container {
+  display: block;
+  margin: 0 auto;
+}
+.vertical-tabs-container .vertical-tab-content-container a:focus {
+  outline: none;
+}
+@media screen and (min-width: 600px) {
+  .vertical-tabs-container .vertical-tab-content-container {
+    height: 18.75em;
+    width: 80%;
+    background-color: white;
+    display: inline-block;
+  }
+}
+.vertical-tabs-container .vertical-tab-content {
+  background-color: white;
+  padding: 1.5em 1.618em;
+}
+.vertical-tabs-container .vertical-tab-content p {
+  color: #333;
+  line-height: 1.5;
+}
+@media screen and (min-width: 600px) {
+  .vertical-tabs-container .vertical-tab-content {
+    border: none;
+    display: none;
+  }
+}
+.vertical-tabs-container .vertical-tab-accordion-heading {
+  background-color: #fff;
+  border-top: 1px solid #f7f7f7;
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  padding: 0.75em 0.809em;
+}
+.vertical-tabs-container .vertical-tab-accordion-heading:focus, .vertical-tabs-container .vertical-tab-accordion-heading:hover {
+  color: #f9d026;
+}
+.vertical-tabs-container .vertical-tab-accordion-heading:first-child {
+  border-top: none;
+}
+.vertical-tabs-container .vertical-tab-accordion-heading.is-active {
+  background: white;
+  border-bottom: none;
+}
+@media screen and (min-width: 600px) {
+  .vertical-tabs-container .vertical-tab-accordion-heading {
+    display: none;
+  }
+}
+
 #container {
   max-width: 1200px;
   margin-left: auto;
@@ -2144,6 +2247,27 @@ article.single_blog_entry p.author {
 }
 #bostad #omrade:last-child {
   margin-right: 0;
+}
+
+#utbildning-background {
+  padding: 3em;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#utbildning-background::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+#utbildning-hero {
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  padding-top: 40px;
+  background-image: url("../isektionen/education-hero.jpg");
+  background-image-background-attachment: fixed;
 }
 
 /*# sourceMappingURL=isektionen.css.map */
