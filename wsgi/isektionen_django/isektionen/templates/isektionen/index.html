@@ -1,63 +1,157 @@
 {% extends 'master.html' %}
+{% load blog_tags %}
+
+{% block above_content %}
+    <div id="js-parallax-window" class="parallax-window">
+        <div class="parallax-static-content">
+            <div class="box-parallax">
+                <h1 class="parallax-header">Nya I-Sektionen</h1>
+                <h4 class="parallax-text">Denna sida riktar sig mot blivanade studenter och företag. Vid åsikter maila webmaster@isektionen.se</h4>
+            </div>
+        </div>
+        <div id="js-parallax-background" class="parallax-background">
+        </div>
+    </div>
+{% endblock %}
+
 
 {% block content %}
-<div id="js-parallax-window" class="parallax-window">
-  <div class="parallax-static-content">
-     <div class="box-parallax">
-         <h1>Sökande</h1>
-         <h4>Om du är sökande, möt mig aldrig!</h4>
-     </div>
-     <div class="box-parallax">
-         <h1>Företag</h1>
-         <h4>Företag, ge mig en god lunchföreläsnings-lunch!!!!</h4>
-     </div>
 
+    {% comment %}
+        This is the parallax window on the top
+    {% endcomment %}
 
+    <section class="front-page">
+        <div id="box-container">
+            <div id="new-student-presentation">
+                <div class="student-presentation-content-box">
+                    <h1>Ny student? <a href="#test-anchor" class="smoothScroll">anchor-point</a></h1>
+                    <!-- start slipsum code -->
 
-  </div>
-  <div id="js-parallax-background" class="parallax-background"></div>
-</div>
+                    <p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass. </p>
 
+                    <p>Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass. </p>
 
-    <div id="box-container">
-    <h1>Content on index.html</h1>
-    <section id="instagramPics">
-        <section id="first-row">
+                    <p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.  </p>
 
-        </section>
-        <section id="second-row">
+                    <!-- please do not remove this line -->
 
-        </section>
+                    <div style="display:none;">
+                        <a href="http://slipsum.com">lorem ipsum</a></div>
+
+                    <!-- end slipsum code -->
+
+                </div>
+                <div class="student-presentation-content-box blog-box">
+                    <h1>Senaste blogginlägget</h1>
+                    <div id="latest-blog-entry">
+                        {% get_last_entry as blog_entry %}
+                        {% for entry in blog_entry %}
+                            <h2 class="blog-title">{{ entry.title }}</h2>
+                            <p class="blog-lead">{{ entry.lead }}</p>
+                            <p class="blog-bread">{{ entry.body|truncatewords:15 }}</p>
+                            <a href="{{ entry.get_absolute_url }}">Läs mer...</a>
+                        {% endfor %}
+                    </div>
+                    <div id="instagramPics">
+
+                        <h2 class="instagram-header">Instagram</h2>
+                        <div id="first-row" class="img-row">
+                        </div>
+                        <div id="second-row" class="img-row">
+                        </div>
+                        <div id="caption">
+                            <p class="caption-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="box">
+    <section class="front-page">
+        <h2><span class="section-header">Nästa sektion</span><a href="#header-anchor" class="smoothScroll"><span class="top-arrow">Upp</span></a></h2>
+        <!-- start slipsum code -->
 
-    <p>
-        Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper.
-        Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus.
-        Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit.
-        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.
-    </p>
-    </section>
-        <section class="box">
-    <p>
-        Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper.
-        Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus.
-        Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit.
-        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.
-    </p>
-    </section>
-        <section class="box">
-    <p>
-        Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper.
-        Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus.
-        Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit.
-        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.
-    </p>
-    </section>
-    </div>
-    
+        <p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends. </p>
 
+        <p>The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee. </p>
 
+        <p>You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man. </p>
+
+        <!-- please do not remove this line -->
+
+        <div style="display:none;">
+            <a href="http://slipsum.com">lorem ipsum</a></div>
+
+        <!-- end slipsum code -->
+
+    </section>
+    <section class="front-page-img">
+        <img src="http://www.panavision.com/sites/default/files/users/heather.mayer/JW-2.jpg">
+
+    </section>
+
+    <section class="front-page">
+        <h2><span class="section-header">Nästa sektion</span><a href="#header-anchor" class="smoothScroll"><span class="top-arrow">Upp</span></a></h2>
+        <!-- start slipsum code -->
+
+        <p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.  </p>
+
+        <p>My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there. Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is. She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker. You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand? </p>
+
+        <p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb. </p>
+
+        <!-- please do not remove this line -->
+
+        <div style="display:none;">
+            <a href="http://slipsum.com">lorem ipsum</a></div>
+
+        <!-- end slipsum code -->
+
+    </section>
+    <section class="front-page-img">
+        <img src="https://wallpaperscraft.com/image/tree_branches_snow_sky_blue_winter_north_south_trunk_61244_1920x1080.jpg">
+    </section>
+
+    <section class="front-page">
+        <h2><span class="section-header">Nästa sektion</span><a href="#header-anchor" class="smoothScroll"><span class="top-arrow">Upp</span></a></h2>
+        <!-- start slipsum code -->
+
+        <p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.  </p>
+
+        <p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass. </p>
+
+        <!-- please do not remove this line -->
+
+        <div style="display:none;">
+            <a href="http://slipsum.com">lorem ipsum</a></div>
+
+        <!-- end slipsum code -->
+
+    </section>
+
+    <section class="front-page-img">
+        <img src="http://allpicts.in/download/2097/2015/02/beautiful_nature_wallpaper_in_1080p_size_with_purpleviews-1920x1080.jpg/">
+    </section>
+
+    <section class="front-page" id="test-anchor">
+        <h2><span class="section-header">Nästa sektion</span><a href="#header-anchor" class="smoothScroll"><span class="top-arrow">Upp</span></a></h2>
+        <!-- start slipsum code -->
+
+        <p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.  </p>
+
+        <p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb. </p>
+
+        <p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. </p>
+
+        <!-- please do not remove this line -->
+
+        <div style="display:none;">
+            <a href="http://slipsum.com">lorem ipsum</a></div>
+
+        <!-- end slipsum code -->
+
+    </section>
 
 {% endblock %}

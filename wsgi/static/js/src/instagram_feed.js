@@ -14,25 +14,27 @@ $(document).ready(function(){
 
         $.getJSON(isektionen_url,function(myjsonObject){
             // this is where we can loop through the results in the json object
-
-                console.log(myjsonObject);
                 var picture_array = myjsonObject.data;
-                console.log(picture_array[0].images.low_resolution.url);
 
-                // this is where we do what we want with the instagram pics
+                // this is where we do what we want with the instagram pics,
+                // -Elon; Changed to show 5 pictures in 1 row
                 number = 0;
-                while (number < 6) {
-                    if (number < 3) {
-                        $("#first-row").append('<img src="' + picture_array[number].images.standard_resolution.url + '">');
-                    } else {
-                        $("#second-row").append('<img src="' + picture_array[number].images.standard_resolution.url + '">');
-                    }
+                while (number < 4) {
+                        $("#first-row").append('<a href="' + picture_array[number].link + '" target="_blank"><img class="instagram-picture" id="' + number + '" src="' + picture_array[number].images.standard_resolution.url + '"></a>');
                    number++;
                 }
 
+                // -Jesper; Added mouseon and mouseoff functionallity to append the caption text
+                $("#instagramPics > #first-row > a > img").hover(function(){
+                    var picNumber = $(this).attr('id');
+                    $("#caption > p").text(picture_array[picNumber].caption.text).show(300);
+                });
 
+                //-Jesper; Added a nice scroll when mouse leaves either the image or the caption-text
+                $("#instagramPics").mouseleave(function(){
+                    $("#caption > p").hide('slow');
+                });
         });
-
 
 
 });
