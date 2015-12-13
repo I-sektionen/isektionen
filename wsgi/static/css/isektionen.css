@@ -832,24 +832,6 @@ picture {
   padding: 3em 1.618em;
   width: 100%;
 }
-.footer .footer-content {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: distribute;
-  -moz-box-pack: distribute;
-  box-pack: distribute;
-  -webkit-justify-content: space-around;
-  -moz-justify-content: space-around;
-  -ms-justify-content: space-around;
-  -o-justify-content: space-around;
-  justify-content: space-around;
-  -ms-flex-pack: distribute;
-}
 .footer .footer-content .footer-logo {
   text-align: center;
   -webkit-box-flex: 1;
@@ -907,14 +889,14 @@ picture {
   font-size: 0.8em;
 }
 .footer .footer-content .footer-links #about-column {
-  -webkit-box-flex: 3;
-  -moz-box-flex: 3;
-  box-flex: 3;
-  -webkit-flex: 3;
-  -moz-flex: 3;
-  -ms-flex: 3;
-  flex: 3;
-  padding-left: 10em;
+  -webkit-box-flex: 2;
+  -moz-box-flex: 2;
+  box-flex: 2;
+  -webkit-flex: 2;
+  -moz-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+  padding-left: 2em;
 }
 .footer .footer-content .footer-links #content-column {
   -webkit-box-flex: 2;
@@ -926,13 +908,13 @@ picture {
   flex: 2;
 }
 .footer .footer-content .footer-links #latest-entry-blog-column {
-  -webkit-box-flex: 3;
-  -moz-box-flex: 3;
-  box-flex: 3;
-  -webkit-flex: 3;
-  -moz-flex: 3;
-  -ms-flex: 3;
-  flex: 3;
+  -webkit-box-flex: 2;
+  -moz-box-flex: 2;
+  box-flex: 2;
+  -webkit-flex: 2;
+  -moz-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
 }
 .footer .footer-content .footer-links #social-media-column {
   -webkit-box-flex: 2;

@@ -12,8 +12,8 @@
   padding: ($base-spacing * 2) $gutter;
   width: 100%;
   .footer-content {
-    @include display(flex);
-    @include justify-content(space-around);
+   // @include display(flex);
+   // @include justify-content(space-around);
     .footer-logo {
       text-align: center;
       @include flex(1);
@@ -40,10 +40,10 @@
         }
       }
 
-      #about-column  {@include flex(3);
-      padding-left: 10em;}
+      #about-column  {@include flex(2);
+      padding-left: 2em;}
       #content-column  {@include flex(2);}
-      #latest-entry-blog-column  {@include flex(3);}
+      #latest-entry-blog-column  {@include flex(2);}
       #social-media-column  {@include flex(2);}
 
       .social-media-box-collector          {
