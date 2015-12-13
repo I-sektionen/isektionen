@@ -2249,6 +2249,10 @@ article.single_blog_entry p.author {
   margin-right: 0;
 }
 
+#utbildnings-bakgrund {
+  background-color: #1e77d6;
+}
+
 #utbildning-background {
   padding: 3em;
   max-width: 1200px;
@@ -2268,6 +2272,15 @@ article.single_blog_entry p.author {
   padding-top: 40px;
   background-image: url("../isektionen/education-hero.jpg");
   background-image-background-attachment: fixed;
+}
+
+#utlandsstudier {
+  list-style: none;
+  text-align: center;
+}
+#utlandsstudier img {
+  width: 300px;
+  height: 300px;
 }
 
 /*# sourceMappingURL=isektionen.css.map */

@@ -190,6 +190,11 @@ $(".js-vertical-tab-content:first").show();
 $(".js-vertical-tab").click(function(event) {
   event.preventDefault();
 
+  /* Previous attempt to fix so the tabs from another section won't be hidden if info in another section should be shown.
+  var currentlyActiveTab = $(".js-vertical-tab-content");
+  if (("#"+currentlyActiveTab <= "tab6" && $(this).attr("rel") <= "tab6") || ("#"+currentlyActiveTab < "tab6" && $(this).attr("rel") < "tab6")) {
+  $(".js-vertical-tab-content").hide();
+  } */
   $(".js-vertical-tab-content").hide();
   var activeTab = $(this).attr("rel");
   $("#"+activeTab).show();
