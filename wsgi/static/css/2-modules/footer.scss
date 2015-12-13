@@ -3,7 +3,8 @@
   $action-color: #477DCA !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
-  $footer-background: desaturate(darken($action-color, 20%), 30%);
+  $footer-background: #2E2E2E;
+ // $footer-background: desaturate(darken($action-color, 20%), 30%);
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, 0.6);
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
@@ -22,12 +23,30 @@
         height: 6em;
       }
     }
+    .footer-logo {
+      margin-bottom: 1em;
+    }
 
     .footer-links {
       @include display(flex);
       @include flex-wrap(wrap);
       @include flex(4);
-      @include justify-content(space-around);
+      // när det är liten skärm
+      #latest-entry-blog-column {
+        visibility: hidden;
+          @include flex(0);
+      }
+       #about-column {
+        visibility: hidden;
+          @include flex(0);
+      }
+       #content-column {
+        @include flex(1);
+      }
+       #social-media-column {
+        @include flex(1);
+      }
+      @include justify-content(space around);
       margin-bottom: $base-spacing;
       .latest-blogs  {
         font-size: 0.9em;
@@ -39,17 +58,23 @@
           font-size: 0.8em;
         }
       }
-
-      #about-column  {@include flex(2);
+     // när det är stor skärm
+    @include media($large-screen-up) {
+    #about-column  {
+      @include flex(1.5);
+      visibility: visible;
       padding-left: 2em;}
-      #content-column  {@include flex(2);}
-      #latest-entry-blog-column  {@include flex(2);}
-      #social-media-column  {@include flex(2);}
-
-      .social-media-box-collector          {
-    //   @include display(flex);
-    //   @include justify-content(space-around);
-      }
+     #content-column  {
+       @include flex(1.5);
+     }
+     #latest-entry-blog-column  {
+       @include flex(2);
+       visibility: visible;
+     }
+     #social-media-column  {
+       @include flex(1.5);
+     }
+    }
       .social-media-box {
         a {
           color: $footer-link-color;
