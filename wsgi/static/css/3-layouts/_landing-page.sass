@@ -1,56 +1,45 @@
 
-.landing-background
+#landing-background
   @include background(url("http://i.imgur.com/t73rP4Q.jpg"))
   background-attachment: fixed
-  position: relative
   background-size: cover
+  background-position: top center
   height: 100vh
   width: 100%
-  background-position: top center
+  margin-left: 0
+  margin-right: 0
   z-index: -1
 
-.background-overlay
-  position: absolute
-  background: linear-gradient($dark-gray, lighten($dark-gray, 20%))
-  z-index: 1
-  top: 0
-  height: 100%
-  width: 100%
-  opacity: 0.4
 
-
-#landing_content
+#landing_container
+  background: rgba(0,0,0,0.6)
   z-index: 999
-  position: relative
-
   +outer-container()
-
-  .logo
-    width: 20%
-    height: 20%
 
 
   .landing_section
+    margin: 1em
     +span-columns(10)
     +shift(1)
     color: white
-    margin-bottom: 0em
-    margin-top: 0em
-    padding: 1em
 
-  .welcome
-    +span-columns(8)
-    +shift(2)
-    text-align: center
-    margin-top: 5em
+    .logo
+      margin-top: 2em
+      width: 20%
+      height: 20%
 
-  .button-group
-    +shift(3)
-    z-index: 999999
+    .welcome
+      +span-columns(8)
+      +shift(2)
+      text-align: center
 
-  .landing_usp
-    +span-columns(6)
-    +shift(3)
+    .button-group
+      +shift(3)
+      z-index: 999999
+
+    .landing_usp
+      +span-columns(6)
+      +shift(3)
 
 
 

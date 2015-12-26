@@ -64,8 +64,7 @@ Parralax/Hero klippt från Refills
 {% endblock %}
 
 <!-- Ett block gör att vi kan använda vår master på flera sidor, men byta ut innehållet som ligger i blocket -->
-<div id="container">
-
+<div {% block container %} id="container" {% endblock %}>
     {% block content %}
 
     {% endblock %}
