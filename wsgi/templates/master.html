@@ -31,33 +31,7 @@
 Denna fil innehåller navigationen för sidan. Den är klippt från Refills precis som jag visade på vår demo-session.
 -->
 {% block header %}
-<header class="centered-navigation" role="banner">
-    <div class="centered-navigation-wrapper">
-        <a href="javascript:void(0)" class="mobile-logo">
-            <img src="http://www.cam.liu.se/cam-dagen/industriell-ekonomi/1.336211/IndustriellEkonomiJPEG.jpg" alt="Logo image">
-        </a>
-        <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
-        <nav role="navigation" id="header-anchor">
-            <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
-                {% block links %}
-
-                {% endblock %}
-            </ul>
-        </nav>
-
-        <nav role="navigation" id="header-submenu">
-            <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
-                {% block sublinks %}
-                {% endblock %}
-            </ul>
-        </nav>
-
-    </div>
-
-    <!--
-Parralax/Hero klippt från Refills
--->
-</header>
+    {% include "header.html" %}
 {% endblock %}
 
 {% block above_content %}
