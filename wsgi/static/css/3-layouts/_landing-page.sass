@@ -1,49 +1,48 @@
-#landing_content
-  +outer-container()
 
-  .landing_section
-    +span-columns(12)
-    border-style: dotted
-    border-width: 3px
-    border-color: black
-
-    margin-top: 1.0em
-    margin-bottom: 1.0em
-    background-color: $light-gray
-    padding: 3em
-
-  .welcome
-    +span-columns(8)
-    +shift(2)
-
-    border-style: dotted
-    border-width: 3px
-    border-color: yellow
-    text-align: center
+#landing-background
+  @include background(url("http://i.imgur.com/t73rP4Q.jpg"))
+  background-attachment: fixed
+  background-size: cover
+  background-position: top center
+  height: 100vh
+  width: 100%
+  margin-left: 0
+  margin-right: 0
+  z-index: -1
 
 
-  .choice_box
-    +span-columns(8)
-    +shift(2)
+  #landing_container
+    position: relative
+    top: 2em
+    background: rgba(0,0,0,0.6)
+    z-index: 999
+    +outer-container()
 
-    border-style: dotted
-    border-width: 3px
-    border-color: green
 
-  .choice
-    +span-columns(4 of 8)
+    .landing_section
+      margin: 1em
+      +span-columns(10)
+      +shift(1)
+      color: white
 
-    text-align: center
-    border-style: dotted
-    border-width: 3px
-    border-color: black
+      .logo
+        margin-top: 2em
+        width: 20%
+        height: 20%
 
-  .landing_usp
-    +span-columns(8)
-    +shift(2)
+      .welcome
+        +span-columns(8)
+        +shift(2)
+        text-align: center
 
-    border-style: dotted
-    border-width: 3px
-    border-color: red
+      .button-group
+        +shift(3)
+        z-index: 999999
+
+      .landing_usp
+        +span-columns(6)
+        +shift(3)
+
+
 
 

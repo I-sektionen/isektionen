@@ -1,0 +1,14 @@
+section.top-image
+  +background(url("http://blog.liu.se/utbildningsbloggen/files/2012/07/liu_campusvalla.jpg"), linear-gradient(black, white) center, no-repeat)
+  background-size: cover
+  width: 100%
+  color: white
+  div.content-wrapper
+    +outer-container()
+    padding-top: 8em
+    padding-bottom: 8em
+    div.content-container
+      +span-columns(6 of 10)
+      +shift(2)
+      +omega(1n)
+      text-align: center

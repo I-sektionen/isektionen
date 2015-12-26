@@ -30,81 +30,69 @@
 <!--
 Denna fil innehåller navigationen för sidan. Den är klippt från Refills precis som jag visade på vår demo-session.
 -->
-
-<header class="centered-navigation" role="banner">
-    <div class="centered-navigation-wrapper">
-        <a href="javascript:void(0)" class="mobile-logo">
-            <img src="http://www.cam.liu.se/cam-dagen/industriell-ekonomi/1.336211/IndustriellEkonomiJPEG.jpg" alt="Logo image">
-        </a>
-        <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
-        <nav role="navigation" id="header-anchor">
-            <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
-                {% block links %}
-
-                {% endblock %}
-            </ul>
-        </nav>
-
-        <nav role="navigation" id="header-submenu">
-            <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
-                {% block sublinks %}
-                {% endblock %}
-            </ul>
-        </nav>
-
-    </div>
-
-    <!--
-Parralax/Hero klippt från Refills
--->
-</header>
+{% block header %}
+    {% include "header.html" %}
+{% endblock %}
 
 {% block above_content %}
 {% endblock %}
 
 <!-- Ett block gör att vi kan använda vår master på flera sidor, men byta ut innehållet som ligger i blocket -->
-<div id="container">
-
+<div {% block container %} id="container" {% endblock %}>
     {% block content %}
 
     {% endblock %}
 </div>
 
+
 {% block footer %}
-    <footer class="footer" role="contentinfo">
-        <div class="footer-logo">
-            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo image">
-        </div>
-        <div class="footer-links">
-            <ul>
-                <li><h3>Content</h3></li>
-                <li><a href="javascript:void(0)">About</a></li>
-                <li><a href="javascript:void(0)">Contact</a></li>
-                <li><a href="javascript:void(0)">Products</a></li>
-            </ul>
-            <ul>
-                <li><h3>Follow Us</h3></li>
-                <li><a href="javascript:void(0)">Facebook</a></li>
-                <li><a href="javascript:void(0)">Twitter</a></li>
-                <li><a href="javascript:void(0)">YouTube</a></li>
-            </ul>
-            <ul>
-                <li><h3>Legal</h3></li>
-                <li><a href="javascript:void(0)">Terms and Conditions</a></li>
-                <li><a href="javascript:void(0)">Privacy Policy</a></li>
-            </ul>
-        </div>
 
-        <hr>
+<footer class="footer" role="contentinfo">
+  <div class="footer-content">
+     <div class="footer-logo">
+        <img src="http://www.i-portalen.se/m/images/gymnasiecaset/ie.png">
+      </div>
+      <div class="footer-links">
+        <ul id="About-column">
+            <li><h4>OM I-SEKTIONEN</h4></li>
+           <p>I-Sektionen är en ideell förening driven av engagerade studenter vid programmet för Industriell ekonomi i Linköping.</p>
+        </ul>
+        <ul id="content-column">
+            <li><h4>INNEHÅLL</h4></li>
+            <li><a href="javascript:void(0)">Efter Studierna</a></li>
+            <li><a href="javascript:void(0)">Utbildningen</a></li>
+            <li><a href="javascript:void(0)">Studentliv</a></li>
+            <li><a href="javascript:void(0)">Företag</a></li>
+        </ul>
+        <ul id="latest-entry-blog-column">
+            <li><h4>SENASTE BLOGGINLÄGGEN</h4></li>
+                <div class="latest-blogs">
+                    <li><a href="i-sektionen.se/senaste-bloggen:void(0)">Välkommen till Industriell ekonomi</a></li>
+                    <p id="footer-date">
+                        2011-08-25</p>
+                </div>
+                <div class="latest-blogs">
+                    <li><a href="javascript:void(0)">Snart är det tenta-p, äntligen!</a></li>
+                    <p id="footer-date">
+                        2011-11-26</p>
+                </div>
+        </ul>
+        <ul id="social-media-column">
 
-        <p>Disclaimer area lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nostrum repudiandae saepe.</p>
-    </footer>
-
-
-
+            <li><h4>FÖLJ OSS</h4></li>
+            <div class="social-media-box-collector">
+            <div class="social-media-box"><a href="https://www.facebook.com/Industriell-ekonomi-Link%C3%B6ping-109690162408268/?fref=ts/"><i class="fa fa-facebook-official"></i> <i>Facebook</i></a></div>
+            <div class="social-media-box"><a href="https://instagram.com/industriellekonomi_liu/"><i class="fa fa-instagram"></i> <i>Instagram</i></a></div>
+            <div class="social-media-box"><a href="https://www.linkedin.com/grps/Industriell-ekonomi-Sverige-ISverige-4435021/about?"><i class="fa fa-linkedin"></i> <i>Linkedin</i></a></div>
+            <div class="social-media-box"><a href="https://twitter.com/i_sektionen/"><i class="fa fa-twitter"></i> <i>Twitter</i></a></div>
+            </div>
+        </ul>
+      </div>
+</div>
+  <p>Disclaimer area lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nostrum repudiandae saepe.</p>
+</footer>
 
 {% endblock %}
-
 
 {% include "scripts.html" %}
 {% block after_scripts %}{% endblock %}

@@ -1,0 +1,30 @@
+.header
+  position: absolute
+  top: 0
+  z-index: 9999
+  width: 100%
+  background: rgba(0, 0, 0, 0.1)
+  nav#header-anchor
+    +outer-container()
+
+  div#start-link
+    +span-columns(2 of 12)
+  div#nav-links
+    +span-columns(4 of 12)
+    +shift(6)
+    position: relative
+
+  div.nav-link
+    +span-columns(4 of 12)
+    +omega(3n)
+    padding-top: 1em
+    a
+      font-weight: bold
+      color: white
+    a:hover
+      text-decoration: underline
+    a:active
+      color: yellow
+#special
+  position: relative
+  top: 0
