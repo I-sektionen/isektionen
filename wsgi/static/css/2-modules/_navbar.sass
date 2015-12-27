@@ -14,7 +14,10 @@
     +shift(5)
     position: relative
 
+
+
   div.nav-link
+    text-align: center
     +span-columns(3 of 12)
     +omega(4n)
     padding-top: 1em
@@ -23,8 +26,7 @@
       color: white
     a:hover
       text-decoration: underline
-    a:active
-      color: yellow
-#special
-  position: relative
-  top: 0
+
+  div.active
+    border-bottom: $isektionen-yellow solid
+
