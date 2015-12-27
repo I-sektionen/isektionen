@@ -1,14 +1,9 @@
+from blog.models import BlogEntry
+from django import template
+from django.utils import timezone
 __author__ = 'elonbrange'
 
-from blog.models import BlogEntry
-from django.template.loader_tags import register
-from django.utils import timezone
-
-
-@register.simple_tag
-def get_last_entry():
-    blog_entry = BlogEntry.objects.filter(publishedDate__lt=timezone.now()).order_by("-publishedDate")[:1]
-    return blog_entry
+register = template.Library()
 
 
 @register.simple_tag
