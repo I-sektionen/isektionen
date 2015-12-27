@@ -27,8 +27,7 @@ function parallax(){
 ;/**
  * Created by lehtonen on 15-11-16.
  */
-$(document).ready(function(){
-
+var load_instagram = function () {
     var url1="https://api.instagram.com/v1/tags/parkslope/media/recent?count=4&access_token=243826054.0b32219.12ebf32c60fb404681205712f0181693&callback=?&_=1318776175283";
     var url2="https://api.instagram.com/v1/users/self/feed?access_token=243826054.0b32219.12ebf32c60fb404681205712f0181693&callback=?&_=1318776175283"
     var isektionen_url2="https://api.instagram.com/v1/users/651514140/media/recent/?access_token=243826054.0b32219.12ebf32c60fb404681205712f0181693&callback=?"
@@ -46,6 +45,7 @@ $(document).ready(function(){
                 // -Elon; Changed to show 5 pictures in 1 row
                 number = 0;
                 while (number < 4) {
+                        console.log('Go!');
                         $("#first-row").append('<a href="' + picture_array[number].link + '" target="_blank"><img class="instagram-picture" id="' + number + '" src="' + picture_array[number].images.standard_resolution.url + '"></a>');
                    number++;
                 }
@@ -63,7 +63,7 @@ $(document).ready(function(){
         });
 
 
-});;/*global $*/
+};;/*global $*/
 
 
 $(document).ready(function() {
@@ -182,37 +182,3 @@ if (!window['jQuery']) alert('The jQuery library must be included before the smo
 
 // Initialize all .smoothScroll links
 jQuery(function($){ $.localScroll({filter:'.smoothScroll'}); });
-;$(".js-vertical-tab-content").hide();
-$(".js-vertical-tab-content:first").show();
-
-/* if in tab mode */
-
-$(".js-vertical-tab").click(function(event) {
-  event.preventDefault();
-
-  $(".js-vertical-tab-content").hide();
-  var activeTab = $(this).attr("rel");
-  $("#"+activeTab).show();
-
-  $(".js-vertical-tab").removeClass("is-active");
-  $(this).addClass("is-active");
-
-  $(".js-vertical-tab-accordion-heading").removeClass("is-active");
-  $(".js-vertical-tab-accordion-heading[rel^='"+activeTab+"']").addClass("is-active");
-});
-
-/* if in accordion mode */
-
-$(".js-vertical-tab-accordion-heading").click(function(event) {
-  event.preventDefault();
-
-  $(".js-vertical-tab-content").hide();
-  var accordion_activeTab = $(this).attr("rel");
-  $("#"+accordion_activeTab).show();
-
-  $(".js-vertical-tab-accordion-heading").removeClass("is-active");
-  $(this).addClass("is-active");
-
-  $(".js-vertical-tab").removeClass("is-active");
-  $(".js-vertical-tab[rel^='"+accordion_activeTab+"']").addClass("is-active");
-});

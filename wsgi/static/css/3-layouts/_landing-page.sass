@@ -1,47 +1,47 @@
-#container
-  max-width: 2500px
 
-  .landing-background
-    background-image: url("http://i.imgur.com/t73rP4Q.jpg")
-      width: 100%
-      height: 100vh
-
-#landing_content
-  +outer-container()
-
-
-
-  .logo
-    width: 30%
-    height: 30%
+#landing-background
+  @include background(url("http://i.imgur.com/t73rP4Q.jpg"))
+  background-attachment: fixed
+  background-size: cover
+  background-position: top center
+  height: 100vh
+  width: 100%
+  margin-left: 0
+  margin-right: 0
+  z-index: -1
 
 
-  .landing_section
-    +span-columns(12)
-    color: white
-
-    margin-top: 0em
-    margin-bottom: 0em
-    padding: 1em
-
-  .welcome
-    +span-columns(8)
-    +shift(2)
-    text-align: center
+  #landing_container
+    position: relative
+    top: 2em
+    background: rgba(0,0,0,0.6)
+    z-index: 999
+    +outer-container()
 
 
-  .first_choice
-    +span-columns(4)
-    +shift(2)
+    .landing_section
+      margin: 1em
+      +span-columns(10)
+      +shift(1)
+      color: white
 
-  .choice
-    +span-columns(4)
-    +shift(1)
+      .logo
+        margin-top: 2em
+        width: 20%
+        height: 20%
 
+      .welcome
+        +span-columns(8)
+        +shift(2)
+        text-align: center
 
-  .landing_usp
-    +span-columns(8)
-    +shift(2)
+      .button-group
+        +shift(3)
+        z-index: 999999
+
+      .landing_usp
+        +span-columns(6)
+        +shift(3)
 
 
 

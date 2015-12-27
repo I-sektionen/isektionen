@@ -1,36 +1,23 @@
 {% load staticfiles %}
 
-<!--
+{% comment %}
 Denna fil innehåller navigationen för sidan. Den är klippt från Refills precis som jag visade på vår demo-session.
--->
+{% endcomment %}
 
-<header class="centered-navigation" role="banner">
-  <div class="centered-navigation-wrapper">
-    <a href="javascript:void(0)" class="mobile-logo">
-      <img src="http://www.cam.liu.se/cam-dagen/industriell-ekonomi/1.336211/IndustriellEkonomiJPEG.jpg" alt="Logo image">
-    </a>
-    <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
+<header class="header">
     <nav role="navigation" id="header-anchor">
-      <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
+    <a href="{% url 'landing' %}" class="mobile-logo">
+        <div id="start-link">
+            <img src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/ie_cmyk.png" alt="Logo image">
+        </div>
+    </a>
+      <div id="nav-links">
           {% block links %}
-              <li class="nav-link"><a href="{% url 'index' %}">I-Sektionen</a></li>
-
-          <li class="nav-link"><a href="{% url 'intro' %}">Intro</a></li>
-          <li class="nav-link"><a href="{% url 'utbildningen' %}">Utbildning</a></li>
-          <li class="nav-link"><a href="{% url 'studentliv' %}">Studentliv</a></li>
-          <li class="nav-link"><a href="{% url 'efter_studier' %}">Efter studietiden</a></li>
-          <li class="nav-link"><a href="{% url 'gymnasiecase_iresan' %}">Gymnasiecaset och I-resan</a></li>
-          <li class="nav-link"><a href="{% url 'kontakt' %}">Kontakt och FAQ</a></li>
-
+              <div class="nav-link{% if sokande %} active{% endif %}"><a href="{% url 'sokande' %}">Start</a></div>
+              <div class="nav-link{% if utbildning %} active{% endif %}"><a href="{% url 'utbildning' %}">Utbildning</a></div>
+              <div class="nav-link{% if studentliv %} active{% endif %}"><a href="{% url 'studentliv' %}">Studentliv</a></div>
+              <div class="nav-link{% if efterstudier %} active{% endif %}"><a href="{% url 'efterstudier' %}">Efter studierna</a></div>
           {% endblock %}
-      </ul>
+      </div>
     </nav>
-  </div>
-
-    <!--
-Parralax/Hero klippt från Refills
--->
-
-
-
 </header>

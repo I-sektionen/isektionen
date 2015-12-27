@@ -1,23 +1,15 @@
-#intro-page
+section#top-page
+  background: url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/122.jpg") no-repeat center center fixed
+  background-size: cover
+  width: 100%
+
+section#intro-page
   +outer-container()
+  padding-top: 2em
 
-  .intro-page-content-header
-    +span-columns(12)
-    text-align: center
-
-  .intro-page-img-left
-    +span-columns(4)
-
-  .intro-page-img-right
-    +span-columns(4)
-    +omega()
-
-  .intro-page-text-left
-    +span-columns(8)
-
-  .intro-page-text-right
-    +span-columns(8)
-    +omega()
-
-  .intro-page-content
-    +span-columns(12)
+  >div
+    +span-columns(4 of 12)
+    +shift(1)
+    +omega(2n)
+    h2
+      text-align: center

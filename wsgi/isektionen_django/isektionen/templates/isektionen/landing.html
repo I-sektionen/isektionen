@@ -2,46 +2,37 @@
 {% block header %}
 {% endblock %}
 
+{% block container %}
+id="landing-background"
+{% endblock %}
+
 {% block content %}
-    <div class = "landing-background">
-    <div id="landing_content">
-        <section class="landing_section">
-
-            <div class="welcome">
-                <img class=logo src="https://i.ytimg.com/i/nd1uTaJEXf4ArcPieKPeCg/mq1.jpg?v=af8113">
-                <p>Välkommen till</p>
-                <h1>Sektionen för Industriell Ekonomi</h1>
-                <hr>
-            </div>
-        </section>
-
-
-
-        <section class="landing_section">
-            <div class="landing_usp">
-                <p>
-                   Originalet sedan 1969 (LiU). Phasellus ut blandit dolor. Nam eu purus non enim consequat rutrum. Praesent imperdiet, urna et tincidunt auctor, nisi sem porttitor risus, ut condimentum ex metus sit amet lectus. Integer accumsan nisl eget posuere lacinia. Sed ultricies imperdiet justo, semper tincidunt felis dapibus at.
-                </p>
-            </div>
-        </section>
-
-
-        <section class="landing_section">
-
-                <div class="first_choice">
-                    <a href="{% url "sokande" %}">
-                    <button type="button">JAG ÄR EN SÖKANDE STUDENT</button>
-                    </a>
+    <div id="landing-content-wrapper">
+    <div id="landing_container">
+            <div class="landing_section">
+                <div class="welcome">
+                    <img class=logo src="../../../../static/isektionen/logo_isektionen.png">
+                    <p>Välkommen till</p>
+                    <h1>Sektionen för Industriell Ekonomi</h1>
+                    <hr>
                 </div>
-
-                <div class="choice">
-                    <a href ="{% url "foretag" %}">
-                    <button type="button">JAG ÄR ETT FÖRETAG</button>
-                        </a>
+            </div>
+            <div class="landing_section">
+                    <p class="landing_usp">
+                        <span style="font-weight: bold;">Originalet sedan 1969.</span> Phasellus ut blandit dolor. Nam eu purus non enim consequat rutrum. Praesent imperdiet, urna et tincidunt auctor, nisi sem porttitor risus, ut condimentum ex metus sit amet lectus. Integer accumsan nisl eget posuere lacinia.
+                    </p>
+            </div>
+            <div class="landing_section">
+                <div class="button-group">
+                    <label>
+                        <a href="{% url "sokande" %}" class="action-button-group-item">JAG ÄR EN SÖKANDE STUDENT</a>
+                    </label>
+                    <label>
+                        <a href="{% url "foretag" %}" class="action-button-group-item">JAG ÄR ETT FÖRETAG</a>
+                    </label>
                 </div>
-
-        </section>
-    </div>
+            </div>
+        </div>
 </div>
 {% endblock %}
 
