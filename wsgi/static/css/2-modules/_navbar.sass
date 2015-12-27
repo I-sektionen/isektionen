@@ -10,21 +10,23 @@
   div#start-link
     +span-columns(2 of 12)
   div#nav-links
-    +span-columns(4 of 12)
-    +shift(6)
+    +span-columns(5 of 12)
+    +shift(5)
     position: relative
 
+
+
   div.nav-link
-    +span-columns(4 of 12)
-    +omega(3n)
+    text-align: center
+    +span-columns(3 of 12)
+    +omega(4n)
     padding-top: 1em
     a
       font-weight: bold
       color: white
     a:hover
       text-decoration: underline
-    a:active
-      color: yellow
-#special
-  position: relative
-  top: 0
+
+  div.active
+    border-bottom: $isektionen-yellow solid
+
