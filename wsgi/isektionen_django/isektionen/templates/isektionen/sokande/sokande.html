@@ -1,7 +1,7 @@
 {% extends 'master.html' %}
 
 {% block above_content %}
-   <section class="top-image">
+   <section class="top-image" id="top-page">
        <div class="content-wrapper">
            <div class="content-container">
                <h1>Sök Industriell Ekonomi</h1>
@@ -12,114 +12,55 @@
    </section>
 {% endblock %}
 {% block content %}
-   <section id="intro-page">
-        <div class="intro-page-content">
-            <div class="intro-page-content-header">
-                <h1>Intro</h1>
-            </div>
-            <div class="intro-page-img-left">
-                <img src="http://www.lifetimetv.co.uk/sites/default/files/assets/landscape/Morgan%20Freeman.jpg?itok=tUAJUY-3">
-
-            </div>
-            <div class="intro-page-text-right">
-
-                <p>
-                    Dyin' ain't much of a livin', boy. that tall drink of water with the silver spoon up his ass. no,
-                    this is mount everest. you should flip on the discovery channel from time to time. but i guess you
-                    can't now, being dead and all. i did the same thing to gandhi, he didn't eat for three weeks. let
-                    me tell you something my friend. hope is a dangerous thing. hope can drive a man insane. i once
-                    heard a wise man say there are no perfect men. only perfect intentions. boxing is about
-                    getting it for yourself, and taking it away from the other guy. cities fall but they are rebuilt.
-                    heroes die but they are remembered. this is the ak-47 assault rifle, the preferred weapon of your
-                    enemy; and it makes a distinctive sound when fired at you, so remember it. boxing is about respect.
-                    getting it for yourself, and taking it away from the other guy. bruce... i'm god. i now issue a
-                    new commandment: thou shalt do the dance.
-                </p>
+    <section id="intro-page">
+        <div>
+            <h2>Industriell Ekonomi i Linköping</h2>
+            <p>Originalet sedan 1969 Välkommen till Industriell ekonomi och Linköpings universitet (LiU). Ända sedan starten 1969 har programmet examinerat studenter med höga ekonomiska och tekniska kompetenser vilket gör utbildningen till Sveriges äldsta program för Industriell ekonomi. Det innebär bland annat att Linköpings universitet har mer än 40 års erfarenhet av att utbilda ingenjörer inom Industriell ekonomi och att ett stort kontaktnätverk bland I-alumner (studenter som redan har tagit examen) från universitetet redan finns i näringslivet.</p>
+            <p>Denna erfarenhet och programmets storlek (störst i Sverige) gör att du ges möjlighet till både gedigen kompetens och stor valfrihet under din studietid. Med studiekamrater från hela Sverige får du ett rikt studieliv som bidrar till att du i framtiden kan se tillbaka på din studietid som fylld av goda minnen och vänner för livet. Samtidigt får du en eftertraktad civilingenjörsexamen från ett av Sveriges större lärosäten med en tradition av förnyelse och öppenhet för samverkan över gränser. Tillsammans med över 27 000 andra studenter och 3 800 anställda kommer du att befinna dig i ett myller av kunskap, idéer, åsikter, kreativitet och visioner.</p>
+        </div>
+        <div>
+            <h3>Instagram</h3>
+                <div id="instagramPics">
+                    <div id="first-row"></div>
+                </div>
+            <h3>Senaste blogginläggen</h3>
+            <div class="blog-preview">
+                {% load blog_tags %}
+                {% get_last_entries as entries %}
+                {% for entry in entries %}
+                    <a href="{% url "view_one_blog_entry" entry.pk %}">
+                        <div class="latest-blog-entry">
+                            <h4>{{ entry.title }}</h4>
+                            <p>{{ entry.lead }}</p>
+                        </div>
+                    </a>
+                {% endfor %}
             </div>
         </div>
-
-        <div class="intro-page-content">
-            <div class="intro-page-content-header">
-                <h1>Utbildning</h1>
-            </div>
-            <div class="intro-page-text-left">
-                <p>
-                    I don't think they tried to market it to the billionaire, spelunking, base-jumping crowd. mister wayne, if you don't want
-                    to tell me exactly what you're doing, when i'm asked, i don't have to lie. but don't think of me as
-                    an idiot. boxing is about respect. getting it for yourself, and taking it away from the other guy.
-                    circumstances have taught me that a man's ethics are the only possessions he will take beyond the
-                    grave. the man likes to play chess; let's get him some rocks. multiply your anger by about a
-                    hundred, kate, that's how much he thinks he loves you. you want a guarantee, buy a toaster. when
-                    a naked man's chasing a woman through an alley with a butcher knife and a hard-on, i figure he's
-                    not out collecting for the red cross. the man likes to play chess; let's get him some rocks. you
-                    want a guarantee, buy a toaster. it only took me six days. same time it took the lord to make the
-                    world. well, what is it today? more spelunking?
-                    This is my gun, clyde! i now issue a new commandment: thou shalt do the dance. man's gotta know his limitations.
-                    bruce... i'm god. it only took me six days. same time it took the lord to make the world. what you
-                    have to ask yourself is, do i feel lucky. well do ya' punk? when a naked man's chasing a woman
-                    through an alley with a butcher knife and a hard-on, i figure he's not out collecting for the red
-                    cross. you measure yourself by the people who measure themselves by you. well, do you have
-                    anything to say for yourself? bruce... i'm god. are you feeling lucky punk dyin' ain't much of
-                    a livin', boy.
-                </p>
-                <a href="utbildning">Läs mer</a>
-            </div>
-            <div class="intro-page-img-right">
-                <img src="http://i.dailymail.co.uk/i/pix/2013/09/18/article-2422952-1BDFE6DA000005DC-336_634x411.jpg">
-            </div>
-
+        <div>
+            <h2>Utbildningen</h2>
+            <p>Kombinationen matematik, teknik, ekonomi och ledarskap ger I:aren en god helhetssyn som är intressant för de flesta företag, oavsett storlek och inriktning.</p>
+            <a href="{% url "utbildning" %}"><p>Här kan du läsa mer om utbildningen.</p></a>
         </div>
-
-        <div class="intro-page-content">
-            <div class="intro-page-content-header">
-                <h1>Studentliv</h1>
-            </div>
-            <div class="intro-page-img-left">
-                <img src="http://www.lifetimetv.co.uk/sites/default/files/assets/landscape/Morgan%20Freeman.jpg?itok=tUAJUY-3">
-
-            </div>
-            <div class="intro-page-text-right">
-
-                <p>
-                    Dyin' ain't much of a livin', boy. that tall drink of water with the silver spoon up his ass. no,
-                    this is mount everest. you should flip on the discovery channel from time to time. but i guess you
-                    can't now, being dead and all. i did the same thing to gandhi, he didn't eat for three weeks. let
-                    me tell you something my friend. hope is a dangerous thing. hope can drive a man insane. i once
-                    heard a wise man say there are no perfect men. only perfect intentions. boxing is about
-                    getting it for yourself, and taking it away from the other guy. cities fall but they are rebuilt.
-                    heroes die but they are remembered. this is the ak-47 assault rifle, the preferred weapon of your
-                    enemy; and it makes a distinctive sound when fired at you, so remember it. boxing is about respect.
-                    getting it for yourself, and taking it away from the other guy. bruce... i'm god. i now issue a
-                    new commandment: thou shalt do the dance.
-                </p>
-                <a href="studentliv">Läs mer</a>
-            </div>
+        <div>
+            <h2>Studentlivet</h2>
+            <p>Sektionen för Industriell Ekonomi (I-sektionen) är landets största studentsektion och det finns mängder av utskott och föreningar att engagera sig i som är kopplade vår sektion. På I-sektionen i Linköping är det över 200 aktiva I-studenter som arbetar ideellt med allt från näringslivssamarbeten till att främja kontakten med utexaminerade alumner och anordna resor och stora fester.</p>
+            <a href="{% url "studentliv" %}"><p>Här kan du läsa mer om studentlivet.</p></a>
         </div>
-
-        <div class="intro-page-content">
-            <div class="intro-page-content-header">
-                <h1>Efter studierna</h1>
-            </div>
-
-            <div class="intro-page-text-left">
-                <p>
-                    Don't p!ss down my back and tell me it's raining. cities fall but they are rebuilt. heroes die but
-                    they are remembered. that tall drink of water with the silver spoon up his ass. this is my gun,
-                    clyde! when a naked man's chasing a woman through an alley with a butcher knife and a hard-on, i
-                    figure he's not out collecting for the red cross. i once heard a wise man say there are no perfect
-                    men. only perfect intentions. you want a guarantee, buy a toaster. you want a guarantee, buy a
-                    toaster. mister wayne, if you don't want to tell me exactly what you're doing, when i'm asked, i
-                    don't have to lie. but don't think of me as an idiot. are you feeling lucky punk ever notice how
-                    sometimes you come across somebody you shouldn't have f**ked with? well, i'm that guy. this is the
-                    ak-47 assault rifle, the preferred weapon of your enemy; and it makes a distinctive sound when
-                    fired at you, so remember it.
-                </p>
-                <a href="efterstudier">Läs mer</a>
-            </div>
-            <div class="intro-page-img-right">
-                <img src="http://gfx.coolwallpapers.org/photo/55503/Clint-Eastwood-1024x768.jpg">
-            </div>
+        <div>
+            <h2>Efter dina studier</h2>
+            <p>De flesta studenter har ofta sin första anställning klar redan innan examen. Intresset för civilingenjörer i industriell ekonomi med examen från Linköpings universitet är mycket stort i näringslivet. Detta tack vare deras driv, vana att arbeta i projekt samt förmåga till att lösa problem utifrån både ett tekniskt och ett ekonomiskt perspektiv.</p>
+            <a href="{% url "efterstudier" %}"><p>Här kan du läsa mer om I:are efter studietiden.</p></a>
         </div>
 
     </section>
+{% endblock %}
+
+{% block after_scripts %}
+<script>
+    $( document).ready(
+            load_instagram()
+    )
+
+</script>
 {% endblock %}

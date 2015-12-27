@@ -6,13 +6,14 @@ Denna fil innehåller navigationen för sidan. Den är klippt från Refills prec
 
 <header class="header">
     <nav role="navigation" id="header-anchor">
-    <a href="{% url 'sokande' %}" class="mobile-logo">
+    <a href="{% url 'landing' %}" class="mobile-logo">
         <div id="start-link">
             <img src="http://www.cam.liu.se/cam-dagen/industriell-ekonomi/1.336211/IndustriellEkonomiJPEG.jpg" alt="Logo image">
         </div>
     </a>
       <div id="nav-links">
           {% block links %}
+              <div class="nav-link"><a href="{% url 'sokande' %}">Start</a></div>
               <div class="nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></div>
               <div class="nav-link"><a href="{% url 'studentliv' %}">Studentliv</a></div>
               <div class="nav-link"><a href="{% url 'efterstudier' %}">Efter studierna</a></div>
