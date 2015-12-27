@@ -991,6 +991,11 @@ div.blog-preview .latest-blog-entry {
   text-shadow: 0 2px 2px silver;
 }
 
+.modal-inner-html {
+  visibility: hidden;
+  position: absolute;
+}
+
 .modal label {
   cursor: pointer;
   margin-bottom: 0;
@@ -1625,10 +1630,162 @@ article.single_blog_entry p.author {
   width: 100%;
 }
 
+#education-page {
+  padding-top: 3em;
+}
+#education-page h3 {
+  text-align: center;
+}
+#education-page div#profiles {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#education-page div#profiles::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+#education-page div.two-col {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+}
+#education-page div.two-col:last-child {
+  margin-right: 0;
+}
+#education-page div.two-col:nth-child(2n) {
+  margin-right: 0;
+}
+#education-page div.two-col:nth-child(2n+1) {
+  clear: left;
+}
+#education-page div.two-col > img {
+  width: 75%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+#education-page div.one-col {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+#education-page div.one-col:last-child {
+  margin-right: 0;
+}
+#education-page div.one-col:nth-child(1n) {
+  margin-right: 0;
+}
+#education-page div.one-col:nth-child(1n+1) {
+  clear: left;
+}
+#education-page div#utlandsstudier {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#education-page div#utlandsstudier::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+#education-page div#utlandsstudier div.text {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+}
+#education-page div#utlandsstudier div.text:last-child {
+  margin-right: 0;
+}
+#education-page div#utlandsstudier div.pic {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+}
+#education-page div#utlandsstudier div.pic:last-child {
+  margin-right: 0;
+}
+
+#years {
+  padding-top: 8em;
+  background: url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/050.jpg") no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+  padding-bottom: 8em;
+}
+#years #year-wrapper {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-left: 8.5298%;
+}
+#years #year-wrapper::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+#years #year-wrapper .year {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%;
+  border-color: #2D701E;
+  background-color: white;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  text-align: center;
+  font-weight: bold;
+}
+#years #year-wrapper .year:last-child {
+  margin-right: 0;
+}
+
 #studentlife-top-page {
   background: url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/201.jpg") no-repeat center center fixed;
   background-size: cover;
   width: 100%;
+}
+
+section#student-life div#extra-curriculars {
+  width: 80%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section#student-life div#extra-curriculars::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+section#student-life div#extra-curriculars div.extra-cur {
+  text-align: center;
+  font-weight: bold;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  border-style: solid;
+  border-color: #2D701E;
+  border-width: 2px;
+  margin-bottom: 1em;
+}
+section#student-life div#extra-curriculars div.extra-cur:last-child {
+  margin-right: 0;
+}
+section#student-life div#extra-curriculars div.extra-cur:nth-child(3n) {
+  margin-right: 0;
+}
+section#student-life div#extra-curriculars div.extra-cur:nth-child(3n+1) {
+  clear: left;
 }
 
 #afterstudies-top-page {

@@ -3,3 +3,53 @@
   background-size: cover
   width: 100%
 
+#education-page
+  padding-top: 3em
+
+  h3
+    text-align: center
+
+  div#profiles
+    +outer-container()
+
+  div.two-col
+    +span-columns(6 of 12)
+    +omega(2n)
+    >img
+      width: 75%
+      display: block
+      margin-right: auto
+      margin-left: auto
+
+  div.one-col
+    +span-columns(12 of 12)
+    +omega(1n)
+
+  div#utlandsstudier
+    +outer-container()
+    div.text
+      +span-columns(6 of 12)
+    div.pic
+      +span-columns(6 of 12)
+
+#years
+  padding-top: 8em
+  background: url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/050.jpg") no-repeat center center fixed
+  background-size: cover
+  width: 100%
+  padding-bottom: 8em
+  #year-wrapper
+    +outer-container()
+    +shift()
+    .year
+      +span-columns(2 of 12)
+
+      +border-color($isektionen-green $isektionen-green $isektionen-green $isektionen-green)
+      background-color: white
+      +border-right-radius(5px)
+      +border-left-radius(5px)
+      +border-style(solid, solid, solid, solid)
+      +directional-property(border, width, 2px 2px 2px 2px)
+
+      text-align: center
+      font-weight: bold

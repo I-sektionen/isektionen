@@ -3,3 +3,18 @@
   background-size: cover
   width: 100%
 
+section#student-life
+  div#extra-curriculars
+    width: 80%
+    +outer-container()
+    div.extra-cur
+      text-align: center
+      font-weight: bold
+
+      +span-columns(4 of 12)
+      +omega(3n)
+      +border-style(solid solid solid solid)
+      +border-color($isektionen-green)
+      +border-width(2px)
+
+      margin-bottom: 1em

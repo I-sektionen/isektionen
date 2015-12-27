@@ -110,7 +110,9 @@ $(document).ready(function() {
   });
 
   $(".modal-trigger").on("click", function(e) {
-    $(".modal-content").html(this.nextElementSibling.innerHTML)
+    console.log('Hej!');
+    //This part injects the html into the modal.
+    $("#modal-content").html(this.nextElementSibling.innerHTML)
   });
 
 });;/**

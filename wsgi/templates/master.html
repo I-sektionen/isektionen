@@ -19,7 +19,7 @@
         <div class="modal-fade-screen">
             <div class="modal-inner">
                 <div class="modal-close" for="modal-1"></div>
-                <div class="modal-content" for="modal-1"></div>
+                <div id="modal-content" for="modal-1"></div>
             </div>
         </div>
     </div>
@@ -27,9 +27,6 @@
 
 <!-- include gör att vi kan importera andra filer -->
 
-<!--
-Denna fil innehåller navigationen för sidan. Den är klippt från Refills precis som jag visade på vår demo-session.
--->
 {% block header %}
     {% include "header.html" %}
 {% endblock %}
@@ -66,16 +63,14 @@ Denna fil innehåller navigationen för sidan. Den är klippt från Refills prec
         </ul>
         <ul id="latest-entry-blog-column">
             <li><h4>SENASTE BLOGGINLÄGGEN</h4></li>
+                {% load blog_tags %}
+                {% get_last_entries as entries %}
+                {% for entry in entries %}
                 <div class="latest-blogs">
-                    <li><a href="i-sektionen.se/senaste-bloggen:void(0)">Välkommen till Industriell ekonomi</a></li>
-                    <p id="footer-date">
-                        2011-08-25</p>
+                    <li><a href="{% url "view_one_blog_entry" entry.pk %}">{{ entry.title }}</a></li>
+                    <p id="footer-date">{{ entry.publishedDate }}</p>
                 </div>
-                <div class="latest-blogs">
-                    <li><a href="javascript:void(0)">Snart är det tenta-p, äntligen!</a></li>
-                    <p id="footer-date">
-                        2011-11-26</p>
-                </div>
+                {% endfor %}
         </ul>
         <ul id="social-media-column">
 
