@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% include "stylesheets.html" %}
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
 
     <title>Industriell ekonomi Linköping - {% block page_subtitle %} {% endblock %}</title>
     {% block head %} {% endblock %}
@@ -40,9 +41,24 @@
 
     {% endblock %}
 </div>
+{% block after_scripts %}
+<script>
+    $(document).ready(
 
+
+    )
+
+</script>
+{% endblock %}
 
 {% include "scripts.html" %}
-{% block after_scripts %}{% endblock %}
+<script>
+    $(document).ready(
+
+            {% block js_document_ready %}
+
+            {% endblock %}
+    );
+</script>
 </body>
 </html>

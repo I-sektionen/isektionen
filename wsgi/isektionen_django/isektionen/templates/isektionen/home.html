@@ -12,44 +12,72 @@
             <h1 class="hero-header">Sektionen för Industriell Ekonomi</h1>
         </div>
     </section>
+    <section class="scroll-down">
+        <!--<p><span class="chevron bottom"></span></p>-->
+    </section>
     <div class="landing-content">
-        <section class="history">
-            <h1 class="section-header">Orginalet sedan 1969</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nos paucis ad haec additis finem faciamus
-                aliquando; Iam contemni non poteris. Apparet statim, quae sint officia, quae actiones.
-                Quod autem meum munus dicis non equidem recuso, sed te adiungo socium. Duo Reges: constructio interrete.
-                Mihi vero, inquit, placet agi subtilius et, ut ipse dixisti, pressius.
-            </p>
-        </section>
+
         <section class="sokande-foretag">
             <div class="sokande-foretag-description">
-                <h1 class="section-header">Sökande</h1>
+                <div class="section-header-with-icon">
+                    <i class="fa fa-university"></i>
+                    <h1 class="section-header">Utbildning</h1>
+                </div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nos paucis ad haec additis finem faciamus
                     aliquando; Iam contemni non poteris. Apparet statim, quae sint officia, quae actiones.
                     Quod autem meum munus dicis non equidem recuso, sed te adiungo socium. Duo Reges: constructio interrete.
                     Mihi vero, inquit, placet agi subtilius et, ut ipse dixisti, pressius.
                 </p>
+                <a href="" class="action-button">Läs om utbildningen</a>
             </div>
             <div class="sokande-foretag-description">
-                <h1 class="section-header">Företag</h1>
+                <div class="section-header-with-icon">
+                    <i class="fa fa-building-o"></i>
+                    <h1 class="section-header">Företag</h1>
+                </div>
+
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et nemo nimium beatus est; Unum nescio,
-                    quo modo possit, si luxuriosus sit, finitas cupiditates habere. Placet igitur tibi, Cato, cum res
-                    sumpseris non concessas, ex illis efficere, quod velis? Istam voluptatem perpetuam quis potest
-                    praestare sapienti? Quid ergo hoc loco intellegit honestum? Qua tu etiam inprudens utebare non numquam.
-                    Aliter enim explicari, quod quaeritur, non potest. Duo Reges: constructio interrete.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nos paucis ad haec additis finem faciamus
+                    aliquando; Iam contemni non poteris. Apparet statim, quae sint officia, quae actiones.
+                    Quod autem meum munus dicis non equidem recuso, sed te adiungo socium. Duo Reges: constructio interrete.
+                    Mihi vero, inquit, placet agi subtilius et, ut ipse dixisti, pressius.
+                </p>
+                <a href="" class="action-button">Läs om samarbete</a>
+            </div>
+        </section>
+
+        <section class="history">
+            <div class="history-content">
+                <h1 class="section-header">Orginalet sedan 1969</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nos paucis ad haec additis finem faciamus
+                    aliquando; Iam contemni non poteris. Apparet statim, quae sint officia, quae actiones.
+                    Quod autem meum munus dicis non equidem recuso, sed te adiungo socium. Duo Reges: constructio interrete.
+                    Mihi vero, inquit, placet agi subtilius et, ut ipse dixisti, pressius.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nos paucis ad haec additis finem faciamus
+                    aliquando; Iam contemni non poteris. Apparet statim, quae sint officia, quae actiones.
+                    Quod autem meum munus dicis non equidem recuso, sed te adiungo socium. Duo Reges: constructio interrete.
+                    Mihi vero, inquit, placet agi subtilius et, ut ipse dixisti, pressius.
                 </p>
             </div>
         </section>
 
         <section class="instagram">
-            <h1 class="section-header">Se vad som händer på sektionen</h1>
-            <div class="instagram-feed">
-                <div id="instagramPics">
-                    <div id="first-row"></div>
+            <div class="instagram-content">
+                <p class="instagram-account-link">
+                    <i class="fa fa-instagram"></i>
+                    <a href="https://www.instagram.com/industriellekonomi_liu/">@industriellekonomi_liu</a>
+                </p>
+                <div class="instagram-feed">
+                    <ul class="instagram-pictures">
+                    </ul>
                 </div>
+                </a>
             </div>
         </section>
     </div>
 
+{% endblock %}
+
+{% block js_document_ready %}
+    load_instagram()
 {% endblock %}
