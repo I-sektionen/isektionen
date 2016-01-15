@@ -1,0 +1,47 @@
+.landing-hero
+  min-height: 90vh
+  +position(relative)
+  background:
+
+    image: linear-gradient(150deg, transparentize(lighten(black, 40%), 0.65) 25%, transparentize(black, 0.65)),  url(https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/Kö.jpg)
+    attachment: fixed
+    size: cover
+  .hero-logo img
+    max-height: 18em
+
+  .hero-content
+    padding: 2em
+    text-align: center
+    //This positions the element rela
+    +position(absolute)
+    left: 50%
+    top: 50%
+    +transform(translate(-50%, -50%))
+  .hero-divider
+    border: none
+    background-color: $light-gray
+    height: 4px
+    margin: 0
+
+  .hero-message
+    text-transform: uppercase
+    color: $light-gray
+    margin-top: 1em
+    font-size: 1.3em
+    margin-bottom: 0
+    font-weight: 300
+
+  .hero-header
+    color: $light-gray
+    font-size: 2.5em
+    margin-top: 5px
+
+
+.landing-content
+  +outer-container()
+  .history
+    +span-columns(12)
+  .sokande-foretag
+    +span-columns(12)
+  .instagram
+    +span-columns(12)

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% include "stylesheets.html" %}
 
-    <title>I-Sektionen - LiU{% block page_subtitle %} {% endblock %}</title>
+    <title>Industriell ekonomi Linköping - {% block page_subtitle %} {% endblock %}</title>
     {% block head %} {% endblock %}
 </head>
 
@@ -31,63 +31,16 @@
     {% include "header.html" %}
 {% endblock %}
 
-{% block above_content %}
+{% block hero %}
 {% endblock %}
 
 <!-- Ett block gör att vi kan använda vår master på flera sidor, men byta ut innehållet som ligger i blocket -->
-<div {% block container %} id="container" {% endblock %}>
+<div id="container">
     {% block content %}
 
     {% endblock %}
 </div>
 
-
-{% block footer %}
-
-<footer class="footer" role="contentinfo">
-  <div class="footer-content">
-     <div class="footer-logo">
-         <img src=" {% static 'isektionen/isektionen-loga.png' %}" >
-      </div>
-      <div class="footer-links">
-        <ul id="about-column">
-            <li><h4>OM I-SEKTIONEN</h4></li>
-           <p>I-Sektionen är en ideell förening driven av engagerade studenter från programmet för Industriell ekonomi i Linköping.</p>
-        </ul>
-        <ul id="content-column">
-            <li><h4>INNEHÅLL</h4></li>
-            <li><a href="javascript:void(0)">Efter Studierna</a></li>
-            <li><a href="javascript:void(0)">Utbildningen</a></li>
-            <li><a href="javascript:void(0)">Studentliv</a></li>
-            <li><a href="javascript:void(0)">Företag</a></li>
-        </ul>
-        <ul id="latest-entry-blog-column">
-            <li><h4>SENASTE BLOGGINLÄGGEN</h4></li>
-                {% load blog_tags %}
-                {% get_last_entries as entries %}
-                {% for entry in entries %}
-                <div class="latest-blogs">
-                    <li><a href="{% url "view_one_blog_entry" entry.pk %}">{{ entry.title }}</a></li>
-                    <p id="footer-date">{{ entry.publishedDate }}</p>
-                </div>
-                {% endfor %}
-        </ul>
-        <ul id="social-media-column">
-
-            <li><h4>FÖLJ OSS</h4></li>
-            <div class="social-media-box-collector">
-            <div class="social-media-box"><a href="https://www.facebook.com/Industriell-ekonomi-Link%C3%B6ping-109690162408268/?fref=ts/"  target="_blank"><i class="fa fa-facebook-official"></i> <i>Facebook</i></a></div>
-            <div class="social-media-box"><a href="https://instagram.com/industriellekonomi_liu/"  target="_blank"><i class="fa fa-instagram"></i> <i>Instagram</i></a></div>
-            <div class="social-media-box"><a href="https://www.linkedin.com/grps/Industriell-ekonomi-Sverige-ISverige-4435021/about?" target="_blank"><i class="fa fa-linkedin"></i> <i>Linkedin</i></a></div>
-            <div class="social-media-box"><a href="https://twitter.com/i_sektionen/" target="_blank"><i class="fa fa-twitter"></i> <i>Twitter</i></a></div>
-            </div>
-        </ul>
-      </div>
-</div>
-  <p>Webgroup <3333333333</p>
-</footer>
-
-{% endblock %}
 
 {% include "scripts.html" %}
 {% block after_scripts %}{% endblock %}
