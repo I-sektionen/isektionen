@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-
+import socket
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Used to determined if being run on Openshift, Jenkins or local. Determines DB-connection settings.
@@ -20,7 +20,10 @@ ON_PASS = 'OPENSHIFT_REPO_DIR' in os.environ
 ON_JENKINS = 'JENKINS_SERVER_IPORTALEN' in os.environ
 
 if ON_PASS:
-    ALLOWED_HOSTS = ['*']
+    ALLOWED_HOSTS = [os.environ.get['OPENSHIFT_APP_DNS'],
+                     socket.gethostname(),
+                     'isektionen.se',
+                     'www.isektionen.se']
     DEBUG = False
 
 elif ON_JENKINS:
