@@ -1,4 +1,9 @@
 {% extends 'master.html' %}
+{% block links %}
+    <li class="nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
+    <li class="nav-link"><a href="{% url 'studentliv' %}">Studentliv</a></li>
+    <li class="nav-link"><a href="{% url 'efterstudier' %}">Efter studierna</a></li>
+{% endblock %}
 
 {% block content %}
     <section class="applicant-hero">
@@ -44,7 +49,7 @@
     </section>
     <div class="applicant-container">
         <section class="after-studies">
-            <h1 class="section-header">Efter studier</h1>
+            <h1 class="section-header">Efter studierna</h1>
             <p class="section-text">
                 De flesta studenter har ofta sin första anställning klar redan innan examen. Intresset för civilingenjörer i
                 industriell ekonomi med examen från Linköpings universitet är mycket stort i näringslivet.
