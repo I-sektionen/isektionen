@@ -1467,7 +1467,7 @@ header.navigation .active-nav-item a {
 }
 
 .blog-hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/Liu+bildbank+sof+110514+0353.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://iportalen-us.s3.amazonaws.com:443/static/iportalen/HERO.jpg");
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
