@@ -101,10 +101,12 @@
       i
         font-size: 5em
     .instagram-pictures
-      overflow: hidden
     .instagram-picture
-      +span-columns(4)
-      +omega(3n)
-      overflow: hidden
+      +span-columns(12)
+      +omega(n)
+      +media($large-screen)
+        +span-columns(4)
+        +omega-reset(2n)
+        +omega(3n)
     .instagram-caption
       +transform(translateY(-100%))

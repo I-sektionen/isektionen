@@ -1094,6 +1094,52 @@ section.top-image div.content-wrapper div.content-container:nth-child(1n+1) {
   transform: rotate(135deg);
 }
 
+.top-hero {
+  min-height: 95vh;
+  position: relative;
+  background-image: linear-gradient(150deg, rgba(102, 102, 102, 0.35) 25%, rgba(0, 0, 0, 0.35)), url(https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/liu_campusvalla.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+.top-hero .hero-content {
+  padding: 2em;
+  text-align: center;
+  width: 60%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.top-hero .hero-heading {
+  color: #f7f7f7;
+  font-size: 2em;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 900px) {
+  .top-hero .hero-heading {
+    font-size: 3em;
+  }
+}
+.top-hero .hero-divider {
+  border: none;
+  background-color: #f7f7f7;
+  height: 5px;
+  margin: 5px;
+}
+.top-hero .hero-text {
+  color: #f7f7f7;
+}
+@media screen and (min-width: 900px) {
+  .top-hero .hero-text {
+    text-align: justify;
+  }
+}
+
 .landing-hero {
   min-height: 95vh;
   position: relative;
@@ -1277,24 +1323,40 @@ section.top-image div.content-wrapper div.content-container:nth-child(1n+1) {
 .landing-content .instagram .instagram-account-link i {
   font-size: 5em;
 }
-.landing-content .instagram .instagram-pictures {
-  overflow: hidden;
-}
 .landing-content .instagram .instagram-picture {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 31.76157%;
-  overflow: hidden;
+  width: 100%;
 }
 .landing-content .instagram .instagram-picture:last-child {
   margin-right: 0;
 }
-.landing-content .instagram .instagram-picture:nth-child(3n) {
+.landing-content .instagram .instagram-picture:nth-child(n) {
   margin-right: 0;
 }
-.landing-content .instagram .instagram-picture:nth-child(3n+1) {
-  clear: left;
+@media screen and (min-width: 900px) {
+  .landing-content .instagram .instagram-picture {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+  }
+  .landing-content .instagram .instagram-picture:last-child {
+    margin-right: 0;
+  }
+  .landing-content .instagram .instagram-picture:nth-child(2n) {
+    margin-right: 2.35765%;
+  }
+  .landing-content .instagram .instagram-picture:nth-child(2n+1) {
+    clear: none;
+  }
+  .landing-content .instagram .instagram-picture:nth-child(3n) {
+    margin-right: 0;
+  }
+  .landing-content .instagram .instagram-picture:nth-child(3n+1) {
+    clear: left;
+  }
 }
 .landing-content .instagram .instagram-caption {
   -webkit-transform: translateY(-100%);
