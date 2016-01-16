@@ -1,69 +1,68 @@
 {% extends 'master.html' %}
 
-{% block above_content %}
-   <section class="top-image" id="top-page">
-       <div class="content-wrapper">
-           <div class="content-container">
-               <h1>Sök Industriell Ekonomi</h1>
-               <hr>
-               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-           </div>
-       </div>
-   </section>
-{% endblock %}
 {% block content %}
-    <section id="intro-page">
-        <div>
-            <h2>Industriell Ekonomi i Linköping</h2>
-            <p>Originalet sedan 1969 Välkommen till Industriell ekonomi och Linköpings universitet (LiU). Ända sedan starten 1969 har programmet examinerat studenter med höga ekonomiska och tekniska kompetenser vilket gör utbildningen till Sveriges äldsta program för Industriell ekonomi. Det innebär bland annat att Linköpings universitet har mer än 40 års erfarenhet av att utbilda ingenjörer inom Industriell ekonomi och att ett stort kontaktnätverk bland I-alumner (studenter som redan har tagit examen) från universitetet redan finns i näringslivet.</p>
-            <p>Denna erfarenhet och programmets storlek (störst i Sverige) gör att du ges möjlighet till både gedigen kompetens och stor valfrihet under din studietid. Med studiekamrater från hela Sverige får du ett rikt studieliv som bidrar till att du i framtiden kan se tillbaka på din studietid som fylld av goda minnen och vänner för livet. Samtidigt får du en eftertraktad civilingenjörsexamen från ett av Sveriges större lärosäten med en tradition av förnyelse och öppenhet för samverkan över gränser. Tillsammans med över 27 000 andra studenter och 3 800 anställda kommer du att befinna dig i ett myller av kunskap, idéer, åsikter, kreativitet och visioner.</p>
+    <section class="applicant-hero">
+        <div class="hero-content">
+            <h1 class="hero-heading">PLUGGA INDUSTRIELL EKONOMI</h1>
+            <hr class="hero-divider">
+            <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In schola desinis.
+                Quod quidem iam fit etiam in Academia. Zenonis est, inquam, hoc Stoici. Nondum autem explanatum satis, erat,
+                quid maxime natura vellet. Duo Reges: constructio interrete. At ego quem huic anteponam non audeo dicere;
+            </p>
         </div>
-        <div>
-            <h3>Instagram</h3>
-        <!--
-                <div id="instagramPics">
-                    <div id="first-row"></div>
-                </div>
-                -->
-            <h3>Senaste blogginläggen</h3>
-            <div class="blog-preview">
-                {% load blog_tags %}
-                {% get_last_entries as entries %}
-                {% for entry in entries %}
-                    <a href="{% url "view_one_blog_entry" entry.pk %}">
-                        <div class="latest-blog-entry">
-                            <h4>{{ entry.title }}</h4>
-                            <p>{{ entry.lead }}</p>
-                        </div>
-                    </a>
-                {% endfor %}
-            </div>
-        </div>
-        <div>
-            <h2>Utbildningen</h2>
-            <p>Kombinationen matematik, teknik, ekonomi och ledarskap ger I:aren en god helhetssyn som är intressant för de flesta företag, oavsett storlek och inriktning.</p>
-            <a href="{% url "utbildning" %}"><p>Här kan du läsa mer om utbildningen.</p></a>
-        </div>
-        <div>
-            <h2>Studentlivet</h2>
-            <p>Sektionen för Industriell Ekonomi (I-sektionen) är landets största studentsektion och det finns mängder av utskott och föreningar att engagera sig i som är kopplade vår sektion. På I-sektionen i Linköping är det över 200 aktiva I-studenter som arbetar ideellt med allt från näringslivssamarbeten till att främja kontakten med utexaminerade alumner och anordna resor och stora fester.</p>
-            <a href="{% url "studentliv" %}"><p>Här kan du läsa mer om studentlivet.</p></a>
-        </div>
-        <div>
-            <h2>Efter dina studier</h2>
-            <p>De flesta studenter har ofta sin första anställning klar redan innan examen. Intresset för civilingenjörer i industriell ekonomi med examen från Linköpings universitet är mycket stort i näringslivet. Detta tack vare deras driv, vana att arbeta i projekt samt förmåga till att lösa problem utifrån både ett tekniskt och ett ekonomiskt perspektiv.</p>
-            <a href="{% url "efterstudier" %}"><p>Här kan du läsa mer om I:are efter studietiden.</p></a>
-        </div>
-
     </section>
+
+    <div class="applicant-container">
+        <section class="education">
+            <h1 class="section-header">Utbildningen</h1>
+            <p class="section-text">
+                Kombinationen matematik, teknik, ekonomi och ledarskap ger I:aren en god helhetssyn som är intressant för de
+                flesta företag, oavsett storlek och inriktning.
+            </p>
+            <a href="" class="action-button">Läs mer om utbildningen</a>
+        </section>
+        <section class="student-life">
+            <h1 class="section-header">Studentlivet</h1>
+            <p class="section-text">
+                Sektionen för Industriell Ekonomi (I-sektionen) är landets största studentsektion och det finns mängder av
+                utskott och föreningar att engagera sig i som är kopplade vår sektion. På I-sektionen i Linköping är det
+                över 200 aktiva I-studenter som arbetar ideellt med allt från näringslivssamarbeten till att främja kontakten
+                med utexaminerade alumner och anordna resor och stora fester.
+            </p>
+            <a href="#" class="action-button">Läs mer om studentlivet</a>
+        </section>
+    </div>
+    <section class="blog-promo">
+        <div class="promo-content">
+            <h1 class="promo-heading">Spana in sektionsbloggen</h1>
+            <p class="promo-text">
+                På Sektionsbloggen hittar du aktuella får du en inblick i studentlivet. På bloggen skrivs även om event riktade
+                till studenter som vill veta mer om hur det är att plugga på universitetet!
+            </p>
+            <a href="#" class="action-button">Spana in bloggen</a>
+        </div>
+    </section>
+    <div class="applicant-container">
+        <section class="after-studies">
+            <h1 class="section-header">Efter studier</h1>
+            <p class="section-text">
+                De flesta studenter har ofta sin första anställning klar redan innan examen. Intresset för civilingenjörer i
+                industriell ekonomi med examen från Linköpings universitet är mycket stort i näringslivet.
+                Detta tack vare deras driv, vana att arbeta i projekt samt förmåga till att lösa problem utifrån både ett
+                tekniskt och ett ekonomiskt perspektiv.
+            </p>
+            <button class="action-button">Läs mer om efter studierna</button>
+        </section>
+    </div>
+
 {% endblock %}
 
 {% block after_scripts %}
-<script>
-    $(document).ready(
-            load_instagram()
+    <script>
+        $(document).ready(
+                load_instagram()
 
-    )
+        )
 
-</script>
+    </script>
 {% endblock %}
