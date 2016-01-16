@@ -22,7 +22,7 @@ def view_all_blog_posts(request):
 
 
 
-    return render(request, "blog/all_blog_posts.html", {"blog_entries": blog_entries, "num_entries": num_entries})
+    return render(request, "blog/blog.html", {"blog_entries": blog_entries, "num_entries": num_entries})
 
 
 def view_one_blog_entry(request, pk):

@@ -21,7 +21,7 @@ def show_foretag_page(request):
 
 
 def show_sokande_page(request):
-    return render(request, "isektionen/sokande/sokande.html", {
+    return render(request, "isektionen/sokande.html", {
         'sokande': True,
     })
 
