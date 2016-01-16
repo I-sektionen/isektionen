@@ -8,13 +8,8 @@ $hero-divider-height: 5px;
 $hero-text-color: $light-gray;
 
 .top-hero {
-  min-height: 95vh;
+  min-height: 80vh;
   @include position(relative);
-  background: {
-    image: $hero-overlay-gradient, url(https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/liu_campusvalla.jpg);
-    attachment:fixed;
-    size:cover
-  }
 
   .hero-content {
     padding: 2em;
