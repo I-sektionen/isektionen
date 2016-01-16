@@ -1,0 +1,97 @@
+{% extends 'master.html' %}
+{% block content %}
+    <section class="landing-hero">
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/ie_cirkel_pms.png" />
+            </div>
+            <p class="hero-message">Välkommen till</p>
+            <hr class="hero-divider">
+            <h1 class="hero-header">Sektionen för Industriell Ekonomi</h1>
+        </div>
+    </section>
+    <section class="scroll-down">
+        <!--<p><span class="chevron bottom"></span></p>-->
+    </section>
+    <div class="landing-content">
+
+        <section class="history">
+            <div class="history-content">
+                <h1 class="section-header">Originalet sedan 1969</h1>
+                <p>
+                    Välkommen till Industriell ekonomi och Linköpings universitet (LiU).
+                    Ända sedan starten 1969 har programmet examinerat studenter med höga ekonomiska och tekniska
+                    kompetenser vilket gör utbildningen till Sveriges äldsta program för Industriell ekonomi.
+                    Det innebär bland annat att Linköpings universitet har mer än 40 års erfarenhet av att utbilda
+                    ingenjörer inom Industriell ekonomi och att ett stort kontaktnätverk bland I-alumner (studenter
+                    som redan har tagit examen) från universitetet redan finns i näringslivet.
+                    </P>
+                <p>
+                    Denna erfarenhet och programmets storlek (störst i Sverige) gör att du ges möjlighet till både
+                    gedigen kompetens och stor valfrihet under din studietid. Med studiekamrater från hela Sverige
+                    får du ett rikt studieliv som bidrar till att du i framtiden kan se tillbaka på din studietid som
+                    fylld av goda minnen och vänner för livet. Samtidigt får du en eftertraktad civilingenjörsexamen
+                    från ett av Sveriges större lärosäten med en tradition av förnyelse och öppenhet för samverkan över
+                    gränser. Tillsammans med över 27 000 andra studenter och 3 800 anställda kommer du att befinna dig
+                    i ett myller av kunskap, idéer, åsikter, kreativitet och visioner.
+                </p>
+
+                <p>På denna sida har vi samlat information som rör både sökande studenter och företag. Scrolla ner för
+                    att hitta den information du söker!
+                </p>
+            </div>
+        </section>
+
+        <section class="sokande-foretag">
+            <div class="sokande-foretag-description">
+                <div class="section-header-with-icon">
+                    <i class="fa fa-university"></i>
+                    <h1 class="section-header">Utbildning</h1>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nos paucis ad haec additis finem faciamus
+                    aliquando; Iam contemni non poteris. Apparet statim, quae sint officia, quae actiones.
+                    Quod autem meum munus dicis non equidem recuso, sed te adiungo socium. Duo Reges: constructio interrete.
+                    Mihi vero, inquit, placet agi subtilius et, ut ipse dixisti, pressius.
+                </p>
+                <a href="" class="action-button">Läs om utbildningen</a>
+            </div>
+            <div class="sokande-foretag-description">
+                <div class="section-header-with-icon">
+                    <i class="fa fa-building-o"></i>
+                    <h1 class="section-header">Företag</h1>
+                </div>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nos paucis ad haec additis finem faciamus
+                    aliquando; Iam contemni non poteris. Apparet statim, quae sint officia, quae actiones.
+                    Quod autem meum munus dicis non equidem recuso, sed te adiungo socium. Duo Reges: constructio interrete.
+                    Mihi vero, inquit, placet agi subtilius et, ut ipse dixisti, pressius.
+                </p>
+                <a href="" class="action-button">Läs om samarbete</a>
+            </div>
+        </section>
+
+
+
+        <section class="instagram">
+            <div class="instagram-content">
+                <p class="instagram-account-link">
+                    <i class="fa fa-instagram"></i>
+                    <a href="https://www.instagram.com/industriellekonomi_liu/">@industriellekonomi_liu</a>
+                </p>
+                <div class="instagram-feed">
+                    <ul class="instagram-pictures">
+                    </ul>
+                </div>
+                </a>
+            </div>
+        </section>
+    </div>
+
+{% endblock %}
+
+
+
+{% block js_document_ready %}
+    load_instagram()
+{% endblock %}

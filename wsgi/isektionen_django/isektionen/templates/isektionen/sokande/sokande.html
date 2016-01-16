@@ -20,9 +20,11 @@
         </div>
         <div>
             <h3>Instagram</h3>
+        <!--
                 <div id="instagramPics">
                     <div id="first-row"></div>
                 </div>
+                -->
             <h3>Senaste blogginläggen</h3>
             <div class="blog-preview">
                 {% load blog_tags %}
@@ -58,8 +60,9 @@
 
 {% block after_scripts %}
 <script>
-    $( document).ready(
+    $(document).ready(
             load_instagram()
+
     )
 
 </script>

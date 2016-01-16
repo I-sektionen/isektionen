@@ -5,7 +5,7 @@ from blog import urls as blog_urls
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', view=views.show_landing_page, name='landing'),
+    url(r'^$', view=views.render_home_page, name='home'),
     url(r'^blog/', include(blog_urls)),
 
     url(r'^foretag/$', view=views.show_foretag_page, name='foretag'),
