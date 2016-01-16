@@ -22,8 +22,7 @@ ON_JENKINS = 'JENKINS_SERVER_IPORTALEN' in os.environ
 if ON_PASS:
     ALLOWED_HOSTS = [os.environ.get['OPENSHIFT_APP_DNS'],
                      socket.gethostname(),
-                     'isektionen.se',
-                     'www.isektionen.se']
+                     '.isektionen.se']
     DEBUG = False
 
 elif ON_JENKINS:
