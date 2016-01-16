@@ -1141,18 +1141,17 @@ div.blog-preview .latest-blog-entry {
   display: table;
 }
 .landing-content .sokande-foretag .sokande-foretag-description {
+  text-align: center;
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%;
   padding: 2em;
-  text-align: justify;
 }
 .landing-content .sokande-foretag .sokande-foretag-description:last-child {
   margin-right: 0;
 }
 .landing-content .sokande-foretag .sokande-foretag-description .section-header-with-icon {
-  text-align: center;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -1180,6 +1179,7 @@ div.blog-preview .latest-blog-entry {
 }
 .landing-content .sokande-foretag .sokande-foretag-description p {
   line-height: 2em;
+  text-align: justify;
 }
 @media screen and (min-width: 900px) {
   .landing-content .sokande-foretag .sokande-foretag-description {

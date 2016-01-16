@@ -54,16 +54,16 @@
         font-size: 2.5em
         color: $dark-gray
   .sokande-foretag
+
     padding: 1em
     +outer-container()
 
     //TODO Implement as flexbox for better control on positioning
     .sokande-foretag-description
+      text-align: center
       +span-columns(12)
       padding: 2em
-      text-align: justify
       .section-header-with-icon
-        text-align: center
         +display(flex)
         +flex-direction(column)
         i
@@ -71,17 +71,15 @@
       .section-header
         font-size: 2.5em
         color: $dark-gray
-
       p
         line-height: 2em
+        text-align: justify
+
       +media($large-screen)
         +span-columns(6)
         +omega()
         &:first-child
           border-right: 1px solid lighten($dark-gray, 30%)
-
-
-
   .instagram
     padding: 1em
 
