@@ -1,9 +1,7 @@
-#blog-entry-container{
+.blog-entry-container{
   @include outer-container();
   padding: 1em;
 }
-
-
 
 article.single_blog_entry {
   $base-border-radius: 3px !default;
@@ -42,8 +40,14 @@ article.single_blog_entry {
   }
 
   a {
-    color: $action-color;
+    color: $dark-gray;
     text-decoration: none;
+
+    &:hover {
+
+      text-decoration: underline;
+
+    }
   }
 
   .type {

@@ -1536,13 +1536,13 @@ div.blog-preview .latest-blog-entry {
   text-align: center;
 }
 
-#blog-entry-container {
+.blog-entry-container {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding: 1em;
 }
-#blog-entry-container::after {
+.blog-entry-container::after {
   clear: both;
   content: "";
   display: table;
@@ -1580,8 +1580,11 @@ article.single_blog_entry p {
   line-height: 1.5;
 }
 article.single_blog_entry a {
-  color: #f9d026;
+  color: #333;
   text-decoration: none;
+}
+article.single_blog_entry a:hover {
+  text-decoration: underline;
 }
 article.single_blog_entry .type {
   border-bottom: 1px solid;
