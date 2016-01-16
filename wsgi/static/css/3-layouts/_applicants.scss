@@ -1,0 +1,108 @@
+$applicant-overlay-gradient: linear-gradient(rgba(black, 0.35), rgba(black, 0.35));
+//Variables for heading
+$applicant-heading-color: $light-gray;
+// Variables for divider
+$hero-divider-height: 5px;
+// Variables for hero text
+$applicant-text-color: $light-gray;
+
+.applicant-hero {
+  @extend .top-hero;
+  @include section-cover-background('https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/campus_nkpg.jpg')
+}
+
+.promo-section {
+  min-height: 50vh;
+  @include position(relative);
+
+  .promo-content {
+    padding: 2em;
+    text-align: center;
+    width: 60%;
+    //This positions the element rela
+    @include position(absolute);
+    left: 50%;
+    top: 50%;
+    @include transform(translate(-50%, -50%));
+  }
+
+  .promo-heading {
+    color: $applicant-heading-color;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    @include  media ($large-screen) {
+      font-size: 3em;
+    }
+
+  }
+
+  .promo-text {
+    color: $applicant-text-color;
+    @include media ($large-screen) {
+      text-align: justify;
+      font-size: 1.2em;
+    }
+  }
+
+}
+// pluggande tjejer
+// https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/campus_nkpg.jpg
+
+//nollep
+//https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/_MG_4139.jpg
+
+//
+
+.applicant-container {
+  @include outer-container()
+}
+
+.applicant-section {
+  padding: 2em;
+  text-align: center;
+  .section-header {
+    color: $dark-gray;
+    font-size: 2.5em;
+    @include  media ($large-screen) {
+      font-size: 3em;
+    }
+  }
+
+  .section-text {
+    line-height: 1.5em;
+    color: $dark-gray;
+    @include media ($large-screen) {
+      text-align: justify;
+      font-size: 1em;
+    }
+  }
+
+}
+
+.education {
+  @extend .applicant-section;
+  @include span-columns(12);
+  @include media($large-screen) {
+    @include span-columns(6)
+  }
+
+}
+
+.student-life {
+  @extend .applicant-section;
+  @include span-columns(12);
+  @include media($large-screen) {
+    @include span-columns(6)
+  }
+}
+
+.blog-promo {
+  @extend .promo-section;
+  @include section-cover-background('https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/_MG_4139.jpg')
+}
+.after-studies {
+  @extend .applicant-section;
+  @include span-columns(12)
+}
+

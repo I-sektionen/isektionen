@@ -1015,14 +1015,11 @@ div.blog-preview .latest-blog-entry {
   transform: rotate(135deg);
 }
 
-.top-hero {
-  min-height: 95vh;
+.top-hero, .applicant-hero {
+  min-height: 80vh;
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/liu_campusvalla.jpg);
-  background-attachment: fixed;
-  background-size: cover;
 }
-.top-hero .hero-content {
+.top-hero .hero-content, .applicant-hero .hero-content {
   padding: 2em;
   text-align: center;
   width: 60%;
@@ -1035,28 +1032,28 @@ div.blog-preview .latest-blog-entry {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.top-hero .hero-heading {
+.top-hero .hero-heading, .applicant-hero .hero-heading {
   color: #f7f7f7;
   font-size: 2em;
   text-transform: uppercase;
   margin-bottom: 0;
 }
 @media screen and (min-width: 900px) {
-  .top-hero .hero-heading {
+  .top-hero .hero-heading, .applicant-hero .hero-heading {
     font-size: 3em;
   }
 }
-.top-hero .hero-divider {
+.top-hero .hero-divider, .applicant-hero .hero-divider {
   border: none;
   background-color: #f7f7f7;
   height: 5px;
   margin: 5px;
 }
-.top-hero .hero-text {
+.top-hero .hero-text, .applicant-hero .hero-text {
   color: #f7f7f7;
 }
 @media screen and (min-width: 900px) {
-  .top-hero .hero-text {
+  .top-hero .hero-text, .applicant-hero .hero-text {
     text-align: justify;
   }
 }
@@ -1285,6 +1282,145 @@ div.blog-preview .latest-blog-entry {
   -ms-transform: translateY(-100%);
   -o-transform: translateY(-100%);
   transform: translateY(-100%);
+}
+
+.applicant-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/campus_nkpg.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.promo-section, .blog-promo {
+  min-height: 50vh;
+  position: relative;
+}
+.promo-section .promo-content, .blog-promo .promo-content {
+  padding: 2em;
+  text-align: center;
+  width: 60%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.promo-section .promo-heading, .blog-promo .promo-heading {
+  color: #f7f7f7;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 900px) {
+  .promo-section .promo-heading, .blog-promo .promo-heading {
+    font-size: 3em;
+  }
+}
+.promo-section .promo-text, .blog-promo .promo-text {
+  color: #f7f7f7;
+}
+@media screen and (min-width: 900px) {
+  .promo-section .promo-text, .blog-promo .promo-text {
+    text-align: justify;
+    font-size: 1.2em;
+  }
+}
+
+.applicant-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.applicant-container::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.applicant-section, .education, .student-life, .after-studies {
+  padding: 2em;
+  text-align: center;
+}
+.applicant-section .section-header, .education .section-header, .student-life .section-header, .after-studies .section-header {
+  color: #333;
+  font-size: 2.5em;
+}
+@media screen and (min-width: 900px) {
+  .applicant-section .section-header, .education .section-header, .student-life .section-header, .after-studies .section-header {
+    font-size: 3em;
+  }
+}
+.applicant-section .section-text, .education .section-text, .student-life .section-text, .after-studies .section-text {
+  line-height: 1.5em;
+  color: #333;
+}
+@media screen and (min-width: 900px) {
+  .applicant-section .section-text, .education .section-text, .student-life .section-text, .after-studies .section-text {
+    text-align: justify;
+    font-size: 1em;
+  }
+}
+
+.education {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+.education:last-child {
+  margin-right: 0;
+}
+@media screen and (min-width: 900px) {
+  .education {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+  }
+  .education:last-child {
+    margin-right: 0;
+  }
+}
+
+.student-life {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+.student-life:last-child {
+  margin-right: 0;
+}
+@media screen and (min-width: 900px) {
+  .student-life {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+  }
+  .student-life:last-child {
+    margin-right: 0;
+  }
+}
+
+.blog-promo {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/_MG_4139.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.after-studies {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+.after-studies:last-child {
+  margin-right: 0;
 }
 
 /*# sourceMappingURL=isektionen.css.map */
