@@ -1,4 +1,4 @@
-$hero-overlay-gradient: linear-gradient(150deg, transparentize(lighten(black, 40%), 0.65) 25%, transparentize(black, 0.65));
+$hero-overlay-gradient: linear-gradient(rgba(black, 0.35), rgba(black, 0.35));
 //Variables for heading
 $hero-heading-color: $light-gray;
 // Variables for divider
@@ -8,13 +8,8 @@ $hero-divider-height: 5px;
 $hero-text-color: $light-gray;
 
 .top-hero {
-  min-height: 95vh;
+  min-height: 80vh;
   @include position(relative);
-  background: {
-    image: $hero-overlay-gradient, url(https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/liu_campusvalla.jpg);
-    attachment:fixed;
-    size:cover
-  }
 
   .hero-content {
     padding: 2em;
