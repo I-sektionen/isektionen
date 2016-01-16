@@ -22,7 +22,7 @@ header.navigation {
 
   background-color: $navigation-background;
   min-height: $navigation-height;
-  
+
   width: 100%;
   z-index: 999;
   @include position(fixed);

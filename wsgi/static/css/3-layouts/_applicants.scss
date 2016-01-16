@@ -83,6 +83,7 @@ $applicant-text-color: $light-gray;
 .education {
   @extend .applicant-section;
   @include span-columns(12);
+
   @include media($large-screen) {
     @include span-columns(6)
   }
