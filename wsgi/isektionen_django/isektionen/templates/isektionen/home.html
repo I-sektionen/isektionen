@@ -1,6 +1,4 @@
 {% extends 'master.html' %}
-{% block header %}
-{% endblock %}
 {% block content %}
     <section class="landing-hero">
         <div class="hero-content">
@@ -16,6 +14,33 @@
         <!--<p><span class="chevron bottom"></span></p>-->
     </section>
     <div class="landing-content">
+
+        <section class="history">
+            <div class="history-content">
+                <h1 class="section-header">Originalet sedan 1969</h1>
+                <p>
+                    Välkommen till Industriell ekonomi och Linköpings universitet (LiU).
+                    Ända sedan starten 1969 har programmet examinerat studenter med höga ekonomiska och tekniska
+                    kompetenser vilket gör utbildningen till Sveriges äldsta program för Industriell ekonomi.
+                    Det innebär bland annat att Linköpings universitet har mer än 40 års erfarenhet av att utbilda
+                    ingenjörer inom Industriell ekonomi och att ett stort kontaktnätverk bland I-alumner (studenter
+                    som redan har tagit examen) från universitetet redan finns i näringslivet.
+                    </P>
+                <p>
+                    Denna erfarenhet och programmets storlek (störst i Sverige) gör att du ges möjlighet till både
+                    gedigen kompetens och stor valfrihet under din studietid. Med studiekamrater från hela Sverige
+                    får du ett rikt studieliv som bidrar till att du i framtiden kan se tillbaka på din studietid som
+                    fylld av goda minnen och vänner för livet. Samtidigt får du en eftertraktad civilingenjörsexamen
+                    från ett av Sveriges större lärosäten med en tradition av förnyelse och öppenhet för samverkan över
+                    gränser. Tillsammans med över 27 000 andra studenter och 3 800 anställda kommer du att befinna dig
+                    i ett myller av kunskap, idéer, åsikter, kreativitet och visioner.
+                </p>
+
+                <p>På denna sida har vi samlat information som rör både sökande studenter och företag. Scrolla ner för
+                    att hitta den information du söker!
+                </p>
+            </div>
+        </section>
 
         <section class="sokande-foretag">
             <div class="sokande-foretag-description">
@@ -46,20 +71,7 @@
             </div>
         </section>
 
-        <section class="history">
-            <div class="history-content">
-                <h1 class="section-header">Orginalet sedan 1969</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nos paucis ad haec additis finem faciamus
-                    aliquando; Iam contemni non poteris. Apparet statim, quae sint officia, quae actiones.
-                    Quod autem meum munus dicis non equidem recuso, sed te adiungo socium. Duo Reges: constructio interrete.
-                    Mihi vero, inquit, placet agi subtilius et, ut ipse dixisti, pressius.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nos paucis ad haec additis finem faciamus
-                    aliquando; Iam contemni non poteris. Apparet statim, quae sint officia, quae actiones.
-                    Quod autem meum munus dicis non equidem recuso, sed te adiungo socium. Duo Reges: constructio interrete.
-                    Mihi vero, inquit, placet agi subtilius et, ut ipse dixisti, pressius.
-                </p>
-            </div>
-        </section>
+
 
         <section class="instagram">
             <div class="instagram-content">
@@ -77,6 +89,8 @@
     </div>
 
 {% endblock %}
+
+
 
 {% block js_document_ready %}
     load_instagram()
