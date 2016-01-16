@@ -1,4 +1,8 @@
 {% extends 'master.html' %}
+{% block links %}
+    <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
+    <li class="nav-link"><a href="{% url 'foretag' %}">Företag</a></li>
+{% endblock %}
 {% block content %}
     <section class="landing-hero">
         <div class="hero-content">
@@ -14,7 +18,6 @@
         <!--<p><span class="chevron bottom"></span></p>-->
     </section>
     <div class="landing-content">
-
         <section class="history">
             <div class="history-content">
                 <h1 class="section-header">Originalet sedan 1969</h1>
@@ -25,7 +28,7 @@
                     Det innebär bland annat att Linköpings universitet har mer än 40 års erfarenhet av att utbilda
                     ingenjörer inom Industriell ekonomi och att ett stort kontaktnätverk bland I-alumner (studenter
                     som redan har tagit examen) från universitetet redan finns i näringslivet.
-                    </P>
+                </P>
                 <p>
                     Denna erfarenhet och programmets storlek (störst i Sverige) gör att du ges möjlighet till både
                     gedigen kompetens och stor valfrihet under din studietid. Med studiekamrater från hela Sverige
@@ -41,7 +44,6 @@
                 </p>
             </div>
         </section>
-
         <section class="sokande-foretag">
             <div class="sokande-foretag-description">
                 <div class="section-header-with-icon">
@@ -69,9 +71,6 @@
                 <a href="" class="action-button">Läs om samarbete</a>
             </div>
         </section>
-
-
-
         <section class="instagram">
             <div class="instagram-content">
                 <p class="instagram-account-link">
@@ -86,11 +85,7 @@
             </div>
         </section>
     </div>
-
 {% endblock %}
-
-
-
 {% block js_document_ready %}
     load_instagram()
 {% endblock %}

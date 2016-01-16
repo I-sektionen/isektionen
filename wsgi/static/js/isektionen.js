@@ -56,29 +56,7 @@ var load_instagram = function () {
         });
 
 
-};;/*global $*/
-
-
-$(document).ready(function() {
-  var menuToggle = $('#js-centered-navigation-mobile-menu').unbind();
-  $('#js-centered-navigation-menu').removeClass("show");
-
-  menuToggle.on('click', function(e) {
-    e.preventDefault();
-    $('#js-centered-navigation-menu').slideToggle(function(){
-      if($('#js-centered-navigation-menu').is(':hidden')) {
-        $('#js-centered-navigation-menu').removeAttr('style');
-      }
-    });
-  });
-
-  if ($("#js-parallax-window").length) {
-    parallax();
-  }
-
-});
-
-;/**
+};;/**
  * Created by MagnusForzelius on 2015-12-01.
  */
 $(document).ready(function() {
@@ -108,7 +86,20 @@ $(document).ready(function() {
     $("#modal-content").html(this.nextElementSibling.innerHTML)
   });
 
-});;/**
+});;$(document).ready(function() {
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+});
+;/**
  * Created by elonbrange on 15-11-10.
  */
 $(document).ready(function() {

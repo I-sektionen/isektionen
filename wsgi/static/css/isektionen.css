@@ -504,69 +504,128 @@ picture {
   max-width: 100%;
 }
 
-.header {
-  position: absolute;
-  top: 0;
-  z-index: 9999;
+/*
+* This header is a modified version from Thoughtbots Refills
+* Written by Andreas Gustafsson 2015
+*/
+header.navigation {
+  background-color: white;
+  min-height: 60px;
   width: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  position: fixed;
+  box-shadow: 1px 1px 8px silver;
 }
-.header nav#header-anchor {
+header.navigation .navigation-wrapper {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  z-index: 9999;
 }
-.header nav#header-anchor::after {
+header.navigation .navigation-wrapper::after {
   clear: both;
   content: "";
   display: table;
 }
-.header div#start-link {
+header.navigation .navigation-wrapper::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+header.navigation .logo {
   float: left;
+  max-height: 60px;
+  padding-left: 1em;
+  padding-right: 2em;
+}
+header.navigation .logo img {
+  max-height: 60px;
+  padding: 0.8em 0;
+}
+header.navigation .navigation-menu-button {
+  color: #333;
   display: block;
-  margin-right: 2.35765%;
-  width: 14.70196%;
+  float: right;
+  line-height: 60px;
+  margin: 0;
+  padding-right: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
 }
-.header div#start-link:last-child {
-  margin-right: 0;
+@media screen and (min-width: 900px) {
+  header.navigation .navigation-menu-button {
+    display: none;
+  }
 }
-.header div#nav-links {
-  float: left;
+header.navigation .navigation-menu-button:focus, header.navigation .navigation-menu-button:hover {
+  color: rgba(51, 51, 51, 0.7);
+}
+header.navigation nav {
+  float: none;
+  min-height: 60px;
+  z-index: 9999999;
+}
+@media screen and (min-width: 900px) {
+  header.navigation nav {
+    float: right;
+    margin-left: 4em;
+  }
+}
+header.navigation ul.navigation-menu {
+  clear: both;
+  display: none;
+  margin: 0 auto;
+  overflow: visible;
+  padding: 1em;
+  width: 100%;
+  z-index: 9999;
+}
+header.navigation ul.navigation-menu.show {
   display: block;
-  margin-right: 2.35765%;
-  width: 40.29137%;
-  margin-left: 42.64902%;
-  position: relative;
 }
-.header div#nav-links:last-child {
-  margin-right: 0;
+@media screen and (min-width: 900px) {
+  header.navigation ul.navigation-menu {
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
 }
-.header div.nav-link {
-  text-align: center;
-  float: left;
+header.navigation ul li.nav-link {
   display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%;
-  padding-top: 1em;
+  line-height: 30px;
+  overflow: hidden;
+  padding-right: 0.8em;
+  width: 100%;
+  z-index: 9999;
 }
-.header div.nav-link:last-child {
-  margin-right: 0;
+@media screen and (min-width: 900px) {
+  header.navigation ul li.nav-link {
+    background: transparent;
+    display: inline;
+    line-height: 60px;
+    text-decoration: none;
+    width: auto;
+  }
 }
-.header div.nav-link:nth-child(4n) {
-  margin-right: 0;
+header.navigation ul li.nav-link a {
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #333;
+  display: inline-block;
+  text-decoration: none;
 }
-.header div.nav-link:nth-child(4n+1) {
-  clear: left;
+@media screen and (min-width: 900px) {
+  header.navigation ul li.nav-link a {
+    padding-right: 1em;
+  }
 }
-.header div.nav-link a {
-  font-weight: bold;
-  color: white;
+header.navigation ul li.nav-link a:focus, header.navigation ul li.nav-link a:hover {
+  color: rgba(51, 51, 51, 0.7);
 }
-.header div.nav-link a:hover {
-  text-decoration: underline;
-}
-.header div.active {
-  border-bottom: #f9d026 solid;
+header.navigation .active-nav-item a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 3px;
 }
 
 .footer {
