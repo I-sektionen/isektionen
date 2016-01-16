@@ -25,6 +25,7 @@ if ON_PASS:
                      '*.isektionen.se',
                      'isektionen.se',
                      'www.isektionen.se',
+                     'localhost'
                      ]
     DEBUG = False
 
