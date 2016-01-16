@@ -38,9 +38,11 @@ else:
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '^+^i^1i94%j-hikdsafl324+107xw(vf^mz4hg--#w0mw93+kc#&4vc=#=@'  # TODO: Make use of os.envion on openshift.
 
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+if ON_PASS:
+    print("HEJJJJJJJJJJJJJJJJJJJJJ!")
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
 
 # Application definition
 INSTALLED_APPS = (
