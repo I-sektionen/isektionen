@@ -71,6 +71,28 @@
                 <a href="" class="action-button">Läs om samarbete</a>
             </div>
         </section>
+        <section class="blog-previews">
+            {% load blog_tags %}
+            {% get_last_entries as entries %}
+            {% for entry in entries %}
+                <div class="latest-blogs-preview">
+                    <div class="latest-blog-preview-datebox">
+                        <p>
+                            {{ entry.publishedDate|date:"d b Y" }}
+                        </p>
+                    </div>
+                    <div class="latest-blog-preview-textbox">
+                        <h2>
+                            <a href="{% url "view_one_blog_entry" entry.pk %}">{{ entry.title }}</a>
+                        </h2>
+                        <p>
+                            {{ entry.lead|truncatechars:200 }}
+                        </p>
+                    </div>
+                </div>
+
+            {% endfor %}
+        </section>
         <section class="instagram">
             <div class="instagram-content">
                 <p class="instagram-account-link">
