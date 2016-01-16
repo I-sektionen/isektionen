@@ -1,21 +1,21 @@
 {% extends 'master.html' %}
 
 {% block content %}
-<section id="blog-entry-container">
-<article class="single_blog_entry">
-  <p class="type">Blogginlägg </p>
-  <h1>{{ blog_entry.title }}</h1>
-  <h2>{{ blog_entry.lead }}</h2>
-  <p class="date">{{ blog_entry.publishedDate }}</p>
-  <p>
-      {{ blog_entry.body }}
-  </p>
+    <section id="blog-entry-container">
+        <article class="single_blog_entry">
+            <p class="type">Blogginlägg </p>
+            <h1>{{ blog_entry.title }}</h1>
+            <h2>{{ blog_entry.lead }}</h2>
+            <p class="date">{{ blog_entry.publishedDate }}</p>
+            <p>
+                {{ blog_entry.body }}
+            </p>
 
-  <hr>
-  <p class="author">{{ blog_entry.author }}</p>
-</article>
-</section>
-    
+            <hr>
+            <p class="author">{{ blog_entry.author }}</p>
+        </article>
+    </section>
+
 
 
 {% endblock %}

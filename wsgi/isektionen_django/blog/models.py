@@ -10,9 +10,10 @@ class BlogEntry(models.Model):
                                 null=True,
                                 blank=False)
     lead = models.TextField(verbose_name='ingress',
-                            help_text="Ingressen är den text som syns i nyhetsflödet. Max 160 tecken.",
+                            help_text="Ingressen är den text som syns i nyhetsflödet. Max 500 tecken.",
                             null=True,
-                            blank=False)
+                            blank=False,
+                            max_length=500)
     body = models.TextField(verbose_name='brödtext',
                             help_text="Brödtext syns när en artikel visas enskilt.",
                             null=True,

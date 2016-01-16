@@ -17,7 +17,7 @@
             <li><a href="javascript:void(0)">Företag</a></li>
         </ul>
         <ul id="latest-entry-blog-column">
-            <li><h4>SENASTE BLOGGINLÄGGEN</h4></li>
+            <li><a href="{% url "all_blog_posts" %}"><h4>SENASTE BLOGGINLÄGGEN</h4></a></li>
                 {% load blog_tags %}
                 {% get_last_entries as entries %}
                 {% for entry in entries %}
