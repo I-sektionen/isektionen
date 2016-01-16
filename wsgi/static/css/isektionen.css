@@ -1018,7 +1018,7 @@ div.blog-preview .latest-blog-entry {
 .top-hero {
   min-height: 95vh;
   position: relative;
-  background-image: linear-gradient(150deg, rgba(102, 102, 102, 0.35) 25%, rgba(0, 0, 0, 0.35)), url(https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/liu_campusvalla.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/liu_campusvalla.jpg);
   background-attachment: fixed;
   background-size: cover;
 }
