@@ -1,6 +1,6 @@
 {% extends 'master.html' %}
 {% block links %}
-        <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
+    <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
     <li class="nav-link"><a href="{% url 'foretag' %}">Företag</a></li>
 {% endblock %}
 {% block content %}
@@ -14,25 +14,6 @@
             </p>
         </div>
     </section>
-    <section class="blog-meny">
-        <div class="blogg-pagination">
-                <span class="step-links">
-                    {% if blog_entries.has_previous %}
-                        <a href="?page={{ blog_entries.previous_page_number }}">Föregående</a>
-                    {% endif %}
-
-                    <span class="current">
-                        Sida {{ blog_entries.number }} av {{ blog_entries.paginator.num_pages }}.
-                    </span>
-
-                    {% if blog_entries.has_next %}
-                        <a href="?page={{ blog_entries.next_page_number }}">Nästa</a>
-                    {% endif %}
-                </span>
-        </div>            <!--Här borde det ligga länkar till arkiv, ev sortera efter taggar mm -->
-
-    </section>
-
     {% for entry in blog_entries %}
         <section class="blog-entry-container">
             <article class="single_blog_entry blog-entry">
@@ -51,8 +32,6 @@
         <hr class="blogg-entry-divider">
 
     {% endfor %}
-
-
     <div class="blogg-pagination">
             <span class="step-links">
                 {% if blog_entries.has_previous %}
@@ -68,6 +47,4 @@
                 {% endif %}
             </span>
     </div>
-
-
 {% endblock %}
