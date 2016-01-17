@@ -1,15 +1,11 @@
 {% extends 'master.html' %}
-{% block above_content %}
-   <section class="top-image" id="education-top-page">
-       <div class="content-wrapper">
-           <div class="content-container">
-               <h1>Utbildningen</h1>
-               <hr>
-               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-           </div>
-       </div>
-   </section>
+
+{% block links %}
+    <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
+    <li class="nav-link"><a href="{% url 'studentliv' %}">Studentliv</a></li>
+    <li class="nav-link"><a href="{% url 'efterstudier' %}">Efter studierna</a></li>
 {% endblock %}
+
 {% block content %}
     <section id="education-page">
     {% include 'isektionen/sokande/utbildning/inledning.html' %}

@@ -1,15 +1,11 @@
 {% extends 'master.html' %}
-{% block above_content %}
-   <section class="top-image" id="afterstudies-top-page">
-       <div class="content-wrapper">
-           <div class="content-container">
-               <h1>Efter dina studier</h1>
-               <hr>
-               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-           </div>
-       </div>
-   </section>
+
+{% block links %}
+    <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
+    <li class="nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
+    <li class="nav-link"><a href="{% url 'studentliv' %}">Studentliv</a></li>
 {% endblock %}
+
 {% block content %}
     <section id="afterstudies-content">
     <h3>Efter studietiden</h3>
