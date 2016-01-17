@@ -10,7 +10,7 @@ header.navigation {
   //$dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $navigation-padding: 1em;
-  $navigation-background: $white;
+  $navigation-background: transparentize($white, 0.15);
   $navigation-color: $dark-gray;
   $navigation-color-hover: transparentize($dark-gray, 0.3);
   $navigation-height: 80px;
