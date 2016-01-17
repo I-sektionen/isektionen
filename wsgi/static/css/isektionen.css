@@ -1140,6 +1140,12 @@ header.navigation .active-nav-item a {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  width: 100%;
+}
+@media screen and (min-width: 900px) {
+  .top-hero .hero-content, .landing-hero .hero-content, .applicant-hero .hero-content, .blog-hero .hero-content, .education-hero .hero-content, .studentlife-hero .hero-content, .after-studies-hero .hero-content {
+    width: auto;
+  }
 }
 .top-hero .hero-heading, .landing-hero .hero-heading, .applicant-hero .hero-heading, .blog-hero .hero-heading, .education-hero .hero-heading, .studentlife-hero .hero-heading, .after-studies-hero .hero-heading {
   color: #f7f7f7;

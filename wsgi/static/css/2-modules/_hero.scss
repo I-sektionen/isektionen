@@ -20,6 +20,13 @@ $hero-text-color: $light-gray;
     left: 50%;
     top: 50%;
     @include transform(translate(-50%, -50%));
+    width: 100%;
+
+    @include media($large-screen) {
+
+      width: auto;
+
+    }
   }
 
   .hero-heading {
