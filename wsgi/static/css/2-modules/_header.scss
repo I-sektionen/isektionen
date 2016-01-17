@@ -13,7 +13,7 @@ header.navigation {
   $navigation-background: $white;
   $navigation-color: $dark-gray;
   $navigation-color-hover: transparentize($dark-gray, 0.3);
-  $navigation-height: 60px;
+  $navigation-height: 80px;
   $navigation-active-link-color: transparentize(white, 0.5);
   $navigation-submenu-padding: 1em;
   $navigation-submenu-width: 18em;
@@ -27,6 +27,8 @@ header.navigation {
   z-index: 999;
   @include position(fixed);
   box-shadow: 1px 1px 8px silver;
+  top: 0;
+  left: 0;
 
   .navigation-wrapper {
     @include clearfix;
