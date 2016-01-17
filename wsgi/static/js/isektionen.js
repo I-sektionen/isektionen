@@ -1,30 +1,4 @@
-
-
-$(window).scroll(function(e) {
-  if ($("#js-parallax-window").length) {
-    parallax();
-  }
-});
-
-function parallax(){
-  if( $("#js-parallax-window").length > 0 ) {
-    var plxBackground = $("#js-parallax-background");
-    var plxWindow = $("#js-parallax-window");
-
-    var plxWindowTopToPageTop = $(plxWindow).offset().top;
-    var windowTopToPageTop = $(window).scrollTop();
-    var plxWindowTopToWindowTop = plxWindowTopToPageTop - windowTopToPageTop;
-
-    var plxBackgroundTopToPageTop = $(plxBackground).offset().top;
-    var windowInnerHeight = window.innerHeight;
-    var plxBackgroundTopToWindowTop = plxBackgroundTopToPageTop - windowTopToPageTop;
-    var plxBackgroundTopToWindowBottom = windowInnerHeight - plxBackgroundTopToWindowTop;
-    var plxSpeed = 0.35;
-
-    plxBackground.css('top', - (plxWindowTopToWindowTop * plxSpeed) + 'px');
-  }
-}
-;/**
+/**
  * Created by lehtonen on 15-11-16.
  */
 var load_instagram = function () {
@@ -44,48 +18,45 @@ var load_instagram = function () {
                 // this is where we do what we want with the instagram pics,
                 // -Elon; Changed to show 5 pictures in 1 row
                 number = 0;
-                while (number < 4) {
+                while (number < 9) {
                         console.log('Go!');
-                        $("#first-row").append('<a href="' + picture_array[number].link + '" target="_blank"><img class="instagram-picture" id="' + number + '" src="' + picture_array[number].images.standard_resolution.url + '"></a>');
+
+                    var picture = picture_array[number];
+
+                    var instagramImageUrl = picture.images.standard_resolution.url;
+                    var instagramImageLink = picture.link;
+
+                    var imageElement = "<img src=\"" + instagramImageUrl + "\">";
+
+                    var imageLinkElement = "<a href=\"" + instagramImageLink + "\" alt=\"instagram image\">" + imageElement + "</a>";
+
+
+
+                    var captionElement = "<p class=\"instagram-caption\">" + picture.caption.text + "</p>";
+
+                    captionElement = ""
+
+
+                    $(".instagram-pictures").append('<li class="instagram-picture">' + imageLinkElement + captionElement + '</li>')
+
+                        //$(".instagram-pictures").append('<a href="' + picture_array[number].link + '" target="_blank"><img class="instagram-picture" id="' + number + '" src="' + picture_array[number].images.standard_resolution.url + '"></a>');
                    number++;
                 }
 
-                // -Jesper; Added mouseon and mouseoff functionallity to append the caption text
-                $("#instagramPics > #first-row > a > img").hover(function(){
+                //-Jesper; Added mouseon and mouseoff functionallity to append the caption text
+                $(".instagram-picture > img").hover(function(){
                     var picNumber = $(this).attr('id');
                     $("#caption > p").text(picture_array[picNumber].caption.text).show(300);
                 });
 
-                //-Jesper; Added a nice scroll when mouse leaves either the image or the caption-text
+/*                //-Jesper; Added a nice scroll when mouse leaves either the image or the caption-text
                 $("#instagramPics").mouseleave(function(){
                     $("#caption > p").hide('slow');
-                });
+                });*/
         });
 
 
-};;/*global $*/
-
-
-$(document).ready(function() {
-  var menuToggle = $('#js-centered-navigation-mobile-menu').unbind();
-  $('#js-centered-navigation-menu').removeClass("show");
-
-  menuToggle.on('click', function(e) {
-    e.preventDefault();
-    $('#js-centered-navigation-menu').slideToggle(function(){
-      if($('#js-centered-navigation-menu').is(':hidden')) {
-        $('#js-centered-navigation-menu').removeAttr('style');
-      }
-    });
-  });
-
-  if ($("#js-parallax-window").length) {
-    parallax();
-  }
-
-});
-
-;/**
+};;/**
  * Created by MagnusForzelius on 2015-12-01.
  */
 $(document).ready(function() {
@@ -115,7 +86,20 @@ $(document).ready(function() {
     $("#modal-content").html(this.nextElementSibling.innerHTML)
   });
 
-});;/**
+});;$(document).ready(function() {
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+});
+;/**
  * Created by elonbrange on 15-11-10.
  */
 $(document).ready(function() {
@@ -149,6 +133,113 @@ function parallax(){
   }
 }
 ;/**
+ * Created by andreas on 17/01/16.
+ */
+
+// Create new chart from canvas elements
+
+var industriellEkonomictx = document.getElementById("chart-industriell-ekonomi").getContext("2d");
+var industriellEkonomiInternationellctx = document.getElementById("chart-industriell-ekonomi-internationell").getContext("2d");
+
+
+
+industriellEkonomiChartData = [
+    {
+        value: 80,
+        color: shadeBlendConvert(0.0,'#F9D026'),
+        highlight: shadeBlendConvert(-0.1,'#F9D026'),
+        label: "Teknik & och fyisk"
+    },
+    {
+        value: 60,
+        color: shadeBlendConvert(0.1,'#F9D026'),
+        highlight: shadeBlendConvert(-0.1,'#F9D026'),
+        label: "Matematik"
+    },
+    {
+        value: 30,
+        color: shadeBlendConvert(0.2,'#F9D026'),
+        highlight: shadeBlendConvert(-0.1,'#F9D026'),
+        label: "Industriell ekonomi & Management"
+    },
+    {
+        value: 15,
+        color: shadeBlendConvert(0.3,'#F9D026'),
+        highlight:shadeBlendConvert(-0.1,'#F9D026'),
+        label: "Ledarskap och kommunikation"
+    },
+    {
+        value: 120,
+        color: shadeBlendConvert(0.4,'#F9D026'),
+        highlight: shadeBlendConvert(-0.1,'#F9D026'),
+        label: "Masterprofil"
+    }
+]
+industriellEkonomiInternationellChartData = [
+    {
+        value: 80,
+        color: shadeBlendConvert(0.0,'#255F17'),
+        highlight: shadeBlendConvert(-0.1,'#255F17'),
+        label: "Teknik & och fyisk"
+    },
+    {
+        value: 60,
+        color: shadeBlendConvert(0.05,'#255F17'),
+        highlight: shadeBlendConvert(-0.1,'#255F17'),
+        label: "Matematik"
+    },
+    {
+        value: 20,
+        color: shadeBlendConvert(0.1,'#255F17'),
+        highlight: shadeBlendConvert(-0.1,'#255F17'),
+        label: "Industriell ekonomi & Management"
+    },
+    {
+        value: 10,
+        color: shadeBlendConvert(0.15,'#255F17'),
+        highlight: shadeBlendConvert(-0.1,'#255F17'),
+        label: "Ledarskap och kommunikation"
+    },
+    {
+        value: 10,
+        color: shadeBlendConvert(0.20,'#255F17'),
+        highlight: shadeBlendConvert(-0.1,'#255F17'),
+        label: "Ledarskap och kommunikation"
+    },
+    {
+        value: 120,
+        color: shadeBlendConvert(0.25,'#255F17'),
+        highlight: shadeBlendConvert(-0.1,'#255F17'),
+        label: "Masterprofil"
+    }
+]
+
+// This is a function that creates shades of a color
+// Found on stack overflow http://stackoverflow.com/questions/5560248/programmatically-lighten-or-darken-a-hex-color-or-rgb-and-blend-colors
+// By Pimp Trizkit
+function shadeBlendConvert(p, from, to) {
+    if(typeof(p)!="number"||p<-1||p>1||typeof(from)!="string"||(from[0]!='r'&&from[0]!='#')||(typeof(to)!="string"&&typeof(to)!="undefined"))return null; //ErrorCheck
+    if(!this.sbcRip)this.sbcRip=function(d){
+        var l=d.length,RGB=new Object();
+        if(l>9){
+            d=d.split(",");
+            if(d.length<3||d.length>4)return null;//ErrorCheck
+            RGB[0]=i(d[0].slice(4)),RGB[1]=i(d[1]),RGB[2]=i(d[2]),RGB[3]=d[3]?parseFloat(d[3]):-1;
+        }else{
+            switch(l){case 8:case 6:case 3:case 2:case 1:return null;} //ErrorCheck
+            if(l<6)d="#"+d[1]+d[1]+d[2]+d[2]+d[3]+d[3]+(l>4?d[4]+""+d[4]:""); //3 digit
+            d=i(d.slice(1),16),RGB[0]=d>>16&255,RGB[1]=d>>8&255,RGB[2]=d&255,RGB[3]=l==9||l==5?r(((d>>24&255)/255)*10000)/10000:-1;
+        }
+        return RGB;}
+    var i=parseInt,r=Math.round,h=from.length>9,h=typeof(to)=="string"?to.length>9?true:to=="c"?!h:false:h,b=p<0,p=b?p*-1:p,to=to&&to!="c"?to:b?"#000000":"#FFFFFF",f=sbcRip(from),t=sbcRip(to);
+    if(!f||!t)return null; //ErrorCheck
+    if(h)return "rgb("+r((t[0]-f[0])*p+f[0])+","+r((t[1]-f[1])*p+f[1])+","+r((t[2]-f[2])*p+f[2])+(f[3]<0&&t[3]<0?")":","+(f[3]>-1&&t[3]>-1?r(((t[3]-f[3])*p+f[3])*10000)/10000:t[3]<0?f[3]:t[3])+")");
+    else return "#"+(0x100000000+(f[3]>-1&&t[3]>-1?r(((t[3]-f[3])*p+f[3])*255):t[3]>-1?r(t[3]*255):f[3]>-1?r(f[3]*255):255)*0x1000000+r((t[0]-f[0])*p+f[0])*0x10000+r((t[1]-f[1])*p+f[1])*0x100+r((t[2]-f[2])*p+f[2])).toString(16).slice(f[3]>-1||t[3]>-1?1:3);
+}
+
+
+var industriellEkonomiChart = new Chart(industriellEkonomictx).Doughnut(industriellEkonomiChartData);
+var industriellEkonomiInternationellChart = new Chart(industriellEkonomiInternationellctx).Doughnut(industriellEkonomiInternationellChartData);;/**
  * Created by lehtonen on 15-11-24.
  */
 /**

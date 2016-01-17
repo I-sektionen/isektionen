@@ -1,0 +1,32 @@
+.blog-hero
+  @extend .top-hero
+  +section-cover-background('https://iportalen-us.s3.amazonaws.com:443/static/iportalen/HERO.jpg')
+
+.blog-entry-container
+  +outer-container()
+  padding: 1em
+
+.blog-entry
+  @include span-columns(12)
+  @include media($large-screen)
+    @include span-columns(8)
+    @include shift(2)
+
+.blog-meny
+  text-align: center
+  max-width: 1200px
+  margin-left: auto
+  margin-right: auto
+  padding: 1em
+
+.blogg-entry-divider
+  border: none
+  background-color: gainsboro
+  height: 0.2em
+  margin: 0
+  max-width: 1200px
+  margin-left: auto
+  margin-right: auto
+
+.blogg-pagination
+  text-align: center

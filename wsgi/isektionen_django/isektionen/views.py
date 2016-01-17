@@ -4,8 +4,8 @@ from django.shortcuts import render
 from blog.models import BlogEntry
 
 
-def show_landing_page(request):
-    return render(request, "isektionen/landing.html", {})
+def render_home_page(request):
+    return render(request, "isektionen/home.html", {})
 
 
 def show_contact_page(request):
@@ -21,7 +21,7 @@ def show_foretag_page(request):
 
 
 def show_sokande_page(request):
-    return render(request, "isektionen/sokande/sokande.html", {
+    return render(request, "isektionen/sokande.html", {
         'sokande': True,
     })
 
