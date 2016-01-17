@@ -3,7 +3,7 @@
 {% block links %}
     <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
     {% if utbildning %}
-        <li class="nav-link active-nav-item"><a href="{% url 'utbildning' %}">Utbildning</a></li>
+        <li class="active-nav-item nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
     {% else %}
         <li class="nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
     {% endif %}

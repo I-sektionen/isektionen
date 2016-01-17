@@ -129,11 +129,10 @@ header.navigation {
       font-weight: 400;
       text-transform: uppercase;
       color: $navigation-color;
-      display: inline-block;
       text-decoration: none;
 
       @include media ($horizontal-bar-mode) {
-        padding-right: 1em;
+        margin-right: 1em;
       }
 
       &:focus,
@@ -144,8 +143,9 @@ header.navigation {
     }
   }
   .active-nav-item a {
-    border-bottom: 5px solid deeppink;
-    padding-bottom: 3px;
+
+    border-bottom: 3px $dark-gray solid;
+    padding: 5px;
   }
 
   .active-nav-items {

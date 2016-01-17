@@ -614,20 +614,19 @@ header.navigation ul li.nav-link a {
   font-weight: 400;
   text-transform: uppercase;
   color: #333;
-  display: inline-block;
   text-decoration: none;
 }
 @media screen and (min-width: 900px) {
   header.navigation ul li.nav-link a {
-    padding-right: 1em;
+    margin-right: 1em;
   }
 }
 header.navigation ul li.nav-link a:focus, header.navigation ul li.nav-link a:hover {
   color: rgba(51, 51, 51, 0.7);
 }
 header.navigation .active-nav-item a {
-  border-bottom: 5px solid deeppink;
-  padding-bottom: 3px;
+  border-bottom: 3px #333 solid;
+  padding: 5px;
 }
 header.navigation .active-nav-items {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
