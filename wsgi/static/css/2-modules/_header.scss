@@ -1,0 +1,149 @@
+/*
+* This header is a modified version from Thoughtbots Refills
+* Written by Andreas Gustafsson 2015
+*/
+
+header.navigation {
+  $base-border-color: gainsboro !default;
+  $base-border-radius: $base-border-radius;
+  //$action-color: #477DCA !default;
+  //$dark-gray: #333 !default;
+  $large-screen: em(860) !default;
+  $navigation-padding: 1em;
+  $navigation-background: $white;
+  $navigation-color: $dark-gray;
+  $navigation-color-hover: transparentize($dark-gray, 0.3);
+  $navigation-height: 60px;
+  $navigation-active-link-color: transparentize(white, 0.5);
+  $navigation-submenu-padding: 1em;
+  $navigation-submenu-width: 18em;
+  $horizontal-bar-mode: $large-screen;
+  $navigation-submenu-font-size: 1em;
+
+  background-color: $navigation-background;
+  min-height: $navigation-height;
+
+  width: 100%;
+  z-index: 999;
+  @include position(fixed);
+  box-shadow: 1px 1px 8px silver;
+
+  .navigation-wrapper {
+    @include clearfix;
+    @include outer-container;
+    z-index: 9999;
+  }
+
+  .logo {
+    float: left;
+    max-height: $navigation-height;
+    padding-left: $navigation-padding;
+    padding-right: 2em;
+
+    img {
+      max-height: $navigation-height;
+      padding: 0.8em 0;
+    }
+  }
+
+  // Mobile view
+
+  .navigation-menu-button {
+    color: $navigation-color;
+    display: block;
+    float: right;
+    line-height: $navigation-height;
+    margin: 0;
+    padding-right: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    @include media ($horizontal-bar-mode) {
+      display: none;
+    }
+
+    &:focus,
+    &:hover {
+      color: $navigation-color-hover;
+    }
+  }
+
+  // Nav menu
+  nav {
+    float: none;
+    min-height: $navigation-height;
+    z-index: 9999999;
+
+
+    @include media ($horizontal-bar-mode) {
+      float: right;
+      margin-left: 4em;
+    }
+  }
+
+  ul.navigation-menu {
+    clear: both;
+    display: none;
+    margin: 0 auto;
+    overflow: visible;
+    padding: 1em;
+    width: 100%;
+    z-index: 9999;
+
+    &.show {
+      display: block;
+    }
+
+    @include media ($horizontal-bar-mode) {
+      display: inline;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  // The nav items
+
+  ul li.nav-link {
+    //background: $navigation-background;
+    display: block;
+    line-height: 30px;
+    overflow: hidden;
+    padding-right: 0.8em;
+    //text-align: right;
+    width: 100%;
+    z-index: 9999;
+
+    @include media ($horizontal-bar-mode) {
+      background: transparent;
+      display: inline;
+      line-height: $navigation-height;
+      text-decoration: none;
+      width: auto;
+    }
+
+    // This sets fonts size all main categories in the menu i.e "Sektionen" or "Föreningar"
+    a {
+      font-size: 1em;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: $navigation-color;
+      display: inline-block;
+      text-decoration: none;
+
+      @include media ($horizontal-bar-mode) {
+        padding-right: 1em;
+      }
+
+      &:focus,
+      &:hover {
+        color: $navigation-color-hover;
+      }
+    
+    }
+  }
+  .active-nav-item a {
+    border-bottom: 1px solid $navigation-active-link-color;
+    padding-bottom: 3px;
+  }
+
+}

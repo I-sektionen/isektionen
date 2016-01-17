@@ -504,115 +504,216 @@ picture {
   max-width: 100%;
 }
 
-.header {
-  position: absolute;
-  top: 0;
-  z-index: 9999;
+/*
+* This header is a modified version from Thoughtbots Refills
+* Written by Andreas Gustafsson 2015
+*/
+header.navigation {
+  background-color: white;
+  min-height: 60px;
   width: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  position: fixed;
+  box-shadow: 1px 1px 8px silver;
 }
-.header nav#header-anchor {
+header.navigation .navigation-wrapper {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  z-index: 9999;
 }
-.header nav#header-anchor::after {
+header.navigation .navigation-wrapper::after {
   clear: both;
   content: "";
   display: table;
 }
-.header div#start-link {
+header.navigation .navigation-wrapper::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+header.navigation .logo {
   float: left;
+  max-height: 60px;
+  padding-left: 1em;
+  padding-right: 2em;
+}
+header.navigation .logo img {
+  max-height: 60px;
+  padding: 0.8em 0;
+}
+header.navigation .navigation-menu-button {
+  color: #333;
   display: block;
-  margin-right: 2.35765%;
-  width: 14.70196%;
+  float: right;
+  line-height: 60px;
+  margin: 0;
+  padding-right: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
 }
-.header div#start-link:last-child {
-  margin-right: 0;
+@media screen and (min-width: 900px) {
+  header.navigation .navigation-menu-button {
+    display: none;
+  }
 }
-.header div#nav-links {
-  float: left;
+header.navigation .navigation-menu-button:focus, header.navigation .navigation-menu-button:hover {
+  color: rgba(51, 51, 51, 0.7);
+}
+header.navigation nav {
+  float: none;
+  min-height: 60px;
+  z-index: 9999999;
+}
+@media screen and (min-width: 900px) {
+  header.navigation nav {
+    float: right;
+    margin-left: 4em;
+  }
+}
+header.navigation ul.navigation-menu {
+  clear: both;
+  display: none;
+  margin: 0 auto;
+  overflow: visible;
+  padding: 1em;
+  width: 100%;
+  z-index: 9999;
+}
+header.navigation ul.navigation-menu.show {
   display: block;
-  margin-right: 2.35765%;
-  width: 40.29137%;
-  margin-left: 42.64902%;
-  position: relative;
 }
-.header div#nav-links:last-child {
-  margin-right: 0;
+@media screen and (min-width: 900px) {
+  header.navigation ul.navigation-menu {
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
 }
-.header div.nav-link {
-  text-align: center;
-  float: left;
+header.navigation ul li.nav-link {
   display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%;
-  padding-top: 1em;
-}
-.header div.nav-link:last-child {
-  margin-right: 0;
-}
-.header div.nav-link:nth-child(4n) {
-  margin-right: 0;
-}
-.header div.nav-link:nth-child(4n+1) {
-  clear: left;
-}
-.header div.nav-link a {
-  font-weight: bold;
-  color: white;
-}
-.header div.nav-link a:hover {
-  text-decoration: underline;
-}
-.header div.active {
-  border-bottom: #f9d026 solid;
-}
-
-.parallax-window {
-  max-height: 30em;
+  line-height: 30px;
   overflow: hidden;
-  position: relative;
+  padding-right: 0.8em;
+  width: 100%;
+  z-index: 9999;
+}
+@media screen and (min-width: 900px) {
+  header.navigation ul li.nav-link {
+    background: transparent;
+    display: inline;
+    line-height: 60px;
+    text-decoration: none;
+    width: auto;
+  }
+}
+header.navigation ul li.nav-link a {
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #333;
+  display: inline-block;
+  text-decoration: none;
+}
+@media screen and (min-width: 900px) {
+  header.navigation ul li.nav-link a {
+    padding-right: 1em;
+  }
+}
+header.navigation ul li.nav-link a:focus, header.navigation ul li.nav-link a:hover {
+  color: rgba(51, 51, 51, 0.7);
+}
+header.navigation .active-nav-item a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 3px;
+}
+
+.instagram {
+  padding: 1em;
+}
+.instagram .instagram-content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.instagram .instagram-content::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.instagram .instagram-content .section-header {
+  font-size: 2.5em;
+  color: #333;
   text-align: center;
+}
+.instagram .instagram-account-link {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  text-align: center;
+}
+.instagram .instagram-account-link a {
+  color: #333;
+  font-weight: bold;
+}
+.instagram .instagram-account-link i {
+  font-size: 5em;
+}
+.instagram .instagram-picture {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
   width: 100%;
 }
-
-.parallax-static-content {
-  color: green;
-  padding: 8em 0;
-  position: relative;
-  z-index: 9;
-  margin-bottom: 70px;
-  text-align: center;
+.instagram .instagram-picture:last-child {
+  margin-right: 0;
 }
-.parallax-static-content .box-parallax {
-  margin: auto;
+.instagram .instagram-picture:nth-child(n) {
+  margin-right: 0;
 }
-
-.parallax-background {
-  background: url("http://blog.liu.se/utbildningsbloggen/files/2012/07/liu_campusvalla.jpg") repeat;
-  background-position: top;
-  background-size: cover;
-  background-color: beige;
-  height: 60em;
-  left: 0;
-  position: absolute;
-  top: -10em;
-  width: 100%;
+@media screen and (min-width: 900px) {
+  .instagram .instagram-picture {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+  }
+  .instagram .instagram-picture:last-child {
+    margin-right: 0;
+  }
+  .instagram .instagram-picture:nth-child(2n) {
+    margin-right: 2.35765%;
+  }
+  .instagram .instagram-picture:nth-child(2n+1) {
+    clear: none;
+  }
+  .instagram .instagram-picture:nth-child(3n) {
+    margin-right: 0;
+  }
+  .instagram .instagram-picture:nth-child(3n+1) {
+    clear: left;
+  }
 }
-
-.parallax-header {
-  color: #ffffff;
-  font-size: 3.5em;
-  margin-bottom: 0.5em;
-  font-weight: 700;
-  box-sizing: inherit;
-}
-
-.parallax-text {
-  color: #ffffff;
-  font-size: 1.2em;
-  box-sizing: inherit;
+.instagram .instagram-caption {
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 
 .footer {
@@ -808,22 +909,6 @@ picture {
   margin: auto;
   max-width: 35em;
   text-align: center;
-}
-
-.blog-box {
-  text-align: center;
-}
-
-div.blog-preview a {
-  text-decoration: none;
-  color: black;
-}
-div.blog-preview .latest-blog-entry {
-  border-left: solid;
-  border-color: #2D701E;
-  border-width: 3px;
-  padding-left: 1em;
-  margin-bottom: 1em;
 }
 
 .tooltip-item {
@@ -1037,71 +1122,11 @@ div.blog-preview .latest-blog-entry {
   overflow: hidden;
 }
 
-section.top-image {
-  color: white;
-}
-section.top-image div.content-wrapper {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 8em;
-  padding-bottom: 8em;
-}
-section.top-image div.content-wrapper::after {
-  clear: both;
-  content: "";
-  display: table;
-}
-section.top-image div.content-wrapper div.content-container {
-  float: left;
-  display: block;
-  margin-right: 2.84259%;
-  width: 58.86297%;
-  margin-left: 20.56852%;
-  text-align: center;
-}
-section.top-image div.content-wrapper div.content-container:last-child {
-  margin-right: 0;
-}
-section.top-image div.content-wrapper div.content-container:nth-child(1n) {
-  margin-right: 0;
-}
-section.top-image div.content-wrapper div.content-container:nth-child(1n+1) {
-  clear: left;
-}
-
-.chevron::before {
-  border-style: solid;
-  border-width: 0.1em 0.1em 0 0;
-  content: "";
-  display: inline-block;
-  height: 1em;
-  left: 0.15em;
+.top-hero, .applicant-hero, .blog-hero, .education-hero, .studentlife-hero, .after-studies-hero {
+  min-height: 80vh;
   position: relative;
-  top: 0.15em;
-  transform: rotate(-45deg);
-  vertical-align: top;
-  width: 1em;
-  -webkit-transition: -webkit-transform 1s ease-in-out;
-  -moz-transition: -moz-transform 1s ease-in-out;
-  transition: transform 1s ease-in-out;
-  -webkit-transition-delay: 0.5s;
-  -moz-transition-delay: 0.5s;
-  transition-delay: 0.5s;
 }
-.chevron.bottom::before {
-  top: 0;
-  transform: rotate(135deg);
-}
-
-.top-hero {
-  min-height: 95vh;
-  position: relative;
-  background-image: linear-gradient(150deg, rgba(102, 102, 102, 0.35) 25%, rgba(0, 0, 0, 0.35)), url(https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/liu_campusvalla.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-}
-.top-hero .hero-content {
+.top-hero .hero-content, .applicant-hero .hero-content, .blog-hero .hero-content, .education-hero .hero-content, .studentlife-hero .hero-content, .after-studies-hero .hero-content {
   padding: 2em;
   text-align: center;
   width: 60%;
@@ -1114,30 +1139,150 @@ section.top-image div.content-wrapper div.content-container:nth-child(1n+1) {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.top-hero .hero-heading {
+.top-hero .hero-heading, .applicant-hero .hero-heading, .blog-hero .hero-heading, .education-hero .hero-heading, .studentlife-hero .hero-heading, .after-studies-hero .hero-heading {
   color: #f7f7f7;
   font-size: 2em;
   text-transform: uppercase;
   margin-bottom: 0;
 }
 @media screen and (min-width: 900px) {
-  .top-hero .hero-heading {
+  .top-hero .hero-heading, .applicant-hero .hero-heading, .blog-hero .hero-heading, .education-hero .hero-heading, .studentlife-hero .hero-heading, .after-studies-hero .hero-heading {
     font-size: 3em;
   }
 }
-.top-hero .hero-divider {
+.top-hero .hero-divider, .applicant-hero .hero-divider, .blog-hero .hero-divider, .education-hero .hero-divider, .studentlife-hero .hero-divider, .after-studies-hero .hero-divider {
   border: none;
   background-color: #f7f7f7;
   height: 5px;
   margin: 5px;
 }
-.top-hero .hero-text {
+.top-hero .hero-text, .applicant-hero .hero-text, .blog-hero .hero-text, .education-hero .hero-text, .studentlife-hero .hero-text, .after-studies-hero .hero-text {
   color: #f7f7f7;
 }
 @media screen and (min-width: 900px) {
-  .top-hero .hero-text {
+  .top-hero .hero-text, .applicant-hero .hero-text, .blog-hero .hero-text, .education-hero .hero-text, .studentlife-hero .hero-text, .after-studies-hero .hero-text {
     text-align: justify;
   }
+}
+
+article.single_blog_entry {
+  font-family: Lato, sans-serif, sans-serif;
+  text-align: left;
+}
+article.single_blog_entry h1, article.single_blog_entry h2, article.single_blog_entry h3, article.single_blog_entry p {
+  margin: 0;
+}
+article.single_blog_entry hr {
+  border-bottom: 1px solid #f7f7f7;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 1.5em 0;
+}
+article.single_blog_entry p {
+  color: #333;
+  line-height: 2em;
+}
+article.single_blog_entry a {
+  color: #333;
+  text-decoration: none;
+}
+article.single_blog_entry a:hover {
+  text-decoration: underline;
+}
+article.single_blog_entry .type {
+  border-bottom: 1px solid;
+  display: inline-block;
+  font-family: Lato, sans-serif, sans-serif;
+  font-size: 0.7em;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 2em;
+  padding: 0.1em 0;
+  text-align: left;
+  text-transform: uppercase;
+}
+article.single_blog_entry h1 {
+  font-family: Lato, sans-serif, sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 0.6em;
+}
+@media screen and (min-width: 600px) {
+  article.single_blog_entry h1 {
+    font-size: 2.4em;
+  }
+}
+article.single_blog_entry h2 {
+  font-family: Lato, sans-serif, sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 1.4em;
+  margin-bottom: 1.2em;
+}
+@media screen and (min-width: 600px) {
+  article.single_blog_entry h2 {
+    font-size: 1.4em;
+  }
+}
+article.single_blog_entry code {
+  background: #F7F7F7;
+  border-radius: 4.5px;
+  border: 1px solid #E0E0E0;
+  font-family: monaco;
+  font-size: 0.65em;
+  font-style: normal;
+  padding: 0.1em 0.4em;
+  white-space: nowrap;
+}
+article.single_blog_entry h3 {
+  font-family: Lato, sans-serif, sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.4em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+article.single_blog_entry p.date {
+  color: rgba(51, 51, 51, 0.4);
+  font-family: Lato, sans-serif, sans-serif;
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+  font-weight: 800;
+}
+article.single_blog_entry p {
+  font-family: Lato, sans-serif, sans-serif;
+  font-weight: 300;
+  letter-spacing: 1;
+  margin-bottom: 1.5em;
+}
+article.single_blog_entry p span {
+  font-family: Lato, sans-serif, sans-serif;
+  font-size: 0.8em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+article.single_blog_entry hr {
+  width: 3em;
+}
+article.single_blog_entry a.read-more {
+  display: inline-block;
+  font-family: Lato, sans-serif, sans-serif;
+  font-size: 0.8em;
+  font-weight: 700;
+  margin-left: 0.2em;
+  position: relative;
+  text-transform: uppercase;
+}
+article.single_blog_entry a.read-more span {
+  font-size: 1.7em;
+  position: absolute;
+  right: -10px;
+  top: -2px;
+}
+article.single_blog_entry p.author {
+  font-family: Lato, sans-serif, sans-serif;
+  font-style: italic;
 }
 
 .landing-hero {
@@ -1180,6 +1325,7 @@ section.top-image div.content-wrapper div.content-container:nth-child(1n+1) {
   color: #f7f7f7;
   font-size: 2.5em;
   margin-top: 5px;
+  text-transform: uppercase;
 }
 
 .scroll-down {
@@ -1223,18 +1369,17 @@ section.top-image div.content-wrapper div.content-container:nth-child(1n+1) {
   display: table;
 }
 .landing-content .sokande-foretag .sokande-foretag-description {
+  text-align: center;
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%;
   padding: 2em;
-  text-align: justify;
 }
 .landing-content .sokande-foretag .sokande-foretag-description:last-child {
   margin-right: 0;
 }
 .landing-content .sokande-foretag .sokande-foretag-description .section-header-with-icon {
-  text-align: center;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -1262,6 +1407,7 @@ section.top-image div.content-wrapper div.content-container:nth-child(1n+1) {
 }
 .landing-content .sokande-foretag .sokande-foretag-description p {
   line-height: 2em;
+  text-align: justify;
 }
 @media screen and (min-width: 900px) {
   .landing-content .sokande-foretag .sokande-foretag-description {
@@ -1278,25 +1424,14 @@ section.top-image div.content-wrapper div.content-container:nth-child(1n+1) {
     border-right: 1px solid gray;
   }
 }
-.landing-content .instagram {
-  padding: 1em;
-}
-.landing-content .instagram .instagram-content {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.landing-content .instagram .instagram-content::after {
-  clear: both;
-  content: "";
-  display: table;
-}
-.landing-content .instagram .instagram-content .section-header {
+
+.latest .section-header {
+  text-align: center;
   font-size: 2.5em;
   color: #333;
-  text-align: center;
 }
-.landing-content .instagram .instagram-account-link {
+
+.blog-previews {
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -1304,6 +1439,8 @@ section.top-image div.content-wrapper div.content-container:nth-child(1n+1) {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 auto;
+  max-width: 800px;
   -webkit-box-orient: vertical;
   -moz-box-orient: vertical;
   box-orient: vertical;
@@ -1314,56 +1451,327 @@ section.top-image div.content-wrapper div.content-container:nth-child(1n+1) {
   -moz-flex-direction: column;
   flex-direction: column;
   -ms-flex-direction: column;
+  padding: 1em;
+  color: #333;
+}
+.blog-previews .blog-title {
+  font-weight: 800;
+  font-size: 1.2em;
+}
+.blog-previews .blog-title a {
+  color: #333;
+}
+.blog-previews .blog-text {
+  line-height: 1.5em;
+}
+.blog-previews .blog-date {
+  font-weight: 200;
+}
+.blog-previews .latest-blogs-preview {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.blog-previews .latest-blogs-preview .blog-entry-datebox {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  align-self: center;
+  -ms-flex-item-align: center;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.blog-previews .latest-blogs-preview .blog-entry-textbox {
+  -webkit-box-flex: 4;
+  -moz-box-flex: 4;
+  box-flex: 4;
+  -webkit-flex: 4;
+  -moz-flex: 4;
+  -ms-flex: 4;
+  flex: 4;
+}
+
+.applicant-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/campus_nkpg.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.promo-section, .blog-promo {
+  min-height: 50vh;
+  position: relative;
+}
+.promo-section .promo-content, .blog-promo .promo-content {
+  padding: 2em;
+  text-align: center;
+  width: 60%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.promo-section .promo-heading, .blog-promo .promo-heading {
+  color: #f7f7f7;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 900px) {
+  .promo-section .promo-heading, .blog-promo .promo-heading {
+    font-size: 3em;
+  }
+}
+.promo-section .promo-text, .blog-promo .promo-text {
+  color: #f7f7f7;
+}
+@media screen and (min-width: 900px) {
+  .promo-section .promo-text, .blog-promo .promo-text {
+    text-align: justify;
+    font-size: 1.2em;
+  }
+}
+
+.applicant-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.applicant-container::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.applicant-section, .education, .student-life, .after-studies {
+  padding: 2em;
   text-align: center;
 }
-.landing-content .instagram .instagram-account-link a {
+.applicant-section .section-header, .education .section-header, .student-life .section-header, .after-studies .section-header {
   color: #333;
-  font-weight: bold;
+  font-size: 2.5em;
 }
-.landing-content .instagram .instagram-account-link i {
-  font-size: 5em;
+@media screen and (min-width: 900px) {
+  .applicant-section .section-header, .education .section-header, .student-life .section-header, .after-studies .section-header {
+    font-size: 3em;
+  }
 }
-.landing-content .instagram .instagram-picture {
+.applicant-section .section-text, .education .section-text, .student-life .section-text, .after-studies .section-text {
+  line-height: 1.5em;
+  color: #333;
+}
+@media screen and (min-width: 900px) {
+  .applicant-section .section-text, .education .section-text, .student-life .section-text, .after-studies .section-text {
+    text-align: justify;
+    font-size: 1em;
+  }
+}
+
+.education {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%;
 }
-.landing-content .instagram .instagram-picture:last-child {
-  margin-right: 0;
-}
-.landing-content .instagram .instagram-picture:nth-child(n) {
+.education:last-child {
   margin-right: 0;
 }
 @media screen and (min-width: 900px) {
-  .landing-content .instagram .instagram-picture {
+  .education {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 31.76157%;
+    width: 48.82117%;
   }
-  .landing-content .instagram .instagram-picture:last-child {
+  .education:last-child {
     margin-right: 0;
-  }
-  .landing-content .instagram .instagram-picture:nth-child(2n) {
-    margin-right: 2.35765%;
-  }
-  .landing-content .instagram .instagram-picture:nth-child(2n+1) {
-    clear: none;
-  }
-  .landing-content .instagram .instagram-picture:nth-child(3n) {
-    margin-right: 0;
-  }
-  .landing-content .instagram .instagram-picture:nth-child(3n+1) {
-    clear: left;
   }
 }
-.landing-content .instagram .instagram-caption {
-  -webkit-transform: translateY(-100%);
-  -moz-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  -o-transform: translateY(-100%);
-  transform: translateY(-100%);
+
+.student-life {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+.student-life:last-child {
+  margin-right: 0;
+}
+@media screen and (min-width: 900px) {
+  .student-life {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+  }
+  .student-life:last-child {
+    margin-right: 0;
+  }
+}
+
+.blog-promo {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/_MG_4139.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.after-studies {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+.after-studies:last-child {
+  margin-right: 0;
+}
+
+.blog-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://iportalen-us.s3.amazonaws.com:443/static/iportalen/HERO.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.blog-entry-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+.blog-entry-container::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.blog-entry {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+.blog-entry:last-child {
+  margin-right: 0;
+}
+@media screen and (min-width: 900px) {
+  .blog-entry {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    margin-left: 17.05961%;
+  }
+  .blog-entry:last-child {
+    margin-right: 0;
+  }
+}
+
+.blog-meny {
+  text-align: center;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+
+.blogg-entry-divider {
+  border: none;
+  background-color: gainsboro;
+  height: 0.2em;
+  margin: 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blogg-pagination {
+  text-align: center;
+}
+
+.education-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://iportalen-us.s3.amazonaws.com:443/static/iportalen/HERO.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.program-graph {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+.program-graph::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.program-graph .section-header {
+  font-size: 2.5em;
+  color: #333;
+}
+.program-graph .chart-container {
+  padding: 2em;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: distribute;
+  -moz-box-pack: distribute;
+  box-pack: distribute;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-pack: distribute;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.program-graph .chart-container .chart-title {
+  text-align: center;
+  font-size: 1.5em;
+  color: #333;
+}
+.program-graph .chart-container .chart-canvas {
+  margin-bottom: 1em;
+  height: 300px;
+  width: 300px;
+}
+
+.studentlife-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://iportalen-us.s3.amazonaws.com:443/static/iportalen/HERO.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.after-studies-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://iportalen-us.s3.amazonaws.com:443/static/iportalen/HERO.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=isektionen.css.map */

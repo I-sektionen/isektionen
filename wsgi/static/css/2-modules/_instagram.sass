@@ -1,1 +1,27 @@
-.instagram-pictures
+.instagram
+  padding: 1em
+  .instagram-content
+    +outer-container()
+    .section-header
+      font-size: 2.5em
+      color: $dark-gray
+      text-align: center
+  .instagram-account-link
+    +display(flex)
+    +flex-direction(column)
+    text-align: center
+    a
+      color: $dark-gray
+      font-weight: bold
+    i
+      font-size: 5em
+  .instagram-pictures
+  .instagram-picture
+    +span-columns(12)
+    +omega(n)
+    +media($large-screen)
+      +span-columns(4)
+      +omega-reset(2n)
+      +omega(3n)
+  .instagram-caption
+    +transform(translateY(-100%))

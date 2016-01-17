@@ -6,14 +6,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% include "stylesheets.html" %}
-
-
     <title>Industriell ekonomi Linköping - {% block page_subtitle %} {% endblock %}</title>
     {% block head %} {% endblock %}
 </head>
 
 <body>
-
 <!-- A modal that could be used in any subpage with different content -->
     <div class="modal">
         <input class="modal-state" id="modal-1" type="checkbox" />
@@ -29,7 +26,23 @@
 <!-- include gör att vi kan importera andra filer -->
 
 {% block header %}
-    {% comment %} {% include "header.html" %} {% endcomment %}
+    <header class="navigation">
+    <div class="navigation-wrapper">
+        <a href="{% url 'home' %}" class="logo">
+            <img src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/ie_cmyk.png" alt="Logo Image">
+        </a>
+        <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu"><i class="fa fa-bars"></i></a>
+        <nav>
+            <ul id="js-navigation-menu" class="navigation-menu show">
+                <li class="nav-link"><a href="{% url 'home' %}">Start</a></li>
+                <li class="nav-link"><a href="{% url 'blog' %}">Blog</a></li>
+                {% block links %}
+
+                {% endblock %}
+            </ul>
+        </nav>
+    </div>
+</header>
 {% endblock %}
 
 {% block hero %}
@@ -43,16 +56,6 @@
 </div>
 
 {% include 'footer.html' %}
-
-{% block after_scripts %}
-<script>
-    $(document).ready(
-
-
-    )
-
-</script>
-{% endblock %}
 
 {% include "scripts.html" %}
 <script>

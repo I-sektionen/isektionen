@@ -1,8 +1,0 @@
-{% extends 'master.html' %}
-
-{% block content %}
-{% for entry in blog_entries %}
-    {{ entry.title }}
-    <a href="{{ entry.get_absolute_url }}"> läs mer </a>
-{% endfor %}
- {% endblock %}
