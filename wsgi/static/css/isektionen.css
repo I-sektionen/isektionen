@@ -1708,33 +1708,56 @@ article.single_blog_entry p.author {
   background-size: cover;
 }
 
-.education-page {
-  padding-top: 1em;
-  text-align: center;
-}
-.education-page .introduction {
+.program-graph {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  padding: 1em;
 }
-.education-page .introduction::after {
+.program-graph::after {
   clear: both;
   content: "";
   display: table;
 }
-.education-page .introduction .introduction-content {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%;
-  text-align: center;
+.program-graph .section-header {
+  font-size: 2.5em;
+  color: #333;
 }
-.education-page .introduction .introduction-content:last-child {
-  margin-right: 0;
+.program-graph .chart-container {
+  padding: 2em;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: distribute;
+  -moz-box-pack: distribute;
+  box-pack: distribute;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-pack: distribute;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-.education-page .introduction .introduction-content h1 {
+.program-graph .chart-container .chart-title {
   text-align: center;
+  font-size: 1.5em;
+  color: #333;
+}
+.program-graph .chart-container .chart-canvas {
+  margin-bottom: 1em;
+  height: 300px;
+  width: 300px;
 }
 
 .studentlife-hero {
