@@ -48,6 +48,8 @@ $hero-text-color: $light-gray;
 
   .hero-text {
     color: $hero-text-color;
+    font-weight: bold;
+    font-size: 1.2em;
     @include media ($large-screen) {
       text-align: justify;
     }
