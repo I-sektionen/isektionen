@@ -7,10 +7,23 @@
 {% endblock %}
 
 {% block content %}
+
+    <section class="education-hero">
+        <div class="hero-content">
+            <h1 class="hero-heading">Utbildningen</h1>
+            <hr class="hero-divider">
+            <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In schola desinis.
+                Quod quidem iam fit etiam in Academia. Zenonis est, inquam, hoc Stoici. Nondum autem explanatum satis, erat,
+                quid maxime natura vellet. Duo Reges: constructio interrete. At ego quem huic anteponam non audeo dicere;
+            </p>
+        </div>
+    </section>
+
+
     <section id="education-page">
-    {% include 'isektionen/sokande/utbildning/inledning.html' %}
-    {% include 'isektionen/sokande/utbildning/tidslinje.html' %}
-    {% include 'isektionen/sokande/utbildning/profiler.html' %}
-    {% include 'isektionen/sokande/utbildning/utlandsstudier.html' %}
+        {% include 'isektionen/sokande/utbildning/inledning.html' %}
+        {% include 'isektionen/sokande/utbildning/tidslinje.html' %}
+        {% include 'isektionen/sokande/utbildning/profiler.html' %}
+        {% include 'isektionen/sokande/utbildning/utlandsstudier.html' %}
     </section>
 {% endblock %}

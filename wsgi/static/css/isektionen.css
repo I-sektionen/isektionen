@@ -921,10 +921,10 @@ header.navigation {
 .modal-open {
   overflow: hidden; }
 
-.top-hero, .applicant-hero, .blog-hero {
+.top-hero, .applicant-hero, .blog-hero, .education-hero, .studentlife-hero, .after-studies-hero {
   min-height: 80vh;
   position: relative; }
-  .top-hero .hero-content, .applicant-hero .hero-content, .blog-hero .hero-content {
+  .top-hero .hero-content, .applicant-hero .hero-content, .blog-hero .hero-content, .education-hero .hero-content, .studentlife-hero .hero-content, .after-studies-hero .hero-content {
     padding: 2em;
     text-align: center;
     width: 60%;
@@ -936,23 +936,23 @@ header.navigation {
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
-  .top-hero .hero-heading, .applicant-hero .hero-heading, .blog-hero .hero-heading {
+  .top-hero .hero-heading, .applicant-hero .hero-heading, .blog-hero .hero-heading, .education-hero .hero-heading, .studentlife-hero .hero-heading, .after-studies-hero .hero-heading {
     color: #f7f7f7;
     font-size: 2em;
     text-transform: uppercase;
     margin-bottom: 0; }
     @media screen and (min-width: 900px) {
-      .top-hero .hero-heading, .applicant-hero .hero-heading, .blog-hero .hero-heading {
+      .top-hero .hero-heading, .applicant-hero .hero-heading, .blog-hero .hero-heading, .education-hero .hero-heading, .studentlife-hero .hero-heading, .after-studies-hero .hero-heading {
         font-size: 3em; } }
-  .top-hero .hero-divider, .applicant-hero .hero-divider, .blog-hero .hero-divider {
+  .top-hero .hero-divider, .applicant-hero .hero-divider, .blog-hero .hero-divider, .education-hero .hero-divider, .studentlife-hero .hero-divider, .after-studies-hero .hero-divider {
     border: none;
     background-color: #f7f7f7;
     height: 5px;
     margin: 5px; }
-  .top-hero .hero-text, .applicant-hero .hero-text, .blog-hero .hero-text {
+  .top-hero .hero-text, .applicant-hero .hero-text, .blog-hero .hero-text, .education-hero .hero-text, .studentlife-hero .hero-text, .after-studies-hero .hero-text {
     color: #f7f7f7; }
     @media screen and (min-width: 900px) {
-      .top-hero .hero-text, .applicant-hero .hero-text, .blog-hero .hero-text {
+      .top-hero .hero-text, .applicant-hero .hero-text, .blog-hero .hero-text, .education-hero .hero-text, .studentlife-hero .hero-text, .after-studies-hero .hero-text {
         text-align: justify; } }
 
 article.single_blog_entry {
@@ -1356,5 +1356,46 @@ article.single_blog_entry {
 
 .blogg-pagination {
   text-align: center; }
+
+.education-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://iportalen-us.s3.amazonaws.com:443/static/iportalen/HERO.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover; }
+
+.education-page {
+  padding-top: 1em;
+  text-align: center; }
+  .education-page .introduction {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; }
+    .education-page .introduction::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .education-page .introduction .introduction-content {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      text-align: center; }
+      .education-page .introduction .introduction-content:last-child {
+        margin-right: 0; }
+      .education-page .introduction .introduction-content h1 {
+        text-align: center; }
+
+.studentlife-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://iportalen-us.s3.amazonaws.com:443/static/iportalen/HERO.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover; }
+
+.after-studies-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://iportalen-us.s3.amazonaws.com:443/static/iportalen/HERO.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover; }
 
 /*# sourceMappingURL=isektionen.css.map */
