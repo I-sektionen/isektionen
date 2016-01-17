@@ -19,11 +19,15 @@ $applicant-text-color: $light-gray;
     padding: 2em;
     text-align: center;
     width: 60%;
-    //This positions the element rela
     @include position(absolute);
     left: 50%;
     top: 50%;
+    width: 100%;
     @include transform(translate(-50%, -50%));
+
+    @include media($large-screen) {
+      width: auto;
+    }
   }
 
   .promo-heading {
@@ -100,7 +104,7 @@ $applicant-text-color: $light-gray;
 
 .blog-promo {
   @extend .promo-section;
-  @include section-cover-background('https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/_MG_4139.jpg')
+  @include section-cover-background('https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/_MG_4139.jpg', top, center)
 }
 .after-studies {
   @extend .applicant-section;

@@ -1505,11 +1505,17 @@ article.single_blog_entry p.author {
   position: absolute;
   left: 50%;
   top: 50%;
+  width: 100%;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 900px) {
+  .promo-section .promo-content, .blog-promo .promo-content {
+    width: auto;
+  }
 }
 .promo-section .promo-heading, .blog-promo .promo-heading {
   color: #f7f7f7;
@@ -1611,7 +1617,7 @@ article.single_blog_entry p.author {
 
 .blog-promo {
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/_MG_4139.jpg");
-  background-position: center center;
+  background-position: top center;
   background-attachment: fixed;
   background-size: cover;
 }
