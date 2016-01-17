@@ -1197,6 +1197,80 @@ article.single_blog_entry {
 .landing-content .instagram {
   padding: 1em; }
 
+.latest .section-header {
+  text-align: center;
+  font-size: 2.5em;
+  color: #333;
+}
+
+.blog-previews {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  max-width: 800px;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  padding: 1em;
+  color: #333;
+}
+.blog-previews .blog-title {
+  font-weight: 800;
+  font-size: 1.2em;
+}
+.blog-previews .blog-title a {
+  color: #333;
+}
+.blog-previews .blog-text {
+  line-height: 1.5em;
+}
+.blog-previews .blog-date {
+  font-weight: 200;
+}
+.blog-previews .latest-blogs-preview {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.blog-previews .latest-blogs-preview .blog-entry-datebox {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  align-self: center;
+  -ms-flex-item-align: center;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.blog-previews .latest-blogs-preview .blog-entry-textbox {
+  -webkit-box-flex: 4;
+  -moz-box-flex: 4;
+  box-flex: 4;
+  -webkit-flex: 4;
+  -moz-flex: 4;
+  -ms-flex: 4;
+  flex: 4;
+}
+
 .applicant-hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/campus_nkpg.jpg");
   background-position: center center;
