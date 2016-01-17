@@ -92,6 +92,7 @@ header.navigation {
     width: 100%;
     z-index: 9999;
 
+
     &.show {
       display: block;
     }
@@ -111,7 +112,7 @@ header.navigation {
     line-height: 30px;
     overflow: hidden;
     padding-right: 0.8em;
-    //text-align: right;
+    text-align: center;
     width: 100%;
     z-index: 9999;
 
@@ -129,21 +130,26 @@ header.navigation {
       font-weight: 400;
       text-transform: uppercase;
       color: $navigation-color;
-      display: inline-block;
       text-decoration: none;
 
       @include media ($horizontal-bar-mode) {
-        padding-right: 1em;
+        margin-right: 1em;
       }
 
       &:focus,
       &:hover {
         color: $navigation-color-hover;
       }
-    
+
     }
   }
   .active-nav-item a {
+
+    border-bottom: 3px $dark-gray solid;
+    padding: 5px;
+  }
+
+  .active-nav-items {
     border-bottom: 1px solid $navigation-active-link-color;
     padding-bottom: 3px;
   }

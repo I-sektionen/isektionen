@@ -597,6 +597,7 @@ header.navigation ul li.nav-link {
   line-height: 30px;
   overflow: hidden;
   padding-right: 0.8em;
+  text-align: center;
   width: 100%;
   z-index: 9999;
 }
@@ -614,18 +615,21 @@ header.navigation ul li.nav-link a {
   font-weight: 400;
   text-transform: uppercase;
   color: #333;
-  display: inline-block;
   text-decoration: none;
 }
 @media screen and (min-width: 900px) {
   header.navigation ul li.nav-link a {
-    padding-right: 1em;
+    margin-right: 1em;
   }
 }
 header.navigation ul li.nav-link a:focus, header.navigation ul li.nav-link a:hover {
   color: rgba(51, 51, 51, 0.7);
 }
 header.navigation .active-nav-item a {
+  border-bottom: 3px #333 solid;
+  padding: 5px;
+}
+header.navigation .active-nav-items {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   padding-bottom: 3px;
 }
@@ -1300,8 +1304,13 @@ article.single_blog_entry p.author {
 .landing-hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/liu_campusvalla.jpg");
   background-position: center center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: cover;
+}
+@media screen and (min-width: 900px) {
+  .landing-hero {
+    background-attachment: fixed;
+  }
 }
 .landing-hero .hero-logo img {
   max-height: 14em;
@@ -1490,8 +1499,13 @@ article.single_blog_entry p.author {
 .applicant-hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/campus_nkpg.jpg");
   background-position: center center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: cover;
+}
+@media screen and (min-width: 900px) {
+  .applicant-hero {
+    background-attachment: fixed;
+  }
 }
 
 .promo-section, .blog-promo {
@@ -1618,8 +1632,13 @@ article.single_blog_entry p.author {
 .blog-promo {
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/_MG_4139.jpg");
   background-position: top center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: cover;
+}
+@media screen and (min-width: 900px) {
+  .blog-promo {
+    background-attachment: fixed;
+  }
 }
 
 .after-studies {
@@ -1635,8 +1654,13 @@ article.single_blog_entry p.author {
 .blog-hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://iportalen-us.s3.amazonaws.com:443/static/iportalen/HERO.jpg");
   background-position: center center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: cover;
+}
+@media screen and (min-width: 900px) {
+  .blog-hero {
+    background-attachment: fixed;
+  }
 }
 
 .blog-entry-container {
@@ -1698,8 +1722,43 @@ article.single_blog_entry p.author {
 .education-hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://iportalen-us.s3.amazonaws.com:443/static/iportalen/HERO.jpg");
   background-position: center center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: cover;
+}
+@media screen and (min-width: 900px) {
+  .education-hero {
+    background-attachment: fixed;
+  }
+}
+
+.utbildning-intro {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+.utbildning-intro::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.utbildning-intro .section-header {
+  font-size: 2.5em;
+  color: #333;
+}
+.utbildning-intro .section-text {
+  line-height: 2em;
+  text-align: justify;
+}
+@media screen and (min-width: 900px) {
+  .utbildning-intro .section-text {
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+    -webkit-column-gap: 4em;
+    -moz-column-gap: 4em;
+    column-gap: 4em;
+  }
 }
 
 .program-graph {
@@ -1757,15 +1816,25 @@ article.single_blog_entry p.author {
 .studentlife-hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://iportalen-us.s3.amazonaws.com:443/static/iportalen/HERO.jpg");
   background-position: center center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: cover;
+}
+@media screen and (min-width: 900px) {
+  .studentlife-hero {
+    background-attachment: fixed;
+  }
 }
 
 .after-studies-hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://iportalen-us.s3.amazonaws.com:443/static/iportalen/HERO.jpg");
   background-position: center center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: cover;
+}
+@media screen and (min-width: 900px) {
+  .after-studies-hero {
+    background-attachment: fixed;
+  }
 }
 
 /*# sourceMappingURL=isektionen.css.map */
