@@ -12,36 +12,35 @@
 
 <body>
 <!-- A modal that could be used in any subpage with different content -->
-    <div class="modal">
-        <input class="modal-state" id="modal-1" type="checkbox" />
-        <div class="modal-fade-screen">
-            <div class="modal-inner">
-                <div class="modal-close" for="modal-1"></div>
-                <div id="modal-content" for="modal-1"></div>
-            </div>
+<div class="modal">
+    <input class="modal-state" id="modal-1" type="checkbox" />
+    <div class="modal-fade-screen">
+        <div class="modal-inner">
+            <div class="modal-close" for="modal-1"></div>
+            <div id="modal-content" for="modal-1"></div>
         </div>
     </div>
+</div>
 
 
 <!-- include gör att vi kan importera andra filer -->
 
 {% block header %}
     <header class="navigation">
-    <div class="navigation-wrapper">
-        <a href="{% url 'home' %}" class="logo">
-            <img src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/ie_cmyk.png" alt="Logo Image">
-        </a>
-        <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu"><i class="fa fa-bars"></i></a>
-        <nav>
-            <ul id="js-navigation-menu" class="navigation-menu show">
+        <div class="navigation-wrapper">
+            <a href="{% url 'home' %}" class="logo">
+                <img src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/ie_cmyk.png" alt="Logo Image">
+            </a>
+            <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu"><i class="fa fa-bars"></i></a>
+            <nav>
+                <ul id="js-navigation-menu" class="navigation-menu show">
+                    {% block links %}
 
-                {% block links %}
-
-                {% endblock %}
-            </ul>
-        </nav>
-    </div>
-</header>
+                    {% endblock %}
+                </ul>
+            </nav>
+        </div>
+    </header>
 {% endblock %}
 
 {% block hero %}

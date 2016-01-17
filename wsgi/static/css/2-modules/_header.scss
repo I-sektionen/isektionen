@@ -144,6 +144,11 @@ header.navigation {
     }
   }
   .active-nav-item a {
+    border-bottom: 5px solid deeppink;
+    padding-bottom: 3px;
+  }
+
+  .active-nav-items {
     border-bottom: 1px solid $navigation-active-link-color;
     padding-bottom: 3px;
   }

@@ -1,6 +1,11 @@
 {% extends 'master.html' %}
 {% block links %}
-    <li class="nav-link"><a href="{% url 'blog' %}">Blog</a></li>
+
+    {% if blog %}
+        <li class="nav-link active-nav-item"><a href="{% url 'blog' %}">Blog</a></li>
+    {% else %}
+        <li class="nav-link"><a href="{% url 'blog' %}">Blog</a></li>
+    {% endif %}
     <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
     <li class="nav-link"><a href="{% url 'foretag' %}">Företag</a></li>
 {% endblock %}
