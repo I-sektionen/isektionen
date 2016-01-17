@@ -509,7 +509,7 @@ picture {
 * Written by Andreas Gustafsson 2015
 */
 header.navigation {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: white;
   min-height: 80px;
   width: 100%;
   z-index: 999;
@@ -597,6 +597,7 @@ header.navigation ul li.nav-link {
   line-height: 30px;
   overflow: hidden;
   padding-right: 0.8em;
+  text-align: center;
   width: 100%;
   z-index: 9999;
 }

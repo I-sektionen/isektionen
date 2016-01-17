@@ -10,7 +10,7 @@ header.navigation {
   //$dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $navigation-padding: 1em;
-  $navigation-background: transparentize($white, 0.15);
+  $navigation-background: $white;
   $navigation-color: $dark-gray;
   $navigation-color-hover: transparentize($dark-gray, 0.3);
   $navigation-height: 80px;
@@ -92,6 +92,7 @@ header.navigation {
     width: 100%;
     z-index: 9999;
 
+
     &.show {
       display: block;
     }
@@ -111,7 +112,7 @@ header.navigation {
     line-height: 30px;
     overflow: hidden;
     padding-right: 0.8em;
-    //text-align: right;
+    text-align: center;
     width: 100%;
     z-index: 9999;
 
