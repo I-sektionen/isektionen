@@ -9,6 +9,8 @@
     text-align: center
     color: $light-gray
     margin: 0
+    font-size: 1.2em
+    font-weight: bold
   .hero-heading
     margin-top: 0
 
@@ -23,12 +25,19 @@
     .history-content
       padding: 2em
       +outer-container()
-      p
+
+
+      .history-text
         text-align: justify
         line-height: 2em
+        @include media($large-screen)
+          +columns(2)
+          +column-gap(4em)
+
       .section-header
         font-size: 2.5em
         color: $dark-gray
+        text-align: center
 
   .sokande-foretag
     padding: 1em
