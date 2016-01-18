@@ -39,17 +39,9 @@ else:
 SECRET_KEY = '^+^i^1i94%j-hikdsafl324+107xw(vf^mz4hg--#w0mw93+kc#&4vc=#=@'  # TODO: Make use of os.envion on openshift.
 
 if ON_PASS:
-    ssl = False
-    try:
-        s = os.environ.get('SSL_ENABLED')
-        if s == "TRUE":
-            ssl = True
-    except:
-        pass
-    if ssl:
-        SECURE_SSL_REDIRECT = True
-        SESSION_COOKIE_SECURE = True
-        CSRF_COOKIE_SECURE = True
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
 
 # Application definition
 INSTALLED_APPS = (
