@@ -39,7 +39,6 @@ else:
 SECRET_KEY = '^+^i^1i94%j-hikdsafl324+107xw(vf^mz4hg--#w0mw93+kc#&4vc=#=@'  # TODO: Make use of os.envion on openshift.
 
 if ON_PASS:
-    print("HEJJJJJJJJJJJJJJJJJJJJJ!")
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
