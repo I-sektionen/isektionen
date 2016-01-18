@@ -47,9 +47,9 @@ if ON_PASS:
     except:
         pass
     if ssl:
-        SECURE_SSL_REDIRECT = False
-        SESSION_COOKIE_SECURE = False
-        CSRF_COOKIE_SECURE = False
+        SECURE_SSL_REDIRECT = True
+        SESSION_COOKIE_SECURE = True
+        CSRF_COOKIE_SECURE = True
 
 # Application definition
 INSTALLED_APPS = (
