@@ -15,5 +15,7 @@ urlpatterns = [
     url(r'^sokande/studentliv$', view=views.show_studentliv_page, name='studentliv'),
     url(r'^sokande/efterstudier$', view=views.show_efterstudier_page, name='efterstudier'),
     url(r'.well-known/acme-challenge/sswDRRG9Em-kCkpXIZvECjVTirS1rIMLsltuF2lwDpk', TemplateView.as_view(template_name='acme.txt', content_type='text/plain'))
+    url(r'^sokande/i-resan/$', view=views.i_resan_page, name="i-resan"),
+
 ]
 
