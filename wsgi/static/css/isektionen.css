@@ -1852,4 +1852,39 @@ article.single_blog_entry p.author {
   }
 }
 
+.i-resan {
+  padding: 2em;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.i-resan::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.i-resan .bullet-list {
+  margin-left: 2em;
+  list-style-type: disc;
+}
+.i-resan .section-header {
+  color: #333;
+  font-size: 2.5em;
+}
+@media screen and (min-width: 900px) {
+  .i-resan .section-header {
+    font-size: 3em;
+  }
+}
+.i-resan .section-text {
+  line-height: 1.5em;
+  color: #333;
+}
+@media screen and (min-width: 900px) {
+  .i-resan .section-text {
+    text-align: justify;
+    font-size: 1em;
+  }
+}
+
 /*# sourceMappingURL=isektionen.css.map */
