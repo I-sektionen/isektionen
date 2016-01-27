@@ -1340,6 +1340,9 @@ article.single_blog_entry p.author {
   content: "";
   display: table;
 }
+.flex-boxes .hide-box {
+  display: none;
+}
 .flex-boxes .flex-box {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;

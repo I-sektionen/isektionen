@@ -26,6 +26,10 @@
     clear: both;
     text-align: center;
 
+  .hide-box {
+    display: none;
+  }
+
   .flex-box {
     @include transition (all 0.2s ease-in-out);
     @include flex(2 2 301px);
