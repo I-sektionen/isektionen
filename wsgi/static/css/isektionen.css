@@ -833,7 +833,7 @@ header.navigation .active-nav-items {
     -moz-flex: 1.5;
     -ms-flex: 1.5;
     flex: 1.5;
-    visibility: visible;
+    display: block;
     padding-left: 2em;
   }
   .footer .footer-content .footer-links #content-column {
@@ -853,7 +853,7 @@ header.navigation .active-nav-items {
     -moz-flex: 2;
     -ms-flex: 2;
     flex: 2;
-    visibility: visible;
+    display: block;
   }
   .footer .footer-content .footer-links #social-media-column {
     -webkit-box-flex: 1.5;
