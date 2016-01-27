@@ -1,0 +1,44 @@
+.education-hero
+  @extend .top-hero
+  +section-cover-background('https://iportalen-us.s3.amazonaws.com:443/static/iportalen/HERO.jpg')
+
+.utbildning-intro
+  +outer-container()
+  padding: 1em
+  .section-header
+    font-size: 2.5em
+    color: $dark-gray
+  .section-text
+    line-height: 2em
+    text-align: justify
+    @include media($large-screen)
+      +columns(2)
+      +column-gap(4em)
+
+
+
+
+.program-graph
+  +outer-container()
+  padding: 1em
+  .section-header
+    font-size: 2.5em
+    color: $dark-gray
+  .chart-container
+    padding: 2em
+    +display(flex)
+    +justify-content(space-around)
+    +flex-wrap(wrap)
+    .chart-title
+      text-align: center
+      font-size: 1.5em
+      color: $dark-gray
+    .chart-canvas
+
+      margin-bottom: 1em
+      height: 300px
+      width: 300px
+
+
+
+

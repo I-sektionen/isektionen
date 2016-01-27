@@ -1,0 +1,101 @@
+.landing-hero
+
+  @extend .top-hero
+  +section-cover-background('https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/liu_campusvalla.jpg')
+  .hero-logo img
+    max-height: 14em
+  .hero-message
+    text-transform: uppercase
+    text-align: center
+    color: $light-gray
+    margin: 0
+    font-size: 1.2em
+    font-weight: bold
+  .hero-heading
+    margin-top: 0
+
+.scroll-down
+  text-align: center
+  width: 100%
+.landing-content
+  .history
+    padding: 1em
+    background-color: $light-gray
+    text-justify: inter-word
+    .history-content
+      padding: 2em
+      +outer-container()
+
+
+      .history-text
+        text-align: justify
+        line-height: 2em
+        @include media($large-screen)
+          +columns(2)
+          +column-gap(4em)
+
+      .section-header
+        font-size: 2.5em
+        color: $dark-gray
+        text-align: center
+
+  .sokande-foretag
+    padding: 1em
+    +outer-container()
+
+    .sokande-foretag-description
+      text-align: center
+      +span-columns(12)
+      padding: 2em
+      .section-header-with-icon
+        +display(flex)
+        +flex-direction(column)
+        i
+          font-size: 5em
+      .section-header
+        font-size: 2.5em
+        color: $dark-gray
+      p
+        line-height: 2em
+        text-align: justify
+
+      +media($large-screen)
+        +span-columns(6)
+        +omega()
+        &:first-child
+          border-right: 1px solid lighten($dark-gray, 30%)
+.latest
+  .section-header
+    text-align: center
+    font-size: 2.5em
+    color: $dark-gray
+
+.blog-previews
+  +display(flex)
+  margin: 0 auto
+  max-width: 800px
+  +flex-direction(column)
+  padding: 1em
+  color: $dark-gray
+
+  .blog-title
+    font-weight: 800
+    font-size: 1.2em
+    a
+      color: $dark-gray
+
+  .blog-text
+    line-height: 1.5em
+
+  .blog-date
+    font-weight: 200
+
+  .latest-blogs-preview
+    +display(flex)
+    .blog-entry-datebox
+      +align-self(center)
+      +flex(1)
+    .blog-entry-textbox
+      +flex(4)
+
+

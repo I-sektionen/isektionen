@@ -1,34 +1,24 @@
 {% extends 'master.html' %}
-{% block above_content %}
-   <section class="top-image" id="afterstudies-top-page">
-       <div class="content-wrapper">
-           <div class="content-container">
-               <h1>Efter dina studier</h1>
-               <hr>
-               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-           </div>
-       </div>
-   </section>
+
+{% block links %}
+    <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
+    <li class="nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
+    <li class="nav-link"><a href="{% url 'studentliv' %}">Studentliv</a></li>
+    {% if efterstudier %}
+        <li class="nav-link active-nav-item"><a href="{% url 'efterstudier' %}">Efter studierna</a></li>
+    {% else %}
+        <li class="nav-link"><a href="{% url 'efterstudier' %}">Efter studierna</a></li>
+    {% endif %}
+
 {% endblock %}
+
 {% block content %}
-    <section id="afterstudies-content">
-    <h3>Efter studietiden</h3>
-    <p>Frågar man tidigare studenter från Industriell ekonomi i Linköping lyfter de ofta fram
-
-kompisarna från studietiden som det viktigaste de tog med sig. Den starka gemenskapen och
-
-sammanhållningen, tillsammans med den långa traditionen att utbilda ingenjörer inom
-
-Industriell ekonomi, leder till att studenter kan dra nytta av Sveriges största nätverk av I-
-
-alumner i näringslivet. Nätverket är ett perfekt sätt för både studenter och utexaminerade
-
-alumner att knyta kontakt, lära av varandra och få in en fot på arbetsmarknaden, antingen i
-
-Sverige eller utomlands.</p>
-    {% include 'isektionen/sokande/efterstudier/framtiden.html' %}
-    {% include 'isektionen/sokande/efterstudier/statistik.html' %}
-    {% include 'isektionen/sokande/efterstudier/intervju.html' %}
+    <section class="after-studies-hero">
+        <div class="hero-content">
+            <h1 class="hero-heading">Under uppbyggnad</h1>
+            <hr class="hero-divider">
+            <p class="hero-text">Denna sida är under uppbyggnad och innehållet kommer inom kort!</p>
+        </div>
+    </section>
 {% endblock %}
-
 </section>

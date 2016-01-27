@@ -1,0 +1,68 @@
+{% extends 'master.html' %}
+{% block links %}
+
+{% if sokande %}
+        <li class="nav-link active-nav-item"><a href="{% url 'sokande' %}">Sökande</a></li>
+    {% else %}
+        <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
+    {% endif %}
+    <li class="nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
+    <li class="nav-link"><a href="{% url 'studentliv' %}">Studentliv</a></li>
+    <li class="nav-link"><a href="{% url 'efterstudier' %}">Efter studierna</a></li>
+{% endblock %}
+
+{% block content %}
+    <section class="applicant-hero">
+        <div class="hero-content">
+            <h1 class="hero-heading">PLUGGA INDUSTRIELL EKONOMI</h1>
+            <hr class="hero-divider">
+            <p class="hero-text">
+                På denna sidan har vi samlat information som är intressant för dig som kanske har tänkt att du ska plugga inom en snar framtid. Du hittar information om utbildningens innehåll, vad man kan göra utanför plugget (det som kallas studentliv) och vad du kan bli när du är färdig med utbildningen.
+            </p>
+        </div>
+    </section>
+
+    <div class="applicant-container">
+        <section class="education">
+            <h1 class="section-header">Utbildningen</h1>
+            <p class="section-text">
+                Kombinationen matematik, teknik, ekonomi och ledarskap ger I:aren en god helhetssyn som är intressant för de
+                flesta företag, oavsett storlek och inriktning.
+            </p>
+            <a href="{% url 'utbildning' %}" class="action-button">Läs mer om utbildningen</a>
+        </section>
+        <section class="student-life">
+            <h1 class="section-header">Studentlivet</h1>
+            <p class="section-text">
+                Sektionen för Industriell Ekonomi (I-sektionen) är landets största studentsektion och det finns mängder av
+                utskott och föreningar att engagera sig i som är kopplade vår sektion. På I-sektionen i Linköping är det
+                över 200 aktiva I-studenter som arbetar ideellt med allt från näringslivssamarbeten till att främja kontakten
+                med utexaminerade alumner och anordna resor och stora fester.
+            </p>
+            <a href="{% url 'studentliv' %}" class="action-button">Läs mer om studentlivet</a>
+        </section>
+    </div>
+    <section class="blog-promo">
+        <div class="promo-content">
+            <h1 class="promo-heading">Spana in sektionsbloggen</h1>
+            <p class="promo-text">
+                På Sektionsbloggen hittar du aktuella får du en inblick i studentlivet. På bloggen skrivs även om event riktade
+                till studenter som vill veta mer om hur det är att plugga på universitetet!
+            </p>
+            <a href="{% url 'blog' %}" class="action-button">Spana in bloggen</a>
+        </div>
+    </section>
+    <div class="applicant-container">
+        <section class="after-studies">
+            <h1 class="section-header">Efter studierna</h1>
+            <p class="section-text">
+                De flesta studenter har ofta sin första anställning klar redan innan examen. Intresset för civilingenjörer i
+                industriell ekonomi med examen från Linköpings universitet är mycket stort i näringslivet.
+                Detta tack vare deras driv, vana att arbeta i projekt samt förmåga till att lösa problem utifrån både ett
+                tekniskt och ett ekonomiskt perspektiv.
+            </p>
+            <a href="{% url 'efterstudier' %}" class="action-button">Läs mer om efter studierna</a>
+        </section>
+    </div>
+
+{% endblock %}
