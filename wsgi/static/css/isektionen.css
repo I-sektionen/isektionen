@@ -1954,6 +1954,17 @@ article.single_blog_entry p.author {
   width: 300px;
 }
 
+.technical-profiles-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.technical-profiles-container::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
 .studentlife-hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://iportalen-us.s3.amazonaws.com:443/static/iportalen/HERO.jpg");
   background-position: center center;
