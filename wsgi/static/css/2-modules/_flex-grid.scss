@@ -28,7 +28,7 @@
 
   .flex-box {
     @include transition (all 0.2s ease-in-out);
-    @include flex(2 2 15em);
+    @include flex(2 2 301px);
     @include align-self(stretch);
     background: $flex-box-background;
     border-radius: $base-border-radius;
@@ -37,6 +37,7 @@
     margin: $flex-box-gutter;
     padding: 2em 2em 3em 2em;
     text-decoration: none;
+
 
     @for $i from 1 to 7 {
 // assign colors from $flex-box-top-colors list
