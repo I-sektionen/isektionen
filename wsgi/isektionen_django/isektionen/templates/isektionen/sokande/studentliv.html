@@ -3,27 +3,20 @@
 {% block links %}
     <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
     <li class="nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
+    {% if studentliv %}
+        <li class="nav-link active-nav-item"><a href="{% url 'studentliv' %}">Studentliv</a></li>
+    {% else %}
+        <li class="nav-link"><a href="{% url 'studentliv' %}">Studentliv</a></li>
+    {% endif %}
     <li class="nav-link"><a href="{% url 'efterstudier' %}">Efter studierna</a></li>
 {% endblock %}
 
 {% block content %}
     <section class="studentlife-hero">
         <div class="hero-content">
-            <h1 class="hero-heading">Studentlivet</h1>
+            <h1 class="hero-heading">Under uppbyggnad</h1>
             <hr class="hero-divider">
-            <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In schola desinis.
-                Quod quidem iam fit etiam in Academia. Zenonis est, inquam, hoc Stoici. Nondum autem explanatum satis, erat,
-                quid maxime natura vellet. Duo Reges: constructio interrete. At ego quem huic anteponam non audeo dicere;
-            </p>
+            <p class="hero-text">Denna sida är under uppbyggnad och innehållet kommer inom kort!</p>
         </div>
-    </section>
-
-
-
-
-    <section id="student-life">
-    {% include 'isektionen/sokande/studentliv/kalender.html' %}
-    {% include 'isektionen/sokande/studentliv/engagemang.html' %}
-    {% include 'isektionen/sokande/studentliv/bostad.html' %}
     </section>
 {% endblock %}

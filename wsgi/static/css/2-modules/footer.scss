@@ -33,12 +33,12 @@
       @include flex(4);
       // när det är liten skärm
       #latest-entry-blog-column {
-        visibility: hidden;
-          @include flex(0);
+        display: none;
+        @include flex(0);
       }
        #about-column {
-        visibility: hidden;
-          @include flex(0);
+        display: none;
+        @include flex(0);
       }
        #content-column {
         @include flex(1);
@@ -62,14 +62,14 @@
     @include media($large-screen-up) {
     #about-column  {
       @include flex(1.5);
-      visibility: visible;
+      display: block;
       padding-left: 2em;}
      #content-column  {
        @include flex(1.5);
      }
      #latest-entry-blog-column  {
        @include flex(2);
-       visibility: visible;
+       display: block;
      }
      #social-media-column  {
        @include flex(1.5);
