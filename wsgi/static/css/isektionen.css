@@ -777,7 +777,7 @@ header.navigation .active-nav-items {
   margin-bottom: 1.5em;
 }
 .footer .footer-content .footer-links #latest-entry-blog-column {
-  visibility: hidden;
+  display: none;
   -webkit-box-flex: 0;
   -moz-box-flex: 0;
   box-flex: 0;
@@ -787,7 +787,7 @@ header.navigation .active-nav-items {
   flex: 0;
 }
 .footer .footer-content .footer-links #about-column {
-  visibility: hidden;
+  display: none;
   -webkit-box-flex: 0;
   -moz-box-flex: 0;
   box-flex: 0;

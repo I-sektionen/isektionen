@@ -33,11 +33,11 @@
       @include flex(4);
       // när det är liten skärm
       #latest-entry-blog-column {
-        visibility: hidden;
+        display: none;
           @include flex(0);
       }
        #about-column {
-        visibility: hidden;
+        display: none;
           @include flex(0);
       }
        #content-column {
