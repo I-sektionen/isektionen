@@ -9,29 +9,7 @@
   $flex-box-background: $light-gray;
   $flex-box-gutter: 0.4em;
   $flex-box-width: 18em;
-  $flex-box-color: transparentize($base-font-color, 0.3);
-  $flex-box-top-colors:
-    $isektionen-green,
-    $isektionen-yellow,
-    $isektionen-yellow,
-    $isektionen-yellow,
-    $isektionen-green,
-    $isektionen-yellow,
-    $isektionen-yellow,
-    $isektionen-yellow,
-    $isektionen-green,
-    $isektionen-yellow,
-    $isektionen-yellow,
-    $isektionen-yellow,
-    $isektionen-green,
-    $isektionen-yellow,
-    $isektionen-yellow,
-    $isektionen-yellow,
-    $isektionen-green,
-    $isektionen-yellow,
-    $isektionen-yellow,
-    $isektionen-yellow,
-    $isektionen-green;;
+  $flex-box-color: $base-font-color;
 
     @include clearfix;
     @include display(flex);
@@ -56,20 +34,12 @@
     margin: $flex-box-gutter;
     padding: 2em 2em 3em 2em;
     text-decoration: none;
-
-
-    @for $i from 1 to 10 {
-// assign colors from $flex-box-top-colors list
-      &:nth-child(#{$i}) {
-        $color-from-list: nth($flex-box-top-colors, $i);
-        border-top: 6px solid $color-from-list;
-
-        &:focus,
-        &:hover {
-          cursor: pointer;
-          background-color: transparentize($color-from-list, 0.9);
-        }
-      }
+    border-top: 6px solid transparentize($isektionen-yellow, 0.3);
+    &:focus,
+    &:hover {
+      cursor: pointer;
+      background-color: transparentize($isektionen-yellow, 0.9);
+      @include transform(scale(1.01))
     }
 
     img {
@@ -83,6 +53,7 @@
       color: $flex-box-color;
       font-size: 1.2em;
       margin-bottom: 0.5em;
+      text-transform: uppercase;
     }
 
     p {
