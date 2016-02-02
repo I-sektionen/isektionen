@@ -1370,11 +1370,6 @@ article.single_blog_entry p.author {
 .flex-boxes .flex-box:focus, .flex-boxes .flex-box:hover {
   cursor: pointer;
   background-color: rgba(249, 208, 38, 0.1);
-  -webkit-transform: scale(1.01);
-  -moz-transform: scale(1.01);
-  -ms-transform: scale(1.01);
-  -o-transform: scale(1.01);
-  transform: scale(1.01);
 }
 .flex-boxes .flex-box img {
   display: block;

@@ -39,7 +39,6 @@
     &:hover {
       cursor: pointer;
       background-color: transparentize($isektionen-yellow, 0.9);
-      @include transform(scale(1.01))
     }
 
     img {
