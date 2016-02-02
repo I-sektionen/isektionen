@@ -1,6 +1,12 @@
 {% extends 'master.html' %}
 {% block links %}
-        <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
+
+    {% if blog %}
+        <li class="nav-link active-nav-item"><a href="{% url 'blog' %}">Blog</a></li>
+    {% else %}
+        <li class="nav-link"><a href="{% url 'blog' %}">Blog</a></li>
+    {% endif %}
+    <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
     <li class="nav-link"><a href="{% url 'foretag' %}">Företag</a></li>
 {% endblock %}
 {% block content %}
@@ -8,31 +14,11 @@
         <div class="hero-content">
             <h1 class="hero-heading">Sektionsbloggen</h1>
             <hr class="hero-divider">
-            <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In schola desinis.
-                Quod quidem iam fit etiam in Academia. Zenonis est, inquam, hoc Stoici. Nondum autem explanatum satis, erat,
-                quid maxime natura vellet. Duo Reges: constructio interrete. At ego quem huic anteponam non audeo dicere;
+            <p class="hero-text">
+                Vad kul att du hittat till sektionsbloggen! Här skriver studenter om vad som händer i skolan och runt omrking. Få en inblick i studentens vardag och information om event vi håller för sökande studenter
             </p>
         </div>
     </section>
-    <section class="blog-meny">
-        <div class="blogg-pagination">
-                <span class="step-links">
-                    {% if blog_entries.has_previous %}
-                        <a href="?page={{ blog_entries.previous_page_number }}">Föregående</a>
-                    {% endif %}
-
-                    <span class="current">
-                        Sida {{ blog_entries.number }} av {{ blog_entries.paginator.num_pages }}.
-                    </span>
-
-                    {% if blog_entries.has_next %}
-                        <a href="?page={{ blog_entries.next_page_number }}">Nästa</a>
-                    {% endif %}
-                </span>
-        </div>            <!--Här borde det ligga länkar till arkiv, ev sortera efter taggar mm -->
-
-    </section>
-
     {% for entry in blog_entries %}
         <section class="blog-entry-container">
             <article class="single_blog_entry blog-entry">
@@ -51,8 +37,6 @@
         <hr class="blogg-entry-divider">
 
     {% endfor %}
-
-
     <div class="blogg-pagination">
             <span class="step-links">
                 {% if blog_entries.has_previous %}
@@ -68,6 +52,4 @@
                 {% endif %}
             </span>
     </div>
-
-
 {% endblock %}

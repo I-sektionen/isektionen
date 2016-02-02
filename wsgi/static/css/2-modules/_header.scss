@@ -13,7 +13,7 @@ header.navigation {
   $navigation-background: $white;
   $navigation-color: $dark-gray;
   $navigation-color-hover: transparentize($dark-gray, 0.3);
-  $navigation-height: 60px;
+  $navigation-height: 80px;
   $navigation-active-link-color: transparentize(white, 0.5);
   $navigation-submenu-padding: 1em;
   $navigation-submenu-width: 18em;
@@ -27,6 +27,8 @@ header.navigation {
   z-index: 999;
   @include position(fixed);
   box-shadow: 1px 1px 8px silver;
+  top: 0;
+  left: 0;
 
   .navigation-wrapper {
     @include clearfix;
@@ -90,6 +92,7 @@ header.navigation {
     width: 100%;
     z-index: 9999;
 
+
     &.show {
       display: block;
     }
@@ -109,7 +112,8 @@ header.navigation {
     line-height: 30px;
     overflow: hidden;
     padding-right: 0.8em;
-    //text-align: right;
+    text-align: center;
+
     width: 100%;
     z-index: 9999;
 
@@ -127,21 +131,26 @@ header.navigation {
       font-weight: 400;
       text-transform: uppercase;
       color: $navigation-color;
-      display: inline-block;
       text-decoration: none;
 
       @include media ($horizontal-bar-mode) {
-        padding-right: 1em;
+        margin-right: 1em;
       }
 
       &:focus,
       &:hover {
         color: $navigation-color-hover;
       }
-    
+
     }
   }
   .active-nav-item a {
+
+    border-bottom: 3px $dark-gray solid;
+    padding: 5px;
+  }
+
+  .active-nav-items {
     border-bottom: 1px solid $navigation-active-link-color;
     padding-bottom: 3px;
   }

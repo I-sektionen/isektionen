@@ -98,7 +98,10 @@ $(document).ready(function() {
       }
     });
   });
+
+
 });
+
 ;/**
  * Created by elonbrange on 15-11-10.
  */

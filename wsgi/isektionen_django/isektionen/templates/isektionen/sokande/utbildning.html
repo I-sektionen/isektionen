@@ -2,6 +2,11 @@
 
 {% block links %}
     <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
+    {% if utbildning %}
+        <li class="active-nav-item nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
+    {% else %}
+        <li class="nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
+    {% endif %}
     <li class="nav-link"><a href="{% url 'studentliv' %}">Studentliv</a></li>
     <li class="nav-link"><a href="{% url 'efterstudier' %}">Efter studierna</a></li>
 {% endblock %}
@@ -12,9 +17,8 @@
         <div class="hero-content">
             <h1 class="hero-heading">Utbildningen</h1>
             <hr class="hero-divider">
-            <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In schola desinis.
-                Quod quidem iam fit etiam in Academia. Zenonis est, inquam, hoc Stoici. Nondum autem explanatum satis, erat,
-                quid maxime natura vellet. Duo Reges: constructio interrete. At ego quem huic anteponam non audeo dicere;
+            <p class="hero-text">
+                Denna sida är under uppbyggnad och innehållet kommer inom kort!
             </p>
         </div>
     </section>

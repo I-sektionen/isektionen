@@ -13,13 +13,19 @@
   &:nth-child(#{$nth}+1) { clear: none }
 }
 
-@mixin section-cover-background($img-uri, $background-top:"center", $background-left:"center", $background-attachment:"fixed") {
+@mixin section-cover-background($img-uri, $background-top:"center", $background-left:"center", $background-attachment:"scroll") {
   $hero-overlay-gradient: linear-gradient(rgba(black, 0.35), rgba(black, 0.35));
   background: {
     image: $hero-overlay-gradient, url($img-uri);
     position: unquote($background-top) unquote($background-left);
     attachment: unquote($background-attachment);
     size: cover;
+  }
+
+  @include media($large-screen) {
+
+    background-attachment: fixed;
+
   }
 
 }
