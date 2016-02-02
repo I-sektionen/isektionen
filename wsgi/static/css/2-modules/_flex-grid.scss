@@ -25,7 +25,7 @@
 
   .flex-box {
     @include transition (all 0.2s ease-in-out);
-    @include flex(2 2 301px);
+    @include flex(2 2 20em);
     @include align-self(stretch);
     background: $flex-box-background;
     border-radius: $base-border-radius;

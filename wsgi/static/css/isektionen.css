@@ -1350,10 +1350,10 @@ article.single_blog_entry p.author {
   -webkit-box-flex: 2;
   -moz-box-flex: 2;
   box-flex: 2;
-  -webkit-flex: 2 2 301px;
-  -moz-flex: 2 2 301px;
-  -ms-flex: 2 2 301px;
-  flex: 2 2 301px;
+  -webkit-flex: 2 2 20em;
+  -moz-flex: 2 2 20em;
+  -ms-flex: 2 2 20em;
+  flex: 2 2 20em;
   -webkit-align-self: stretch;
   -moz-align-self: stretch;
   align-self: stretch;
