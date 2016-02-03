@@ -53,3 +53,38 @@
       +columns(2)
       +column-gap(4em)
 
+.study-abroad
+  min-height: 50vh
+  @include position(relative)
+
+  .study-abroad-content
+    padding: 2em
+    text-align: center
+    width: 60%
+    @include position(absolute)
+    left: 50%
+    top: 50%
+    width: 100%
+    @include transform(translate(-50%, -50%))
+
+    @include media($large-screen)
+      width: auto
+
+    .study-abroad-heading
+      color: $applicant-heading-color
+      font-size: 1.5em
+      text-transform: uppercase
+      margin-bottom: 0
+      @include  media ($large-screen)
+        font-size: 3em
+
+    .study-abroad-text
+      color: $applicant-text-color
+      @include media ($large-screen)
+        text-align: justify
+        font-size: 1.2em
+
+.study-abroad-image
+  @extend .study-abroad
+  @include section-cover-background('https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/_MG_4139.jpg', top, center)
+  min-height: 70vh
