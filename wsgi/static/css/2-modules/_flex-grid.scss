@@ -19,9 +19,7 @@
     clear: both;
     text-align: center;
 
-  .modal-content-box {
-    display: none;
-  }
+
 
   .flex-box {
     @include transition (all 0.2s ease-in-out);
@@ -65,4 +63,8 @@
   .flex-box-big {
     @include flex(1 1 40em);
   }
+}
+
+.modal-content-box {
+  display: none;
 }
