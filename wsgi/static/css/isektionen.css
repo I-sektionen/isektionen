@@ -1398,6 +1398,65 @@ article.single_blog_entry p.author {
   flex: 1 1 40em;
 }
 
+.accordion-tabs-minimal {
+  line-height: 1.5;
+  padding: 0;
+}
+.accordion-tabs-minimal::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.accordion-tabs-minimal .tab-header-and-content {
+  list-style: none;
+}
+@media screen and (min-width: 600px) {
+  .accordion-tabs-minimal .tab-header-and-content {
+    display: inline;
+  }
+}
+.accordion-tabs-minimal .tab-link {
+  background-color: #fff;
+  border-top: 1px solid #2D701E;
+  color: #333;
+  display: block;
+  padding: 0.75em 1.618em;
+  text-decoration: none;
+}
+@media screen and (min-width: 600px) {
+  .accordion-tabs-minimal .tab-link {
+    border-top: 0;
+    display: inline-block;
+  }
+}
+.accordion-tabs-minimal .tab-link:hover {
+  color: #f9d026;
+}
+.accordion-tabs-minimal .tab-link:focus {
+  outline: none;
+}
+.accordion-tabs-minimal .tab-link.is-active {
+  border-bottom: 0;
+}
+@media screen and (min-width: 600px) {
+  .accordion-tabs-minimal .tab-link.is-active {
+    border: 1px solid #2D701E;
+    border-bottom-color: #fff;
+    margin-bottom: -1px;
+  }
+}
+.accordion-tabs-minimal .tab-content {
+  display: none;
+  padding: 1.5em 1.618em;
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  .accordion-tabs-minimal .tab-content {
+    border-top: 1px solid #2D701E;
+    float: left;
+  }
+}
+
 .container {
   margin-top: 80px;
 }
@@ -1967,6 +2026,26 @@ article.single_blog_entry p.author {
     -moz-column-gap: 4em;
     column-gap: 4em;
   }
+}
+
+.education-timeline {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+.education-timeline::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.education-timeline .section-header {
+  font-size: 2.5em;
+  color: #333;
+}
+.education-timeline .section-text {
+  line-height: 2em;
+  text-align: justify;
 }
 
 .studentlife-hero {
