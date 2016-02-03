@@ -1340,7 +1340,7 @@ article.single_blog_entry p.author {
   content: "";
   display: table;
 }
-.flex-boxes .hide-box {
+.flex-boxes .modal-content-box {
   display: none;
 }
 .flex-boxes .flex-box {
