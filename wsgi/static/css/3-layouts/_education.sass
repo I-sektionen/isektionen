@@ -15,9 +15,6 @@
       +columns(2)
       +column-gap(4em)
 
-
-
-
 .program-graph
   +outer-container()
   padding: 1em
@@ -39,6 +36,20 @@
       height: 300px
       width: 300px
 
+.technical-profiles-container
+  +outer-container()
+  padding: 1em
 
-
+.technical-profiles-text
+  +outer-container()
+  padding: 1em
+  .section-header
+    font-size: 2.5em
+    color: $dark-gray
+  .section-text
+    line-height: 2em
+    text-align: justify
+    @include media($large-screen)
+      +columns(2)
+      +column-gap(4em)
 
