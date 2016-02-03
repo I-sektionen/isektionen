@@ -15,8 +15,16 @@ $(document).ready(function () {
       accordionTabs.find('.is-active').removeClass('is-active');
       $(this).addClass('is-active');
     } else {
-      event.preventDefault();
+        if(window.innerWidth <= 600){
+            var accordionTabs = $(this).closest('.accordion-tabs-minimal');
+            accordionTabs.find('.is-open').removeClass('is-open').hide();
+
+            accordionTabs.find('.is-active').removeClass('is-active');
+        }
+
+        event.preventDefault();
     }
+
   });
 });
 ;/**
