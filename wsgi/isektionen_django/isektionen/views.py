@@ -47,3 +47,7 @@ def show_studentliv_page(request):
 def i_resan_page(request):
     return render(request, "isektionen/sokande/i-resan.html")
 
+def show_contact_page(request):
+    return render(request, "isektionen/sokande/kontakt.html", {
+        'kontakt': True,
+    })
