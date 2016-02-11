@@ -1,0 +1,116 @@
+{% extends 'master.html' %}
+{% block links %}
+    <li class="nav-link"><a href="{% url 'blog' %}">Blog</a></li>
+    <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
+    <li class="nav-link"><a href="{% url 'foretag' %}">Företag</a></li>
+{% endblock %}
+{% block content %}
+    <section class="landing-hero">
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/ie_cirkel_pms.png" />
+            </div>
+            <p class="hero-message">Välkommen till</p>
+            <hr class="hero-divider">
+            <h1 class="hero-heading">Sektionen för Industriell Ekonomi</h1>
+        </div>
+    </section>
+    <section class="scroll-down">
+        <!--<p><span class="chevron bottom"></span></p>-->
+    </section>
+    <div class="landing-content">
+        <section class="history">
+            <div class="history-content">
+                <h1 class="section-header">Originalet sedan 1969</h1>
+                <div class="history-text">
+                    <p>
+                        Välkommen till Industriell ekonomi och Linköpings universitet (LiU).
+                        Ända sedan starten 1969 har programmet examinerat studenter med höga ekonomiska och tekniska
+                        kompetenser vilket gör utbildningen till Sveriges äldsta program för Industriell ekonomi.
+                        Det innebär bland annat att Linköpings universitet har mer än 40 års erfarenhet av att utbilda
+                        ingenjörer inom Industriell ekonomi och att ett stort kontaktnätverk bland I-alumner (studenter
+                        som redan har tagit examen) från universitetet redan finns i näringslivet.
+                    </P>
+                    <p>
+                        Denna erfarenhet och programmets storlek (störst i Sverige) gör att du ges möjlighet till både
+                        gedigen kompetens och stor valfrihet under din studietid. Med studiekamrater från hela Sverige
+                        får du ett rikt studieliv som bidrar till att du i framtiden kan se tillbaka på din studietid som
+                        fylld av goda minnen och vänner för livet. Samtidigt får du en eftertraktad civilingenjörsexamen
+                        från ett av Sveriges större lärosäten med en tradition av förnyelse och öppenhet för samverkan över
+                        gränser. Tillsammans med över 27 000 andra studenter och 3 800 anställda kommer du att befinna dig
+                        i ett myller av kunskap, idéer, åsikter, kreativitet och visioner.
+                    </p>
+
+                    <p>På denna sida har vi samlat information som rör både sökande studenter och företag. Scrolla ner för
+                        att hitta den information du söker!
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="sokande-foretag">
+            <div class="sokande-foretag-description">
+                <div class="section-header-with-icon">
+                    <i class="fa fa-university"></i>
+                    <h1 class="section-header">Sökande</h1>
+                </div>
+                <p>Är du intresserad av att börja plugga industriell ekonomi? På denna sidan har vi samlat information som är intressant för dig som kanske har tänkt att du ska plugga inom en snar framtid. Du hittar information om utbildningens innehåll, vad man kan göra utanför plugget (det som kallas studentliv) och vad du kan bli när du är färdig med utbildningen. Klicka på knappen för att leta dig vidare!
+                </p>
+                <a href="{% url 'sokande' %}" class="action-button">Läs om utbildningen</a>
+            </div>
+            <div class="sokande-foretag-description">
+                <div class="section-header-with-icon">
+                    <i class="fa fa-building-o"></i>
+                    <h1 class="section-header">Företag</h1>
+                </div>
+                <p>
+                    Industriell ekonomi i Linköping har i många år legat i topp bland mest sökta teknikutbildningar i Sverige. Den mer än 40-åriga erfarenheten av att utbilda I:are samt vår storlek garanterar att utbildningen håller en hög kvalitet.  Detta avspeglas i att I:are från Linköping alltid varit mycket eftertraktade i näringslivet. Vi erbjuder er möjligheten att marknadsföra ert företag direkt mot I:are.
+                </p>
+                <a href="{% url 'foretag' %}" class="action-button">Läs om samarbete</a>
+            </div>
+        </section>
+        <!--//TODO ADD "LATEST SECTION"-->
+        <section class="latest">
+            <h1 class="section-header">Se vad som händer på sektionen</h1>
+            <hr>
+            <div class="blog-previews">
+                <h2>Senaste bloginläggen</h2>
+                {% load blog_tags %}
+                {% get_last_entries as entries %}
+                {% for entry in entries %}
+                    <div class="latest-blogs-preview">
+                        <div class="blog-entry-datebox">
+                            <p class="blog-date">
+                                {{ entry.publishedDate|date:"d b Y" }}
+                            </p>
+                        </div>
+                        <div class="blog-entry-textbox">
+                            <h2 class="blog-title">
+                                <a href="{% url "view_one_blog_entry" entry.pk %}">{{ entry.title }}</a>
+                            </h2>
+                            <p class="blog-text">
+                                {{ entry.lead|truncatechars:200 }}
+                            </p>
+                        </div>
+                    </div>
+
+                {% endfor %}
+            </div>
+            <div class="instagram">
+                <div class="instagram-content">
+                    <p class="instagram-account-link">
+                        <i class="fa fa-instagram"></i>
+                        <a href="https://www.instagram.com/industriellekonomi_liu/">@industriellekonomi_liu</a>
+                    </p>
+                    <div class="instagram-feed">
+                        <ul class="instagram-pictures">
+                        </ul>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
+{% block js_document_ready %}
+    load_instagram()
+{% endblock %}

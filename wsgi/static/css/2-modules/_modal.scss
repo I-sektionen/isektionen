@@ -1,3 +1,7 @@
+.modal-inner-html {
+  visibility: hidden;
+  position: absolute;
+  }
 .modal {
   $base-border-color: #dcdcdc !default;
   $base-border-radius: 3px !default;

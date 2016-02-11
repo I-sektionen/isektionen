@@ -1,9 +1,31 @@
 {% extends 'master.html' %}
+
+{% block links %}
+    <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
+    {% if utbildning %}
+        <li class="active-nav-item nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
+    {% else %}
+        <li class="nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
+    {% endif %}
+    <li class="nav-link"><a href="{% url 'studentliv' %}">Studentliv</a></li>
+    <li class="nav-link"><a href="{% url 'efterstudier' %}">Efter studierna</a></li>
+{% endblock %}
+
 {% block content %}
-    <h3>här ska det vara kanske ett block med en bildoch text som visar vilken sida man är på</h3>
-    <p>sidan är tänkt att svara på frågan "vad innebär I/Ii?"</p>
-    {% include 'isektionen/sokande/utbildning/inledning.html' %}
-    {% include 'isektionen/sokande/utbildning/profiler.html' %}
-    {% include 'isektionen/sokande/utbildning/tidslinje.html' %}
-    {% include 'isektionen/sokande/utbildning/utlandsstudier.html' %}
+
+    <section class="education-hero">
+        <div class="hero-content">
+            <h1 class="hero-heading">Utbildningen</h1>
+            <hr class="hero-divider">
+            <p class="hero-text">
+                Denna sida är under uppbyggnad och innehållet kommer inom kort!
+            </p>
+        </div>
+    </section>
+        {% include 'isektionen/sokande/utbildning/inledning.html' %}
+        {% include 'isektionen/sokande/utbildning/program.html' %}
+        {% include 'isektionen/sokande/utbildning/tidslinje.html' %}
+        {% include 'isektionen/sokande/utbildning/tekniska_profiler.html' %}
+        {% include 'isektionen/sokande/utbildning/masterprofiler.html' %}
+        {% include 'isektionen/sokande/utbildning/utlandsstudier.html' %}
 {% endblock %}

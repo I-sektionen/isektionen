@@ -6,83 +6,64 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% include "stylesheets.html" %}
-
-    <title>I-Sektionen - LiU{% block page_subtitle %} {% endblock %}</title>
+    <title>Industriell ekonomi Linköping - {% block page_subtitle %} {% endblock %}</title>
     {% block head %} {% endblock %}
 </head>
 
 <body>
-
+{% include "analytics.html" %}
 <!-- A modal that could be used in any subpage with different content -->
-    <div class="modal">
-        <input class="modal-state" id="modal-1" type="checkbox" />
-        <div class="modal-fade-screen">
-            <div class="modal-inner">
-                <div class="modal-close" for="modal-1"></div>
-                <div class="modal-content" for="modal-1"></div>
-            </div>
+<div class="modal">
+    <input class="modal-state" id="modal-1" type="checkbox" />
+    <div class="modal-fade-screen">
+        <div class="modal-inner">
+            <div class="modal-close" for="modal-1"></div>
+            <div id="modal-content" for="modal-1"></div>
         </div>
     </div>
+</div>
 
 
 <!-- include gör att vi kan importera andra filer -->
 
-<!--
-Denna fil innehåller navigationen för sidan. Den är klippt från Refills precis som jag visade på vår demo-session.
--->
 {% block header %}
-    {% include 'header.html' %}
-    {% endblock %}
+    <header class="navigation">
+        <div class="navigation-wrapper">
+            <a href="{% url 'home' %}" class="logo">
+                <img src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/ie_cmyk.png" alt="Logo Image">
+            </a>
+            <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu"><i class="fa fa-bars"></i></a>
+            <nav>
+                <ul id="js-navigation-menu" class="navigation-menu show">
+                    {% block links %}
 
+                    {% endblock %}
+                </ul>
+            </nav>
+        </div>
+    </header>
+{% endblock %}
 
-{% block above_content %}
+{% block hero %}
 {% endblock %}
 
 <!-- Ett block gör att vi kan använda vår master på flera sidor, men byta ut innehållet som ligger i blocket -->
-<div id="container">
-
+<div class="container">
     {% block content %}
 
     {% endblock %}
 </div>
 
-{% block footer %}
-    <footer class="footer" role="contentinfo">
-        <div class="footer-logo">
-            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo image">
-        </div>
-        <div class="footer-links">
-            <ul>
-                <li><h3>Content</h3></li>
-                <li><a href="javascript:void(0)">About</a></li>
-                <li><a href="javascript:void(0)">Contact</a></li>
-                <li><a href="javascript:void(0)">Products</a></li>
-            </ul>
-            <ul>
-                <li><h3>Follow Us</h3></li>
-                <li><a href="javascript:void(0)">Facebook</a></li>
-                <li><a href="javascript:void(0)">Twitter</a></li>
-                <li><a href="javascript:void(0)">YouTube</a></li>
-            </ul>
-            <ul>
-                <li><h3>Legal</h3></li>
-                <li><a href="javascript:void(0)">Terms and Conditions</a></li>
-                <li><a href="javascript:void(0)">Privacy Policy</a></li>
-            </ul>
-        </div>
-
-        <hr>
-
-        <p>Disclaimer area lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nostrum repudiandae saepe.</p>
-    </footer>
-
-
-
-
-{% endblock %}
-
+{% include 'footer.html' %}
 
 {% include "scripts.html" %}
-{% block after_scripts %}{% endblock %}
+<script>
+    $(document).ready(
+
+            {% block js_document_ready %}
+
+            {% endblock %}
+    );
+</script>
 </body>
 </html>

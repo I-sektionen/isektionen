@@ -1,0 +1,31 @@
+.i-resan {
+  padding: 2em;
+
+  @include outer-container();
+
+  .bullet-list {
+
+    margin-left: 2em;
+
+    list-style-type: disc;
+
+  }
+
+    .section-header {
+    color: $dark-gray;
+    font-size: 2.5em;
+    @include  media ($large-screen) {
+      font-size: 3em;
+    }
+  }
+
+  .section-text {
+    line-height: 1.5em;
+    color: $dark-gray;
+    @include media ($large-screen) {
+      text-align: justify;
+      font-size: 1em;
+    }
+  }
+
+}

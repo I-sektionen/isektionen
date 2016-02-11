@@ -1,21 +1,34 @@
 {% extends 'master.html' %}
+{% block links %}
+        <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
+    <li class="nav-link"><a href="{% url 'foretag' %}">Företag</a></li>
+{% endblock %}
 
 {% block content %}
-<section id="blog-entry-container">
-<article class="single_blog_entry">
-  <p class="type">Blogginlägg </p>
-  <h1>{{ blog_entry.title }}</h1>
-  <h2>{{ blog_entry.lead }}</h2>
-  <p class="date">{{ blog_entry.publishedDate }}</p>
-  <p>
-      {{ blog_entry.body }}
-  </p>
+     <section class="blog-hero">
+        <div class="hero-content">
+            <h1 class="hero-heading">Sektionsbloggen</h1>
+            <hr class="hero-divider">
+            <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In schola desinis.
+                Quod quidem iam fit etiam in Academia. Zenonis est, inquam, hoc Stoici. Nondum autem explanatum satis, erat,
+                quid maxime natura vellet. Duo Reges: constructio interrete. At ego quem huic anteponam non audeo dicere;
+            </p>
+        </div>
+    </section>
+    <section class="blog-entry-container">
+        <article class="single_blog_entry blog-entry">
+            <h1>{{ blog_entry.title }}</h1>
+            <h2>{{ blog_entry.lead }}</h2>
+            <p class="date">{{ blog_entry.publishedDate }}</p>
+            <p>
+                {{ blog_entry.body }}
+            </p>
 
-  <hr>
-  <p class="author">{{ blog_entry.author }}</p>
-</article>
-</section>
-    
+            <hr>
+            <p class="author">{{ blog_entry.author }}</p>
+        </article>
+    </section>
+
 
 
 {% endblock %}
