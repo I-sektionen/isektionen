@@ -1930,9 +1930,10 @@ Modules - reusable parts of our design
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 90%;
-  max-width: 1170px;
-  margin: 0 auto;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: #F2F5F2;
 }
 .cd-container::after {
   /* clearfix */
@@ -1974,6 +1975,8 @@ Main components
 }
 
 .cd-timeline-block {
+  padding-left: 5%;
+  padding-right: 5%;
   position: relative;
   margin: 2em 0;
 }
@@ -2020,13 +2023,13 @@ Main components
   margin-top: -12px;
 }
 .cd-timeline-img.cd-picture {
-  background: #75ce66;
+  background: #f9d026;
 }
 .cd-timeline-img.cd-movie {
-  background: #c03b44;
+  background: #2D701E;
 }
 .cd-timeline-img.cd-location {
-  background: #f0ca45;
+  background: #f9d026;
 }
 @media only screen and (min-width: 1170px) {
   .cd-timeline-img {

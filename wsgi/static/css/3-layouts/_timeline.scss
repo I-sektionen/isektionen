@@ -59,8 +59,8 @@ $background: #e9f0f5; // body background color
 $color-1: #303e49; // blue dark
 $color-2: #c03b44; // red
 $color-3: #ffffff; // white
-$color-4: #75ce66; // green
-$color-5: #f0ca45; // yellow
+$color-4: #2D701E; // green
+$color-5: #f9d026; // yellow
 
 // fonts
 
@@ -76,9 +76,12 @@ Modules - reusable parts of our design
 
 .cd-container { /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
     @include box-sizing(border-box);
-    width: 90%;
-	max-width: $L; // breakpoints inside partials > _layout.scss
-	margin: 0 auto;
+    width: 100%;
+  	padding-left: 5%;
+  	padding-right: 5%;
+	 // breakpoints inside partials > _layout.scss
+
+  	background-color: #F2F5F2;
 
 	&::after { /* clearfix */
 		content: '';
@@ -95,7 +98,7 @@ Main components
 
 
 #cd-timeline {
-	position: relative;
+  	position: relative;
 	padding: 2em 0;
 	margin: {
 		top: 2em;
@@ -127,6 +130,8 @@ Main components
 }
 
 .cd-timeline-block {
+  	padding-left: 5%;
+  	padding-right: 5%;
 	position: relative;
 	margin: 2em 0;
 	@include clearfix;
@@ -173,11 +178,11 @@ Main components
 	}
 
 	&.cd-picture {
-		background: $color-4;
+		background: $color-5;
 	}
 
 	&.cd-movie {
-		background: $color-2;
+		background: $color-4;
 	}
 
 	&.cd-location {
