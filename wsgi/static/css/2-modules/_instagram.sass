@@ -16,12 +16,45 @@
     i
       font-size: 5em
   .instagram-pictures
-  .instagram-picture
-    +span-columns(12)
-    +omega(n)
-    +media($large-screen)
-      +span-columns(4)
-      +omega-reset(2n)
+
+    .instagram-picture
+      position: relative
+      margin-top: 1.5em
+      +span-columns(12)
       +omega(3n)
-  .instagram-caption
-    +transform(translateY(-100%))
+      +media($large-screen)
+        +span-columns(4)
+        +omega-reset(3n)
+        +omega(3n)
+
+      //.instagram-image:active + .caption-wrapper
+        visibility: visible
+        +transform(translateY(0%))
+
+      .caption-wrapper
+        visibility: hidden
+        +transform(translateY(100%))
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        background-color: transparentize($dark-gray,0.35)
+        color: $white
+        padding: 2.5em
+        text-align: center
+
+
+        //+transform(translateY(-100%))
+        +transition()
+
+        .close-icon
+          text-align: center
+          bottom: 0
+
+      .caption-visible
+        visibility: visible
+        +transform(translateY(0%))
+
+
+
+
