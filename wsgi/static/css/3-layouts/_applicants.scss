@@ -6,6 +6,8 @@ $hero-divider-height: 5px;
 // Variables for hero text
 $applicant-text-color: $light-gray;
 
+$stupidly-small-phones: new-breakpoint(max-width 325px);
+
 .applicant-hero {
   @extend .top-hero;
   @include section-cover-background('https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/campus_nkpg.jpg')
@@ -88,8 +90,81 @@ $applicant-text-color: $light-gray;
   @extend .applicant-section;
   @include span-columns(12);
 
-  @include media($large-screen) {
-    @include span-columns(6)
+  .edu-header {
+    @include span-columns(12);
+    font-size: 3em;
+    text-align: center;
+  }
+
+  .applicant-listview {
+    list-style-type: none;
+
+    .listview-item {
+      display: block;
+      @include span-columns(12);
+      padding: 0em;
+      margin-top: 2em;
+
+
+
+      .listview-icon {
+        @include span-columns(3);
+        display: block;
+        font-size: 2em;
+        margin-top: 1em;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        @include display(flex);
+        @include justify-content(center);
+        @include align-items(center);
+
+        box-sizing: border-box;
+        background-color: $light-gray;
+        @include media($stupidly-small-phones) {
+          font-size: 1.5em;
+          width: 50px;
+          height: 50px;
+        }
+
+        @include media($medium-screen) {
+          font-size: 4.5em;
+          width: 110px;
+          height: 110px;
+          margin-top: 0em;
+
+        }
+
+        @include media($large-screen) {
+          font-size: 7em;
+          width: 180px;
+          height: 180px;
+          background-color: $light-gray;
+          margin-top: 0em;
+        }
+      }
+      .text-box {
+        @include span-columns(9);
+        @include omega();
+
+        .list-header {
+          @include span-columns(9 of 9);
+          text-align: left;
+        }
+        .list-text {
+          @include span-columns(9 of 9);
+
+          line-height: 1.5em;
+          text-align: justify;
+          margin-bottom: 1em;
+        }
+
+        .list-link {
+          float: left;
+        }
+
+      }
+    }
   }
 
 }
@@ -110,4 +185,6 @@ $applicant-text-color: $light-gray;
   @extend .applicant-section;
   @include span-columns(12)
 }
+
+
 

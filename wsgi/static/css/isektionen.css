@@ -1611,16 +1611,132 @@ article.single_blog_entry p.author {
 .education:last-child {
   margin-right: 0;
 }
+.education .edu-header {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  font-size: 3em;
+  text-align: center;
+}
+.education .edu-header:last-child {
+  margin-right: 0;
+}
+.education .applicant-listview {
+  list-style-type: none;
+}
+.education .applicant-listview .listview-item {
+  display: block;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  padding: 0em;
+  margin-top: 2em;
+}
+.education .applicant-listview .listview-item:last-child {
+  margin-right: 0;
+}
+.education .applicant-listview .listview-item .listview-icon {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  display: block;
+  font-size: 2em;
+  margin-top: 1em;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+}
+.education .applicant-listview .listview-item .listview-icon:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 325px) {
+  .education .applicant-listview .listview-item .listview-icon {
+    font-size: 1.5em;
+    width: 50px;
+    height: 50px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .education .applicant-listview .listview-item .listview-icon {
+    font-size: 4.5em;
+    width: 110px;
+    height: 110px;
+    margin-top: 0em;
+  }
+}
 @media screen and (min-width: 900px) {
-  .education {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
+  .education .applicant-listview .listview-item .listview-icon {
+    font-size: 7em;
+    width: 180px;
+    height: 180px;
+    background-color: #f7f7f7;
+    margin-top: 0em;
   }
-  .education:last-child {
-    margin-right: 0;
-  }
+}
+.education .applicant-listview .listview-item .text-box {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%;
+  margin-right: 0;
+}
+.education .applicant-listview .listview-item .text-box:last-child {
+  margin-right: 0;
+}
+.education .applicant-listview .listview-item .text-box .list-header {
+  float: left;
+  display: block;
+  margin-right: 3.16844%;
+  width: 100%;
+  text-align: left;
+}
+.education .applicant-listview .listview-item .text-box .list-header:last-child {
+  margin-right: 0;
+}
+.education .applicant-listview .listview-item .text-box .list-text {
+  float: left;
+  display: block;
+  margin-right: 3.16844%;
+  width: 100%;
+  line-height: 1.5em;
+  text-align: justify;
+  margin-bottom: 1em;
+}
+.education .applicant-listview .listview-item .text-box .list-text:last-child {
+  margin-right: 0;
+}
+.education .applicant-listview .listview-item .text-box .list-link {
+  float: left;
 }
 
 .student-life {

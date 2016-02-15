@@ -1,7 +1,7 @@
 {% extends 'master.html' %}
 {% block links %}
 
-{% if sokande %}
+    {% if sokande %}
         <li class="nav-link active-nav-item"><a href="{% url 'sokande' %}">Sökande</a></li>
     {% else %}
         <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
@@ -23,46 +23,73 @@
     </section>
 
     <div class="applicant-container">
+
         <section class="education">
-            <h1 class="section-header">Utbildningen</h1>
-            <p class="section-text">
-                Kombinationen matematik, teknik, ekonomi och ledarskap ger I:aren en god helhetssyn som är intressant för de
-                flesta företag, oavsett storlek och inriktning.
-            </p>
-            <a href="{% url 'utbildning' %}" class="action-button">Läs mer om utbildningen</a>
-        </section>
-        <section class="student-life">
-            <h1 class="section-header">Studentlivet</h1>
-            <p class="section-text">
-                Sektionen för Industriell Ekonomi (I-sektionen) är landets största studentsektion och det finns mängder av
-                utskott och föreningar att engagera sig i som är kopplade vår sektion. På I-sektionen i Linköping är det
-                över 200 aktiva I-studenter som arbetar ideellt med allt från näringslivssamarbeten till att främja kontakten
-                med utexaminerade alumner och anordna resor och stora fester.
-            </p>
-            <a href="{% url 'studentliv' %}" class="action-button">Läs mer om studentlivet</a>
+            <h1 class="edu-header">
+                Vad vill du veta mer om?
+            </h1>
+            <ul class="applicant-listview">
+                <li class="listview-item">
+                    <div class="listview-icon">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    <div class="text-box">
+                        <div class="list-header">
+                            <h1>Nyfiken på mer om utbildningen?</h1>
+                        </div>
+                        <div class="list-text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel metus at orci consequat laoreet. Quisque eu felis nec metus porta condimentum. Integer convallis tristique nibh et pulvinar. In pharetra, lacus ac efficitur mollis, sapien dui laoreet risus, id fermentum erat nisi quis velit. Vestibulum bibendum erat ac sem ornare, auctor
+
+                        </div>
+                        <a href="{% url 'utbildning' %}" class="action-button list-link">Läs om utbildningen</a>
+                    </div>
+
+                </li>
+                <li class="listview-item">
+                    <div class="listview-icon">
+                        <i class="fa fa-bicycle"></i>
+                    </div>
+                    <div class="text-box">
+                        <div class="list-header">
+                            <h1>Sugen på studentliv?</h1>
+                        </div>
+                        <div class="list-text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel metus at orci consequat laoreet. Quisque eu felis nec metus porta condimentum. Integer convallis tristique nibh et pulvinar. In pharetra, lacus ac efficitur mollis, sapien dui laoreet risus, id fermentum erat nisi quis velit. Vestibulum bibendum erat ac sem ornare, auctor .</p>
+                            <a href="{% url 'studentliv' %}" class="action-button">Läs om utbildningen</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="listview-item">
+                    <div class="listview-icon">
+                        <i class="fa fa-home"></i>
+                    </div>
+                    <div class="text-box">
+                        <div class="list-header">
+                            <h1>Vart ska jag bo?</h1>
+                        </div>
+                        <div class="list-text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel metus at orci consequat laoreet. Quisque eu felis nec metus porta condimentum. Integer convallis tristique nibh et pulvinar. In pharetra, lacus ac efficitur mollis, sapien dui laoreet risus, id fermentum erat nisi quis velit. Vestibulum bibendum erat ac sem ornare, auctor fermentum erat pellentesque. In porttitor nisi ligula, a luctus enim aliquam vitae. Duis sit amet libero at libero feugiat aliquam. In at metus et orci malesuada dapibus. Ut id nisi posuere, consequat quam eget, sodales tellus. Mauris lobortis tempor diam ut porta. Aenean fermentum eros eu neque commodo, non ornare urna ullamcorper. Suspendisse tristique nunc sed laoreet suscipit.</p>
+                            <a href="{% url 'sokande' %}" class="action-button">Läs om utbildningen</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="listview-item">
+                    <div class="listview-icon">
+                        <i class="fa fa-briefcase"></i>
+                    </div>
+                    <div class="text-box">
+                        <div class="list-header">
+                            <h1>Vad händer efter mina studier?</h1>
+                        </div>
+                        <div class="list-text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel metus at orci consequat laoreet. Quisque eu felis nec metus porta condimentum. Integer convallis tristique nibh et pulvinar. In pharetra, lacus ac efficitur mollis, sapien dui laoreet risus, id fermentum erat nisi quis velit. Vestibulum bibendum erat ac sem ornare, auctor fermentum erat pellentesque. In porttitor nisi ligula, a luctus enim aliquam vitae. Duis sit amet libero at libero feugiat aliquam. In at metus et orci malesuada dapibus. Ut id nisi posuere, consequat quam eget, sodales tellus. Mauris lobortis tempor diam ut porta. Aenean fermentum eros eu neque commodo, non ornare urna ullamcorper. Suspendisse tristique nunc sed laoreet suscipit.</p>
+                            <a href="{% url 'sokande' %}" class="action-button">Läs om utbildningen</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </section>
     </div>
-    <section class="blog-promo">
-        <div class="promo-content">
-            <h1 class="promo-heading">Spana in sektionsbloggen</h1>
-            <p class="promo-text">
-                På Sektionsbloggen hittar du aktuella får du en inblick i studentlivet. På bloggen skrivs även om event riktade
-                till studenter som vill veta mer om hur det är att plugga på universitetet!
-            </p>
-            <a href="{% url 'blog' %}" class="action-button">Spana in bloggen</a>
-        </div>
-    </section>
-    <div class="applicant-container">
-        <section class="after-studies">
-            <h1 class="section-header">Efter studierna</h1>
-            <p class="section-text">
-                De flesta studenter har ofta sin första anställning klar redan innan examen. Intresset för civilingenjörer i
-                industriell ekonomi med examen från Linköpings universitet är mycket stort i näringslivet.
-                Detta tack vare deras driv, vana att arbeta i projekt samt förmåga till att lösa problem utifrån både ett
-                tekniskt och ett ekonomiskt perspektiv.
-            </p>
-            <a href="{% url 'efterstudier' %}" class="action-button">Läs mer om efter studierna</a>
-        </section>
-    </div>
+
 
 {% endblock %}
