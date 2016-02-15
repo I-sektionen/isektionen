@@ -20,9 +20,10 @@
     .instagram-picture
       position: relative
       margin-top: 1.5em
+      padding: 0.3em
       +span-columns(12)
-      +omega(3n)
-      +media($large-screen)
+      //+omega(3n)
+      +media(670px)
         +span-columns(4)
         +omega-reset(3n)
         +omega(3n)
@@ -33,27 +34,33 @@
 
       .caption-wrapper
         visibility: hidden
-        +transform(translateY(100%))
+        opacity: 0
+        //+transform(translateY(100%))
+        overflow: scroll
         position: absolute
         width: 100%
         height: 100%
         top: 0
         background-color: transparentize($dark-gray,0.35)
         color: $white
-        padding: 2.5em
+
         text-align: center
 
+        +display(flex)
+        +justify-content(center)
+        +align-items(center)
+        +flex-direction(column)
 
         //+transform(translateY(-100%))
         +transition()
 
-        .close-icon
-          text-align: center
-          bottom: 0
+        //.close-icon
 
       .caption-visible
         visibility: visible
-        +transform(translateY(0%))
+        opacity: 1
+        //+transform(translateY(0%))
+
 
 
 
