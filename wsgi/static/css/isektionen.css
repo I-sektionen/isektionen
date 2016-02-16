@@ -1668,8 +1668,8 @@ article.single_blog_entry p.author {
   align-items: center;
   -ms-flex-align: center;
   display: block;
-  font-size: 2em;
-  margin-top: 1em;
+  font-size: 2.4em;
+  margin-top: 0em;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -1681,7 +1681,7 @@ article.single_blog_entry p.author {
 }
 @media screen and (max-width: 325px) {
   .education .applicant-listview .listview-item .listview-icon {
-    font-size: 1.5em;
+    font-size: 2em;
     width: 50px;
     height: 50px;
   }
@@ -1704,15 +1704,51 @@ article.single_blog_entry p.author {
   }
 }
 .education .applicant-listview .listview-item .text-box {
-  margin-left: 8.5298%;
+  margin-left: 0%;
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 57.35098%;
+  width: 74.41059%;
   margin-right: 0;
 }
 .education .applicant-listview .listview-item .text-box:last-child {
   margin-right: 0;
+}
+@media screen and (max-width: 325px) {
+  .education .applicant-listview .listview-item .text-box {
+    margin-left: 0%;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%;
+  }
+  .education .applicant-listview .listview-item .text-box:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 600px) {
+  .education .applicant-listview .listview-item .text-box {
+    margin-left: 0%;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%;
+  }
+  .education .applicant-listview .listview-item .text-box:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 900px) {
+  .education .applicant-listview .listview-item .text-box {
+    margin-left: 8.5298%;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 57.35098%;
+  }
+  .education .applicant-listview .listview-item .text-box:last-child {
+    margin-right: 0;
+  }
 }
 .education .applicant-listview .listview-item .text-box .list-header {
   float: left;

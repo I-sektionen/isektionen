@@ -111,8 +111,8 @@ $stupidly-small-phones: new-breakpoint(max-width 325px);
         @include justify-content(center);
         @include align-items(center);
         display: block;
-        font-size: 2em;
-        margin-top: 1em;
+        font-size: 2.4em;
+        margin-top: 0em;
         border-radius: 50%;
         width: 60px;
         height: 60px;
@@ -120,7 +120,7 @@ $stupidly-small-phones: new-breakpoint(max-width 325px);
         background-color: $light-gray;
 
         @include media($stupidly-small-phones) {
-          font-size: 1.5em;
+          font-size: 2em;
           width: 50px;
           height: 50px;
         }
@@ -141,9 +141,25 @@ $stupidly-small-phones: new-breakpoint(max-width 325px);
         }
       }
       .text-box {
-        @include shift(1);
-        @include span-columns(7);
+        @include shift(0);
+        @include span-columns(9);
         @include omega();
+
+        @include media($stupidly-small-phones) {
+          @include shift(0);
+          @include span-columns(9);
+        }
+
+        @include media($medium-screen) {
+          @include shift(0);
+          @include span-columns(9);
+        }
+
+        @include media($large-screen) {
+          @include shift(1);
+          @include span-columns(7);
+        }
+
 
         .list-header {
           @include span-columns(7 of 7);
@@ -161,6 +177,7 @@ $stupidly-small-phones: new-breakpoint(max-width 325px);
 
           @include media($stupidly-small-phones) {
             text-align: left;
+
           }
         }
 
