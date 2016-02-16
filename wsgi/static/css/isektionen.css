@@ -1696,18 +1696,19 @@ article.single_blog_entry p.author {
 }
 @media screen and (min-width: 900px) {
   .education .applicant-listview .listview-item .listview-icon {
-    font-size: 6em;
-    width: 180px;
-    height: 180px;
+    font-size: 6.5em;
+    width: 170px;
+    height: 170px;
     background-color: #f7f7f7;
     margin-top: 0em;
   }
 }
 .education .applicant-listview .listview-item .text-box {
+  margin-left: 8.5298%;
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 74.41059%;
+  width: 57.35098%;
   margin-right: 0;
 }
 .education .applicant-listview .listview-item .text-box:last-child {
@@ -1716,7 +1717,7 @@ article.single_blog_entry p.author {
 .education .applicant-listview .listview-item .text-box .list-header {
   float: left;
   display: block;
-  margin-right: 3.16844%;
+  margin-right: 4.11092%;
   width: 100%;
   text-align: left;
 }
@@ -1729,7 +1730,7 @@ article.single_blog_entry p.author {
 .education .applicant-listview .listview-item .text-box .list-text {
   float: left;
   display: block;
-  margin-right: 3.16844%;
+  margin-right: 4.11092%;
   width: 100%;
   line-height: 1.5em;
   text-align: justify;

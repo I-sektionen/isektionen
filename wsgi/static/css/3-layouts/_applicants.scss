@@ -133,19 +133,20 @@ $stupidly-small-phones: new-breakpoint(max-width 325px);
         }
 
         @include media($large-screen) {
-          font-size: 6em;
-          width: 180px;
-          height: 180px;
+          font-size: 6.5em;
+          width: 170px;
+          height: 170px;
           background-color: $light-gray;
           margin-top: 0em;
         }
       }
       .text-box {
-        @include span-columns(9);
+        @include shift(1);
+        @include span-columns(7);
         @include omega();
 
         .list-header {
-          @include span-columns(9 of 9);
+          @include span-columns(7 of 7);
           text-align: left;
 
           h1 {
@@ -153,7 +154,7 @@ $stupidly-small-phones: new-breakpoint(max-width 325px);
           }
         }
         .list-text {
-          @include span-columns(9 of 9);
+          @include span-columns(7 of 7);
           line-height: 1.5em;
           text-align: justify;
           margin-bottom: 1em;
