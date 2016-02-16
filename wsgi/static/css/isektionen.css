@@ -1696,7 +1696,7 @@ article.single_blog_entry p.author {
 }
 @media screen and (min-width: 900px) {
   .education .applicant-listview .listview-item .listview-icon {
-    font-size: 7em;
+    font-size: 6em;
     width: 180px;
     height: 180px;
     background-color: #f7f7f7;

@@ -136,7 +136,7 @@ $stupidly-small-phones: new-breakpoint(max-width 325px);
         }
 
         @include media($large-screen) {
-          font-size: 7em;
+          font-size: 6em;
           width: 180px;
           height: 180px;
           background-color: $light-gray;
