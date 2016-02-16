@@ -157,6 +157,10 @@ $stupidly-small-phones: new-breakpoint(max-width 325px);
           line-height: 1.5em;
           text-align: justify;
           margin-bottom: 1em;
+
+          @include media($stupidly-small-phones) {
+            text-align: left;
+          }
         }
 
         .list-link {

@@ -1735,6 +1735,11 @@ article.single_blog_entry p.author {
 .education .applicant-listview .listview-item .text-box .list-text:last-child {
   margin-right: 0;
 }
+@media screen and (max-width: 325px) {
+  .education .applicant-listview .listview-item .text-box .list-text {
+    text-align: left;
+  }
+}
 .education .applicant-listview .listview-item .text-box .list-link {
   float: left;
 }
