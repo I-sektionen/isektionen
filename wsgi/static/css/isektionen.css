@@ -1178,6 +1178,11 @@ header.navigation .active-nav-items {
     text-align: justify;
   }
 }
+@media screen and (max-width: 325px) {
+  .top-hero .hero-text, .landing-hero .hero-text, .applicant-hero .hero-text, .blog-hero .hero-text, .education-hero .hero-text, .studentlife-hero .hero-text, .after-studies-hero .hero-text {
+    font-size: 1em;
+  }
+}
 
 article.single_blog_entry {
   font-family: Lato, sans-serif, sans-serif;
