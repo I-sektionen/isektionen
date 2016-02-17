@@ -57,9 +57,9 @@ $link: #acb7c0; // anchor tags
 $background: #e9f0f5; // body background color
 
 $color-1: #303e49; // blue dark
-$color-2: #c03b44; // red
+$color-2: $isektionen-yellow; // red
 $color-3: #ffffff; // white
-$color-4: #2D701E; // green
+$color-4: $isektionen-green; // green
 $color-5: #f9d026; // yellow
 
 // fonts
@@ -74,14 +74,14 @@ Modules - reusable parts of our design
 
 -------------------------------- */
 
-.cd-container { /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
-    @include box-sizing(border-box);
-    width: 100%;
-  	padding-left: 5%;
-  	padding-right: 5%;
-	 // breakpoints inside partials > _layout.scss
-
+.timeline-section{
   	background-color: #F2F5F2;
+}
+
+.cd-container { /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+	width: 90%;
+	max-width: $L; // breakpoints inside partials > _layout.scss
+	margin: 0 auto;
 
 	&::after { /* clearfix */
 		content: '';
@@ -97,8 +97,9 @@ Main components
 -------------------------------- */
 
 
+
 #cd-timeline {
-  	position: relative;
+	position: relative;
 	padding: 2em 0;
 	margin: {
 		top: 2em;
@@ -130,8 +131,6 @@ Main components
 }
 
 .cd-timeline-block {
-  	padding-left: 5%;
-  	padding-right: 5%;
 	position: relative;
 	margin: 2em 0;
 	@include clearfix;
@@ -166,6 +165,24 @@ Main components
 	border-radius: 50%;
 	box-shadow: 0 0 0 4px $color-3, inset 0 2px 0 rgba(#000, .08), 0 3px 0 4px rgba(#000, .05) ;
 
+  	.img-text{
+  	@include MQ(S){
+	  	padding-top:10%;
+	  	font-size: 130%;
+	}
+	@include MQ(S){
+	  	padding-top:5%;
+	  	font-size: 150%;
+	}
+   	@include MQ(L){
+	  	padding-top:10%;
+	  	font-size: 200%;
+	}
+	text-align: center;
+	color: white;
+	}
+
+
 	img {
 		display: block;
 		width: 24px;
@@ -178,11 +195,11 @@ Main components
 	}
 
 	&.cd-picture {
-		background: $color-5;
+		background: $color-4;
 	}
 
 	&.cd-movie {
-		background: $color-4;
+		background: $color-2;
 	}
 
 	&.cd-location {
@@ -390,4 +407,6 @@ Main components
 		@include transform(translateX(0));
 	}
 }
+
+
 
