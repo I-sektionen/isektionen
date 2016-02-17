@@ -24,40 +24,25 @@ var load_instagram = function () {
                     var picture = picture_array[number];
 
                     var instagramImageUrl = picture.images.standard_resolution.url;
-                    //var instagramImageLink = picture.link;
 
                     var imageElement = "<img class=\"instagram-image\" src=\"" + instagramImageUrl + "\">";
 
-                    //var imageLinkElement = "<a class=\"instagram-image\" href=\"" + instagramImageLink + "\" alt=\"instagram image\">" + imageElement + "</a>";
-
-                    var captionElement = "<div class=\"caption-wrapper\"><p class=\"instagram-caption\">" + picture.caption.text + "</p><i class=\"close-icon fa fa-times fa-2x\"></i></div>";
-
-                    //captionElement = ""
-                    //var hoverTile = '<div class="hover-tile-outer"><div class="hover-tile-container"> <div class="hover-tile hover-tile-visible"></div> <div class="hover-tile hover-tile-hidden"> <h4>Hidden Copy</h4> ' +
-                        //'<p>+ captionElement +'</p> </div> </div> <div>'
+                    var captionElement = "<div class=\"caption-wrapper\"><p class=\"instagram-caption\">" + picture.caption.text + "</p></div>";
 
 
                     $(".instagram-pictures").append('<li class="instagram-picture">' + imageElement + captionElement + '</li>')
 
-
-                    //$(".insta2").append('<li class="instagram-picture"><div class=\"hover-tile-outer\"><div class=\"hover-tile-container\">' + imageLinkElement + captionElement + '</div></div></li>')
-
-                        //$(".instagram-pictures").append('<a href="' + picture_array[number].link + '" target="_blank"><img class="instagram-picture" id="' + number + '" src="' + picture_array[number].images.standard_resolution.url + '"></a>');
-                   number++;
+                    number++;
                 }
 
-                //-Jesper; Added mouseon and mouseoff functionallity to append the caption text
+                //-Magnus; Added click functionality to show the caption text
                 $(".instagram-image").click(function(){
                     $(this).next().addClass("caption-visible");
                 });
-                $(".close-icon").click(function(){
-                    $(this).parent().removeClass("caption-visible");
+                $(".caption-wrapper").click(function(){
+                    $(this).removeClass("caption-visible");
                 });
 
-/*                //-Jesper; Added a nice scroll when mouse leaves either the image or the caption-text
-                $("#instagramPics").mouseleave(function(){
-                    $("#caption > p").hide('slow');
-                });*/
         });
 
 

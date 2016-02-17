@@ -551,14 +551,14 @@ header.navigation {
   .instagram .instagram-pictures .instagram-picture {
     position: relative;
     margin-top: 1.5em;
-    padding: 0.3em;
+    padding: 0em;
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 100%; }
     .instagram .instagram-pictures .instagram-picture:last-child {
       margin-right: 0; }
-    @media screen and (min-width: 670px) {
+    @media screen and (min-width: 900px) {
       .instagram .instagram-pictures .instagram-picture {
         float: left;
         display: block;
@@ -574,10 +574,13 @@ header.navigation {
           margin-right: 0; }
         .instagram .instagram-pictures .instagram-picture:nth-child(3n+1) {
           clear: left; } }
+    .instagram .instagram-pictures .instagram-picture .instagram-image {
+      height: 100%;
+      width: 100%;
+      top: 0; }
     .instagram .instagram-pictures .instagram-picture .caption-wrapper {
       visibility: hidden;
       opacity: 0;
-      overflow: scroll;
       position: absolute;
       width: 100%;
       height: 100%;
@@ -623,6 +626,14 @@ header.navigation {
       -webkit-transition: all 0.15s ease-out 0s;
       -moz-transition: all 0.15s ease-out 0s;
       transition: all 0.15s ease-out 0s; }
+    .instagram .instagram-pictures .instagram-picture .instagram-caption {
+      position: absolute;
+      overflow: scroll;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      padding: 0.5em; }
     .instagram .instagram-pictures .instagram-picture .caption-visible {
       visibility: visible;
       opacity: 1; }
