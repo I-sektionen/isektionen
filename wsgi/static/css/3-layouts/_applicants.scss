@@ -130,6 +130,7 @@ $applicant-text-color: $light-gray;
           width: 110px;
           height: 110px;
           margin-top: 0em;
+
         }
 
         @include media($large-screen) {
@@ -140,7 +141,10 @@ $applicant-text-color: $light-gray;
           margin-top: 0em;
         }
       }
-      .text-box {
+
+
+      .list-header {
+        text-align: left;
         @include shift(0);
         @include span-columns(9);
         @include omega();
@@ -160,32 +164,38 @@ $applicant-text-color: $light-gray;
           @include span-columns(7);
         }
 
-
-        .list-header {
-          @include span-columns(7 of 7);
-          text-align: left;
-
-          h1 {
-            margin-top: 0;
-          }
+        h1 {
+          margin-top: 0;
         }
-        .list-text {
-          @include span-columns(7 of 7);
-          line-height: 1.5em;
-          text-align: justify;
-          margin-bottom: 1em;
+      }
+      .list-text {
+        line-height: 1.5em;
+        text-align: justify;
+        margin-bottom: 1em;
+        @include span-columns(12);
 
-          @include media($stupidly-small-phones) {
-            text-align: left;
-
-          }
+        @include media($medium-screen) {
+          @include shift(0);
+          @include span-columns(9);
         }
 
-        .list-link {
-          float: left;
+        @include media($large-screen) {
+          @include shift(1);
+          @include span-columns(7);
         }
+
+        @include media($stupidly-small-phones) {
+          @include span-columns(12);
+
+        }
+      }
+
+      .list-link {
+        float: left;
 
       }
+
+
     }
   }
 

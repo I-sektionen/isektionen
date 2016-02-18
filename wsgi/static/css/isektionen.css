@@ -1708,7 +1708,8 @@ article.single_blog_entry p.author {
     margin-top: 0em;
   }
 }
-.education .applicant-listview .listview-item .text-box {
+.education .applicant-listview .listview-item .list-header {
+  text-align: left;
   margin-left: 0%;
   float: left;
   display: block;
@@ -1716,76 +1717,96 @@ article.single_blog_entry p.author {
   width: 74.41059%;
   margin-right: 0;
 }
-.education .applicant-listview .listview-item .text-box:last-child {
+.education .applicant-listview .listview-item .list-header:last-child {
   margin-right: 0;
 }
 @media screen and (max-width: 325px) {
-  .education .applicant-listview .listview-item .text-box {
+  .education .applicant-listview .listview-item .list-header {
     margin-left: 0%;
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 74.41059%;
   }
-  .education .applicant-listview .listview-item .text-box:last-child {
+  .education .applicant-listview .listview-item .list-header:last-child {
     margin-right: 0;
   }
 }
 @media screen and (min-width: 600px) {
-  .education .applicant-listview .listview-item .text-box {
+  .education .applicant-listview .listview-item .list-header {
     margin-left: 0%;
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 74.41059%;
   }
-  .education .applicant-listview .listview-item .text-box:last-child {
+  .education .applicant-listview .listview-item .list-header:last-child {
     margin-right: 0;
   }
 }
 @media screen and (min-width: 900px) {
-  .education .applicant-listview .listview-item .text-box {
+  .education .applicant-listview .listview-item .list-header {
     margin-left: 8.5298%;
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 57.35098%;
   }
-  .education .applicant-listview .listview-item .text-box:last-child {
+  .education .applicant-listview .listview-item .list-header:last-child {
     margin-right: 0;
   }
 }
-.education .applicant-listview .listview-item .text-box .list-header {
-  float: left;
-  display: block;
-  margin-right: 4.11092%;
-  width: 100%;
-  text-align: left;
-}
-.education .applicant-listview .listview-item .text-box .list-header:last-child {
-  margin-right: 0;
-}
-.education .applicant-listview .listview-item .text-box .list-header h1 {
+.education .applicant-listview .listview-item .list-header h1 {
   margin-top: 0;
 }
-.education .applicant-listview .listview-item .text-box .list-text {
-  float: left;
-  display: block;
-  margin-right: 4.11092%;
-  width: 100%;
+.education .applicant-listview .listview-item .list-text {
   line-height: 1.5em;
   text-align: justify;
   margin-bottom: 1em;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
 }
-.education .applicant-listview .listview-item .text-box .list-text:last-child {
+.education .applicant-listview .listview-item .list-text:last-child {
   margin-right: 0;
 }
-@media screen and (max-width: 325px) {
-  .education .applicant-listview .listview-item .text-box .list-text {
-    text-align: left;
+@media screen and (min-width: 600px) {
+  .education .applicant-listview .listview-item .list-text {
+    margin-left: 0%;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%;
+  }
+  .education .applicant-listview .listview-item .list-text:last-child {
+    margin-right: 0;
   }
 }
-.education .applicant-listview .listview-item .text-box .list-link {
+@media screen and (min-width: 900px) {
+  .education .applicant-listview .listview-item .list-text {
+    margin-left: 8.5298%;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 57.35098%;
+  }
+  .education .applicant-listview .listview-item .list-text:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 325px) {
+  .education .applicant-listview .listview-item .list-text {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  .education .applicant-listview .listview-item .list-text:last-child {
+    margin-right: 0;
+  }
+}
+.education .applicant-listview .listview-item .list-link {
   float: left;
 }
 
