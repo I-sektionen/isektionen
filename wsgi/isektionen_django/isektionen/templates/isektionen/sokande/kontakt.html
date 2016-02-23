@@ -12,10 +12,27 @@
     {% endif %}
 {% endblock %}
 {% block content %}
-
     <section class="contacts-section">
+        <h1 class="contacts-headline">Kontakt</h1>
+        <div class="contacts-form">
+            <form name="kontaktform" id="kontaktform" method="post" action="">
+                {% csrf_token %}
+                <fieldset>
+                    <input type="text" name="namn" id="namn" placeholder="Namn"/> <br />
+                    <input type="text" name="epost" id="epost" placeholder="E-post"/> <br />
+                    <input type="text" name="subject" id="subject" placeholder="Ämne"/> <br />
+                    <textarea name="meddelande" id="meddelande" cols="30" rows="5" placeholder="Meddelande"></textarea> <br />
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-default">
+                                Skicka meddelandet
+                            </button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
         <div class="contacts-content">
-            <h1>Kontakt</h1>
             <div class="contact-person">
                 <p>
                     Lena-Lotta Kjellberg<br>

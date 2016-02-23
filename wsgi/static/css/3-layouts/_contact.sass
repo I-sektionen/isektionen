@@ -7,7 +7,24 @@
   margin-top: 7em
   margin-bottom: 1em
 
+  .contacts-headline
+    text-align: center
+
+  .contacts-form
+
+    +span-columns(12)
+
+
+    +media($large-screen)
+      +span-columns(6)
+      +shift(3)
+      text-align: center
+
+
+
+
   .contacts-content
+    +span-columns(12)
     text-align: center
 
 
