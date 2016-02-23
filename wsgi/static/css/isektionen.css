@@ -1462,7 +1462,7 @@ article.single_blog_entry {
       color: #333; }
     .program-graph-section .program-graph .program-selector {
       height: 4em; }
-      .program-graph-section .program-graph .program-selector .choice {
+      .program-graph-section .program-graph .program-selector .choice a {
         float: left;
         display: block;
         margin-right: 2.35765%;
@@ -1471,15 +1471,18 @@ article.single_blog_entry {
         color: #333;
         padding-right: 2em;
         padding-left: 2em;
-        height: 4em; }
-        .program-graph-section .program-graph .program-selector .choice:last-child {
+        padding-top: 1em;
+        padding-bottom: 1em;
+        height: 4em;
+        font-size: 1em; }
+        .program-graph-section .program-graph .program-selector .choice a:last-child {
           margin-right: 0; }
+      .program-graph-section .program-graph .program-selector .choice .active {
+        color: green; }
       .program-graph-section .program-graph .program-selector .first {
         border-right: solid 2px black;
         text-align: right;
         margin-right: 0; }
-      .program-graph-section .program-graph .program-selector .active {
-        color: #f7f7f7; }
     .program-graph-section .program-graph .program-info {
       height: 500px; }
     .program-graph-section .program-graph #i-info {

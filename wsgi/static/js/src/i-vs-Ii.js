@@ -1,4 +1,11 @@
 
+$(function() {
+    $( 'div.program-selector a' ).on( 'click', function() {
+        $( this ).parent().find( 'a.active' ).removeClass( 'active' );
+        $( this ).addClass( 'active' );
+    });
+});
+
 
 $(function() {
     $( "#show-ii-info" ).click(function() {
