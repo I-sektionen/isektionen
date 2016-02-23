@@ -9,8 +9,8 @@ $(function() {
 
 $(function() {
     $( "#show-ii-info" ).click(function() {
-        $( "#ii-info:hidden" ).show();
-        $( "#i-info:visible").hide();
+        $( "#i-info:hidden" ).show();
+        $( "#ii-info:visible").hide();
     });
 });
 

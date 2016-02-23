@@ -9,8 +9,8 @@ $(function() {
 
 $(function() {
     $( "#show-ii-info" ).click(function() {
-        $( "#ii-info:hidden" ).show();
-        $( "#i-info:visible").hide();
+        $( "#i-info:hidden" ).show();
+        $( "#ii-info:visible").hide();
     });
 });
 
@@ -161,10 +161,16 @@ function parallax(){
  */
 
 // Create new chart from canvas elements
-/**
-var industriellEkonomictx = document.getElementById("chart-industriell-ekonomi").getContext("2d");
-var industriellEkonomiInternationellctx = document.getElementById("chart-industriell-ekonomi-internationell").getContext("2d");
 
+
+
+var industriellEkonomictx = document.getElementById("chart-industriell-ekonomi").getContext("2d");
+
+//if (document.getElementById("chart-industriell-ekonomi-internationell").is(":visible")) {
+
+if ($("#ii-info").is(":hidden")) {
+    var industriellEkonomiInternationellctx = document.getElementById("chart-industriell-ekonomi-internationell").getContext("2d");
+}
 
 
 industriellEkonomiChartData = [
@@ -263,9 +269,11 @@ function shadeBlendConvert(p, from, to) {
 
 
 var industriellEkonomiChart = new Chart(industriellEkonomictx).Doughnut(industriellEkonomiChartData);
-var industriellEkonomiInternationellChart = new Chart(industriellEkonomiInternationellctx).Doughnut(industriellEkonomiInternationellChartData);
 
- */;/**
+if ($("#ii-info").is(":hidden")) {
+    var industriellEkonomiInternationellChart = new Chart(industriellEkonomiInternationellctx).Doughnut(industriellEkonomiInternationellChartData);
+
+};/**
  * Created by lehtonen on 15-11-24.
  */
 /**
