@@ -34,12 +34,19 @@
 
     .program-selector
       height: 4em
+      margin-top: 2em
+      margin-bottom: 5em
 
+      +media($medium-screen)
+        margin-bottom: 2em
+
+      +media($large-screen)
+        margin-bottom: 2em
 
       .choice
 
         a
-          +span-columns(6)
+          +span-columns(12)
           display: block
           color: $dark-gray
           padding-right: 2em
@@ -48,39 +55,82 @@
           padding-bottom: 1em
           height: 4em
           font-size: 1em
+          text-align: center
+
+          +media($stupidly-small-phones)
+            +span-columns(12)
+
+          +media($medium-screen)
+            +span-columns(6)
+
+          +media($large-screen)
+            +span-columns(6)
+            text-align: left
 
         .active
           color: green
 
-      .first
-        border-right: solid 2px black
-        text-align: right
-        margin-right: 0
+      a.first
+        text-align: center
+        border-right: 0px
+        border-bottom: 2px solid black
 
+        +media($medium-screen)
+          border-bottom: 0px
+          border-right: solid 2px black
+          text-align: right
+          margin-right: 0
 
+        +media($stupidly-small-phones)
+          text-align: center
+          border-right: 0px
+          border-bottom: 2px solid black
+
+        +media($large-screen)
+          border-bottom: 0px
+          border-right: solid 2px black
+          text-align: right
+          margin-right: 0
 
     .program-info
-      height: 500px
 
       .text-box
-        +span-columns(6)
+        +span-columns(12)
+
+        +media($large-screen)
+          +span-columns(6)
 
         .header
           +span-columns(12)
+          text-align: center
+
+          +media($large-screen)
+            text-align: left
 
 
         .course
-          +span-columns(6)
-          +omega(3n)
-          margin-top: 2em
+          +span-columns(12)
+          text-align: center
           margin-bottom: 2em
-          padding-right: 2em
+
+          +media($medium-screen)
+            +span-columns(6)
+            +omega(3n)
+            text-align: center
+
+          +media($large-screen)
+            +span-columns(6)
+            +omega(3n)
+            text-align: left
+            margin-top: 2em
+
 
       .img-box
         +span-columns(6)
 
     #i-info
       display: block
+
 
     #ii-info
       display: none

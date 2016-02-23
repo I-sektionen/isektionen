@@ -6,6 +6,7 @@ $hero-divider-color: $light-gray;
 $hero-divider-height: 5px;
 // Variables for hero text
 $hero-text-color: $light-gray;
+$stupidly-small-phones: new-breakpoint(max-width 325px);
 
 .top-hero {
   min-height: 80vh;
