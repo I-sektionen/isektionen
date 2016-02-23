@@ -1426,71 +1426,76 @@ article.single_blog_entry {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding: 1em; }
+  padding: 1em;
+  padding-top: 5em;
+  padding-bottom: 5em; }
   .utbildning-intro::after {
     clear: both;
     content: "";
     display: table; }
-  .utbildning-intro .section-header {
-    font-size: 2.5em;
-    color: #333; }
-  .utbildning-intro .section-text {
-    line-height: 2em;
-    text-align: justify; }
-    @media screen and (min-width: 900px) {
-      .utbildning-intro .section-text {
-        -webkit-columns: 2;
-        -moz-columns: 2;
-        columns: 2;
-        -webkit-column-gap: 4em;
-        -moz-column-gap: 4em;
-        column-gap: 4em; } }
 
-.program-graph {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1em; }
-  .program-graph::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .program-graph .section-header {
-    font-size: 2.5em;
-    color: #333; }
-  .program-graph .chart-container {
-    padding: 2em;
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: distribute;
-    -moz-box-pack: distribute;
-    box-pack: distribute;
-    -webkit-justify-content: space-around;
-    -moz-justify-content: space-around;
-    -ms-justify-content: space-around;
-    -o-justify-content: space-around;
-    justify-content: space-around;
-    -ms-flex-pack: distribute;
-    -webkit-box-lines: multiple;
-    -moz-box-lines: multiple;
-    box-lines: multiple;
-    -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
-    .program-graph .chart-container .chart-title {
-      text-align: center;
-      font-size: 1.5em;
+.section-header {
+  font-size: 3.5em;
+  color: #333;
+  text-align: center; }
+
+.section-text {
+  line-height: 2em;
+  text-align: center;
+  color: #333; }
+
+.program-graph-section {
+  background-color: #f7f7f7; }
+  .program-graph-section .program-graph {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    padding-top: 5em;
+    padding-bottom: 5em; }
+    .program-graph-section .program-graph::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .program-graph-section .program-graph .section-header {
+      font-size: 2.5em;
       color: #333; }
-    .program-graph .chart-container .chart-canvas {
-      margin-bottom: 1em;
-      height: 300px;
-      width: 300px; }
+    .program-graph-section .program-graph .program-selector {
+      height: 4em; }
+      .program-graph-section .program-graph .program-selector .choice {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 48.82117%;
+        display: block;
+        color: #333;
+        padding-right: 2em;
+        padding-left: 2em;
+        height: 4em; }
+        .program-graph-section .program-graph .program-selector .choice:last-child {
+          margin-right: 0; }
+      .program-graph-section .program-graph .program-selector .first {
+        border-right: solid 2px black;
+        text-align: right;
+        margin-right: 0; }
+      .program-graph-section .program-graph .program-selector .active {
+        color: #f7f7f7; }
+    .program-graph-section .program-graph .program-info {
+      height: 500px; }
+    .program-graph-section .program-graph #i-info {
+      display: block; }
+    .program-graph-section .program-graph #ii-info {
+      display: none; }
+    .program-graph-section .program-graph .chart-container {
+      padding: 2em; }
+      .program-graph-section .program-graph .chart-container .chart-title {
+        text-align: center;
+        font-size: 1.5em;
+        color: #333; }
+      .program-graph-section .program-graph .chart-container .chart-canvas {
+        margin-bottom: 1em;
+        height: 300px;
+        width: 300px; }
 
 .studentlife-hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://iportalen-us.s3.amazonaws.com:443/static/iportalen/HERO.jpg");

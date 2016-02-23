@@ -1,23 +1,17 @@
-/**
- * Created by axel on 2016-02-18.
- */
-$(document).ready(function () {
-  $('.accordion-tabs-minimal').each(function(index) {
-    $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
-  });
-  $('.accordion-tabs-minimal').on('click', 'li > a.tab-link', function(event) {
-    if (!$(this).hasClass('is-active')) {
-      event.preventDefault();
-      var accordionTabs = $(this).closest('.accordion-tabs-minimal');
-      accordionTabs.find('.is-open').removeClass('is-open').hide();
 
-      $(this).next().toggleClass('is-open').toggle();
-      accordionTabs.find('.is-active').removeClass('is-active');
-      $(this).addClass('is-active');
-    } else {
-      event.preventDefault();
-    }
-  });
+
+$(function() {
+    $( "#show-ii-info" ).click(function() {
+        $( "#ii-info:hidden" ).show();
+        $( "#i-info:visible").hide();
+    });
+});
+
+$(function() {
+    $( "#show-i-info" ).click(function() {
+        $( "#i-info:hidden" ).show();
+        $( "#ii-info:visible").hide();
+    });
 });;/**
  * Created by lehtonen on 15-11-16.
  */
@@ -160,7 +154,7 @@ function parallax(){
  */
 
 // Create new chart from canvas elements
-
+/**
 var industriellEkonomictx = document.getElementById("chart-industriell-ekonomi").getContext("2d");
 var industriellEkonomiInternationellctx = document.getElementById("chart-industriell-ekonomi-internationell").getContext("2d");
 
@@ -262,7 +256,9 @@ function shadeBlendConvert(p, from, to) {
 
 
 var industriellEkonomiChart = new Chart(industriellEkonomictx).Doughnut(industriellEkonomiChartData);
-var industriellEkonomiInternationellChart = new Chart(industriellEkonomiInternationellctx).Doughnut(industriellEkonomiInternationellChartData);;/**
+var industriellEkonomiInternationellChart = new Chart(industriellEkonomiInternationellctx).Doughnut(industriellEkonomiInternationellChartData);
+
+ */;/**
  * Created by lehtonen on 15-11-24.
  */
 /**
