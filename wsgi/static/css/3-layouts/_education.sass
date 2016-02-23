@@ -34,6 +34,8 @@
 
     .program-selector
       height: 4em
+
+
       .choice
 
         a
@@ -59,6 +61,23 @@
 
     .program-info
       height: 500px
+
+      .text-box
+        +span-columns(6)
+
+        .header
+          +span-columns(12)
+
+
+        .course
+          +span-columns(6)
+          +omega(3n)
+          margin-top: 2em
+          margin-bottom: 2em
+          padding-right: 2em
+
+      .img-box
+        +span-columns(6)
 
     #i-info
       display: block
