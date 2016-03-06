@@ -21,76 +21,39 @@
             </p>
         </div>
     </section>
-
-    <div class="applicant-container">
-
-        <section class="education">
-            <h1 class="edu-header">
-                Vad vill du veta mer om?
-            </h1>
-            <ul class="applicant-listview">
-                <li class="listview-item">
-                    <div class="listview-icon">
-                        <i class="fa fa-book"></i>
-                    </div>
-
-                    <div class="list-header">
-                        <h1>Nyfiken på mer om utbildningen?</h1>
-                    </div>
-                    <div class="list-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel metus at orci consequat laoreet. Quisque eu felis nec metus porta condimentum. Integer convallis tristique nibh et pulvinar. In pharetra, lacus ac efficitur mollis, sapien dui laoreet risus, id fermentum erat nisi quis velit. Vestibulum bibendum erat ac sem ornare, auctor</p>
-
-                        <a href="{% url 'utbildning' %}" class="action-button list-link">Om utbildningen</a>
-
-                    </div>
-
-
-                </li>
-                <li class="listview-item">
-                    <div class="listview-icon">
-                        <i class="fa fa-bicycle"></i>
-                    </div>
-                    <div class="text-box">
-                        <div class="list-header">
-                            <h1>Sugen på studentliv?</h1>
-                        </div>
-                        <div class="list-text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel metus at orci consequat laoreet. Quisque eu felis nec metus porta condimentum. Integer convallis tristique nibh et pulvinar. In pharetra, lacus ac efficitur mollis, sapien dui laoreet risus, id fermentum erat nisi quis velit. Vestibulum bibendum erat ac sem ornare, auctor .</p>
-                            <a href="{% url 'studentliv' %}" class="action-button">Om studentlivet</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="listview-item">
-                    <div class="listview-icon">
-                        <i class="fa fa-home"></i>
-                    </div>
-                    <div class="text-box">
-                        <div class="list-header">
-                            <h1>Vart ska jag bo?</h1>
-                        </div>
-                        <div class="list-text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel metus at orci consequat laoreet. Quisque eu felis nec metus porta condimentum. Integer convallis tristique nibh et pulvinar. In pharetra, lacus ac efficitur mollis, sapien dui laoreet risus, id fermentum erat nisi quis velit. Vestibulum bibendum erat ac sem ornare, auctor fermentum .</p>
-                            <a href="{% url 'sokande' %}" class="action-button">Om bostad</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="listview-item">
-                    <div class="listview-icon">
-                        <i class="fa fa-car"></i>
-                    </div>
-                    <div class="text-box">
-                        <div class="list-header">
-                            <h1>Vad händer efter mina studier?</h1>
-                        </div>
-                        <div class="list-text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel metus at orci consequat laoreet. Quisque eu felis nec metus porta condimentum. Integer convallis tristique nibh et pulvinar. In pharetra, lacus ac efficitur mollis, sapien dui laoreet risus, id fermentum erat nisi quis velit. Vestibulum bibendum erat ac sem ornare, auctor fermentum .</p>
-                            <a href="{% url 'efterstudier' %}" class="action-button">Om arbetslivet</a>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </section>
-    </div>
+    <section class="applicant-container">
+    <h1 CLASS="section-header">Vad vill du veta mer om?</h1>
+        <ul class="bullets">
+            <li class="bullet">
+                <div class="bullet-icon bullet-icon-1">
+                    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2.png
+" alt="">
+                </div>
+                <div class="bullet-content">
+                    <h2>This Bullet Title</h2>
+                    <p>Lorem dolor sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem.</p>
+                </div>
+            </li>
+            <li class="bullet">
+                <div class="bullet-icon bullet-icon-2">
+                    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3.png" alt="">
+                </div>
+                <div class="bullet-content">
+                    <h2>Another Bullet Title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum.</p>
+                </div>
+            </li>
+            <li class="bullet">
+                <div class="bullet-icon bullet-icon-3">
+                    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_4.png" alt="">
+                </div>
+                <div class="bullet-content">
+                    <h2>Last Bullet Title</h2>
+                    <p>Lorem ipsum sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem.</p>
+                </div>
+            </li>
+        </ul>
+    </section>
 
 
 {% endblock %}
