@@ -679,47 +679,142 @@ header.navigation .active-nav-items {
 .instagram .instagram-account-link i {
   font-size: 5em;
 }
-.instagram .instagram-picture {
+.instagram .instagram-pictures .instagram-picture {
+  position: relative;
+  margin-top: 1.5em;
+  padding: 0em;
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%;
 }
-.instagram .instagram-picture:last-child {
-  margin-right: 0;
-}
-.instagram .instagram-picture:nth-child(n) {
+.instagram .instagram-pictures .instagram-picture:last-child {
   margin-right: 0;
 }
 @media screen and (min-width: 900px) {
-  .instagram .instagram-picture {
+  .instagram .instagram-pictures .instagram-picture {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 31.76157%;
   }
-  .instagram .instagram-picture:last-child {
+  .instagram .instagram-pictures .instagram-picture:last-child {
     margin-right: 0;
   }
-  .instagram .instagram-picture:nth-child(2n) {
+  .instagram .instagram-pictures .instagram-picture:nth-child(3n) {
     margin-right: 2.35765%;
   }
-  .instagram .instagram-picture:nth-child(2n+1) {
+  .instagram .instagram-pictures .instagram-picture:nth-child(3n+1) {
     clear: none;
   }
-  .instagram .instagram-picture:nth-child(3n) {
+  .instagram .instagram-pictures .instagram-picture:nth-child(3n) {
     margin-right: 0;
   }
-  .instagram .instagram-picture:nth-child(3n+1) {
+  .instagram .instagram-pictures .instagram-picture:nth-child(3n+1) {
     clear: left;
   }
 }
-.instagram .instagram-caption {
-  -webkit-transform: translateY(-100%);
-  -moz-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  -o-transform: translateY(-100%);
-  transform: translateY(-100%);
+.instagram .instagram-pictures .instagram-picture .instagram-image {
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
+.instagram .instagram-pictures .instagram-picture .caption-wrapper {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(51, 51, 51, 0.65);
+  color: white;
+  text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+}
+.instagram .instagram-pictures .instagram-picture .instagram-caption {
+  position: absolute;
+  overflow: scroll;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 0.5em;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+}
+.instagram .instagram-pictures .instagram-picture .caption-visible {
+  visibility: visible;
+  opacity: 1;
 }
 
 .footer {
@@ -1128,11 +1223,11 @@ header.navigation .active-nav-items {
   overflow: hidden;
 }
 
-.top-hero, .landing-hero, .applicant-hero, .blog-hero, .education-hero, .studentlife-hero, .after-studies-hero {
+.top-hero, .landing-hero, .applicant-hero, .blog-hero, .education-hero, .studentlife-hero, .after-studies-hero, .contacts-hero {
   min-height: 80vh;
   position: relative;
 }
-.top-hero .hero-content, .landing-hero .hero-content, .applicant-hero .hero-content, .blog-hero .hero-content, .education-hero .hero-content, .studentlife-hero .hero-content, .after-studies-hero .hero-content {
+.top-hero .hero-content, .landing-hero .hero-content, .applicant-hero .hero-content, .blog-hero .hero-content, .education-hero .hero-content, .studentlife-hero .hero-content, .after-studies-hero .hero-content, .contacts-hero .hero-content {
   padding: 2em;
   text-align: center;
   width: 60%;
@@ -1147,34 +1242,34 @@ header.navigation .active-nav-items {
   width: 100%;
 }
 @media screen and (min-width: 900px) {
-  .top-hero .hero-content, .landing-hero .hero-content, .applicant-hero .hero-content, .blog-hero .hero-content, .education-hero .hero-content, .studentlife-hero .hero-content, .after-studies-hero .hero-content {
+  .top-hero .hero-content, .landing-hero .hero-content, .applicant-hero .hero-content, .blog-hero .hero-content, .education-hero .hero-content, .studentlife-hero .hero-content, .after-studies-hero .hero-content, .contacts-hero .hero-content {
     width: auto;
   }
 }
-.top-hero .hero-heading, .landing-hero .hero-heading, .applicant-hero .hero-heading, .blog-hero .hero-heading, .education-hero .hero-heading, .studentlife-hero .hero-heading, .after-studies-hero .hero-heading {
+.top-hero .hero-heading, .landing-hero .hero-heading, .applicant-hero .hero-heading, .blog-hero .hero-heading, .education-hero .hero-heading, .studentlife-hero .hero-heading, .after-studies-hero .hero-heading, .contacts-hero .hero-heading {
   color: #f7f7f7;
   font-size: 2em;
   text-transform: uppercase;
   margin-bottom: 0;
 }
 @media screen and (min-width: 900px) {
-  .top-hero .hero-heading, .landing-hero .hero-heading, .applicant-hero .hero-heading, .blog-hero .hero-heading, .education-hero .hero-heading, .studentlife-hero .hero-heading, .after-studies-hero .hero-heading {
+  .top-hero .hero-heading, .landing-hero .hero-heading, .applicant-hero .hero-heading, .blog-hero .hero-heading, .education-hero .hero-heading, .studentlife-hero .hero-heading, .after-studies-hero .hero-heading, .contacts-hero .hero-heading {
     font-size: 3em;
   }
 }
-.top-hero .hero-divider, .landing-hero .hero-divider, .applicant-hero .hero-divider, .blog-hero .hero-divider, .education-hero .hero-divider, .studentlife-hero .hero-divider, .after-studies-hero .hero-divider {
+.top-hero .hero-divider, .landing-hero .hero-divider, .applicant-hero .hero-divider, .blog-hero .hero-divider, .education-hero .hero-divider, .studentlife-hero .hero-divider, .after-studies-hero .hero-divider, .contacts-hero .hero-divider {
   border: none;
   background-color: #f7f7f7;
   height: 5px;
   margin: 5px;
 }
-.top-hero .hero-text, .landing-hero .hero-text, .applicant-hero .hero-text, .blog-hero .hero-text, .education-hero .hero-text, .studentlife-hero .hero-text, .after-studies-hero .hero-text {
+.top-hero .hero-text, .landing-hero .hero-text, .applicant-hero .hero-text, .blog-hero .hero-text, .education-hero .hero-text, .studentlife-hero .hero-text, .after-studies-hero .hero-text, .contacts-hero .hero-text {
   color: #f7f7f7;
   font-weight: bold;
   font-size: 1.2em;
 }
 @media screen and (min-width: 900px) {
-  .top-hero .hero-text, .landing-hero .hero-text, .applicant-hero .hero-text, .blog-hero .hero-text, .education-hero .hero-text, .studentlife-hero .hero-text, .after-studies-hero .hero-text {
+  .top-hero .hero-text, .landing-hero .hero-text, .applicant-hero .hero-text, .blog-hero .hero-text, .education-hero .hero-text, .studentlife-hero .hero-text, .after-studies-hero .hero-text, .contacts-hero .hero-text {
     text-align: justify;
   }
 }
@@ -1885,6 +1980,34 @@ article.single_blog_entry p.author {
     text-align: justify;
     font-size: 1em;
   }
+}
+
+.contacts-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://iportalen-us.s3.amazonaws.com:443/static/iportalen/HERO.jpg");
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+}
+@media screen and (min-width: 900px) {
+  .contacts-hero {
+    background-attachment: fixed;
+  }
+}
+
+.contacts-section {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7em;
+  margin-bottom: 1em;
+}
+.contacts-section::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.contacts-section .contacts-content {
+  text-align: center;
 }
 
 /*# sourceMappingURL=isektionen.css.map */
