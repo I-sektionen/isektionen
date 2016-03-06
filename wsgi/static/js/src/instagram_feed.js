@@ -24,35 +24,25 @@ var load_instagram = function () {
                     var picture = picture_array[number];
 
                     var instagramImageUrl = picture.images.standard_resolution.url;
-                    var instagramImageLink = picture.link;
 
-                    var imageElement = "<img src=\"" + instagramImageUrl + "\">";
+                    var imageElement = "<img class=\"instagram-image\" src=\"" + instagramImageUrl + "\">";
 
-                    var imageLinkElement = "<a href=\"" + instagramImageLink + "\" alt=\"instagram image\">" + imageElement + "</a>";
-
+                    var captionElement = "<div class=\"caption-wrapper\"><p class=\"instagram-caption\">" + picture.caption.text + "</p></div>";
 
 
-                    var captionElement = "<p class=\"instagram-caption\">" + picture.caption.text + "</p>";
+                    $(".instagram-pictures").append('<li class="instagram-picture">' + imageElement + captionElement + '</li>')
 
-                    captionElement = ""
-
-
-                    $(".instagram-pictures").append('<li class="instagram-picture">' + imageLinkElement + captionElement + '</li>')
-
-                        //$(".instagram-pictures").append('<a href="' + picture_array[number].link + '" target="_blank"><img class="instagram-picture" id="' + number + '" src="' + picture_array[number].images.standard_resolution.url + '"></a>');
-                   number++;
+                    number++;
                 }
 
-                //-Jesper; Added mouseon and mouseoff functionallity to append the caption text
-                $(".instagram-picture > img").hover(function(){
-                    var picNumber = $(this).attr('id');
-                    $("#caption > p").text(picture_array[picNumber].caption.text).show(300);
+                //-Magnus; Added click functionality to show the caption text
+                $(".instagram-image").click(function(){
+                    $(this).next().addClass("caption-visible");
+                });
+                $(".caption-wrapper").click(function(){
+                    $(this).removeClass("caption-visible");
                 });
 
-/*                //-Jesper; Added a nice scroll when mouse leaves either the image or the caption-text
-                $("#instagramPics").mouseleave(function(){
-                    $("#caption > p").hide('slow');
-                });*/
         });
 
 
