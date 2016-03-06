@@ -1585,7 +1585,7 @@ article.single_blog_entry p.author {
 }
 @media screen and (min-width: 900px) {
   .applicant-container {
-    width: 80%;
+    width: 70%;
   }
 }
 .applicant-container .section-header {
