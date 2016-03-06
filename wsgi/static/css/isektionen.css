@@ -1454,16 +1454,6 @@ article.single_blog_entry p.author {
   text-align: justify;
   line-height: 2em;
 }
-@media screen and (min-width: 900px) {
-  .landing-content .history .history-content .history-text {
-    -webkit-columns: 2;
-    -moz-columns: 2;
-    columns: 2;
-    -webkit-column-gap: 4em;
-    -moz-column-gap: 4em;
-    column-gap: 4em;
-  }
-}
 .landing-content .history .history-content .section-header {
   font-size: 2.5em;
   color: #333;
