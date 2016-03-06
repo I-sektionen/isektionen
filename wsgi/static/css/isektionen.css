@@ -1926,7 +1926,19 @@ Modules - reusable parts of our design
 
 -------------------------------- */
 .timeline-section {
-  background-color: #F2F5F2;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://photos-5.dropbox.com/t/2/AABG4jTms16Y04_ynNwKZ45bcqRgRkZg1q_lNWWK0IoRSg/12/41389780/jpeg/32x32/8_1872-0-3744-3744-5616-3744/1457287200/0/2/campus_valla_2013.jpg/ELa3zR8YnI8WIAcoBw/wGoxxCwpDe-RZD7Rd7mZY4sIIns7AkNiwuuAfS3TZCM%2CYcZJQHxA6_N4OKrV-2JyEdGBLhTOQ3eZlcPjKTo-Dz0?size_mode=3&size=1280x960");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.timeline-header .timeline-header-text {
+  font-size: 2.5em;
+  text-align: center;
+  box-sizing: inherit;
+  padding-top: 1em;
+  line-height: 1.2;
+  color: white;
 }
 
 .cd-container {
@@ -2139,26 +2151,9 @@ Main components
 .cd-timeline-content h2 {
   color: #303e49;
 }
-.cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
-  font-size: 13px;
-  font-size: 0.8125rem;
-}
-.cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
-  display: inline-block;
-}
 .cd-timeline-content p {
   margin: 1em 0;
   line-height: 1.6;
-}
-.cd-timeline-content .cd-read-more {
-  float: right;
-  padding: .8em 1em;
-  background: #acb7c0;
-  color: #ffffff;
-  border-radius: 0.25em;
-}
-.no-touch .cd-timeline-content .cd-read-more:hover {
-  background-color: #bac4cb;
 }
 .cd-timeline-content .cd-date {
   float: left;
@@ -2201,9 +2196,6 @@ Main components
     border-color: transparent;
     border-left-color: #ffffff;
   }
-  .cd-timeline-content .cd-read-more {
-    float: left;
-  }
   .cd-timeline-content .cd-date {
     position: absolute;
     width: 100%;
@@ -2221,9 +2213,6 @@ Main components
     right: 100%;
     border-color: transparent;
     border-right-color: #ffffff;
-  }
-  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
-    float: right;
   }
   .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
     left: auto;

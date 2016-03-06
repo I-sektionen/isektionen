@@ -75,9 +75,24 @@ Modules - reusable parts of our design
 -------------------------------- */
 
 .timeline-section{
-  	background-color: #F2F5F2;
+  //	background-color: #F2F5F2;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('https://photos-5.dropbox.com/t/2/AABG4jTms16Y04_ynNwKZ45bcqRgRkZg1q_lNWWK0IoRSg/12/41389780/jpeg/32x32/8_1872-0-3744-3744-5616-3744/1457287200/0/2/campus_valla_2013.jpg/ELa3zR8YnI8WIAcoBw/wGoxxCwpDe-RZD7Rd7mZY4sIIns7AkNiwuuAfS3TZCM%2CYcZJQHxA6_N4OKrV-2JyEdGBLhTOQ3eZlcPjKTo-Dz0?size_mode=3&size=1280x960');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
+.timeline-header {
+  .timeline-header-text{
+	font-size: 2.5em;
+	text-align: center;
+	box-sizing: inherit;
+	padding-top: 1em;
+	line-height: 1.2;
+	color: white;
+  }
+}
 .cd-container { /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
 	width: 90%;
 	max-width: $L; // breakpoints inside partials > _layout.scss
@@ -256,30 +271,30 @@ Main components
 		color: $color-1;
 	}
 
-	p, .cd-read-more, .cd-date {
-		@include font-size(13px);
-	}
+	//p, .cd-read-more, .cd-date {
+	//	@include font-size(13px);
+	//}
 
-	.cd-read-more, .cd-date {
-		display: inline-block;
-	}
+	//.cd-read-more, .cd-date {
+	//	display: inline-block;
+	//}
 
 	p {
 		margin: 1em 0;
 		line-height: 1.6;
 	}
 
-	.cd-read-more {
-		float: right;
-		padding: .8em 1em;
-		background: $link;
-		color: $color-3;
-		@include border-radius;
+	//.cd-read-more {
+	//	float: right;
+	//	padding: .8em 1em;
+	//	background: $link;
+	//	color: $color-3;
+	//	@include border-radius;
 
-		.no-touch &:hover {
-			background-color: lighten($link, 5%);
-		}
-	}
+	//	.no-touch &:hover {
+	//		background-color: lighten($link, 5%);
+	//	}
+	//}
 
 	.cd-date {
 		float: left;
@@ -324,9 +339,9 @@ Main components
 			border-left-color: $color-3;
 		}
 
-		.cd-read-more {
-			float: left;
-		}
+		//.cd-read-more {
+		//	float: left;
+		//}
 
 		.cd-date {
 			position: absolute;
@@ -347,9 +362,9 @@ Main components
 				border-right-color: $color-3;
 			}
 
-			.cd-read-more {
-				float: right;
-			}
+			//.cd-read-more {
+			//	float: right;
+			//}
 
 			.cd-date {
 				left: auto;
