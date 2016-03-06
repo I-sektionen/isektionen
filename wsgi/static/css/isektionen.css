@@ -1606,6 +1606,35 @@ article.single_blog_entry p.author {
   flex: 4;
 }
 
+.social-media-container {
+  background-color: black;
+}
+.social-media-container .social-media-title {
+  text-align: center;
+  color: gray;
+}
+.social-media-container .social-media-links {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+}
+.social-media-container .social-media-links .fa.fa-twitter {
+  color: white;
+}
+
 .applicant-hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/campus_nkpg.jpg");
   background-position: center center;
