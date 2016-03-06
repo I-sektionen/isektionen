@@ -1896,16 +1896,6 @@ article.single_blog_entry p.author {
   line-height: 2em;
   text-align: justify;
 }
-@media screen and (min-width: 900px) {
-  .utbildning-intro .section-text {
-    -webkit-columns: 2;
-    -moz-columns: 2;
-    columns: 2;
-    -webkit-column-gap: 4em;
-    -moz-column-gap: 4em;
-    column-gap: 4em;
-  }
-}
 
 .program-graph {
   max-width: 1200px;
