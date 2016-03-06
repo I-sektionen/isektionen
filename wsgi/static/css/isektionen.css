@@ -1642,29 +1642,20 @@ article.single_blog_entry p.author {
   background: #f9d026;
   border-radius: 50%;
   float: left;
-  height: 3.5em;
-  padding: 0.875em;
-  width: 3.5em;
-}
-.applicant-container .bullets .bullet-icon-1 {
-  background: #f9d026;
-}
-.applicant-container .bullets .bullet-icon-2 {
-  background: #f9262d;
-}
-.applicant-container .bullets .bullet-icon-3 {
-  background: #8926f9;
+  height: 4em;
+  padding: 1em;
+  width: 4em;
 }
 .applicant-container .bullets .bullet-content {
-  margin-left: 4.9em;
+  margin-left: 5.6em;
   margin-bottom: 2em;
 }
 .applicant-container .bullets h2 {
   border-bottom: 1px solid rgba(51, 51, 51, 0.2);
   display: inline-block;
-  font-size: 1.4em;
-  margin: 0 0 0.58333em 0;
-  padding-top: 0.5em;
+  font-size: 1.6em;
+  margin: 0 0 0.66667em 0;
+  padding-top: 0.57143em;
 }
 .applicant-container .bullets li {
   list-style: none;
