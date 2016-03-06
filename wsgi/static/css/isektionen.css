@@ -1915,4 +1915,49 @@ article.single_blog_entry p.author {
   text-align: center;
 }
 
+.FAQ-section {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+  width: 60%;
+}
+.FAQ-section::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.FAQ-section .expander .expander-trigger {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.18);
+  color: #2D701E;
+  cursor: pointer;
+  display: block;
+  font-size: 1em;
+  margin-bottom: 1em;
+  padding-bottom: 0.25em;
+  text-decoration: none;
+}
+.FAQ-section .expander .expander-trigger:before {
+  font-size: 0.7em;
+  content: "\25BC";
+  margin-right: 0.5em;
+}
+.FAQ-section .expander .expander-content p {
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 2em;
+  margin-top: 0.8em;
+}
+.FAQ-section .expander .expander-hidden:before {
+  font-size: 0.7em;
+  content: "\25BA";
+}
+.FAQ-section .expander .expander-hidden + .expander-content {
+  display: none;
+}
+
 /*# sourceMappingURL=isektionen.css.map */
