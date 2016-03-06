@@ -1607,11 +1607,15 @@ article.single_blog_entry p.author {
 }
 
 .social-media-container {
-  background-color: black;
+  padding-top: 6em;
+  background-color: #F2F2F2;
+  padding-bottom: 10em;
 }
 .social-media-container .social-media-title {
   text-align: center;
-  color: gray;
+  font-size: 2.5em;
+  line-height: 1.2em;
+  padding-bottom: 0.5em;
 }
 .social-media-container .social-media-links {
   display: -webkit-box;
@@ -1631,8 +1635,10 @@ article.single_blog_entry p.author {
   justify-content: center;
   -ms-flex-pack: center;
 }
-.social-media-container .social-media-links .fa.fa-twitter {
-  color: white;
+.social-media-container .social-media-links .social-media-icon {
+  color: black;
+  font-size: 5em;
+  margin: 0.1em;
 }
 
 .applicant-hero {
