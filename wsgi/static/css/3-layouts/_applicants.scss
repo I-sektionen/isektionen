@@ -61,20 +61,22 @@ $applicant-text-color: $light-gray;
 //
 
 .applicant-container {
-  @include outer-container()
-}
-
-.applicant-section {
+  @include outer-container();
   padding: 2em;
-  text-align: center;
-  .section-header {
-    color: $dark-gray;
-    font-size: 2.5em;
-    @include  media ($large-screen) {
-      font-size: 3em;
-    }
+
+  @include media($large-screen) {
+      width: 70%
+
   }
 
+  .section-header {
+    text-align: center;
+    color: $dark-gray;
+    font-size: 2.5em;
+    @include media ($large-screen) {
+      font-size: 2em;
+    }
+  }
   .section-text {
     line-height: 1.5em;
     color: $dark-gray;
@@ -84,139 +86,82 @@ $applicant-text-color: $light-gray;
     }
   }
 
-}
+  .bullets {
+    $base-line-height: 1.5em !default;
+    $dark-gray: #333 !default;
+    $base-font-color: $dark-gray !default;
+    $icon-bullet-size: 4em;
 
-.education {
-  @extend .applicant-section;
-  @include span-columns(12);
+    @include display(flex);
+    @include flex-wrap(wrap);
+    margin-bottom: $base-line-height;
+    margin: 1em;
+    overflow: auto;
+    padding: 0;
 
-  .edu-header {
-    @include span-columns(12);
-    font-size: 3em;
-    text-align: center;
-  }
+    .bullet {
+      @include flex-basis(100%);
+      @include flex-grow(1);
+    }
 
-  .applicant-listview {
-    list-style-type: none;
+    .bullet-icon {
+      background: $light-gray;
+      border-radius: 50%;
+      float: left;
+      height: $icon-bullet-size;
+      padding: $icon-bullet-size / 4;
+      width: $icon-bullet-size;
 
-    .listview-item {
-      display: block;
-      @include span-columns(12);
-      padding: 0em;
-      margin-top: 3em;
-
-      .listview-icon {
-        @include span-columns(3);
-        @include display(flex);
-        @include justify-content(center);
-        @include align-items(center);
-        display: block;
-        font-size: 2.4em;
-        margin-top: 0em;
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        box-sizing: border-box;
-        background-color: $light-gray;
-
-        @include media($stupidly-small-phones) {
+      i {
+          color: $dark-gray;
           font-size: 2em;
-          width: 50px;
-          height: 50px;
-        }
-
-        @include media($medium-screen) {
-          font-size: 4.5em;
-          width: 110px;
-          height: 110px;
-          margin-top: 0em;
-
-        }
-
-        @include media($large-screen) {
-          font-size: 6.5em;
-          width: 170px;
-          height: 170px;
-          background-color: $light-gray;
-          margin-top: 0em;
-        }
-      }
-
-
-      .list-header {
-        text-align: left;
-        @include shift(0);
-        @include span-columns(9);
-        @include omega();
-
-        @include media($stupidly-small-phones) {
-          @include shift(0);
-          @include span-columns(9);
-        }
-
-        @include media($medium-screen) {
-          @include shift(0);
-          @include span-columns(9);
-        }
-
-        @include media($large-screen) {
-          @include shift(1);
-          @include span-columns(7);
-        }
-
-        h1 {
-          margin-top: 0;
-        }
-      }
-      .list-text {
-        line-height: 1.5em;
-        text-align: justify;
-        margin-bottom: 1em;
-        @include span-columns(12);
-
-        @include media($medium-screen) {
-          @include shift(0);
-          @include span-columns(9);
-        }
-
-        @include media($large-screen) {
-          @include shift(1);
-          @include span-columns(7);
-        }
-
-        @include media($stupidly-small-phones) {
-          @include span-columns(12);
-
-        }
-      }
-
-      .list-link {
-        float: left;
 
       }
 
+    }
 
+    .bullet-content {
+      margin-left: $icon-bullet-size * 1.4;
+      margin-bottom: 2em;
+    }
+
+    h2 {
+      border-bottom: 1px solid transparentize($base-font-color, 0.8);
+      display: inline-block;
+      font-size: $icon-bullet-size / 2.5;
+      margin: 0 0 ($icon-bullet-size / 6) 0;
+      padding-top: $icon-bullet-size / 7;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    p {
+      color: $base-font-color;
+      line-height: $base-line-height;
+    }
+
+    img {
+      max-width: 100%;
     }
   }
 
-}
-
-.student-life {
-  @extend .applicant-section;
-  @include span-columns(12);
-  @include media($large-screen) {
-    @include span-columns(6)
+  .student-life {
+    //@extend .applicant-section;
+    @include span-columns(12);
+    @include media($large-screen) {
+      @include span-columns(6)
+    }
   }
+
+  .blog-promo {
+    //@extend .promo-section;
+    @include section-cover-background('https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/_MG_4139.jpg', top, center)
+  }
+  .after-studies {
+    //@extend .applicant-section;
+    @include span-columns(12)
+  }
+
 }
-
-.blog-promo {
-  @extend .promo-section;
-  @include section-cover-background('https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/_MG_4139.jpg', top, center)
-}
-.after-studies {
-  @extend .applicant-section;
-  @include span-columns(12)
-}
-
-
-

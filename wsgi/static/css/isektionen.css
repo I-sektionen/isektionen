@@ -1528,11 +1528,11 @@ article.single_blog_entry p.author {
   }
 }
 
-.promo-section, .blog-promo {
+.promo-section {
   min-height: 50vh;
   position: relative;
 }
-.promo-section .promo-content, .blog-promo .promo-content {
+.promo-section .promo-content {
   padding: 2em;
   text-align: center;
   width: 60%;
@@ -1547,26 +1547,26 @@ article.single_blog_entry p.author {
   transform: translate(-50%, -50%);
 }
 @media screen and (min-width: 900px) {
-  .promo-section .promo-content, .blog-promo .promo-content {
+  .promo-section .promo-content {
     width: auto;
   }
 }
-.promo-section .promo-heading, .blog-promo .promo-heading {
+.promo-section .promo-heading {
   color: #f7f7f7;
   font-size: 1.5em;
   text-transform: uppercase;
   margin-bottom: 0;
 }
 @media screen and (min-width: 900px) {
-  .promo-section .promo-heading, .blog-promo .promo-heading {
+  .promo-section .promo-heading {
     font-size: 3em;
   }
 }
-.promo-section .promo-text, .blog-promo .promo-text {
+.promo-section .promo-text {
   color: #f7f7f7;
 }
 @media screen and (min-width: 900px) {
-  .promo-section .promo-text, .blog-promo .promo-text {
+  .promo-section .promo-text {
     text-align: justify;
     font-size: 1.2em;
   }
@@ -1576,77 +1576,39 @@ article.single_blog_entry p.author {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  padding: 2em;
 }
 .applicant-container::after {
   clear: both;
   content: "";
   display: table;
 }
-
-.applicant-section, .education, .student-life, .after-studies {
-  padding: 2em;
-  text-align: center;
+@media screen and (min-width: 900px) {
+  .applicant-container {
+    width: 70%;
+  }
 }
-.applicant-section .section-header, .education .section-header, .student-life .section-header, .after-studies .section-header {
+.applicant-container .section-header {
+  text-align: center;
   color: #333;
   font-size: 2.5em;
 }
 @media screen and (min-width: 900px) {
-  .applicant-section .section-header, .education .section-header, .student-life .section-header, .after-studies .section-header {
-    font-size: 3em;
+  .applicant-container .section-header {
+    font-size: 2em;
   }
 }
-.applicant-section .section-text, .education .section-text, .student-life .section-text, .after-studies .section-text {
+.applicant-container .section-text {
   line-height: 1.5em;
   color: #333;
 }
 @media screen and (min-width: 900px) {
-  .applicant-section .section-text, .education .section-text, .student-life .section-text, .after-studies .section-text {
+  .applicant-container .section-text {
     text-align: justify;
     font-size: 1em;
   }
 }
-
-.education {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%;
-}
-.education:last-child {
-  margin-right: 0;
-}
-.education .edu-header {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%;
-  font-size: 3em;
-  text-align: center;
-}
-.education .edu-header:last-child {
-  margin-right: 0;
-}
-.education .applicant-listview {
-  list-style-type: none;
-}
-.education .applicant-listview .listview-item {
-  display: block;
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%;
-  padding: 0em;
-  margin-top: 3em;
-}
-.education .applicant-listview .listview-item:last-child {
-  margin-right: 0;
-}
-.education .applicant-listview .listview-item .listview-icon {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%;
+.applicant-container .bullets {
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -1654,202 +1616,99 @@ article.single_blog_entry p.author {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  box-pack: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  -o-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  box-align: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
-  align-items: center;
-  -ms-flex-align: center;
-  display: block;
-  font-size: 2.4em;
-  margin-top: 0em;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 1.5;
+  margin: 1em;
+  overflow: auto;
+  padding: 0;
+}
+.applicant-container .bullets .bullet {
+  -webkit-flex-basis: 100%;
+  -moz-flex-basis: 100%;
+  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  flex-grow: 1;
+  -ms-flex-positive: 1;
+}
+.applicant-container .bullets .bullet-icon {
+  background: #f7f7f7;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  box-sizing: border-box;
-  background-color: #f7f7f7;
-}
-.education .applicant-listview .listview-item .listview-icon:last-child {
-  margin-right: 0;
-}
-@media screen and (max-width: 325px) {
-  .education .applicant-listview .listview-item .listview-icon {
-    font-size: 2em;
-    width: 50px;
-    height: 50px;
-  }
-}
-@media screen and (min-width: 600px) {
-  .education .applicant-listview .listview-item .listview-icon {
-    font-size: 4.5em;
-    width: 110px;
-    height: 110px;
-    margin-top: 0em;
-  }
-}
-@media screen and (min-width: 900px) {
-  .education .applicant-listview .listview-item .listview-icon {
-    font-size: 6.5em;
-    width: 170px;
-    height: 170px;
-    background-color: #f7f7f7;
-    margin-top: 0em;
-  }
-}
-.education .applicant-listview .listview-item .list-header {
-  text-align: left;
-  margin-left: 0%;
   float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 74.41059%;
-  margin-right: 0;
+  height: 4em;
+  padding: 1em;
+  width: 4em;
 }
-.education .applicant-listview .listview-item .list-header:last-child {
-  margin-right: 0;
+.applicant-container .bullets .bullet-icon i {
+  color: #333;
+  font-size: 2em;
 }
-@media screen and (max-width: 325px) {
-  .education .applicant-listview .listview-item .list-header {
-    margin-left: 0%;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 74.41059%;
-  }
-  .education .applicant-listview .listview-item .list-header:last-child {
-    margin-right: 0;
-  }
+.applicant-container .bullets .bullet-content {
+  margin-left: 5.6em;
+  margin-bottom: 2em;
 }
-@media screen and (min-width: 600px) {
-  .education .applicant-listview .listview-item .list-header {
-    margin-left: 0%;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 74.41059%;
-  }
-  .education .applicant-listview .listview-item .list-header:last-child {
-    margin-right: 0;
-  }
+.applicant-container .bullets h2 {
+  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+  display: inline-block;
+  font-size: 1.6em;
+  margin: 0 0 0.66667em 0;
+  padding-top: 0.57143em;
 }
-@media screen and (min-width: 900px) {
-  .education .applicant-listview .listview-item .list-header {
-    margin-left: 8.5298%;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 57.35098%;
-  }
-  .education .applicant-listview .listview-item .list-header:last-child {
-    margin-right: 0;
-  }
+.applicant-container .bullets li {
+  list-style: none;
 }
-.education .applicant-listview .listview-item .list-header h1 {
-  margin-top: 0;
+.applicant-container .bullets p {
+  color: #333;
+  line-height: 1.5;
 }
-.education .applicant-listview .listview-item .list-text {
-  line-height: 1.5em;
-  text-align: justify;
-  margin-bottom: 1em;
+.applicant-container .bullets img {
+  max-width: 100%;
+}
+.applicant-container .student-life {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%;
 }
-.education .applicant-listview .listview-item .list-text:last-child {
-  margin-right: 0;
-}
-@media screen and (min-width: 600px) {
-  .education .applicant-listview .listview-item .list-text {
-    margin-left: 0%;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 74.41059%;
-  }
-  .education .applicant-listview .listview-item .list-text:last-child {
-    margin-right: 0;
-  }
-}
-@media screen and (min-width: 900px) {
-  .education .applicant-listview .listview-item .list-text {
-    margin-left: 8.5298%;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 57.35098%;
-  }
-  .education .applicant-listview .listview-item .list-text:last-child {
-    margin-right: 0;
-  }
-}
-@media screen and (max-width: 325px) {
-  .education .applicant-listview .listview-item .list-text {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%;
-  }
-  .education .applicant-listview .listview-item .list-text:last-child {
-    margin-right: 0;
-  }
-}
-.education .applicant-listview .listview-item .list-link {
-  float: left;
-}
-
-.student-life {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%;
-}
-.student-life:last-child {
+.applicant-container .student-life:last-child {
   margin-right: 0;
 }
 @media screen and (min-width: 900px) {
-  .student-life {
+  .applicant-container .student-life {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 48.82117%;
   }
-  .student-life:last-child {
+  .applicant-container .student-life:last-child {
     margin-right: 0;
   }
 }
-
-.blog-promo {
+.applicant-container .blog-promo {
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/_MG_4139.jpg");
   background-position: top center;
   background-attachment: scroll;
   background-size: cover;
 }
 @media screen and (min-width: 900px) {
-  .blog-promo {
+  .applicant-container .blog-promo {
     background-attachment: fixed;
   }
 }
-
-.after-studies {
+.applicant-container .after-studies {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%;
 }
-.after-studies:last-child {
+.applicant-container .after-studies:last-child {
   margin-right: 0;
 }
 
