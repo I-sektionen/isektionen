@@ -65,7 +65,7 @@ $applicant-text-color: $light-gray;
   padding: 2em;
 
   @include media($large-screen) {
-      width: 60%
+      width: 80%
 
   }
 
@@ -88,7 +88,6 @@ $applicant-text-color: $light-gray;
 
   .bullets {
     $base-line-height: 1.5em !default;
-    $action-color: $isektionen-yellow !default;
     $dark-gray: #333 !default;
     $base-font-color: $dark-gray !default;
     $icon-bullet-size: 4em;
@@ -106,12 +105,19 @@ $applicant-text-color: $light-gray;
     }
 
     .bullet-icon {
-      background: $action-color;
+      background: $light-gray;
       border-radius: 50%;
       float: left;
       height: $icon-bullet-size;
       padding: $icon-bullet-size / 4;
       width: $icon-bullet-size;
+
+      i {
+          color: $dark-gray;
+          font-size: 2em;
+
+      }
+
     }
 
     .bullet-content {

@@ -1585,7 +1585,7 @@ article.single_blog_entry p.author {
 }
 @media screen and (min-width: 900px) {
   .applicant-container {
-    width: 60%;
+    width: 80%;
   }
 }
 .applicant-container .section-header {
@@ -1639,12 +1639,16 @@ article.single_blog_entry p.author {
   -ms-flex-positive: 1;
 }
 .applicant-container .bullets .bullet-icon {
-  background: #f9d026;
+  background: #f7f7f7;
   border-radius: 50%;
   float: left;
   height: 4em;
   padding: 1em;
   width: 4em;
+}
+.applicant-container .bullets .bullet-icon i {
+  color: #333;
+  font-size: 2em;
 }
 .applicant-container .bullets .bullet-content {
   margin-left: 5.6em;
