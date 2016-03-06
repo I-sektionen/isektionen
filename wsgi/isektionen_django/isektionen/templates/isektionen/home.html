@@ -68,47 +68,6 @@
                 <a href="{% url 'foretag' %}" class="action-button">Läs om samarbete</a>
             </div>
         </section>
-        <!--//TODO ADD "LATEST SECTION"-->
-        <section class="latest">
-            <h1 class="section-header">Se vad som händer på sektionen</h1>
-            <hr>
-            <div class="blog-previews">
-                <h2>Senaste bloginläggen</h2>
-                {% load blog_tags %}
-                {% get_last_entries as entries %}
-                {% for entry in entries %}
-                    <div class="latest-blogs-preview">
-                        <div class="blog-entry-datebox">
-                            <p class="blog-date">
-                                {{ entry.publishedDate|date:"d b Y" }}
-                            </p>
-                        </div>
-                        <div class="blog-entry-textbox">
-                            <h2 class="blog-title">
-                                <a href="{% url "view_one_blog_entry" entry.pk %}">{{ entry.title }}</a>
-                            </h2>
-                            <p class="blog-text">
-                                {{ entry.lead|truncatechars:200 }}
-                            </p>
-                        </div>
-                    </div>
-
-                {% endfor %}
-            </div>
-            <div class="instagram">
-                <div class="instagram-content">
-                    <p class="instagram-account-link">
-                        <i class="fa fa-instagram"></i>
-                        <a href="https://www.instagram.com/industriellekonomi_liu/">@industriellekonomi_liu</a>
-                    </p>
-                    <div class="instagram-feed">
-                        <ul class="instagram-pictures">
-                        </ul>
-                    </div>
-                    </a>
-                </div>
-            </div>
-        </section>
     </div>
 {% endblock %}
 {% block js_document_ready %}
