@@ -1394,6 +1394,49 @@ article.single_blog_entry p.author {
   font-style: italic;
 }
 
+.table-minimal {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+.table-minimal tbody tr:hover > td, .table-minimal tbody tr:hover > th {
+  background-color: #e6e6e6;
+}
+.table-minimal tbody tr:first-child td {
+  border-top: 2px solid #f7f7f7;
+}
+.table-minimal thead th {
+  background-color: #ededed;
+  border-bottom: 0px;
+  padding: 0.75em 1em;
+  text-align: left;
+}
+.table-minimal tbody {
+  background-color: #ebebeb;
+}
+.table-minimal tbody td {
+  border-bottom: 0px;
+  border-top: 1px solid #f7f7f7;
+  line-height: 1.5;
+  padding: 0.75em 1em;
+}
+.table-minimal tbody td button {
+  display: inline-block;
+  font-size: .7em;
+  line-height: 1.5;
+  margin-bottom: .3em;
+  margin-right: 0.5em;
+  outline: none;
+  padding: .3em 1em;
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  .table-minimal tbody td button {
+    margin-bottom: 0;
+    width: auto;
+  }
+}
+
 .container {
   margin-top: 80px;
 }
@@ -1957,6 +2000,102 @@ article.single_blog_entry p.author {
 }
 .program-graph-section .toggle-link .active {
   border-bottom: 3px solid #333;
+}
+.program-graph-section .course-list-container {
+  text-align: center;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: strech;
+  -moz-box-align: strech;
+  box-align: strech;
+  -webkit-align-items: strech;
+  -moz-align-items: strech;
+  -ms-align-items: strech;
+  -o-align-items: strech;
+  align-items: strech;
+  -ms-flex-align: strech;
+  -webkit-box-pack: distribute;
+  -moz-box-pack: distribute;
+  box-pack: distribute;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-pack: distribute;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.program-graph-section .course-list-container:last-child {
+  margin-right: 0;
+}
+.program-graph-section .course-list-container .course-list {
+  padding: 1em;
+}
+.program-graph-section .chart-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  box-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  -o-align-items: stretch;
+  align-items: stretch;
+  -ms-flex-align: stretch;
+}
+.program-graph-section .table-container {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1 1 25em;
+  -moz-flex: 1 1 25em;
+  -ms-flex: 1 1 25em;
+  flex: 1 1 25em;
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  align-self: center;
+  -ms-flex-item-align: center;
+}
+.program-graph-section .chart-canvas {
+  height: 350px;
+  width: 350px;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1 1 25em;
+  -moz-flex: 1 1 25em;
+  -ms-flex: 1 1 25em;
+  flex: 1 1 25em;
 }
 
 .studentlife-hero {

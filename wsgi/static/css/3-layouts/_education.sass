@@ -39,7 +39,25 @@
     .active
       border-bottom: 3px solid $dark-gray
 
+  .course-list-container
+    text-align: center
+    +span-columns(12)
+    +display(flex)
+    +align-items(strech)
+    +justify-content(space-around)
+    +flex-wrap(wrap)
 
+    .course-list
+      padding: 1em
 
-  .course-list
-
+  .chart-container
+    +display(flex)
+    +justify-content(center)
+    +align-items(stretch)
+  .table-container
+    +flex(1 1 25em)
+    +align-self(center)
+  .chart-canvas
+    height: 350px
+    width: 350px
+    +flex(1 1 25em)
