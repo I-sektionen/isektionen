@@ -12,6 +12,7 @@ urlpatterns = [
     url(r'^foretag/$', view=views.show_foretag_page, name='foretag'),
     url(r'^sokande/$', view=views.show_sokande_page, name='sokande'),
     url(r'^sokande/utbildning$', view=views.show_utbildning_page, name='utbildning'),
+    url(r'^sokande/bostad$', view=views.show_bostad_page, name='bostad'),
     url(r'^sokande/studentliv$', view=views.show_studentliv_page, name='studentliv'),
     url(r'^sokande/efterstudier$', view=views.show_efterstudier_page, name='efterstudier'),
     url(r'^sokande/kontakt$', view=views.show_contact_page, name='kontakt'),
