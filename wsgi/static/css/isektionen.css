@@ -1877,8 +1877,6 @@ article.single_blog_entry p.author {
   margin-left: auto;
   margin-right: auto;
   padding: 1em;
-  padding-top: 5em;
-  padding-bottom: 5em;
 }
 .utbildning-intro::after {
   clear: both;
@@ -1887,14 +1885,13 @@ article.single_blog_entry p.author {
 }
 
 .section-header {
-  font-size: 3.5em;
+  font-size: 2em;
   color: #333;
   text-align: center;
 }
 
 .section-text {
   line-height: 2em;
-  text-align: center;
   color: #333;
 }
 
@@ -1906,8 +1903,6 @@ article.single_blog_entry p.author {
   margin-left: auto;
   margin-right: auto;
   padding: 1em;
-  padding-top: 5em;
-  padding-bottom: 5em;
 }
 .program-graph-section .program-graph::after {
   clear: both;
@@ -1918,196 +1913,50 @@ article.single_blog_entry p.author {
   font-size: 2.5em;
   color: #333;
 }
-.program-graph-section .program-graph .program-selector {
-  height: 4em;
-  margin-top: 2em;
-  margin-bottom: 5em;
+.program-graph-section .toggle-links {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  box-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  -o-align-items: stretch;
+  align-items: stretch;
+  -ms-flex-align: stretch;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-@media screen and (min-width: 600px) {
-  .program-graph-section .program-graph .program-selector {
-    margin-bottom: 2em;
-  }
+.program-graph-section .toggle-link {
+  text-align: center;
+  padding: 1em;
 }
-@media screen and (min-width: 900px) {
-  .program-graph-section .program-graph .program-selector {
-    margin-bottom: 2em;
-  }
-}
-.program-graph-section .program-graph .program-selector .choice a {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%;
-  display: block;
+.program-graph-section .toggle-link a {
   color: #333;
-  padding-right: 2em;
-  padding-left: 2em;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  height: 4em;
-  font-size: 1em;
-  text-align: center;
+  padding-bottom: 5px;
 }
-.program-graph-section .program-graph .program-selector .choice a:last-child {
-  margin-right: 0;
-}
-@media screen and (min-width: 600px) {
-  .program-graph-section .program-graph .program-selector .choice a {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-  }
-  .program-graph-section .program-graph .program-selector .choice a:last-child {
-    margin-right: 0;
-  }
-}
-@media screen and (min-width: 900px) {
-  .program-graph-section .program-graph .program-selector .choice a {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-    text-align: left;
-  }
-  .program-graph-section .program-graph .program-selector .choice a:last-child {
-    margin-right: 0;
-  }
-}
-.program-graph-section .program-graph .program-selector .choice .active {
-  color: green;
-}
-.program-graph-section .program-graph .program-selector a.first {
-  text-align: center;
-  border-right: 0px;
-  border-bottom: 2px solid black;
-}
-@media screen and (min-width: 600px) {
-  .program-graph-section .program-graph .program-selector a.first {
-    border-bottom: 0px;
-    border-right: solid 2px black;
-    text-align: right;
-    margin-right: 0;
-  }
-}
-@media screen and (min-width: 900px) {
-  .program-graph-section .program-graph .program-selector a.first {
-    border-bottom: 0px;
-    border-right: solid 2px black;
-    text-align: right;
-    margin-right: 0;
-  }
-}
-.program-graph-section .program-graph .program-info .text-box {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%;
-}
-.program-graph-section .program-graph .program-info .text-box:last-child {
-  margin-right: 0;
-}
-@media screen and (min-width: 900px) {
-  .program-graph-section .program-graph .program-info .text-box {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-  }
-  .program-graph-section .program-graph .program-info .text-box:last-child {
-    margin-right: 0;
-  }
-}
-.program-graph-section .program-graph .program-info .text-box .header {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%;
-  text-align: center;
-}
-.program-graph-section .program-graph .program-info .text-box .header:last-child {
-  margin-right: 0;
-}
-@media screen and (min-width: 900px) {
-  .program-graph-section .program-graph .program-info .text-box .header {
-    text-align: left;
-  }
-}
-.program-graph-section .program-graph .program-info .text-box .course {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 2em;
-}
-.program-graph-section .program-graph .program-info .text-box .course:last-child {
-  margin-right: 0;
-}
-@media screen and (min-width: 600px) {
-  .program-graph-section .program-graph .program-info .text-box .course {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-    text-align: center;
-  }
-  .program-graph-section .program-graph .program-info .text-box .course:last-child {
-    margin-right: 0;
-  }
-  .program-graph-section .program-graph .program-info .text-box .course:nth-child(3n) {
-    margin-right: 0;
-  }
-  .program-graph-section .program-graph .program-info .text-box .course:nth-child(3n+1) {
-    clear: left;
-  }
-}
-@media screen and (min-width: 900px) {
-  .program-graph-section .program-graph .program-info .text-box .course {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-    text-align: left;
-    margin-top: 2em;
-  }
-  .program-graph-section .program-graph .program-info .text-box .course:last-child {
-    margin-right: 0;
-  }
-  .program-graph-section .program-graph .program-info .text-box .course:nth-child(3n) {
-    margin-right: 0;
-  }
-  .program-graph-section .program-graph .program-info .text-box .course:nth-child(3n+1) {
-    clear: left;
-  }
-}
-.program-graph-section .program-graph .program-info .img-box {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%;
-}
-.program-graph-section .program-graph .program-info .img-box:last-child {
-  margin-right: 0;
-}
-.program-graph-section .program-graph #i-info {
-  display: block;
-}
-.program-graph-section .program-graph #ii-info {
-  display: none;
-}
-.program-graph-section .program-graph .chart-container {
-  padding: 2em;
-}
-.program-graph-section .program-graph .chart-container .chart-title {
-  text-align: center;
-  font-size: 1.5em;
-  color: #333;
-}
-.program-graph-section .program-graph .chart-container .chart-canvas {
-  margin-bottom: 1em;
-  height: 300px;
-  width: 300px;
+.program-graph-section .toggle-link .active {
+  border-bottom: 3px solid #333;
 }
 
 .studentlife-hero {
