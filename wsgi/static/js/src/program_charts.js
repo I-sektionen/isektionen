@@ -7,12 +7,7 @@
 
 
 var industriellEkonomictx = document.getElementById("chart-industriell-ekonomi").getContext("2d");
-
-//if (document.getElementById("chart-industriell-ekonomi-internationell").is(":visible")) {
-
-if ($("#ii-info").is(":hidden")) {
-    var industriellEkonomiInternationellctx = document.getElementById("chart-industriell-ekonomi-internationell").getContext("2d");
-}
+var industriellEkonomiInternationellctx = document.getElementById("chart-industriell-ekonomi-internationell").getContext("2d");
 
 
 industriellEkonomiChartData = [
@@ -112,7 +107,5 @@ function shadeBlendConvert(p, from, to) {
 
 var industriellEkonomiChart = new Chart(industriellEkonomictx).Doughnut(industriellEkonomiChartData);
 
-if ($("#ii-info").is(":hidden")) {
-    var industriellEkonomiInternationellChart = new Chart(industriellEkonomiInternationellctx).Doughnut(industriellEkonomiInternationellChartData);
 
-}
+var industriellEkonomiInternationellChart = new Chart(industriellEkonomiInternationellctx).Doughnut(industriellEkonomiInternationellChartData);

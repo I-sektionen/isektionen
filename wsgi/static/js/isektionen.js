@@ -1,25 +1,26 @@
+var toggleProgramInfo = function() {
 
-$(function() {
-    $( 'div.program-selector a' ).on( 'click', function() {
-        $( this ).parent().find( 'a.active' ).removeClass( 'active' );
-        $( this ).addClass( 'active' );
-    });
+    industriellEkonomiInterLink = $("#industriell-ekonomi-inter-link");
+    industriellEkonomiLink = $( "#industriell-ekonomi-link" )
+    industriellEkonomiInterInfo = $("#industriell-ekonomi-inter-info")
+    industriellEkonomiInfo = $("#industriell-ekonomi-info")
+
+industriellEkonomiInterLink.click(function() {
+    industriellEkonomiInfo.addClass("no-show-left");
+    industriellEkonomiInterInfo.removeClass("no-show-right");
+    industriellEkonomiInterLink.addClass("active")
+    industriellEkonomiLink.removeClass("active")
 });
 
+ industriellEkonomiLink.click(function() {
 
-$(function() {
-    $( "#show-ii-info" ).click(function() {
-        $( "#i-info:hidden" ).show();
-        $( "#ii-info:visible").hide();
-    });
+    industriellEkonomiInterInfo.addClass("no-show-right");
+    industriellEkonomiInfo.removeClass("no-show-left");
+    industriellEkonomiLink.addClass("active");
+    industriellEkonomiInterLink.removeClass("active");
 });
 
-$(function() {
-    $( "#show-i-info" ).click(function() {
-        $( "#i-info:hidden" ).show();
-        $( "#ii-info:visible").hide();
-    });
-});;/**
+};;/**
  * Created by lehtonen on 15-11-16.
  */
 var load_instagram = function () {
@@ -1561,12 +1562,7 @@ function parallax(){
 
 
 var industriellEkonomictx = document.getElementById("chart-industriell-ekonomi").getContext("2d");
-
-//if (document.getElementById("chart-industriell-ekonomi-internationell").is(":visible")) {
-
-if ($("#ii-info").is(":hidden")) {
-    var industriellEkonomiInternationellctx = document.getElementById("chart-industriell-ekonomi-internationell").getContext("2d");
-}
+var industriellEkonomiInternationellctx = document.getElementById("chart-industriell-ekonomi-internationell").getContext("2d");
 
 
 industriellEkonomiChartData = [
@@ -1666,10 +1662,9 @@ function shadeBlendConvert(p, from, to) {
 
 var industriellEkonomiChart = new Chart(industriellEkonomictx).Doughnut(industriellEkonomiChartData);
 
-if ($("#ii-info").is(":hidden")) {
-    var industriellEkonomiInternationellChart = new Chart(industriellEkonomiInternationellctx).Doughnut(industriellEkonomiInternationellChartData);
 
-};/**
+var industriellEkonomiInternationellChart = new Chart(industriellEkonomiInternationellctx).Doughnut(industriellEkonomiInternationellChartData);
+;/**
  * Created by lehtonen on 15-11-24.
  */
 /**

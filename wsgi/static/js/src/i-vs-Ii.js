@@ -1,22 +1,23 @@
+var toggleProgramInfo = function() {
 
-$(function() {
-    $( 'div.program-selector a' ).on( 'click', function() {
-        $( this ).parent().find( 'a.active' ).removeClass( 'active' );
-        $( this ).addClass( 'active' );
-    });
+    industriellEkonomiInterLink = $("#industriell-ekonomi-inter-link");
+    industriellEkonomiLink = $( "#industriell-ekonomi-link" )
+    industriellEkonomiInterInfo = $("#industriell-ekonomi-inter-info")
+    industriellEkonomiInfo = $("#industriell-ekonomi-info")
+
+industriellEkonomiInterLink.click(function() {
+    industriellEkonomiInfo.addClass("no-show-left");
+    industriellEkonomiInterInfo.removeClass("no-show-right");
+    industriellEkonomiInterLink.addClass("active")
+    industriellEkonomiLink.removeClass("active")
 });
 
+ industriellEkonomiLink.click(function() {
 
-$(function() {
-    $( "#show-ii-info" ).click(function() {
-        $( "#i-info:hidden" ).show();
-        $( "#ii-info:visible").hide();
-    });
+    industriellEkonomiInterInfo.addClass("no-show-right");
+    industriellEkonomiInfo.removeClass("no-show-left");
+    industriellEkonomiLink.addClass("active");
+    industriellEkonomiInterLink.removeClass("active");
 });
 
-$(function() {
-    $( "#show-i-info" ).click(function() {
-        $( "#i-info:hidden" ).show();
-        $( "#ii-info:visible").hide();
-    });
-});
+};

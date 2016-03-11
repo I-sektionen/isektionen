@@ -23,6 +23,18 @@
       font-size: 2.5em
       color: $dark-gray
 
+  .program-info-container
+    +transition(0.3s ease-in-out)
+    +transform(translateX(0))
+
+  .no-show-right
+    +transform(translateX(130%))
+    +position(absolute)
+
+  .no-show-left
+    +transform(translateX(-130%))
+    +position(absolute)
+
   .toggle-links
     +display(flex)
     +align-items(stretch)
@@ -35,9 +47,14 @@
     a
       color: $dark-gray
       padding-bottom: 5px
+      cursor: pointer
+      border-bottom: 0px solid $dark-gray
+      +transition()
 
     .active
       border-bottom: 3px solid $dark-gray
+
+
 
   .course-list-container
     text-align: center
@@ -55,9 +72,10 @@
     +justify-content(center)
     +align-items(stretch)
   .table-container
-    +flex(1 1 25em)
+    +flex(2 2 20em)
     +align-self(center)
   .chart-canvas
+    padding: 1em
     height: 350px
     width: 350px
-    +flex(1 1 25em)
+    //+flex(1 1 25em)
