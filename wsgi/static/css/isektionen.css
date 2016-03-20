@@ -2121,6 +2121,13 @@ article.single_blog_entry p.author {
   padding: 1em;
   height: 350px;
   width: 350px;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1 1 25em;
+  -moz-flex: 1 1 25em;
+  -ms-flex: 1 1 25em;
+  flex: 1 1 25em;
 }
 
 .studentlife-hero {
