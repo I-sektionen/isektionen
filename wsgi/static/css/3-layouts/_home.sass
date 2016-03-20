@@ -30,9 +30,6 @@
       .history-text
         text-align: justify
         line-height: 2em
-        @include media($large-screen)
-          +columns(2)
-          +column-gap(4em)
 
       .section-header
         font-size: 2.5em
@@ -103,15 +100,14 @@
   padding-bottom: 10em
   .social-media-title
     text-align: center
-    font-size: 2.5em
+    font-size: 2em
     line-height: 1.2em
     padding-bottom: 0.5em
   .social-media-links
     @include display(flex)
-    @include justify-content(center)
+    @include justify-content(space-around)
     .social-media-icon
-      color: black
-      font-size: 5em
-      margin: 0.1em
+      color: $dark-gray
+      font-size: 3em
 
 
