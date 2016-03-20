@@ -4,9 +4,10 @@
 
 // Create new chart from canvas elements
 
+
+
 var industriellEkonomictx = document.getElementById("chart-industriell-ekonomi").getContext("2d");
 var industriellEkonomiInternationellctx = document.getElementById("chart-industriell-ekonomi-internationell").getContext("2d");
-
 
 
 industriellEkonomiChartData = [
@@ -105,4 +106,6 @@ function shadeBlendConvert(p, from, to) {
 
 
 var industriellEkonomiChart = new Chart(industriellEkonomictx).Doughnut(industriellEkonomiChartData);
+
+
 var industriellEkonomiInternationellChart = new Chart(industriellEkonomiInternationellctx).Doughnut(industriellEkonomiInternationellChartData);
