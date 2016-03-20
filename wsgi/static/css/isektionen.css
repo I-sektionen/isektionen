@@ -1640,15 +1640,12 @@ article.single_blog_entry p.author {
 }
 
 .social-media-container {
-  padding-top: 6em;
-  background-color: #F2F2F2;
-  padding-bottom: 10em;
+  background-color: #f7f7f7;
+  padding: 4em;
+  text-align: center;
 }
 .social-media-container .social-media-title {
-  text-align: center;
   font-size: 2em;
-  line-height: 1.2em;
-  padding-bottom: 0.5em;
 }
 .social-media-container .social-media-links {
   display: -webkit-box;
@@ -1658,19 +1655,23 @@ article.single_blog_entry p.author {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: distribute;
-  -moz-box-pack: distribute;
-  box-pack: distribute;
-  -webkit-justify-content: space-around;
-  -moz-justify-content: space-around;
-  -ms-justify-content: space-around;
-  -o-justify-content: space-around;
-  justify-content: space-around;
-  -ms-flex-pack: distribute;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
 }
-.social-media-container .social-media-links .social-media-icon {
+.social-media-container .social-media-icon {
   color: #333;
   font-size: 3em;
+  padding: 1em;
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
 }
 
 .applicant-hero {
