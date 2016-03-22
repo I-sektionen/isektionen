@@ -6,8 +6,6 @@ $hero-divider-color: $light-gray;
 $hero-divider-height: 5px;
 // Variables for hero text
 $hero-text-color: $light-gray;
-$stupidly-small-phones: new-breakpoint(max-width 325px);
-
 
 .top-hero {
   min-height: 80vh;
@@ -25,7 +23,9 @@ $stupidly-small-phones: new-breakpoint(max-width 325px);
     width: 100%;
 
     @include media($large-screen) {
+
       width: auto;
+
     }
   }
 
@@ -52,9 +52,6 @@ $stupidly-small-phones: new-breakpoint(max-width 325px);
     font-size: 1.2em;
     @include media ($large-screen) {
       text-align: justify;
-    }
-    @include media($stupidly-small-phones) {
-      font-size: 1em;
     }
   }
 

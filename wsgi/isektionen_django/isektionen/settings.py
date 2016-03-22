@@ -163,3 +163,23 @@ STATIC_URL = '/static/'
 
 #  This url is where you can log in. The login_required decorator uses this constant.
 LOGIN_URL = 'login_view' #  TODO: Use a named view instead.
+
+# Email settings:
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # This is a dummy backend which prints emails as a
+                                                                  # normal print() statement (i.e. to stdout)
+EMAIL_HOST_USER = 'noreply@i-portalen.se'
+
+if ON_PASS:
+    send_email = False
+    try:
+        s = str(os.environ.get('SEND_EMAIL'))
+        if s == str('TRUE'):
+            send_email = True
+    except:
+        pass
+    if send_email:
+        EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+        EMAIL_USE_TLS = True
+        EMAIL_HOST = 'smtp.gmail.com'
+        EMAIL_PORT = 587
+        EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
