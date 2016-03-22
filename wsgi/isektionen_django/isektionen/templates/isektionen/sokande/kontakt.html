@@ -12,34 +12,27 @@
     {% endif %}
 {% endblock %}
 {% block content %}
-
     <section class="contacts-section">
-        <div class="contacts-content">
-            <h1>Kontakt</h1>
-            <div class="contact-person">
-                <p>
-                    Lena-Lotta Kjellberg<br>
-                    Studievägledare för Industriell ekonomi<br>
-                    013-28 23 41<br>
-                    studievagledare.i@liu.se<br>
-                </p>
-            </div>
-            <div class="contact-person">
-                <p>
-                    Susann Årnfelt<br>
-                    Studievägledare för Industriell ekonomi Internationell<br>
-                    013-28 57 54<br>
-                    studievagledare.i@liu.se<br>
-                </p>
-            </div>
-            <div class="contact-person">
-                <p>
-                    Linköpings universitet<br>
-                    581 83 Linköping<br>
-                    013-28 10 00 (vx)<br>
-                    <a href="http://www.liu.se" target="_blank">www.liu.se</a>
-                </p>
-            </div>
+        <h1 class="contacts-headline">Skicka ett meddelande om du undrar något</h1>
+        <div class="contacts-form">
+            <form name="kontaktform" id="kontaktform" method="post" action="">
+                {% csrf_token %}
+                <fieldset>
+                    <label>
+                        Ditt namn
+                        <input type="text" name="namn" id="namn" placeholder="Namn"/>
+                    </label>
+                    <label>
+                        Ämnet för ditt meddelande
+                        <input type="text" name="subject" id="subject" placeholder="Ämne"/>
+                    </label>
+                    <label>
+                        Meddelande
+                        <textarea name="meddelande" id="meddelande" cols="30" rows="5" placeholder="Meddelande"></textarea>
+                    </label>
+                </fieldset>
+                <input type="submit" class="button action-button" value="Skicka" />
+            </form>
         </div>
     </section>
 {% endblock %}
