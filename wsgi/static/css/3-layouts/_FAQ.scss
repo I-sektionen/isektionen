@@ -17,24 +17,25 @@
     $expander-toggle-size: 1em;
     $expander-toggle-arrow-size: $expander-toggle-size;
     $expander-toggle-margin: 1em;
+    @include transition();
 
 
 
     .expander-trigger {
       @include user-select(none);
-      border-bottom: 1px solid transparentize($dark-gray,0.82%);
+      border-bottom: 1px solid $light-gray;
       color: $isektionen-green;
       cursor: pointer;
       display: block;
       font-size: $expander-toggle-size;
       margin-bottom: $expander-toggle-size;
       padding-bottom: $expander-toggle-size / 4;
-      text-decoration: none;
 
 
       &:before {
+        font-family: "FontAwesome";
         font-size: $expander-arrow-width;
-        content: "\25BC";
+        content: "\f13a";
         margin-right: 0.5em;
       }
     }
@@ -49,7 +50,8 @@
     .expander-hidden {
       &:before {
         font-size: $expander-arrow-width;
-        content: "\25BA";
+        font-family: "FontAwesome";
+        content: "\f138";
       }
     }
 

@@ -2703,23 +2703,28 @@ Main components
     width: 60%;
   }
 }
+.FAQ-section .expander {
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+}
 .FAQ-section .expander .expander-trigger {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border-bottom: 1px solid rgba(51, 51, 51, 0.18);
+  border-bottom: 1px solid #f7f7f7;
   color: #2D701E;
   cursor: pointer;
   display: block;
   font-size: 1em;
   margin-bottom: 1em;
   padding-bottom: 0.25em;
-  text-decoration: none;
 }
 .FAQ-section .expander .expander-trigger:before {
+  font-family: "FontAwesome";
   font-size: 0.7em;
-  content: "\25BC";
+  content: "\f13a";
   margin-right: 0.5em;
 }
 .FAQ-section .expander .expander-content p {
@@ -2730,7 +2735,8 @@ Main components
 }
 .FAQ-section .expander .expander-hidden:before {
   font-size: 0.7em;
-  content: "\25BA";
+  font-family: "FontAwesome";
+  content: "\f138";
 }
 .FAQ-section .expander .expander-hidden + .expander-content {
   display: none;
