@@ -2687,6 +2687,61 @@ Main components
     transform: translateX(0);
   }
 }
+.FAQ-section {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+.FAQ-section::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+@media screen and (min-width: 900px) {
+  .FAQ-section {
+    width: 60%;
+  }
+}
+.FAQ-section .expander {
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+}
+.FAQ-section .expander .expander-trigger {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-bottom: 1px solid #f7f7f7;
+  color: #2D701E;
+  cursor: pointer;
+  display: block;
+  font-size: 1em;
+  margin-bottom: 1em;
+  padding-bottom: 0.25em;
+}
+.FAQ-section .expander .expander-trigger:before {
+  font-family: "FontAwesome";
+  font-size: 0.7em;
+  content: "\f13a";
+  margin-right: 0.5em;
+}
+.FAQ-section .expander .expander-content p {
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 2em;
+  margin-top: 0.8em;
+}
+.FAQ-section .expander .expander-hidden:before {
+  font-size: 0.7em;
+  font-family: "FontAwesome";
+  content: "\f138";
+}
+.FAQ-section .expander .expander-hidden + .expander-content {
+  display: none;
+}
+
 .accordion-tabs-minimal {
   line-height: 1.5;
   padding: 0;
@@ -2705,7 +2760,7 @@ Main components
   }
 }
 .accordion-tabs-minimal .tab-link {
-  background-color: #fff;
+  background-color: white;
   border-top: 1px solid #f7f7f7;
   color: #333;
   display: block;
@@ -2730,7 +2785,7 @@ Main components
 @media screen and (min-width: 600px) {
   .accordion-tabs-minimal .tab-link.is-active {
     border: 1px solid #f7f7f7;
-    border-bottom-color: #fff;
+    border-bottom-color: white;
     margin-bottom: -1px;
   }
 }

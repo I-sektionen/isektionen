@@ -1,7 +1,7 @@
 {% extends 'master.html' %}
 {% block links %}
 
-    {% if sokande %}
+{% if sokande %}
         <li class="nav-link active-nav-item"><a href="{% url 'sokande' %}">Sökande</a></li>
     {% else %}
         <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
@@ -9,6 +9,8 @@
     <li class="nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
     <li class="nav-link"><a href="{% url 'studentliv' %}">Studentliv</a></li>
     <li class="nav-link"><a href="{% url 'efterstudier' %}">Efter studierna</a></li>
+    <li class="nav-link"><a href="{% url 'FAQ' %}">FAQ</a></li>
+    <li class="nav-link"><a href="{% url 'kontakt' %}">Kontakt</a></li>
 {% endblock %}
 
 {% block content %}

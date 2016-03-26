@@ -58,3 +58,8 @@ def show_contact_page(request):
     return render(request, "isektionen/sokande/kontakt.html", {
         'kontakt': True,
     })
+
+def show_FAQ_page(request):
+    return render(request, "isektionen/sokande/FAQ.html", {
+        'FAQ': True,
+    })

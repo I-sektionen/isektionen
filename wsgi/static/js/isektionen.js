@@ -1,4 +1,11 @@
-var toggleProgramInfo = function() {
+/**
+ * Created by elof on 2016-03-02.
+ */
+$(document).ready(function() {
+  $('.expander-trigger').click(function(){
+    $(this).toggleClass("expander-hidden");
+  });
+});;var toggleProgramInfo = function() {
 
     //saves variables to reduce DOM-traverse
     industriellEkonomiInterLink = $("#industriell-ekonomi-inter-link");
@@ -13,6 +20,7 @@ industriellEkonomiInterLink.click(function() {
     industriellEkonomiInfo.addClass("no-show-left");
     industriellEkonomiInterInfo.removeClass("no-show-right");
     industriellEkonomiInterLink.addClass("active")
+
     industriellEkonomiLink.removeClass("active")
 });
 

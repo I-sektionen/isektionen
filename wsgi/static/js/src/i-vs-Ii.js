@@ -13,6 +13,7 @@ industriellEkonomiInterLink.click(function() {
     industriellEkonomiInfo.addClass("no-show-left");
     industriellEkonomiInterInfo.removeClass("no-show-right");
     industriellEkonomiInterLink.addClass("active")
+
     industriellEkonomiLink.removeClass("active")
 });
 
