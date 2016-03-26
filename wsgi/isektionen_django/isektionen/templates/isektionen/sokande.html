@@ -8,7 +8,7 @@
     {% endif %}
     <li class="nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
     <li class="nav-link"><a href="{% url 'studentliv' %}">Studentliv</a></li>
-    <li class="nav-link"><a href="{% url 'efterstudier' %}">Efter studierna</a></li>
+    {% comment %}<li class="nav-link"><a href="{% url 'efterstudier' %}">Efter studierna</a></li> {% endcomment %}
     <li class="nav-link"><a href="{% url 'FAQ' %}">FAQ</a></li>
     <li class="nav-link"><a href="{% url 'kontakt' %}">Kontakt</a></li>
 {% endblock %}
@@ -39,6 +39,7 @@
                     <a href="{% url 'utbildning' %}" class="action-button">Om utbildningen</a>
                 </div>
             </li>
+            {% comment %}
             <li class="bullet">
                 <div class="bullet-icon">
                     <i class="fa fa-home"></i>
@@ -51,6 +52,7 @@
                     <a href="{% url 'utbildning' %}" class="action-button">Om bostad</a>
                 </div>
             </li>
+            {% endcomment %}
             <li class="bullet">
                 <div class="bullet-icon">
                     <i class="fa fa-bicycle"></i>
@@ -63,6 +65,7 @@
                     <a href="{% url 'utbildning' %}" class="action-button">Om studentlivet</a>
                 </div>
             </li>
+            {% comment %}
             <li class="bullet">
                 <div class="bullet-icon">
                     <i class="fa fa-briefcase"></i>
@@ -75,6 +78,7 @@
                     <a href="{% url 'utbildning' %}" class="action-button">Om efter studierna</a>
                 </div>
             </li>
+            {% endcomment %}
         </ul>
     </section>
     <section class="latest">
