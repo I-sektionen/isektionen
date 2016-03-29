@@ -2255,15 +2255,14 @@ article.single_blog_entry p.author {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 }
-.image-list-gallery .card-caption-heading {
+.image-list-gallery .card-caption-link {
+  cursor: pointer;
   color: white;
   margin: 0;
   font-size: 1.4em;
-  text-transform: uppercase;
   font-weight: 200;
-  text-align: center;
 }
-.image-list-gallery .card-caption-heading:after {
+.image-list-gallery .card-caption-link:after {
   font-family: FontAwesome;
   content: "";
   font-size: 0.8em;
