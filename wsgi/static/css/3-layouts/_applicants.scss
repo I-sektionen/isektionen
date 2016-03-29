@@ -9,7 +9,7 @@ $applicant-text-color: $light-gray;
 
 .applicant-hero {
   @extend .top-hero;
-  @include section-cover-background('https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/campus_nkpg.jpg')
+  @include section-cover-background('https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/hero-images/nollep-karallen.jpg')
 
 }
 
