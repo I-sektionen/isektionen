@@ -1443,7 +1443,7 @@ article.single_blog_entry p.author {
 }
 
 .landing-hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/liu_campusvalla.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/hero-images/corson.jpg");
   background-position: center center;
   background-attachment: scroll;
   background-size: cover;
@@ -1676,7 +1676,7 @@ article.single_blog_entry p.author {
 }
 
 .applicant-hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/campus_nkpg.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/hero-images/nollep-karallen.jpg");
   background-position: center center;
   background-attachment: scroll;
   background-size: cover;
@@ -1871,7 +1871,7 @@ article.single_blog_entry p.author {
 }
 
 .blog-hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://iportalen-us.s3.amazonaws.com:443/static/iportalen/HERO.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/hero-images/micro.jpg");
   background-position: center center;
   background-attachment: scroll;
   background-size: cover;
@@ -1939,7 +1939,7 @@ article.single_blog_entry p.author {
 }
 
 .education-hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://iportalen-us.s3.amazonaws.com:443/static/iportalen/HERO.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/hero-images/studenter.jpg");
   background-position: center center;
   background-attachment: scroll;
   background-size: cover;
@@ -2166,7 +2166,7 @@ article.single_blog_entry p.author {
 }
 
 .studentlife-hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://iportalen-us.s3.amazonaws.com:443/static/iportalen/HERO.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/hero-images/sof.jpg");
   background-position: center center;
   background-attachment: scroll;
   background-size: cover;
