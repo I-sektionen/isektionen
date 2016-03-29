@@ -1,3 +1,54 @@
 .studentlife-hero
   @extend .top-hero
   +section-cover-background('https://iportalen-us.s3.amazonaws.com:443/static/iportalen/HERO.jpg')
+
+.studentlife-image-gallery
+  padding: 1em
+  +media($large-screen)
+    padding: 4em
+
+
+
+
+.image-list-gallery
+  +display(flex)
+  +flex-wrap(wrap)
+  +align-items(center)
+  .image-list-item
+    max-width: 25em
+    +display(flex)
+    +flex-direction(column)
+    box-shadow: 1px 1px 5px darken($light-gray, 50%)
+    margin-bottom: 1em
+    border-radius: $base-border-radius
+    +media($medium-screen)
+      margin-right: 1em
+      &:nth-child(3n)
+        margin-right: 0
+
+    +flex(1 1 25em)
+
+
+  .card-caption
+    padding: 1em
+    background-color: $dark-gray
+    border-bottom-left-radius: $base-border-radius
+    border-bottom-right-radius: $base-border-radius
+  .card-caption-heading
+    color: $white
+    margin: 0
+    font-size: 1.4em
+    text-transform: uppercase
+    font-weight: 200
+    text-align: center
+    &:after
+      font-family: FontAwesome
+      content: '\f054'
+      font-size: 0.8em
+      margin-left: 0.5em
+  .card-caption-expanded
+    display: none
+  .card-image
+    max-width: 100%
+    border-top-left-radius: $base-border-radius
+    border-top-right-radius: $base-border-radius
