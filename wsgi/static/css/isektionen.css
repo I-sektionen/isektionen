@@ -2400,7 +2400,7 @@ Modules - reusable parts of our design
 
 -------------------------------- */
 .timeline-section {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/Bla_havet_2013_timeline_background.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/sko-forelasning.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
