@@ -13,8 +13,8 @@
 .image-list-gallery
   +display(flex)
   +flex-wrap(wrap)
-  +align-items(center)
-  +justify-content(space-around)
+  +align-items(flex-start)
+  +justify-content(center)
   .image-list-item
     +display(flex)
     +flex-direction(column)
@@ -47,16 +47,15 @@
       content: '\f054'
       font-size: 0.8em
       margin-left: 0.5em
+      +transition()
+    &:hover
+      &:after
+        margin-left: 1em
   .card-caption-expanded
     padding: 1em
     background-color: $dark-gray
     color: $light-gray
     display: none
-    height: 0
-
-    .visible
-      display: block
-      height: autp
 
   .card-image
     max-width: 100%
