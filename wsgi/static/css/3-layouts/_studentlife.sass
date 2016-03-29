@@ -14,19 +14,21 @@
   +display(flex)
   +flex-wrap(wrap)
   +align-items(center)
+  +justify-content(space-around)
   .image-list-item
-    max-width: 25em
     +display(flex)
     +flex-direction(column)
+
+    background-color: $dark-gray
     box-shadow: 1px 1px 5px darken($light-gray, 50%)
     margin-bottom: 1em
     border-radius: $base-border-radius
     +media($medium-screen)
+      max-width: 40em
       margin-right: 1em
-      &:nth-child(3n)
-        margin-right: 0
-
-    +flex(1 1 25em)
+      +flex(1 1 40em)
+    +media($large-screen)
+      +flex(1 1 25em)
 
 
   .card-caption
@@ -46,7 +48,16 @@
       font-size: 0.8em
       margin-left: 0.5em
   .card-caption-expanded
+    padding: 1em
+    background-color: $dark-gray
+    color: $light-gray
     display: none
+    height: 0
+
+    .visible
+      display: block
+      height: autp
+
   .card-image
     max-width: 100%
     border-top-left-radius: $base-border-radius
