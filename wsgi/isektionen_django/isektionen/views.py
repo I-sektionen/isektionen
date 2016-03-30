@@ -50,7 +50,7 @@ def i_resan_page(request):
 def show_contact_page(request):
     if request.method == "POST":
         name = request.POST.get("namn")
-        epost = request.POST.get("epost")
+        epost = request.POST.get("email")
         meddelande = request.POST.get("meddelande")
         subject = request.POST.get("subject")
         print(name)
