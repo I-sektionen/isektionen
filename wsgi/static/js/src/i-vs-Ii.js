@@ -1,12 +1,7 @@
-/**
- * Created by andreas on 17/01/16.
- */
+var toggleProgramInfo = function() {
 
-// Create new chart from canvas elements
-
-var industriellEkonomictx = document.getElementById("chart-industriell-ekonomi").getContext("2d");
+    var industriellEkonomictx = document.getElementById("chart-industriell-ekonomi").getContext("2d");
 var industriellEkonomiInternationellctx = document.getElementById("chart-industriell-ekonomi-internationell").getContext("2d");
-
 
 
 industriellEkonomiChartData = [
@@ -14,7 +9,7 @@ industriellEkonomiChartData = [
         value: 80,
         color: shadeBlendConvert(0.0,'#F9D026'),
         highlight: shadeBlendConvert(-0.1,'#F9D026'),
-        label: "Teknik & och fyisk"
+        label: "Teknik & fyisk"
     },
     {
         value: 60,
@@ -105,4 +100,33 @@ function shadeBlendConvert(p, from, to) {
 
 
 var industriellEkonomiChart = new Chart(industriellEkonomictx).Doughnut(industriellEkonomiChartData);
+
+
 var industriellEkonomiInternationellChart = new Chart(industriellEkonomiInternationellctx).Doughnut(industriellEkonomiInternationellChartData);
+
+
+    //saves variables to reduce DOM-traverse
+    industriellEkonomiInterLink = $("#industriell-ekonomi-inter-link");
+    industriellEkonomiLink = $( "#industriell-ekonomi-link" )
+    industriellEkonomiInterInfo = $("#industriell-ekonomi-inter-info")
+    industriellEkonomiInfo = $("#industriell-ekonomi-info")
+
+
+    // These functions are used to add appropriate classes to the navigation of the two programs.
+    // When clicking corresponding link - classes are set and removed
+industriellEkonomiInterLink.click(function() {
+    industriellEkonomiInfo.addClass("no-show-left");
+    industriellEkonomiInterInfo.removeClass("no-show-right");
+    industriellEkonomiInterLink.addClass("active")
+
+    industriellEkonomiLink.removeClass("active")
+});
+
+ industriellEkonomiLink.click(function() {
+    industriellEkonomiInterInfo.addClass("no-show-right");
+    industriellEkonomiInfo.removeClass("no-show-left");
+    industriellEkonomiLink.addClass("active");
+    industriellEkonomiInterLink.removeClass("active");
+});
+
+};

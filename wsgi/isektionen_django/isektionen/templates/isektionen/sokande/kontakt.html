@@ -1,0 +1,43 @@
+{% extends 'master.html' %}
+
+{% block links %}
+    <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
+    <li class="nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
+    <li class="nav-link"><a href="{% url 'studentliv' %}">Studentliv</a></li>
+    {% comment %}<li class="nav-link"><a href="{% url 'efterstudier' %}">Efter studierna</a></li> {% endcomment %}
+    <li class="nav-link"><a href="{% url 'FAQ' %}">FAQ</a></li>
+    {% if kontakt %}
+        <li class="nav-link active-nav-item"><a href="{% url 'kontakt' %}">Kontakt</a></li>
+    {% else %}
+        <li class="nav-link"><a href="{% url 'kontakt' %}">Kontakt</a></li>
+    {% endif %}
+{% endblock %}
+{% block content %}
+    <section class="contacts-section">
+        <h1 class="contacts-headline">Skicka ett meddelande om du undrar något</h1>
+        <div class="contacts-form">
+            <form name="kontaktform" id="kontaktform" method="post" action="">
+                {% csrf_token %}
+                <fieldset>
+                    <label>
+                        Ditt namn
+                        <input type="text" name="namn" id="namn" placeholder="Namn"/>
+                    </label>
+                     <label>
+                        Ditt namn
+                        <input type="text" name="email" id="email" placeholder="Din e-post"/>
+                    </label>
+                    <label>
+                        Ämnet för ditt meddelande
+                        <input type="text" name="subject" id="subject" placeholder="Ämne"/>
+                    </label>
+                    <label>
+                        Meddelande
+                        <textarea name="meddelande" id="meddelande" cols="30" rows="5" placeholder="Meddelande"></textarea>
+                    </label>
+                </fieldset>
+                <input type="submit" class="button action-button" value="Skicka" />
+            </form>
+        </div>
+    </section>
+{% endblock %}

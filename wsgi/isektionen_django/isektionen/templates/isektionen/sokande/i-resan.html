@@ -1,14 +1,16 @@
 {% extends 'master.html' %}
 
 {% block links %}
-    <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
-    {% if utbildning %}
-        <li class="active-nav-item nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
-    {% else %}
-        <li class="nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
-    {% endif %}
-    <li class="nav-link"><a href="{% url 'studentliv' %}">Studentliv</a></li>
-    <li class="nav-link"><a href="{% url 'efterstudier' %}">Efter studierna</a></li>
+<li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
+{% if utbildning %}
+    <li class="active-nav-item nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
+{% else %}
+    <li class="nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
+{% endif %}
+<li class="nav-link"><a href="{% url 'studentliv' %}">Studentliv</a></li>
+{% comment %}<li class="nav-link"><a href="{% url 'efterstudier' %}">Efter studierna</a></li> {% endocomment %}
+<li class="nav-link"><a href="{% url 'FAQ' %}">FAQ</a></li>
+<li class="nav-link"><a href="{% url 'kontakt' %}">Kontakt</a></li>
 {% endblock %}
 
 {% block content %}
@@ -33,22 +35,22 @@
                 Bussresa tur och retur från Stockholm, Göteborg eller Malmö. Du som inte har möjlighet att åka med bussarna är givetvis också välkommen, men får då ordna resan själv.
             </li>
             <li>
-Heldag på Linköpings universitet
+                Heldag på Linköpings universitet
             </li>
             <li>
-Inspirationsföreläsning
+                Inspirationsföreläsning
             </li>
             <li>
-Caselösning
+                Caselösning
             </li>
             <li>
-Lunchsittning
+                Lunchsittning
             </li>
             <li>
-Rundvandring på campus med mingel och aktiviteter med I-sektionens föreningar och studenter
+                Rundvandring på campus med mingel och aktiviteter med I-sektionens föreningar och studenter
             </li>
             <li>
-Träffa många härliga studenter och mycket mer!
+                Träffa många härliga studenter och mycket mer!
             </li>
         </ul>
         <p></p>
@@ -70,21 +72,21 @@ Träffa många härliga studenter och mycket mer!
         </p>
         <p></p>
         <p>
-Vi kan stolt presentera vår samarbetspartner Gränges som kommer vara del av case-lösningen. Gränges är en ledande global leverantör av valsade produkter till industrin för lödda värmeväxlare i aluminium. Bolaget utvecklar, producerar och marknadsför avancerade material som ökar effektiviteten i kundernas tillverkningsprocesser och prestandan hos slutprodukten; den lödda värmeväxlaren. Bolagets geografiska marknader är Europa, Asien och Nord- och Sydamerika. Produktionsanläggningarna är belägna i Sverige och Kina och har totalt en årlig kapacitet på 220 000 ton. Gränges har omkring 950 anställda och under 2014 uppgick nettoomsättningen till 4 748 MSEK. Sedan oktober 2014 är bolagets aktier noterade på Nasdaq Stockholm.
-Mer information om Gränges finns på <a href="http://www.granges.com">www.granges.com</a>!
+            Vi kan stolt presentera vår samarbetspartner Gränges som kommer vara del av case-lösningen. Gränges är en ledande global leverantör av valsade produkter till industrin för lödda värmeväxlare i aluminium. Bolaget utvecklar, producerar och marknadsför avancerade material som ökar effektiviteten i kundernas tillverkningsprocesser och prestandan hos slutprodukten; den lödda värmeväxlaren. Bolagets geografiska marknader är Europa, Asien och Nord- och Sydamerika. Produktionsanläggningarna är belägna i Sverige och Kina och har totalt en årlig kapacitet på 220 000 ton. Gränges har omkring 950 anställda och under 2014 uppgick nettoomsättningen till 4 748 MSEK. Sedan oktober 2014 är bolagets aktier noterade på Nasdaq Stockholm.
+            Mer information om Gränges finns på <a href="http://www.granges.com">www.granges.com</a>!
         </p>
 
-<p>
-Undrar du över något?
-Tveka inte att kontakta oss på <a href="mailto:info@i-resan.se">info@i-resan.se</a>!
-Passa på att ta den här chansen att få uppleva en dag i riktig studentanda!
-</p>
         <p>
-Varmt välkomna, vi ses i Linköping!
-            </p><p>
-<em>/Projektgruppen för I-resan</em>
-
+            Undrar du över något?
+            Tveka inte att kontakta oss på <a href="mailto:info@i-resan.se">info@i-resan.se</a>!
+            Passa på att ta den här chansen att få uppleva en dag i riktig studentanda!
         </p>
+        <p>
+            Varmt välkomna, vi ses i Linköping!
+        </p><p>
+        <em>/Projektgruppen för I-resan</em>
+
+    </p>
 
 
     </section>

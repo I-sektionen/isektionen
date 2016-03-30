@@ -1,0 +1,62 @@
+.FAQ-section{
+  @include outer-container();
+  padding: 1em;
+  @include media($large-screen) {
+    width: 60%;
+  }
+
+  .expander {
+    $base-font-size: 1em !default;
+    $base-line-height: 1.5em !default;
+    $base-spacing: 1.5em !default;
+    $action-color: #477DCA !default;
+    $dark-gray: #333 !default;
+    $light-gray: #DDD !default;
+    $base-font-color: $dark-gray !default;
+    $expander-arrow-width: 0.7em;
+    $expander-toggle-size: 1em;
+    $expander-toggle-arrow-size: $expander-toggle-size;
+    $expander-toggle-margin: 1em;
+    @include transition();
+
+
+
+    .expander-trigger {
+      @include user-select(none);
+      border-bottom: 1px solid $light-gray;
+      color: $isektionen-green;
+      cursor: pointer;
+      display: block;
+      font-size: $expander-toggle-size;
+      margin-bottom: $expander-toggle-size;
+      padding-bottom: $expander-toggle-size / 4;
+
+
+      &:before {
+        font-family: "FontAwesome";
+        font-size: $expander-arrow-width;
+        content: "\f13a";
+        margin-right: 0.5em;
+      }
+    }
+
+    .expander-content p {
+      color: $base-font-color;
+      line-height: $base-line-height;
+      margin-bottom: 2em;
+      margin-top: 0.8em;
+    }
+
+    .expander-hidden {
+      &:before {
+        font-size: $expander-arrow-width;
+        font-family: "FontAwesome";
+        content: "\f138";
+      }
+    }
+
+    .expander-hidden + .expander-content {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,145 @@
+{% extends 'master.html' %}
+
+{% block links %}
+    <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
+    <li class="nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
+    <li class="nav-link"><a href="{% url 'studentliv' %}">Studentliv</a></li>
+    {% comment %}<li class="nav-link"><a href="{% url 'efterstudier' %}">Efter studierna</a></li> {% endcomment %}
+    {% if FAQ %}
+    <li class="nav-link active-nav-item"><a href="{% url 'FAQ' %}">FAQ</a></li>
+    {% else %}
+        <li class="nav-link"><a href="{% url 'FAQ' %}">FAQ</a></li>
+    {% endif %}
+    <li class="nav-link"><a href="{% url 'kontakt' %}">Kontakt</a></li>
+{% endblock %}
+
+{% block content %}
+    <section class="FAQ-section">
+        <div class="FAQ-content">
+            <h1 class="FAQ-header">FAQ</h1>
+            <div class="expander">
+              <a href="javascript:void(0)" class="expander-trigger expander-hidden">Är jag garanterad plats på Industriell ekonomi om jag läst basår?</a>
+              <div class="expander-content">
+                <p>Efter fullgjord basutbildning har du en garanterad plats på en av LiTHs civilingenjörs-,
+                högskoleingenjörs- eller matematisk-naturvetenskapliga kandidatutbildningar.
+                Vilken utbildning som du vill fortsätta på väljer du under basåret. Om det är fler som söker
+                garantiplats på en viss utbildning än det finns platser baseras urvalet till garantiplatserna på
+                uppnått studieresultat under basutbildningen. Om du inte kan få ditt förstahandsval erbjuds du
+                istället plats på någon av de andra utbildningarna med garantiplatser.
+                Om du söker till en utbildning som inte omfattas av garantiplatslöftet baseras urvalet på din
+                gymnasiepoäng eller ditt resultat från högskoleprovet.
+                För mer info om basåret, klicka <a href="http://www.liu.se/utbildning/program/basar?l=sv" target="_blank"><b>här!</b></a></p>
+              </div>
+            </div>
+            <div class="expander">
+              <a href="javascript:void(0)" class="expander-trigger expander-hidden">Finns det möjlighet att läsa språkinriktning på Industriell ekonomi?</a>
+              <div class="expander-content">
+                <p>Ja, Industriell Ekonomi erbjuder fem olika språkinriktningar. Du kan välja att läsa spanska,
+                franska, tyska, japanska eller kinesiska.</p>
+              </div>
+            </div>
+            <div class="expander">
+              <a href="javascript:void(0)" class="expander-trigger expander-hidden">Finns det några möjligheter att genom utbyte, läsa Industriell ekonomi utomlands?</a>
+              <div class="expander-content">
+                <p>Det finns goda möjligheter att studera utomlands via LiU. Läser man Internationell Industriell
+                ekonomi är man dessutom garanterad en plats utomlands.</p>
+              </div>
+            </div>
+            <div class="expander">
+              <a href="javascript:void(0)" class="expander-trigger expander-hidden">Hur många kommer in på utbildningen varje år?</a>
+              <div class="expander-content">
+                <p>Varje år antas åtta klasser med drygt 30 elever i varje klass. Två av klasserna är för internationell inriktning.</p>
+              </div>
+            </div>
+            <div class="expander">
+              <a href="javascript:void(0)" class="expander-trigger expander-hidden">Hur mycket högre är studietempot jämfört med gymnasiet?</a>
+              <div class="expander-content">
+                <p>Studietempot är högre, men knappast så pass högt att det blir svårt att hänga med. Den största
+                skillnaden är att universitetsstudierna blir mer som ett heltidsarbete jämfört med gymnasiestudierna.</p>
+              </div>
+            </div>
+            <div class="expander">
+              <a href="javascript:void(0)" class="expander-trigger expander-hidden">Vad innebär det att man ”kuggar” en tenta?</a>
+              <div class="expander-content">
+                <p>Att kugga en tenta innebär att man inte får godkänt på tentan. Det händer nästan alla studenter
+                att man någon gång kuggar en tenta. Men som student på Tekniska fakulteten får man nya
+                chanser att klara en tenta på så kallade omtentor. Omtentor brukar ges några gånger om året.</p>
+              </div>
+            </div>
+            <div class="expander">
+              <a href="javascript:void(0)" class="expander-trigger expander-hidden">Hur stort är Linköping?</a>
+              <div class="expander-content">
+                <p>Linköping har 140 000 invånare och är Sveriges femte största kommun.</p>
+              </div>
+            </div>
+            <div class="expander">
+              <a href="javascript:void(0)" class="expander-trigger expander-hidden">Hur svårt är det att få boende i Linköping?</a>
+              <div class="expander-content">
+                <p>Boende i Linköping är relativt lätt att få. Ett tips är att registrera sig
+                på <a href="https://www.studentbostader.se/sv" target="_blank"><b>www.studentbostader.se</b></a> och <a href="http://www.stangastaden.se" target="_blank"><b>www.stangastaden.se</b></a> och börja samla köpoäng som man
+                sedan behöver när man söker boende. Läs mer om var och hur man får boende <a href="#"><b>här!</b></a></p>
+              </div>
+            </div>
+            <div class="expander">
+              <a href="javascript:void(0)" class="expander-trigger expander-hidden">Måste jag ha cykel?</a>
+              <div class="expander-content">
+                <p>Det finns inga måsten, men det underlättar absolut om du har en cykel. Linköping är en
+                ganska platt stad och med en cykel går det smidigt att ta sig från punkt A till B.</p>
+              </div>
+            </div>
+            <div class="expander">
+              <a href="javascript:void(0)" class="expander-trigger expander-hidden">Vart ligger universitetet i förhållande till Linköpings centrum?</a>
+              <div class="expander-content">
+                <p>Universitetet ligger ca 3-4 km från centrum och det tar ca 10-15 minuter med cykel. Givetvis
+                finns även goda bussförbindelser.</p>
+              </div>
+            </div>
+            <div class="expander">
+              <a href="javascript:void(0)" class="expander-trigger expander-hidden">När är det lov?</a>
+              <div class="expander-content">
+                <p>Man har egentligen inte lov på samma sätt som i gymnasiet när man studerar på
+                universitet/högskola. Höstterminen pågår in i januari med några veckors uppehåll över jul och
+                nyår och sedan fortsätter vårterminen. Om man har klarat tentorna vid det ordinarie tillfället
+                är man dessutom ledig i omtentamensperioderna, dvs första veckan på vårterminen och
+                veckan efter påsk.</p>
+              </div>
+            </div>
+            <div class="expander">
+              <a href="javascript:void(0)" class="expander-trigger expander-hidden">När är sista ansökningsdagen?</a>
+              <div class="expander-content">
+                <p>Den sista ansökningsdagen är den 15 april. Anmälan görs via antagningens <a href="https://www.antagning.se/se/start"><b>hemsida!</b></a></p>
+              </div>
+            </div>
+              <div class="expander">
+              <a href="javascript:void(0)" class="expander-trigger expander-hidden">Vad är det för behörighet till Industriell ekonomi?</a>
+              <div class="expander-content">
+                <p>Industriell ekonomi: Läs mer <a href="http://www.liu.se/utbildning/program/industriellekonomi?l=sv" target="_blank"><b>här</b></a>.<br>
+                Industriell ekonomi-internationell: Läs mer <a href="http://www.liu.se/utbildning/program/industriellekonomii?l=sv" target="_blank"><b>här</b></a>.</p>
+              </div>
+            </div>
+            <div class="expander">
+              <a href="javascript:void(0)" class="expander-trigger expander-hidden">Vad är högskolepoäng? Hur räknas utbildningens längd?</a>
+              <div class="expander-content">
+                <p>Högskolepoängen är ett sätt att mäta utbildningens längd och omfattning. 1,5 högskolepoäng
+                motsvarar en veckas heltidsstudier. 30 poäng motsvarar 20 veckors studier som är en termin.
+                En utbildning på 300 poäng innebär alltså fem  års heltidsstudier.</p>
+              </div>
+            </div>
+            <div class="expander">
+              <a href="javascript:void(0)" class="expander-trigger expander-hidden">Vad kan man besöka i Linköping?</a>
+              <div class="expander-content">
+                <p>Några sevärdheter är; Domkyrkan, Linköpings slott, Gamla Linköping, flygvapenmuseet, Göta kanal.</p>
+              </div>
+            </div>
+            <div class="expander">
+              <a href="javascript:void(0)" class="expander-trigger expander-hidden">Varför ska jag välja Industriell ekonomi i just Linköping?</a>
+              <div class="expander-content">
+                <p>Industriell ekonomi grundades från början i Linköping och utbildningen här har ett mycket
+                gott rykte bland företag eftersom den håller väldigt hög kvalitet. Det är ingen tvekan om att
+                du kommer få en mycket bra utbildning i ryggen som ger dig stora möjligheter i arbetslivet.
+                Dessutom är Linköping en väldigt rolig stad att plugga i.</p>
+              </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
