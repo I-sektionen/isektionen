@@ -14,6 +14,27 @@
   line-height: 2em
   color: $dark-gray
 
+.link-promo
+  padding: 2em
+  +outer-container()
+  text-align: center
+  a
+    font-size: 2em
+    cursor: pointer
+    color: $dark-gray
+    text-align: center
+    &:after
+      font-family: FontAwesome
+      content: '\f054'
+      font-size: 0.8em
+      margin-left: 0.5em
+      +transition()
+    &:hover
+      &:after
+        margin-left: 1em
+
+
+
 .program-graph-section
   background-color: $light-gray
   .program-graph

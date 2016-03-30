@@ -1973,6 +1973,37 @@ article.single_blog_entry p.author {
   color: #333;
 }
 
+.link-promo {
+  padding: 2em;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.link-promo::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.link-promo a {
+  font-size: 2em;
+  cursor: pointer;
+  color: #333;
+  text-align: center;
+}
+.link-promo a:after {
+  font-family: FontAwesome;
+  content: "";
+  font-size: 0.8em;
+  margin-left: 0.5em;
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+}
+.link-promo a:hover:after {
+  margin-left: 1em;
+}
+
 .program-graph-section {
   background-color: #f7f7f7;
 }
