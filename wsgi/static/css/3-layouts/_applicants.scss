@@ -52,13 +52,6 @@ $applicant-text-color: $light-gray;
   }
 
 }
-// pluggande tjejer
-// https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/campus_nkpg.jpg
-
-//nollep
-//https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/_MG_4139.jpg
-
-//
 
 .applicant-container {
   @include outer-container();
@@ -162,6 +155,38 @@ $applicant-text-color: $light-gray;
   .after-studies {
     //@extend .applicant-section;
     @include span-columns(12)
+  }
+
+}
+
+.interview-container {
+  padding: 5em;
+  background-color: rgba($isektionen-yellow, 35%);
+  .interview-cards {
+    @include display(flex);
+    @include justify-content(center);
+    @include flex-wrap(wrap);
+  }
+
+  .interview-card {
+    box-shadow: 1px 1px 3px $light-gray;
+    border-radius: $base-border-radius;
+    @include display(flex);
+    @include flex(1 1 25em);
+    @include justify-content(center);
+    @include align-items(center);
+    text-align: center;
+  }
+
+  .interview-card-image {
+  }
+
+  .interview-short-info {
+    @include flex(1);
+  }
+
+  .interview-full {
+    @include flex(3 1 10em);
   }
 
 }
