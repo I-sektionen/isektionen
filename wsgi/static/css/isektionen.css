@@ -1917,10 +1917,13 @@ article.single_blog_entry p.author {
   flex-wrap: wrap;
 }
 .interview-cards .interview-card {
-  -webkit-flex-basis: 1 1 10em;
-  -moz-flex-basis: 1 1 10em;
-  flex-basis: 1 1 10em;
-  -ms-flex-preferred-size: 1 1 10em;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1 1 20em;
+  -moz-flex: 1 1 20em;
+  -ms-flex: 1 1 20em;
+  flex: 1 1 20em;
   margin-bottom: 2em;
 }
 @media screen and (min-width: 900px) {

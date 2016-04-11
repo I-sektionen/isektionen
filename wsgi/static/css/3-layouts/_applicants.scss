@@ -172,7 +172,7 @@ $applicant-text-color: $light-gray;
     @include flex-wrap(wrap);
 
   .interview-card {
-    @include flex-basis(1 1 10em);
+    @include flex(1 1 20em);
     //@include flex-grow(1);
 
     margin-bottom: 2em;
