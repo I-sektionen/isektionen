@@ -9,7 +9,7 @@
     {% if kontakt %}
         <li class="nav-link active-nav-item"><a href="{% url 'kontakt' %}">Kontakt</a></li>
     {% else %}
-        <li class="nav-link"><a href="{% url 'kontakt' %}">Kontakt</a></li>
+        {% comment %}<li class="nav-link"><a href="{% url 'kontakt' %}">Kontakt</a></li> {% endcomment %}
     {% endif %}
 {% endblock %}
 {% block content %}
