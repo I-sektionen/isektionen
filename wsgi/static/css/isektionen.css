@@ -1969,6 +1969,30 @@ article.single_blog_entry p.author {
 }
 .interview-cards .interview-card-info .interview-name {
   font-size: 2em;
+  margin: 0;
+}
+.interview-cards .interview-card-info a {
+  color: white;
+}
+.interview-cards .interview-card-info a:after {
+  font-family: 'FontAwesome';
+  content: '\f054';
+  position: relative;
+  left: 8px;
+  top: 1px;
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+}
+.interview-cards .interview-card-info a:hover:after {
+  left: 15px;
+}
+.interview-cards .interview-content {
+  display: none;
+}
+.interview-cards .interview-class {
+  font-size: 1.8em;
+  font-weight: 300;
 }
 
 .blog-hero {

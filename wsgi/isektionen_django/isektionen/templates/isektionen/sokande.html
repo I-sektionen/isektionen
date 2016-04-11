@@ -1,7 +1,7 @@
 {% extends 'master.html' %}
 {% block links %}
 
-{% if sokande %}
+    {% if sokande %}
         <li class="nav-link active-nav-item"><a href="{% url 'sokande' %}">Sökande</a></li>
     {% else %}
         <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
@@ -24,7 +24,7 @@
         </div>
     </section>
     <section class="applicant-container">
-    <h1 CLASS="section-header">Vad vill du veta mer om?</h1>
+        <h1 CLASS="section-header">Vad vill du veta mer om?</h1>
         <ul class="bullets">
             <li class="bullet">
                 <div class="bullet-icon">
@@ -40,18 +40,18 @@
                 </div>
             </li>
             {% comment %}
-            <li class="bullet">
-                <div class="bullet-icon">
-                    <i class="fa fa-home"></i>
-                </div>
-                <div class="bullet-content">
-                    <h2>Var kan jag bo i Linköping?</h2>
-                    <p>
-                        Det finns flera olika bostadsköer och bostadsområden i Linköping. På denna sida hittar du all viktig information om hur du hittar så bra boende som möjlig i Linköping.
-                    </p>
-                    <a href="{% url 'utbildning' %}" class="action-button">Om bostad</a>
-                </div>
-            </li>
+                <li class="bullet">
+                    <div class="bullet-icon">
+                        <i class="fa fa-home"></i>
+                    </div>
+                    <div class="bullet-content">
+                        <h2>Var kan jag bo i Linköping?</h2>
+                        <p>
+                            Det finns flera olika bostadsköer och bostadsområden i Linköping. På denna sida hittar du all viktig information om hur du hittar så bra boende som möjlig i Linköping.
+                        </p>
+                        <a href="{% url 'utbildning' %}" class="action-button">Om bostad</a>
+                    </div>
+                </li>
             {% endcomment %}
             <li class="bullet">
                 <div class="bullet-icon">
@@ -66,120 +66,129 @@
                 </div>
             </li>
             {% comment %}
-            <li class="bullet">
-                <div class="bullet-icon">
-                    <i class="fa fa-briefcase"></i>
-                </div>
-                <div class="bullet-content">
-                    <h2>Vad händer när jag är klar med utbildningen?</h2>
-                    <p>
-                        De flesta studenter har ofta sin första anställning klar redan innan examen. Intresset för civilingenjörer i industriell ekonomi med examen från Linköpings universitet är mycket stort i näringslivet. Detta tack vare deras driv, vana att arbeta i projekt samt förmåga till att lösa problem utifrån både ett tekniskt och ett ekonomiskt perspektiv.
-                    </p>
-                    <a href="{% url 'utbildning' %}" class="action-button">Om efter studierna</a>
-                </div>
-            </li>
+                <li class="bullet">
+                    <div class="bullet-icon">
+                        <i class="fa fa-briefcase"></i>
+                    </div>
+                    <div class="bullet-content">
+                        <h2>Vad händer när jag är klar med utbildningen?</h2>
+                        <p>
+                            De flesta studenter har ofta sin första anställning klar redan innan examen. Intresset för civilingenjörer i industriell ekonomi med examen från Linköpings universitet är mycket stort i näringslivet. Detta tack vare deras driv, vana att arbeta i projekt samt förmåga till att lösa problem utifrån både ett tekniskt och ett ekonomiskt perspektiv.
+                        </p>
+                        <a href="{% url 'utbildning' %}" class="action-button">Om efter studierna</a>
+                    </div>
+                </li>
             {% endcomment %}
         </ul>
     </section>
     <section class="interview-container">
-    <h1 class="section-header">Intervju med studenter på Industriell Ekonomi</h1>
+        <h1 class="section-header">Intervju med studenter på Industriell Ekonomi</h1>
 
-    <ul class="interview-cards">
-       <li class="interview-card">
-       <div class="card-image">
-        <img src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/interviews/bjorn.jpg">
-       </div>
-       <div class="interview-card-info">
-            <h2 class="interview-name">Björn Rünlow</h2>
-            <p>Årskurs 1</p>
-            <a href="javascript:void(0);">Läs intervjun med Björn</a>
-       </div>
-       </li>
-        <li class="interview-card">
-            <div class="card-image">
-            <img src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/interviews/emelie.jpg">
-           </div>
-       <div class="interview-card-info">
-            <h2 class="interview-name">Emelie Jönsson</h2>
-            <p>Årskurs 2</p>
-            <a href="javascript:void(0);">Läs intervjun med Emelie</a>
-       </div>
-       </li>
-                <li class="interview-card">
-            <div class="card-image">
-            <img src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/interviews/lisa.jpg">
-           </div>
-       <div class="interview-card-info">
-            <h2 class="interview-name">Lisa Boström</h2>
-            <p>Årskurs 3</p>
-            <a href="javascript:void(0);">Läs intervjun med Lisa</a>
-       </div>
-       </li>
-                <li class="interview-card">
-            <div class="card-image">
-            <img src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/interviews/chia.jpg">
-           </div>
-       <div class="interview-card-info">
-            <h2 class="interview-name">Chia Kattane</h2>
-            <p>Årskurs 4</p>
-            <a href="javascript:void(0);">Läs intervjun med Chia</a>
-       </div>
-       </li>
-                <li class="interview-card">
-            <div class="card-image">
-            <img src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/interviews/emma.jpg">
-           </div>
-       <div class="interview-card-info">
-            <h2 class="interview-name">Emma Helsing Mork</h2>
-            <p>Årskurs 5</p>
-            <a href="javascript:void(0);">Läs intervjun med Emma</a>
-       </div>
-       </li>
-    </ul>
+        <ul class="interview-cards">
+            <li class="interview-card">
+                <div class="card-image">
+                    <img src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/interviews/bjorn.jpg">
+                </div>
+                <div class="interview-card-info">
+                    <h2 class="interview-name">Björn Rünlow</h2>
+                    <h2 class="interview-class">Årskurs 1</h2>
+                    <a href="javascript:void(0);">Läs intervjun med Björn</a>
+                </div>
+                <!-- THIS CONTAINS ALL INTERVIEW MARKUP -->
+                <div class="interview-content">
+                    <h2 class="main-question">Vem är du?</h2>
+                    <ul class="question-list">
+                        <li>Namn: Björn Runow</li>
+                        <li>Årskurs: 1</li>
+                        <li>Bakgrund: Jag är 23 år gammal och uppvuxen i Södertälje. Matematik har alltid varit ett stort intresse och jag har de senaste åren jobbat en hel del med att lära ut matte på gymnasienivå, dels genom att jobba som långtidsvikarie på min gamla gymnasieskola och dels genom ett läxhjälpsföretag som jag startade. Utöver det gillar jag det mesta som har med bollar att göra och jag verkligen beundrar riktiga entreprenörer!</li>
+                        <li>Varför du valde I Linköping? Jag valde Linköping för att det dels är nära hem med tåg och dels för att jag hört mycket gott om universitet, särskilt då I-linjen. Just I-linjen lät väldigt lockande på grund av kombinationen ekonomi- teknik. I efterhand har jag upptäckt att staden Linköping definitivt är en ort jag kan tänka mig att bo på en längre tid och det har varit en positiv överraskning.</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="interview-card">
+                <div class="card-image">
+                    <img src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/interviews/emelie.jpg">
+                </div>
+                <div class="interview-card-info">
+                    <h2 class="interview-name">Emelie Jönsson</h2>
+                    <p class="interview-class">Årskurs 2</p>
+                    <a href="javascript:void(0);">Läs intervjun med Emelie</a>
+                </div>
+            </li>
+            <li class="interview-card">
+                <div class="card-image">
+                    <img src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/interviews/lisa.jpg">
+                </div>
+                <div class="interview-card-info">
+                    <h2 class="interview-name">Lisa Boström</h2>
+                    <p class="interview-class">Årskurs 3</p>
+                    <a href="javascript:void(0);">Läs intervjun med Lisa</a>
+                </div>
+            </li>
+            <li class="interview-card">
+                <div class="card-image">
+                    <img src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/interviews/chia.jpg">
+                </div>
+                <div class="interview-card-info">
+                    <h2 class="interview-name">Chia Kattane</h2>
+                    <p class="interview-class">Årskurs 4</p>
+                    <a href="javascript:void(0);">Läs intervjun med Chia</a>
+                </div>
+            </li>
+            <li class="interview-card">
+                <div class="card-image">
+                    <img src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/interviews/emma.jpg">
+                </div>
+                <div class="interview-card-info">
+                    <h2 class="interview-name">Emma Helsing Mork</h2>
+                    <p class="interview-class">Årskurs 5</p>
+                    <a href="javascript:void(0);">Läs intervjun med Emma</a>
+                </div>
 
-
+            </li>
+        </ul>
     </section>
     <section class="latest">
-            <h1 class="section-header">Se vad som händer på sektionen</h1>
-            <hr>
-            <div class="blog-previews">
-                <h2>Senaste bloginläggen</h2>
-                {% load blog_tags %}
-                {% get_last_entries as entries %}
-                {% for entry in entries %}
-                    <div class="latest-blogs-preview">
-                        <div class="blog-entry-datebox">
-                            <p class="blog-date">
-                                {{ entry.publishedDate|date:"d b Y" }}
-                            </p>
-                        </div>
-                        <div class="blog-entry-textbox">
-                            <h2 class="blog-title">
-                                <a href="{% url "view_one_blog_entry" entry.pk %}">{{ entry.title }}</a>
-                            </h2>
-                            <p class="blog-text">
-                                {{ entry.lead|truncatechars:200 }}
-                            </p>
-                        </div>
+        <h1 class="section-header">Se vad som händer på sektionen</h1>
+        <hr>
+        <div class="blog-previews">
+            <h2>Senaste bloginläggen</h2>
+            {% load blog_tags %}
+            {% get_last_entries as entries %}
+            {% for entry in entries %}
+                <div class="latest-blogs-preview">
+                    <div class="blog-entry-datebox">
+                        <p class="blog-date">
+                            {{ entry.publishedDate|date:"d b Y" }}
+                        </p>
                     </div>
-
-                {% endfor %}
-            </div>
-            <div class="instagram">
-                <div class="instagram-content">
-                    <p class="instagram-account-link">
-                        <i class="fa fa-instagram"></i>
-                        <a href="https://www.instagram.com/industriellekonomi_liu/">@industriellekonomi_liu</a>
-                    </p>
-                    <div class="instagram-feed">
-                        <ul class="instagram-pictures">
-                        </ul>
+                    <div class="blog-entry-textbox">
+                        <h2 class="blog-title">
+                            <a href="{% url "view_one_blog_entry" entry.pk %}">{{ entry.title }}</a>
+                        </h2>
+                        <p class="blog-text">
+                            {{ entry.lead|truncatechars:200 }}
+                        </p>
                     </div>
-                    </a>
                 </div>
-            </div>
 
-        </section>
+            {% endfor %}
+        </div>
+        <div class="instagram">
+            <div class="instagram-content">
+                <p class="instagram-account-link">
+                    <i class="fa fa-instagram"></i>
+                    <a href="https://www.instagram.com/industriellekonomi_liu/">@industriellekonomi_liu</a>
+                </p>
+                <div class="instagram-feed">
+                    <ul class="instagram-pictures">
+                    </ul>
+                </div>
+                </a>
+            </div>
+        </div>
+
+    </section>
 
 
 {% endblock %}

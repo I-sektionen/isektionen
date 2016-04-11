@@ -218,10 +218,39 @@ $applicant-text-color: $light-gray;
     @include border-bottom-radius($base-border-radius);
 
     .interview-name {
-
       font-size: 2em;
-
+      margin: 0;
     }
 
+    a {
+      color: white;
+      &:after {
+
+        font-family: 'FontAwesome';
+        content: '\f054';
+        position: relative;
+        left: 8px;
+        top: 1px;
+        @include transition();
+
+      }
+
+      &:hover {
+
+        &:after {
+          left: 15px;
+        }
+
+      }
+
+
+    }
   }
+    .interview-content {
+      display: none;
+    }
+    .interview-class {
+      font-size: 1.8em;
+      font-weight: 300;
+    }
 }
