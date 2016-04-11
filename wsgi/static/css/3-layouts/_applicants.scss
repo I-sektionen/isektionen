@@ -160,33 +160,68 @@ $applicant-text-color: $light-gray;
 }
 
 .interview-container {
-  padding: 5em;
-  background-color: rgba($isektionen-yellow, 35%);
+  @include outer-container();
+  padding: 2em;
+
+}
+
   .interview-cards {
     @include display(flex);
+    @include align-items(center);
     @include justify-content(center);
     @include flex-wrap(wrap);
-  }
 
   .interview-card {
-    box-shadow: 1px 1px 3px $light-gray;
-    border-radius: $base-border-radius;
-    @include display(flex);
-    @include flex(1 1 25em);
-    @include justify-content(center);
-    @include align-items(center);
-    text-align: center;
-  }
+    @include flex-basis(1 1 10em);
+    //@include flex-grow(1);
 
-  .interview-card-image {
-  }
+    margin-bottom: 2em;
 
-  .interview-short-info {
-    @include flex(1);
-  }
+    @include media($large-screen) {
+      margin-right: 2em;
+    }
 
-  .interview-full {
-    @include flex(3 1 10em);
-  }
+    @include media($medium-screen) {
+      margin-right: 1em;
+    }
 
+
+  }
+  .card-image {
+    height: 300px;
+    max-height: 300px;
+    overflow: hidden;
+
+    @include media($large-screen) {
+      height: 700px;
+      max-height: 700px;
+
+    }
+
+    @include media($medium-screen) {
+      height: 450px;
+      max-height: 450px;
+    }
+
+
+    img {
+      @include border-top-radius($base-border-radius);
+      opacity: 1;
+      transition: all 0.2s ease-in-out;
+      width: 100%;
+    }
+  }
+  .interview-card-info {
+    color: white;
+    background-color: $isektionen-yellow;
+    padding: 1em;
+    @include border-bottom-radius($base-border-radius);
+
+    .interview-name {
+
+      font-size: 2em;
+
+    }
+
+  }
 }
