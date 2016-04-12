@@ -1995,6 +1995,14 @@ article.single_blog_entry p.author {
   font-weight: 300;
 }
 
+.interview-question {
+  font-size: 2em;
+}
+
+.interview-sub-question {
+  font-size: 1.5em;
+}
+
 .blog-hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/hero-images/micro.jpg");
   background-position: center center;

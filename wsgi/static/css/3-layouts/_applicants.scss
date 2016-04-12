@@ -249,8 +249,18 @@ $applicant-text-color: $light-gray;
     .interview-content {
       display: none;
     }
+
     .interview-class {
       font-size: 1.8em;
       font-weight: 300;
     }
+
 }
+
+    .interview-question {
+      font-size: 2em;
+    }
+
+    .interview-sub-question {
+      font-size: 1.5em;
+    }
