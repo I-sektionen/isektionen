@@ -52,13 +52,6 @@ $applicant-text-color: $light-gray;
   }
 
 }
-// pluggande tjejer
-// https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/campus_nkpg.jpg
-
-//nollep
-//https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/_MG_4139.jpg
-
-//
 
 .applicant-container {
   @include outer-container();
@@ -165,3 +158,109 @@ $applicant-text-color: $light-gray;
   }
 
 }
+
+.interview-container {
+  @include outer-container();
+  padding: 2em;
+
+}
+
+  .interview-cards {
+    @include display(flex);
+    @include align-items(center);
+    @include justify-content(center);
+    @include flex-wrap(wrap);
+
+  .interview-card {
+    @include flex(1 1 20em);
+    //@include flex-grow(1);
+
+    margin-bottom: 2em;
+
+    @include media($large-screen) {
+      margin-right: 2em;
+    }
+
+    @include media($medium-screen) {
+      margin-right: 1em;
+    }
+
+
+  }
+  .card-image {
+    height: 300px;
+    max-height: 300px;
+    overflow: hidden;
+
+    @include media($large-screen) {
+      height: 700px;
+      max-height: 700px;
+
+    }
+
+    @include media($medium-screen) {
+      height: 450px;
+      max-height: 450px;
+    }
+
+
+    img {
+      @include border-top-radius($base-border-radius);
+      opacity: 1;
+      transition: all 0.2s ease-in-out;
+      width: 100%;
+    }
+  }
+  .interview-card-info {
+    color: white;
+    background-color: $isektionen-yellow;
+    padding: 1em;
+    @include border-bottom-radius($base-border-radius);
+
+    .interview-name {
+      font-size: 2em;
+      margin: 0;
+    }
+
+    a {
+      color: white;
+      &:after {
+
+        font-family: 'FontAwesome';
+        content: '\f054';
+        position: relative;
+        left: 8px;
+        top: 1px;
+        @include transition();
+
+      }
+
+      &:hover {
+
+        &:after {
+          left: 15px;
+        }
+
+      }
+
+
+    }
+  }
+    .interview-content {
+      display: none;
+    }
+
+    .interview-class {
+      font-size: 1.8em;
+      font-weight: 300;
+    }
+
+}
+
+    .interview-question {
+      font-size: 2em;
+    }
+
+    .interview-sub-question {
+      font-size: 1.5em;
+    }
