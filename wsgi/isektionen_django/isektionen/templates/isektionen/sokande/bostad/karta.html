@@ -1,7 +1,7 @@
 {% block content %}
 
 
-
+<div class = mapcontent>
 <h1>Bostadsområden i Linköping</h1>
 
 
@@ -16,25 +16,26 @@
       function initMap() {
         var ryd = {lat: 58.409291, lng: 15.565224};
         var valla = {lat: 58.404436, lng: 15.602634};
-        var lambohov = {lat: 58.386918, lng:15.571977};
+        var lambohov = {lat: 58.381918, lng:15.571977};
         var flamman = {lat: 58.411764,lng: 15.602623};
-        var vasastan = {lat: 58.412991, lng:15.614969 };
+        var vasastaden = {lat: 58.412991, lng:15.614969 };
         var skaggetorp = {lat: 58.425945, lng: 15.580251};
         var colonia = {lat: 58.403198, lng: 15.583598};
 
-        var mapcenter = {lat: 58.407407, lng: 15.598485};
+        var mapcenter = {lat: 58.415407, lng: 15.598485};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 12,
           center: mapcenter
         });
 
-        var contentString = '<div id="content">'+
+
+        var rydContent = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
             '<h1 id="firstHeading" class="firstHeading">Ryd</h1>'+
             '<div id="bodyContent">'+
             '<p><b>Ryd</b> ' +
-            'är det största studentboendeområdet i Linköping, här finns både lägenheter och studentkorriorer.</p>'+
+            'fddxfdxär det största studentboendeområdet i Linköping, här finns både lägenheter och studentkorriorer.</p>'+
             '</div>'+
             '</div>';
 
@@ -48,38 +49,186 @@
             '</div>'+
             '</div>';
 
-        var infowindow = new google.maps.InfoWindow({
-          content: contentString
+        var lambohovContent = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Lambohov</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Lambohov</b> ' +
+            'det största studentboendeområdet i Linköping, här finns både lägenheter och studentkorriorer.</p>'+
+            '</div>'+
+            '</div>';
+
+        var flammanContent = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Flamman</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Flamman</b> ' +
+            'det största studentboendeområdet i Linköping, här finns både lägenheter och studentkorriorer.</p>'+
+            '</div>'+
+            '</div>';
+
+        var vasastadenContent = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Vasastaden</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Vasastaden</b> ' +
+            'det största studentboendeområdet i Linköping, här finns både lägenheter och studentkorriorer.</p>'+
+            '</div>'+
+            '</div>';
+
+        var vallaContent = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Valla</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Valla</b> ' +
+            'det största studentboendeområdet i Linköping, här finns både lägenheter och studentkorriorer.</p>'+
+            '</div>'+
+            '</div>';
+
+         var skaggetorpContent = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<div id="bodyContent">'+
+            '<p><b>Skäggetorp</b> ' +
+            'det största studentboendeområdet i Linköping, här finns både lägenheter och studentkorriorer.</p>'+
+            '</div>'+
+            '</div>';
+
+        var rydInfoWindow = new google.maps.InfoWindow({
+          content: rydContent
         });
+        var latestInfoWindow = rydInfoWindow;
+
+        var coloniaInfoWindow = new google.maps.InfoWindow({
+          content: coloniaContent
+        });
+
+        var lambohovInfoWindow = new google.maps.InfoWindow({
+          content: lambohovContent
+        });
+
+        var flammanInfoWindow = new google.maps.InfoWindow({
+          content: flammanContent
+        });
+
+        var vasastadenInfoWindow = new google.maps.InfoWindow({
+          content: vasastadenContent
+        });
+
+        var vallaInfoWindow = new google.maps.InfoWindow({
+          content: vallaContent
+        });
+
+        var skaggetorpInfoWindow = new google.maps.InfoWindow({
+          content: skaggetorpContent
+        });
+
+        var rydMarker = new google.maps.Marker({
+          position: ryd,
+          map: map,
+          title: 'Ryd'
+        });
+
+       rydMarker.addListener('click', function() {
+            latestInfoWindow.close();
+            rydInfoWindow.open(map, rydMarker);
+            latestInfoWindow = rydInfoWindow;
+        });
+
 
         var coloniaMarker = new google.maps.Marker({
           position: colonia,
           map: map,
           title: 'Colonia'
         });
+
         coloniaMarker.addListener('click', function() {
-          coloniaInfowindow.open(map, coloniaMarker);
-
+            latestInfoWindow.close();
+            coloniaInfoWindow.open(map, coloniaMarker);
+            latestInfoWindow = coloniaInfoWindow;
         });
 
-        var coloniaInfowindow = new google.maps.InfoWindow({
-          content: coloniaContent
-        });
 
-        var marker = new google.maps.Marker({
-          position: ryd,
+        var lambohovMarker = new google.maps.Marker({
+          position: lambohov,
           map: map,
-          title: 'Ryd'
+          title: 'Lambohov'
         });
-        marker.addListener('click', function() {
-          infowindow.open(map, marker);
-            center: mapcenter
 
+         lambohovMarker.addListener('click', function() {
+            latestInfoWindow.close();
+            lambohovInfoWindow.open(map, lambohovMarker);
+            latestInfoWindow = lambohovInfoWindow;
         });
+
+        var flammanMarker = new google.maps.Marker({
+            position: flamman,
+            map: map,
+            title: 'Flamman'
+        });
+
+        flammanMarker.addListener('click', function() {
+            latestInfoWindow.close();
+            flammanInfoWindow.open(map, flammanMarker);
+            latestInfoWindow = flammanInfoWindow;
+        });
+
+        var vasastadenMarker = new google.maps.Marker({
+            position: vasastaden,
+            map: map,
+            title: 'Vasastaden'
+        });
+
+        vasastadenMarker.addListener('click', function() {
+            latestInfoWindow.close();
+            vasastadenInfoWindow.open(map, vasastadenMarker);
+            latestInfoWindow =vasastadenInfoWindow;
+        });
+
+        var vallaMarker = new google.maps.Marker({
+            position: valla,
+            map: map,
+            title: 'Valla'
+        });
+
+        vallaMarker.addListener('click', function() {
+            latestInfoWindow.close();
+            vallaInfoWindow.open(map, vallaMarker);
+            latestInfoWindow =vallaInfoWindow;
+        });
+
+        var skaggetorpMarker = new google.maps.Marker({
+            position: skaggetorp,
+            map: map,
+            title: 'Skäggetorp'
+        });
+
+        skaggetorpMarker.addListener('click', function() {
+            latestInfoWindow.close();
+            skaggetorpInfoWindow.open(map, skaggetorpMarker);
+            latestInfoWindow =skaggetorpInfoWindow;
+        });
+
+        google.maps.event.addListener(map, "click", function(event) {
+            rydInfoWindow.close();
+            coloniaInfoWindow.close();
+            lambohovInfoWindow.close();
+            vasastadenInfoWindow.close();
+            vallaInfoWindow.close();
+            skaggetorpInfoWindow.close();
+            flammanInfoWindow.close();
+        });
+
+
+
       }
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzvVbf7okh24tzAmHCbmworZs9lCO2H1Q&callback=initMap">
     </script>
-
+</div>
 {% endblock %}
