@@ -1,5 +1,4 @@
 .mapcontent {
-  margin-left: 10em;
-  margin-right: 10em;
+@include outer-container();
 
 }

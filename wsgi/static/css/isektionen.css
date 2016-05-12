@@ -2477,8 +2477,14 @@ Main components
   }
 }
 .mapcontent {
-  margin-left: 10em;
-  margin-right: 10em;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mapcontent::after {
+  clear: both;
+  content: "";
+  display: table;
 }
 
 /*# sourceMappingURL=isektionen.css.map */

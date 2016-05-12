@@ -1,7 +1,8 @@
+
 {% block content %}
 
-
 <div class = mapcontent>
+
 <h1>Bostadsområden i Linköping</h1>
 
 
@@ -15,18 +16,144 @@
 
       function initMap() {
         var ryd = {lat: 58.409291, lng: 15.565224};
-        var valla = {lat: 58.404436, lng: 15.602634};
-        var lambohov = {lat: 58.381918, lng:15.571977};
+        var irrblosset = {lat: 58.40289, lng: 15.59835};
+        var lambohov = {lat: 58.384918, lng:15.571977};
         var flamman = {lat: 58.411764,lng: 15.602623};
         var vasastaden = {lat: 58.412991, lng:15.614969 };
-        var skaggetorp = {lat: 58.425945, lng: 15.580251};
+        var skaggetorp = {lat: 58.421945, lng: 15.580251};
         var colonia = {lat: 58.403198, lng: 15.583598};
-
         var mapcenter = {lat: 58.415407, lng: 15.598485};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 12,
           center: mapcenter
         });
+
+           // Define the LatLng coordinates for the polygon's path.
+  var rydCoords = [
+    {lat: 58.40666, lng: 15.57722},
+    {lat: 58.40534, lng: 15.56885},
+    {lat: 58.40511, lng: 15.56203},
+    {lat: 58.40594, lng: 15.55859},
+    {lat: 58.40824, lng: 15.55576},
+    {lat: 58.41228, lng: 15.55730},
+    {lat: 58.41467, lng: 15.56589},
+    {lat: 58.41426, lng: 15.57456}
+  ];
+
+var rydArea = new google.maps.Polygon({
+    paths:rydCoords,
+    strokeColor: '#FF0000',
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 0.35
+  });
+        rydArea.setMap(map);
+
+var coloniaCoords = [
+    {lat: 58.40479, lng: 15.58069},
+    {lat: 58.40517, lng: 15.58220},
+    {lat: 58.40515, lng: 15.58524},
+    {lat: 58.40155, lng: 15.58687},
+    {lat: 58.40144, lng: 15.58142}
+];
+
+var coloniaArea = new google.maps.Polygon({
+    paths:coloniaCoords,
+    strokeColor: '#FF0000',
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 0.35
+  });
+        coloniaArea.setMap(map);
+
+
+  var lambohovCoords = [
+    {lat: 58.39029, lng: 15.55516},
+    {lat: 58.38849, lng: 15.57992},
+    {lat: 58.38201, lng: 15.58069},
+    {lat: 58.38197, lng: 15.56336},
+    {lat: 58.38404, lng: 15.56327},
+    {lat: 58.38413, lng: 15.55477},
+  ];
+
+var lambohovArea = new google.maps.Polygon({
+    paths:lambohovCoords,
+    strokeColor: '#FF0000',
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 0.35
+  });
+        lambohovArea.setMap(map);
+
+         var skaggetorpCoords = [
+            {lat: 58.42148, lng: 15.58533},
+            {lat: 58.42414, lng: 15.57005},
+            {lat: 58.43083, lng: 15.56765},
+            {lat: 58.43209, lng: 15.56902},
+            {lat: 58.43245, lng: 15.57082},
+            {lat: 58.43281, lng: 15.57511},
+            {lat: 58.43227, lng: 15.58138},
+            {lat: 58.42647, lng: 15.58696},
+            {lat: 58.42436, lng: 15.59091},
+            {lat: 58.42382, lng: 15.59117},
+            {lat: 58.42252, lng: 15.59117},
+            {lat: 58.42207, lng: 15.59031}
+        ];
+
+
+        var skaggetorpArea = new google.maps.Polygon({
+            paths:skaggetorpCoords,
+            strokeColor: '#FF0000',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#FF0000',
+            fillOpacity: 0.35
+          });
+
+        skaggetorpArea.setMap(map);
+
+         var flammanCoords = [
+            {lat: 58.41155, lng: 15.60506},
+            {lat: 58.41077, lng: 15.60159},
+            {lat: 58.41212, lng: 15.59938},
+            {lat: 58.41296, lng: 15.60466}
+        ];
+
+
+        var flammanArea = new google.maps.Polygon({
+            paths:flammanCoords,
+            strokeColor: '#FF0000',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#FF0000',
+            fillOpacity: 0.35
+          });
+
+        flammanArea.setMap(map);
+
+
+         var irrblossetCoords = [
+            {lat: 58.40307, lng: 15.59568},
+            {lat: 58.40460, lng: 15.60044},
+            {lat: 58.40309, lng: 15.60237},
+            {lat: 58.40180, lng: 15.59746}
+        ];
+
+
+        var irrblossetArea = new google.maps.Polygon({
+            paths:irrblossetCoords,
+            strokeColor: '#FF0000',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#FF0000',
+            fillOpacity: 0.35
+          });
+
+        irrblossetArea.setMap(map);
+
 
 
         var rydContent = '<div id="content">'+
@@ -79,12 +206,12 @@
             '</div>'+
             '</div>';
 
-        var vallaContent = '<div id="content">'+
+        var irrblossetContent = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Valla</h1>'+
+            '<h1 id="firstHeading" class="firstHeading">irrblosset</h1>'+
             '<div id="bodyContent">'+
-            '<p><b>Valla</b> ' +
+            '<p><b>irrblosset</b> ' +
             'det största studentboendeområdet i Linköping, här finns både lägenheter och studentkorriorer.</p>'+
             '</div>'+
             '</div>';
@@ -119,69 +246,63 @@
           content: vasastadenContent
         });
 
-        var vallaInfoWindow = new google.maps.InfoWindow({
-          content: vallaContent
+        var irrblossetInfoWindow = new google.maps.InfoWindow({
+          content: irrblossetContent
         });
 
         var skaggetorpInfoWindow = new google.maps.InfoWindow({
           content: skaggetorpContent
         });
 
-        var rydMarker = new google.maps.Marker({
-          position: ryd,
-          map: map,
-          title: 'Ryd'
-        });
 
-       rydMarker.addListener('click', function() {
+        google.maps.event.addListener(rydArea, 'click', function() {
             latestInfoWindow.close();
-            rydInfoWindow.open(map, rydMarker);
             latestInfoWindow = rydInfoWindow;
+            rydInfoWindow.setPosition(new google.maps.LatLng(ryd));
+            rydInfoWindow.open(map);
         });
 
 
-        var coloniaMarker = new google.maps.Marker({
-          position: colonia,
-          map: map,
-          title: 'Colonia'
-        });
 
-        coloniaMarker.addListener('click', function() {
+
+        coloniaArea.addListener('click', function() {
             latestInfoWindow.close();
-            coloniaInfoWindow.open(map, coloniaMarker);
             latestInfoWindow = coloniaInfoWindow;
+            coloniaInfoWindow.setPosition(new google.maps.LatLng(colonia));
+            coloniaInfoWindow.open(map);
         });
 
 
-        var lambohovMarker = new google.maps.Marker({
-          position: lambohov,
-          map: map,
-          title: 'Lambohov'
-        });
 
-         lambohovMarker.addListener('click', function() {
+         lambohovArea.addListener('click', function() {
             latestInfoWindow.close();
-            lambohovInfoWindow.open(map, lambohovMarker);
             latestInfoWindow = lambohovInfoWindow;
+            lambohovInfoWindow.setPosition(new google.maps.LatLng(lambohov));
+            lambohovInfoWindow.open(map);
         });
 
-        var flammanMarker = new google.maps.Marker({
-            position: flamman,
-            map: map,
-            title: 'Flamman'
-        });
-
-        flammanMarker.addListener('click', function() {
+        skaggetorpArea.addListener('click', function() {
             latestInfoWindow.close();
-            flammanInfoWindow.open(map, flammanMarker);
-            latestInfoWindow = flammanInfoWindow;
+            latestInfoWindow = skaggetorpInfoWindow;
+            skaggetorpInfoWindow.setPosition(new google.maps.LatLng(skaggetorp));
+            skaggetorpInfoWindow.open(map);
         });
 
-        var vasastadenMarker = new google.maps.Marker({
-            position: vasastaden,
-            map: map,
-            title: 'Vasastaden'
+        flammanArea.addListener('click', function() {
+            latestInfoWindow.close();
+            latestInfoWindow = flammanInfoWindow;
+            flammanInfoWindow.setPosition(new google.maps.LatLng(flamman));
+            flammanInfoWindow.open(map);
         });
+          
+          
+        irrblossetArea.addListener('click', function() {
+            latestInfoWindow.close();
+            latestInfoWindow = irrblossetInfoWindow;
+            irrblossetInfoWindow.setPosition(new google.maps.LatLng(irrblosset));
+            irrblossetInfoWindow.open(map);
+        });
+
 
         vasastadenMarker.addListener('click', function() {
             latestInfoWindow.close();
@@ -189,23 +310,14 @@
             latestInfoWindow =vasastadenInfoWindow;
         });
 
-        var vallaMarker = new google.maps.Marker({
-            position: valla,
-            map: map,
-            title: 'Valla'
-        });
 
-        vallaMarker.addListener('click', function() {
+
+        irrblossetMarker.addListener('click', function() {
             latestInfoWindow.close();
-            vallaInfoWindow.open(map, vallaMarker);
-            latestInfoWindow =vallaInfoWindow;
+            irrblossetInfoWindow.open(map, irrblossetMarker);
+            latestInfoWindow =irrblossetInfoWindow;
         });
 
-        var skaggetorpMarker = new google.maps.Marker({
-            position: skaggetorp,
-            map: map,
-            title: 'Skäggetorp'
-        });
 
         skaggetorpMarker.addListener('click', function() {
             latestInfoWindow.close();
@@ -218,7 +330,7 @@
             coloniaInfoWindow.close();
             lambohovInfoWindow.close();
             vasastadenInfoWindow.close();
-            vallaInfoWindow.close();
+            irrblossetInfoWindow.close();
             skaggetorpInfoWindow.close();
             flammanInfoWindow.close();
         });
