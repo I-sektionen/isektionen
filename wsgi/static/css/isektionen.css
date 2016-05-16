@@ -2155,34 +2155,6 @@ article.single_blog_entry p.author {
   font-size: 2.5em;
   color: #333;
 }
-.program-graph-section .program-info-container {
-  -webkit-transition: 0.3s ease-in-out;
-  -moz-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-  transform: translateX(0);
-}
-.program-graph-section .no-show-right {
-  -webkit-transform: translateX(130%);
-  -moz-transform: translateX(130%);
-  -ms-transform: translateX(130%);
-  -o-transform: translateX(130%);
-  transform: translateX(130%);
-  position: absolute;
-  display: none;
-}
-.program-graph-section .no-show-left {
-  -webkit-transform: translateX(-130%);
-  -moz-transform: translateX(-130%);
-  -ms-transform: translateX(-130%);
-  -o-transform: translateX(-130%);
-  transform: translateX(-130%);
-  position: absolute;
-  display: none;
-}
 .program-graph-section .toggle-links {
   display: -webkit-box;
   display: -moz-box;
@@ -2320,15 +2292,15 @@ article.single_blog_entry p.author {
 }
 .program-graph-section .chart-canvas {
   padding: 1em;
-  height: 350px;
-  width: 350px;
+  height: 300px;
+  width: 300px;
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
   box-flex: 1;
-  -webkit-flex: 1 1 25em;
-  -moz-flex: 1 1 25em;
-  -ms-flex: 1 1 25em;
-  flex: 1 1 25em;
+  -webkit-flex: 1 1 20em;
+  -moz-flex: 1 1 20em;
+  -ms-flex: 1 1 20em;
+  flex: 1 1 20em;
 }
 
 .studentlife-hero {

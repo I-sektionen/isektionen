@@ -1669,17 +1669,20 @@ var toggleProgramInfo = function() {
     // These functions are used to add appropriate classes to the navigation of the two programs.
     // When clicking corresponding link - classes are set and removed
 industriellEkonomiInterLink.click(function() {
-    industriellEkonomiInfo.addClass("no-show-left");
-    industriellEkonomiInterInfo.removeClass("no-show-right");
-    industriellEkonomiInterLink.addClass("active")
-    industriellEkonomiLink.removeClass("active")
+    $(industriellEkonomiInterLink).addClass("active");
+    $(industriellEkonomiLink).removeClass("active")
+    $(industriellEkonomiInterInfo).show();
+    $(industriellEkonomiInfo).hide();
+
 });
 
  industriellEkonomiLink.click(function() {
-    industriellEkonomiInterInfo.addClass("no-show-right");
-    industriellEkonomiInfo.removeClass("no-show-left");
-    industriellEkonomiLink.addClass("active");
-    industriellEkonomiInterLink.removeClass("active");
+    $(industriellEkonomiLink).addClass("active")
+     $(industriellEkonomiInterLink).removeClass("active")
+    $(industriellEkonomiInfo).show();
+    $(industriellEkonomiInterInfo).hide();
+
+
 });
 
 };

@@ -44,24 +44,6 @@
       font-size: 2.5em
       color: $dark-gray
 
-  .program-info-container
-    +transition(0.3s ease-in-out)
-    +transform(translateX(0))
-
-  // The absolute positioning is necessary due to use of chart JS rendering.
-  // The element cannot be display: none, and visibility: none still uses space in DOM
-  // Position absolute is a decent workaround
-
-  .no-show-right
-    +transform(translateX(130%))
-    +position(absolute)
-    +display(none)
-
-  .no-show-left
-    +transform(translateX(-130%))
-    +position(absolute)
-    +display(none)
-
   .toggle-links
     +display(flex)
     +align-items(stretch)
@@ -80,8 +62,6 @@
 
     .active
       border-bottom: 3px solid $dark-gray
-
-
 
   .course-list-container
     text-align: center
@@ -103,6 +83,6 @@
     +align-self(center)
   .chart-canvas
     padding: 1em
-    height: 350px
-    width: 350px
-    +flex(1 1 25em)
+    height: 300px
+    width: 300px
+    +flex(1 1 20em)
