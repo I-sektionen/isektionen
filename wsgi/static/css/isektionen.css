@@ -2172,6 +2172,7 @@ article.single_blog_entry p.author {
   -o-transform: translateX(130%);
   transform: translateX(130%);
   position: absolute;
+  display: none;
 }
 .program-graph-section .no-show-left {
   -webkit-transform: translateX(-130%);
@@ -2180,6 +2181,7 @@ article.single_blog_entry p.author {
   -o-transform: translateX(-130%);
   transform: translateX(-130%);
   position: absolute;
+  display: none;
 }
 .program-graph-section .toggle-links {
   display: -webkit-box;

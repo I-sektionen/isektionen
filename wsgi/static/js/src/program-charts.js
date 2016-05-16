@@ -1,80 +1,3 @@
-var toggleProgramInfo = function() {
-
-    var industriellEkonomictx = document.getElementById("chart-industriell-ekonomi").getContext("2d");
-var industriellEkonomiInternationellctx = document.getElementById("chart-industriell-ekonomi-internationell").getContext("2d");
-
-
-industriellEkonomiChartData = [
-    {
-        value: 80,
-        color: shadeBlendConvert(0.0,'#F9D026'),
-        highlight: shadeBlendConvert(-0.1,'#F9D026'),
-        label: "Teknik & fyisk"
-    },
-    {
-        value: 60,
-        color: shadeBlendConvert(0.1,'#F9D026'),
-        highlight: shadeBlendConvert(-0.1,'#F9D026'),
-        label: "Matematik"
-    },
-    {
-        value: 30,
-        color: shadeBlendConvert(0.2,'#F9D026'),
-        highlight: shadeBlendConvert(-0.1,'#F9D026'),
-        label: "Industriell ekonomi & Management"
-    },
-    {
-        value: 15,
-        color: shadeBlendConvert(0.3,'#F9D026'),
-        highlight:shadeBlendConvert(-0.1,'#F9D026'),
-        label: "Ledarskap och kommunikation"
-    },
-    {
-        value: 120,
-        color: shadeBlendConvert(0.4,'#F9D026'),
-        highlight: shadeBlendConvert(-0.1,'#F9D026'),
-        label: "Masterprofil"
-    }
-]
-industriellEkonomiInternationellChartData = [
-    {
-        value: 80,
-        color: shadeBlendConvert(0.0,'#255F17'),
-        highlight: shadeBlendConvert(-0.1,'#255F17'),
-        label: "Teknik & och fyisk"
-    },
-    {
-        value: 60,
-        color: shadeBlendConvert(0.05,'#255F17'),
-        highlight: shadeBlendConvert(-0.1,'#255F17'),
-        label: "Matematik"
-    },
-    {
-        value: 20,
-        color: shadeBlendConvert(0.1,'#255F17'),
-        highlight: shadeBlendConvert(-0.1,'#255F17'),
-        label: "Industriell ekonomi & Management"
-    },
-    {
-        value: 10,
-        color: shadeBlendConvert(0.15,'#255F17'),
-        highlight: shadeBlendConvert(-0.1,'#255F17'),
-        label: "Ledarskap och kommunikation"
-    },
-    {
-        value: 10,
-        color: shadeBlendConvert(0.20,'#255F17'),
-        highlight: shadeBlendConvert(-0.1,'#255F17'),
-        label: "Ledarskap och kommunikation"
-    },
-    {
-        value: 120,
-        color: shadeBlendConvert(0.25,'#255F17'),
-        highlight: shadeBlendConvert(-0.1,'#255F17'),
-        label: "Masterprofil"
-    }
-]
-
 // This is a function that creates shades of a color
 // Found on stack overflow http://stackoverflow.com/questions/5560248/programmatically-lighten-or-darken-a-hex-color-or-rgb-and-blend-colors
 // By Pimp Trizkit
@@ -98,12 +21,83 @@ function shadeBlendConvert(p, from, to) {
     else return "#"+(0x100000000+(f[3]>-1&&t[3]>-1?r(((t[3]-f[3])*p+f[3])*255):t[3]>-1?r(t[3]*255):f[3]>-1?r(f[3]*255):255)*0x1000000+r((t[0]-f[0])*p+f[0])*0x10000+r((t[1]-f[1])*p+f[1])*0x100+r((t[2]-f[2])*p+f[2])).toString(16).slice(f[3]>-1||t[3]>-1?1:3);
 }
 
+var generateChartColorSet = function (primaryColor, numberOfColors, shadeMultiplier) {
+    var colorSet = [];
+    for (var i = 0; i < numberOfColors; i++) {
+        var color = shadeBlendConvert(i*shadeMultiplier, primaryColor);
+        colorSet.push(color);
+    }
+    return colorSet;
+}
 
-var industriellEkonomiChart = new Chart(industriellEkonomictx).Doughnut(industriellEkonomiChartData);
 
+var toggleProgramInfo = function() {
 
-var industriellEkonomiInternationellChart = new Chart(industriellEkonomiInternationellctx).Doughnut(industriellEkonomiInternationellChartData);
+    var industriellEkonomictx = $("#chart-industriell-ekonomi");
+    var industriellEkonomiInternationellctx = $("#chart-industriell-ekonomi-internationell");
 
+    industriellEkonomiLabels = [
+        "Teknik och fyisk",
+        "Matematik",
+        "Industriell ekonomi & Management",
+        "Ledarskap och kommunikation",
+        "Masterprofil"
+    ]
+
+    industriellEkonomiChartdataSet = [80, 30, 60, 15, 120];
+    industriellEkonomiChartBackgroundColor = '#2D701E';
+    industriellEkonomiChartBackgroundColorSet = generateChartColorSet(
+        industriellEkonomiChartBackgroundColor,
+        industriellEkonomiChartdataSet.length,
+        0.15
+    );
+
+    var industriellEkonomiChartdata = {
+    labels: industriellEkonomiLabels,
+    datasets: [
+        {
+            data: industriellEkonomiChartdataSet,
+            backgroundColor: industriellEkonomiChartBackgroundColorSet,
+            hoverBackgroundColor: shadeBlendConvert(-0.1, industriellEkonomiChartBackgroundColor)
+        }]
+};
+
+    industriellEkonomiInternationellLabels = [
+        "Teknik och fysik",
+        "Matematik",
+        "Industriell ekonomi & Management",
+        "Ledarskap och kommunikation",
+        "Språk & Kultur",
+        "Masterprofil"
+    ]
+
+    industriellEkonomiInternationellChartdataSet = [60, 55, 30, 15, 20, 120];
+    industriellEkonomiInternationellChartBackgroundColor = '#2D701E';
+    industriellEkonomiInternationellChartBackgroundColorSet = generateChartColorSet(
+        industriellEkonomiInternationellChartBackgroundColor,
+        industriellEkonomiInternationellChartdataSet.length,
+        0.15
+    );
+
+    var industriellEkonomiInternationellChartdata = {
+    labels: industriellEkonomiInternationellLabels ,
+    datasets: [
+        {
+            data: industriellEkonomiInternationellChartdataSet,
+            backgroundColor: industriellEkonomiInternationellChartBackgroundColorSet,
+            hoverBackgroundColor: shadeBlendConvert(-0.1, industriellEkonomiChartBackgroundColor)
+        }]
+};
+
+        var industriellEkonomiChart = new Chart(industriellEkonomictx, {
+        type: 'doughnut',
+        data: industriellEkonomiChartdata,
+    })
+
+        var industriellEkonomiInternationellChart = new Chart(industriellEkonomiInternationellctx, {
+        type: 'doughnut',
+        data: industriellEkonomiInternationellChartdata,
+    })
 
     //saves variables to reduce DOM-traverse
     industriellEkonomiInterLink = $("#industriell-ekonomi-inter-link");
@@ -118,7 +112,6 @@ industriellEkonomiInterLink.click(function() {
     industriellEkonomiInfo.addClass("no-show-left");
     industriellEkonomiInterInfo.removeClass("no-show-right");
     industriellEkonomiInterLink.addClass("active")
-
     industriellEkonomiLink.removeClass("active")
 });
 
@@ -130,3 +123,5 @@ industriellEkonomiInterLink.click(function() {
 });
 
 };
+
+
