@@ -20,9 +20,11 @@
         var lambohov = {lat: 58.384918, lng:15.571977};
         var flamman = {lat: 58.411764,lng: 15.602623};
         var vasastaden = {lat: 58.412991, lng:15.614969 };
-        var skaggetorp = {lat: 58.421945, lng: 15.580251};
+        var T1 = {lat: 58.40322943611773, lng: 15.607532858848572};
         var colonia = {lat: 58.403198, lng: 15.583598};
+        var fjarilen = {lat: 58.41329002630203, lng: 15.605505108833313};
         var mapcenter = {lat: 58.415407, lng: 15.598485};
+
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 12,
           center: mapcenter
@@ -88,24 +90,19 @@ var lambohovArea = new google.maps.Polygon({
   });
         lambohovArea.setMap(map);
 
-         var skaggetorpCoords = [
-            {lat: 58.42148, lng: 15.58533},
-            {lat: 58.42414, lng: 15.57005},
-            {lat: 58.43083, lng: 15.56765},
-            {lat: 58.43209, lng: 15.56902},
-            {lat: 58.43245, lng: 15.57082},
-            {lat: 58.43281, lng: 15.57511},
-            {lat: 58.43227, lng: 15.58138},
-            {lat: 58.42647, lng: 15.58696},
-            {lat: 58.42436, lng: 15.59091},
-            {lat: 58.42382, lng: 15.59117},
-            {lat: 58.42252, lng: 15.59117},
-            {lat: 58.42207, lng: 15.59031}
+         var T1Coords = [
+            {lat: 58.40352173958393, lng: 15.60632050037384},
+            {lat: 58.40399953810664, lng: 15.608755946159363},
+            {lat: 58.40419627679206, lng: 15.608766674995422},
+            {lat: 58.40457288778354, lng: 15.610880255699158},
+            {lat: 58.40344304273537, lng: 15.611631274223328},
+            {lat: 58.40296523666821, lng: 15.608208775520325},
+            {lat: 58.402656064584725,lng: 15.607436299324036},
         ];
 
 
-        var skaggetorpArea = new google.maps.Polygon({
-            paths:skaggetorpCoords,
+        var T1Area = new google.maps.Polygon({
+            paths:T1Coords,
             strokeColor: '#FF0000',
             strokeOpacity: 0.8,
             strokeWeight: 2,
@@ -113,7 +110,7 @@ var lambohovArea = new google.maps.Polygon({
             fillOpacity: 0.35
           });
 
-        skaggetorpArea.setMap(map);
+        T1Area.setMap(map);
 
          var flammanCoords = [
             {lat: 58.41155, lng: 15.60506},
@@ -155,6 +152,26 @@ var lambohovArea = new google.maps.Polygon({
         irrblossetArea.setMap(map);
 
 
+        var fjarilenCoords = [
+            {lat: 58.4127561565406, lng: 15.605451464653015},
+            {lat: 58.414121723074544, lng: 15.605108141899109},
+            {lat: 58.41431278577586, lng: 15.607457756996155},
+            {lat: 58.41310457772297, lng: 15.607672333717346}
+        ];
+
+
+        var fjarilenArea = new google.maps.Polygon({
+            paths:fjarilenCoords,
+            strokeColor: '#FF0000',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#FF0000',
+            fillOpacity: 0.35
+          });
+
+        fjarilenArea.setMap(map);
+
+
 
         var rydContent = '<div id="content">'+
             '<div id="siteNotice">'+
@@ -162,7 +179,7 @@ var lambohovArea = new google.maps.Polygon({
             '<h1 id="firstHeading" class="firstHeading">Ryd</h1>'+
             '<div id="bodyContent">'+
             '<p><b>Ryd</b> ' +
-            'fddxfdxär det största studentboendeområdet i Linköping, här finns både lägenheter och studentkorriorer.</p>'+
+            'Ryd är ett större område med ett eget centrum. Där har man bland annat tillgång till livsmedelsaffär, konditori, frisör och cykelverkstad. I Ryd bor ungefär 3000 studenter i antingen korridorrum, ettor, tvåor eller treor. Mitt i Ryd ligger Herrgårn, även kallat hg, som är studenternas eget uteställe. Herrgårn drivs av studenter för studenter och där kan man både äta och dricka gott, dansa eller lyssna på livemusik.</p>'+
             '</div>'+
             '</div>';
 
@@ -172,7 +189,7 @@ var lambohovArea = new google.maps.Polygon({
             '<h1 id="firstHeading" class="firstHeading">Colonia</h1>'+
             '<div id="bodyContent">'+
             '<p><b>Colonia</b> ' +
-            'är det största studentboendeområdet i Linköping, här finns både lägenheter och studentkorriorer.</p>'+
+            'Colonia är Linköpings nyaste och mordernaste studentområde och ligger så nära skolan man kan komma. Det korta avståndet innebär att du bara har några minuters gångavstånd till föreläsningslokaler, caféer och biblioteket.</p>'+
             '</div>'+
             '</div>';
 
@@ -182,7 +199,7 @@ var lambohovArea = new google.maps.Polygon({
             '<h1 id="firstHeading" class="firstHeading">Lambohov</h1>'+
             '<div id="bodyContent">'+
             '<p><b>Lambohov</b> ' +
-            'det största studentboendeområdet i Linköping, här finns både lägenheter och studentkorriorer.</p>'+
+            'Bor man i Lambohov har man nära till universitetet och en lite längre cykelväg til Linköpings centrum. Dock har Lambohov ett eget centrum med bland annat matbutik, restaurang, bibliotek och vårdcentral. Här finns omöblerade ettor och tvåor att hyra. Dessutom har varje hus ett gemensamt allrum och en gemensam tvättstuga. I ett av husen finns en större samlingslokal och bastu att boka.</p>'+
             '</div>'+
             '</div>';
 
@@ -192,7 +209,7 @@ var lambohovArea = new google.maps.Polygon({
             '<h1 id="firstHeading" class="firstHeading">Flamman</h1>'+
             '<div id="bodyContent">'+
             '<p><b>Flamman</b> ' +
-            'det största studentboendeområdet i Linköping, här finns både lägenheter och studentkorriorer.</p>'+
+            'Området Flamman är beläget mitt mellan centrum och universitetsområdet. Här finns i huvudsak korridorrum att hyra, men även en del lägenheter. Korridorrummen finns att hyra både möblerade eller omöblerade. I ett av husen finns bastu att tillgå. I källaren på ett annat hus finns den studentdrivna puben/nattklubben Flamman, ett studentställe som är väl värt att besöka. Förutom närheten till universitetet och centrum är det inte långt till Rydsskogen med motionsspår och fotbollsplaner.</p>'+
             '</div>'+
             '</div>';
 
@@ -202,7 +219,7 @@ var lambohovArea = new google.maps.Polygon({
             '<h1 id="firstHeading" class="firstHeading">Vasastaden</h1>'+
             '<div id="bodyContent">'+
             '<p><b>Vasastaden</b> ' +
-            'det största studentboendeområdet i Linköping, här finns både lägenheter och studentkorriorer.</p>'+
+            'ligger nära centrum och är ett populärt bostadsområde bland studenter, här erbjuder många privata hyresvärdar och hyrestgästföreningar lägenheter.</p>'+
             '</div>'+
             '</div>';
 
@@ -212,16 +229,27 @@ var lambohovArea = new google.maps.Polygon({
             '<h1 id="firstHeading" class="firstHeading">irrblosset</h1>'+
             '<div id="bodyContent">'+
             '<p><b>irrblosset</b> ' +
-            'det största studentboendeområdet i Linköping, här finns både lägenheter och studentkorriorer.</p>'+
+            'har nära till universitetsområdet och centrum. Varje hus på Irrblosset har flera studierum som går att boka. Dessutom finns det en bastu, ett gym, en volleybollplan och ett biljardrum. Här finns både korridorrum, ettor och tvåor att hyra. Korridorrummen har ett stort och fräscht gemensamutrymme som antingen har balkong eller uteplats.</p>'+
             '</div>'+
             '</div>';
 
-         var skaggetorpContent = '<div id="content">'+
+         var T1Content = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">T1</h1>'+
             '<div id="bodyContent">'+
-            '<p><b>Skäggetorp</b> ' +
-            'det största studentboendeområdet i Linköping, här finns både lägenheter och studentkorriorer.</p>'+
+            '<p><b>T1</b> ' +
+            'De rödvita husen i T1 är ett av Linköpings nyaste studentbostadsområden. Området är beläget mitt mellan city och universitetet och ligger dessutom nära Hälsouniversitetet. I området finns tillgång till bland annat bastu och studierum, som de boende har möjlighet att hyra. I området finns enbart omöblerade lägenheter.'+
+            '</div>'+
+            '</div>';
+
+        var fjarilenContent = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Irrblosset</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Fjarilen</b> ' +
+            'De rödvita husen i T1 är ett av Linköpings nyaste studentbostadsområden. Området är beläget mitt mellan city och universitetet och ligger dessutom nära Hälsouniversitetet. I området finns tillgång till bland annat bastu och studierum, som de boende har möjlighet att hyra. I området finns enbart omöblerade lägenheter.'+
             '</div>'+
             '</div>';
 
@@ -242,6 +270,10 @@ var lambohovArea = new google.maps.Polygon({
           content: flammanContent
         });
 
+        var fjarilenInfoWindow = new google.maps.InfoWindow({
+          content: fjarilenContent
+        });
+
         var vasastadenInfoWindow = new google.maps.InfoWindow({
           content: vasastadenContent
         });
@@ -250,8 +282,8 @@ var lambohovArea = new google.maps.Polygon({
           content: irrblossetContent
         });
 
-        var skaggetorpInfoWindow = new google.maps.InfoWindow({
-          content: skaggetorpContent
+        var T1InfoWindow = new google.maps.InfoWindow({
+          content: T1Content
         });
 
 
@@ -281,11 +313,11 @@ var lambohovArea = new google.maps.Polygon({
             lambohovInfoWindow.open(map);
         });
 
-        skaggetorpArea.addListener('click', function() {
+        T1Area.addListener('click', function() {
             latestInfoWindow.close();
-            latestInfoWindow = skaggetorpInfoWindow;
-            skaggetorpInfoWindow.setPosition(new google.maps.LatLng(skaggetorp));
-            skaggetorpInfoWindow.open(map);
+            latestInfoWindow = T1InfoWindow;
+            T1InfoWindow.setPosition(new google.maps.LatLng(T1));
+            T1InfoWindow.open(map);
         });
 
         flammanArea.addListener('click', function() {
@@ -303,26 +335,23 @@ var lambohovArea = new google.maps.Polygon({
             irrblossetInfoWindow.open(map);
         });
 
+        fjarilenArea.addListener('click', function() {
+            latestInfoWindow.close();
+            latestInfoWindow = fjarilenInfoWindow;
+            fjarilenInfoWindow.setPosition(new google.maps.LatLng(fjarilen));
+            fjarilenInfoWindow.open(map);
+        });
+
+        var vasastadenMarker = new google.maps.Marker({
+            position: vasastaden,
+            map: map
+        });
+
 
         vasastadenMarker.addListener('click', function() {
             latestInfoWindow.close();
             vasastadenInfoWindow.open(map, vasastadenMarker);
             latestInfoWindow =vasastadenInfoWindow;
-        });
-
-
-
-        irrblossetMarker.addListener('click', function() {
-            latestInfoWindow.close();
-            irrblossetInfoWindow.open(map, irrblossetMarker);
-            latestInfoWindow =irrblossetInfoWindow;
-        });
-
-
-        skaggetorpMarker.addListener('click', function() {
-            latestInfoWindow.close();
-            skaggetorpInfoWindow.open(map, skaggetorpMarker);
-            latestInfoWindow =skaggetorpInfoWindow;
         });
 
         google.maps.event.addListener(map, "click", function(event) {
@@ -331,8 +360,9 @@ var lambohovArea = new google.maps.Polygon({
             lambohovInfoWindow.close();
             vasastadenInfoWindow.close();
             irrblossetInfoWindow.close();
-            skaggetorpInfoWindow.close();
+            T1InfoWindow.close();
             flammanInfoWindow.close();
+            fjarilenInfoWindow.close();
         });
 
 
