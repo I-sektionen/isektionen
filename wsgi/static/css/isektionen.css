@@ -2101,35 +2101,43 @@ article.single_blog_entry p.author {
   display: table;
 }
 
-.masterprofiler-text {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%;
-}
-.masterprofiler-text:last-child {
-  margin-right: 0;
-}
-.masterprofiler-text p {
-  margin-right: 4em;
-  margin-top: 1em;
+@media only screen and (min-width: 768px) {
+  .masterprofiler-text {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+  }
+  .masterprofiler-text:last-child {
+    margin-right: 0;
+  }
+  .masterprofiler-text p {
+    margin-right: 4em;
+    margin-top: 1em;
+  }
 }
 
 .masterprofiler-list {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%;
-  text-align: center;
-  border-left: solid rgba(51, 51, 51, 0.4);
-  border-width: 1px;
+  margin-top: 2em;
 }
-.masterprofiler-list:last-child {
-  margin-right: 0;
-}
-.masterprofiler-list ul {
-  margin-left: 5em;
-  text-align: left;
+@media only screen and (min-width: 768px) {
+  .masterprofiler-list {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    text-align: center;
+    border-left: solid rgba(51, 51, 51, 0.4);
+    border-width: 1px;
+    margin-top: 0em;
+  }
+  .masterprofiler-list:last-child {
+    margin-right: 0;
+  }
+  .masterprofiler-list ul {
+    margin-left: 5em;
+    text-align: left;
+  }
 }
 
 .masterprofiler-header {
@@ -2163,11 +2171,15 @@ article.single_blog_entry p.author {
 
 .link-promo {
   padding: 2em;
-  margin-top: 15em;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .link-promo {
+    margin-top: 15em;
+  }
 }
 .link-promo::after {
   clear: both;

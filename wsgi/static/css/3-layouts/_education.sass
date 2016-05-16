@@ -13,19 +13,23 @@
   @include outer-container()
 
 .masterprofiler-text
-  @include span-columns(6)
-  p
-    margin-right: 4em
-    margin-top: 1em
+  @media only screen and (min-width: 768px)
+    @include span-columns(6)
+    p
+      margin-right: 4em
+      margin-top: 1em
   
 .masterprofiler-list
-  @include span-columns(6)
-  text-align: center
-  border-left: solid transparentize($dark-gray,0.60)
-  border-width: 1px
-  ul
-    margin-left: 5em
-    text-align: left
+  margin-top: 2em
+  @media only screen and (min-width: 768px)
+    @include span-columns(6)
+    text-align: center
+    border-left: solid transparentize($dark-gray,0.60)
+    border-width: 1px
+    margin-top: 0em
+    ul
+      margin-left: 5em
+      text-align: left
 .masterprofiler-header
   font-size: 1.5em
   font-weight: 400
@@ -46,7 +50,8 @@
 
 .link-promo
   padding: 2em
-  margin-top: 15em
+  @media only screen and (min-width: 768px)
+    margin-top: 15em
   +outer-container()
   text-align: center
   a
