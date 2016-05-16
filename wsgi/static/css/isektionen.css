@@ -2083,6 +2083,61 @@ article.single_blog_entry p.author {
   }
 }
 
+.masterprofiler-section {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+
+.masterprofiler-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.masterprofiler-container::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.masterprofiler-text {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+}
+.masterprofiler-text:last-child {
+  margin-right: 0;
+}
+.masterprofiler-text p {
+  margin-right: 4em;
+  margin-top: 1em;
+}
+
+.masterprofiler-list {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  text-align: center;
+  border-left: solid rgba(51, 51, 51, 0.4);
+  border-width: 1px;
+}
+.masterprofiler-list:last-child {
+  margin-right: 0;
+}
+.masterprofiler-list ul {
+  margin-left: 5em;
+  text-align: left;
+}
+
+.masterprofiler-header {
+  font-size: 1.5em;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 0.85);
+}
+
 .utbildning-intro {
   max-width: 1200px;
   margin-left: auto;
@@ -2108,6 +2163,7 @@ article.single_blog_entry p.author {
 
 .link-promo {
   padding: 2em;
+  margin-top: 15em;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
