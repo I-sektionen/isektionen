@@ -9,7 +9,7 @@
     {% if kontakt %}
         <li class="nav-link active-nav-item"><a href="{% url 'kontakt' %}">Kontakt</a></li>
     {% else %}
-        {% comment %}<li class="nav-link"><a href="{% url 'kontakt' %}">Kontakt</a></li> {% endcomment %}
+        <li class="nav-link"><a href="{% url 'kontakt' %}">Kontakt</a></li>
     {% endif %}
 {% endblock %}
 {% block content %}
@@ -24,7 +24,7 @@
                         <input type="text" name="namn" id="namn" placeholder="Namn"/>
                     </label>
                      <label>
-                        Ditt namn
+                        Din e-post
                         <input type="text" name="email" id="email" placeholder="Din e-post"/>
                     </label>
                     <label>
