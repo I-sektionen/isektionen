@@ -14,7 +14,7 @@ urlpatterns = [
     url(r'^sokande/utbildning$', view=views.show_utbildning_page, name='utbildning'),
     url(r'^sokande/studentliv$', view=views.show_studentliv_page, name='studentliv'),
     url(r'^sokande/efterstudier$', view=views.show_efterstudier_page, name='efterstudier'),
-    url(r'.well-known/acme-challenge/iJZd-oSZ4cbLWGvx8gONUmubokP8YDtBwmvk8S_vJRM',
+    url(r'.well-known/acme-challenge/LL_cMfspNIhlFCYBHX_Hc5TOlrSeQ_Gu05kXCCTF2t4',
         TemplateView.as_view(template_name='acme.txt', content_type='text/plain')),
     url(r'^sokande/kontakt$', view=views.show_contact_page, name='kontakt'),
     url(r'.well-known/acme-challenge/sswDRRG9Em-kCkpXIZvECjVTirS1rIMLsltuF2lwDpk', TemplateView.as_view(template_name='acme.txt', content_type='text/plain')),
