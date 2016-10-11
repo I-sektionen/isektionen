@@ -53,7 +53,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'reversion',
     'blog',
-    'isektionen'
+    'isektionen',
+    'letsencrypt'
 )
 
 MIDDLEWARE_CLASSES = (
