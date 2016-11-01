@@ -1,10 +1,15 @@
 {% extends 'master.html' %}
 
 {% block links %}
-<li class="nav-item nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
-<li class="active-nav-item nav-link"><a href="{% url 'i-resan' %}">I-Resan</a></li>
-<li class="nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
-<li class="nav-link"><a href="{% url 'studentliv' %}">Studentliv</a></li>
+    <li class="nav-item nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
+    {% if i_resan %}
+        <li class="active-nav-item nav-link"><a href="{% url 'i-resan' %}">I-Resan</a></li>
+    {% else %}
+        <li class="nav-link"><a href="{% url 'i-resan' %}">I-Resan</a></li>
+    {% endif %}
+    <li class="nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
+    <li class="nav-link"><a href="{% url 'studentliv' %}">Studentliv</a></li>
+    <li class="nav-link"><a href="{% url 'FAQ' %}">FAQ</a></li>
 {% endblock %}
 
 {% block content %}
