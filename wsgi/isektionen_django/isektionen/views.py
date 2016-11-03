@@ -45,7 +45,9 @@ def show_studentliv_page(request):
 
 
 def i_resan_page(request):
-    return render(request, "isektionen/sokande/i-resan.html")
+    return render(request, "isektionen/sokande/i-resan.html", {
+        'i_resan': True,
+    })
 
 def show_contact_page(request):
     if request.method == "POST":
