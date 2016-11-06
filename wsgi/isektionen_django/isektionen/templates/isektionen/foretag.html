@@ -1,5 +1,8 @@
 {% extends 'master.html' %}
 {% block links %}
+    <li class="nav-link"><a href="{% url 'blog' %}">Blogg</a></li>
+    <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
+    <li class="nav-link active-nav-item"><a href="{% url 'foretag' %}">Företag</a></li>
 {% endblock %}
 {% block content %}
     <section class="applicant-hero">
