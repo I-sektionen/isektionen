@@ -1,3 +1,9 @@
+.fade-in-elements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .fade-in-element {
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
@@ -13,10 +19,14 @@
   border-radius: $base-border-radius;
   box-shadow: 0 2px 2px transparentize(black, 0.8);
   line-height: $base-line-height;
-  margin-bottom: 4em;
   padding: $base-spacing;
   text-align: center;
-  width: 100%;
+
+  //width: 100%;
+  min-width: 20em;
+  max-width: 20em;
+
+  margin: 0.25em;
 
   p {
     color: $base-font-color;
