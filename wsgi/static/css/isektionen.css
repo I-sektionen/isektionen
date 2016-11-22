@@ -2525,6 +2525,10 @@ Main components
     max-width: 50em;
     margin-left: auto;
     margin-right: auto; }
+    .foretag-statistik .foretag-statistik-content .chart-canvas-company {
+      padding: 1em;
+      height: 300px;
+      width: 300px; }
 
 .foretag-erbjudande {
   padding: 2em;
