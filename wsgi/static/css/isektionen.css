@@ -1641,8 +1641,8 @@ article.single_blog_entry p.author {
 }
 
 .social-media-container {
+  padding: 1em;
   background-color: #f7f7f7;
-  padding: 4em;
   text-align: center;
 }
 .social-media-container .social-media-title {
@@ -1668,11 +1668,13 @@ article.single_blog_entry p.author {
 }
 .social-media-container .social-media-icon {
   color: #333;
-  font-size: 3em;
+  font-size: 2em;
   padding: 1em;
-  -webkit-transition: all 0.15s ease-out 0s;
-  -moz-transition: all 0.15s ease-out 0s;
-  transition: all 0.15s ease-out 0s;
+}
+@media screen and (min-width: 900px) {
+  .social-media-container .social-media-icon {
+    font-size: 3em;
+  }
 }
 
 .applicant-hero {
