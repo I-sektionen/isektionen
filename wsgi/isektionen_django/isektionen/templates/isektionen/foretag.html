@@ -3,6 +3,7 @@
     <li class="nav-link"><a href="{% url 'blog' %}">Blogg</a></li>
     <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
     <li class="nav-link active-nav-item"><a href="{% url 'foretag' %}">Företag</a></li>
+    <li class="nav-link"><a href="#contact-header">Kontakt</a></li>
 {% endblock %}
 {% block content %}
     {% comment %}<section class="applicant-hero">
@@ -24,6 +25,7 @@
         {% include 'isektionen/foretag/information.html' %}
         {% include 'isektionen/foretag/statistik.html' %}
         {% include 'isektionen/foretag/erbjudanden.html' %}
+        {% include 'isektionen/foretag/kontakt.html' %}
     </section>
 {% endblock %}
 
