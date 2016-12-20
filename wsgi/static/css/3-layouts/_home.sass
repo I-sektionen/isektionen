@@ -94,19 +94,21 @@
       +flex(1)
     .blog-entry-textbox
       +flex(4)
-.social-media-container
+
+.outer-social-media-container
   background-color: $light-gray
   padding: 4em
-  text-align: center
-  .social-media-title
-    font-size: 2em
-  .social-media-links
-    @include display(flex)
-    @include justify-content(center)
-  .social-media-icon
-
-    color: $dark-gray
-    font-size: 3em
-    padding: 1em
-    +transition()
+  .social-media-container
+    text-align: center
+    width: auto
+    margin: auto
+    .social-media-title
+      font-size: 2em
+    .social-media-links
+      //@include display(flex)
+      //@include justify-content(center)
+    .social-media-icon
+      color: $dark-gray
+      font-size: 3em
+      +transition()
 
