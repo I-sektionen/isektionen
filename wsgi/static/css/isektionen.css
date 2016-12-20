@@ -3137,7 +3137,7 @@ Main components
   }
 }
 .foretag-exponering .foretag-exponering-content .exponering-heading {
-  color: darkgray;
+  color: dimgrey;
   font-size: 2em;
   text-transform: uppercase;
   margin-bottom: 0;
@@ -3149,12 +3149,12 @@ Main components
 }
 .foretag-exponering .foretag-exponering-content .exponering-divider {
   border: none;
-  background-color: darkgrey;
+  background-color: dimgray;
   height: 5px;
   margin: 5px;
 }
 .foretag-exponering .foretag-exponering-content .exponering-text {
-  color: darkgray;
+  color: dimgrey;
   font-weight: bold;
   font-size: 1.2em;
 }
