@@ -3133,7 +3133,7 @@ Main components
 }
 @media screen and (min-width: 900px) {
   .foretag-exponering .foretag-exponering-content {
-    width: auto;
+    width: 60%;
   }
 }
 .foretag-exponering .foretag-exponering-content .exponering-heading {
