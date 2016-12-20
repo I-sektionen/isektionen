@@ -1,3 +1,4 @@
+
 .foretag-inledning
   //+outer-container()
   padding: 2em
@@ -16,13 +17,45 @@
   padding: 2em
   margin: 0
   width: 100%
-  min-height: 500px
+  min-height: 80vh
   background-color: #f7f7f7
 
   .foretag-exponering-content
-    max-width: 50em
-    margin-left: auto
-    margin-right: auto
+    padding: 2em
+    text-align: center
+    width: 60%
+    //This positions the element rela
+    @include position(absolute)
+    left: 50%
+    top: 50%
+    @include transform(translate(-50%, -50%))
+    width: 100%
+
+    @include media($large-screen)
+      width: auto
+
+    .exponering-heading
+      color: darkgray
+      font-size: 2em
+      text-transform: uppercase
+      margin-bottom: 0
+      @include  media ($large-screen)
+        font-size: 3em
+
+
+    .exponering-divider
+      border: none
+      background-color: darkgrey
+      height: 5px
+      margin: 5px
+
+    .exponering-text
+      color: darkgray
+      font-weight: bold
+      font-size: 1.2em
+      @include media ($large-screen)
+        text-align: justify
+
 
 .foretag-information
   //+outer-container()

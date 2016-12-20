@@ -5,7 +5,7 @@
     <li class="nav-link active-nav-item"><a href="{% url 'foretag' %}">Företag</a></li>
 {% endblock %}
 {% block content %}
-    <section class="applicant-hero">
+    {% comment %}<section class="applicant-hero">
         <div class="hero-content">
             <h1 class="hero-heading">Sidan är under uppbyggnad</h1>
             <hr class="hero-divider">
@@ -15,6 +15,8 @@
             </p>
         </div>
     </section>
+
+    {% endcomment %}
 
     <section class="">
         {% comment %} {% include 'isektionen/foretag/inledning.html' %} {% endcomment %}
