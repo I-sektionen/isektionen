@@ -3203,7 +3203,6 @@ Main components
   width: 100%;
   min-height: 500px;
   background-color: #f7f7f7;
-  background-image: url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/hero-images/nollep-karallen.jpg");
 }
 .foretag-erbjudande .section-header {
   color: white;
@@ -3211,6 +3210,10 @@ Main components
 .foretag-erbjudande .foretag-erbjudande-content {
   margin-left: auto;
   margin-right: auto;
+}
+.foretag-erbjudande .foretag-erbjudande-content .section-header {
+  text-align: center;
+  color: dimgrey;
 }
 
 .bullet-list {
