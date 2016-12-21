@@ -3211,6 +3211,24 @@ Main components
   margin-left: auto;
   margin-right: auto;
 }
+.foretag-erbjudande .foretag-erbjudande-content .offer-item-list {
+  background-color: #f7f7f7;
+  box-shadow: 1px 1px 5px #787878;
+  margin-bottom: 1em;
+  border-radius: 3px;
+}
+.foretag-erbjudande .foretag-erbjudande-content .offer-item-list .bullet-icon {
+  background: #f7f7f7;
+  border-radius: 50%;
+  float: left;
+  height: 20em;
+  padding: 5em;
+  width: 20em;
+}
+.foretag-erbjudande .foretag-erbjudande-content .offer-item-list .bullet-icon i {
+  color: #333;
+  font-size: 13em;
+}
 .foretag-erbjudande .foretag-erbjudande-content .section-header {
   text-align: center;
   color: dimgrey;
