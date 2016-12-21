@@ -1786,15 +1786,19 @@ industriellEkonomiInterLink.click(function() {
  */
 
 var $root = $('html, body');
-$('a').click(function() {
-    var href = $.attr(this, 'href');
+
+function anchor(element) {
+    var href = $.attr(element, 'href');
+
+    console.log(href);
     $root.animate({
         scrollTop: $(href).offset().top - 100
     }, 500, function () {
         window.location.hash = href;
     });
     return false;
-});;/**
+};
+;/**
  * Created by andreas on 29/03/16.
  */
 
