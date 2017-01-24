@@ -12,6 +12,78 @@
     margin-left: auto
     margin-right: auto
 
+.image-list-contact
+  +display(flex)
+  +flex-wrap(wrap)
+  +align-items(flex-start)
+  +justify-content(center)
+  .image-list-item
+    +display(flex)
+    +flex-direction(column)
+
+    background-color: $dark-gray
+    box-shadow: 1px 1px 5px darken($light-gray, 50%)
+    margin-bottom: 1em
+    border-radius: $base-border-radius
+    +media($medium-screen)
+      max-width: 30%
+      margin-right: 1em
+      +flex(1 1 40em)
+    +media($large-screen)
+      +flex(1 1 25em)
+
+
+  .card-caption
+    padding: 1em
+    background-color: $dark-gray
+    border-bottom-left-radius: $base-border-radius
+    border-bottom-right-radius: $base-border-radius
+  .card-caption-link
+    cursor: pointer
+    color: $white
+    margin: 0
+    font-size: 1.4em
+    font-weight: 200
+    &:after
+      font-family: FontAwesome
+      content: '\f054'
+      font-size: 0.8em
+      margin-left: 0.5em
+      +transition()
+    &:hover
+      &:after
+        margin-left: 1em
+  .card-caption-expanded
+    padding: 1em
+    background-color: $dark-gray
+    color: $light-gray
+    display: none
+
+  .card-image
+    max-width: 100%
+    border-top-left-radius: $base-border-radius
+    border-top-right-radius: $base-border-radius
+
+    .offer-item-list
+      background-color: $light-gray
+      box-shadow: 1px 1px 5px darken($light-gray, 50%)
+      margin-bottom: 1em
+      border-radius: $base-border-radius
+      $icon-bullet-size: 20em
+
+      .bullet-icon
+        background: $light-gray
+        border-radius: 50%
+        float: left
+        height: $icon-bullet-size
+        padding: $icon-bullet-size / 4
+        width: $icon-bullet-size
+
+        i
+          color: $light-gray
+          font-size: 13em
+
+
 
 .foretag-exponering
   //+outer-container()
