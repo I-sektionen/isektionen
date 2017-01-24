@@ -23,12 +23,13 @@
         {% comment %} {% include 'isektionen/foretag/inledning.html' %} {% endcomment %}
         {% include 'isektionen/foretag/exponering.html' %}
         {% include 'isektionen/foretag/information.html' %}
-        {% comment %} {% include 'isektionen/foretag/statistik.html' %} {% endcomment %}
+        {% include 'isektionen/foretag/intervjuer.html' %}
         {% include 'isektionen/foretag/erbjudanden.html' %}
         {% include 'isektionen/foretag/kontakt.html' %}
     </section>
 {% endblock %}
-
-{% block js_document_ready %}
-    createCompanyChart()
-{% endblock %}
+{##}
+{# Initierar donut-graf, ej aktuell i dagsläget #}
+{#{% block js_document_ready %}#}
+{#    createCompanyChart()#}
+{#{% endblock %}#}
