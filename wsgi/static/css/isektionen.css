@@ -3109,6 +3109,13 @@ Main components
   margin-left: auto;
   margin-right: auto;
 }
+.foretag-contact .foretag-contact-content .contact-divider {
+  border: none;
+  min-width: 100%;
+  background-color: #333;
+  height: 4px;
+  margin: 2px;
+}
 
 .image-list-contact {
   display: -webkit-box;
@@ -3331,6 +3338,24 @@ Main components
 .foretag-information .foretag-information-content {
   margin-left: auto;
   margin-right: auto;
+}
+
+.foretag-intervjuer {
+  padding: 2em;
+  margin: 0;
+  width: 100%;
+  min-height: 500px;
+  background-color: #f7f7f7;
+}
+.foretag-intervjuer .foretag-intervjuer-content {
+  max-width: 50em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.foretag-intervjuer .foretag-intervjuer-content .chart-canvas-company {
+  padding: 1em;
+  height: 300px;
+  width: 300px;
 }
 
 .foretag-statistik {
