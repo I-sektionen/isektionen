@@ -20,13 +20,17 @@
   .image-list-item
     +display(flex)
     +flex-direction(row)
+    min-width: 500px
+    max-width: 500px
+    min-height: 200px
+    max-height: 200px
 
     background-color: $dark-gray
     box-shadow: 1px 1px 5px darken($light-gray, 50%)
     margin-bottom: 1em
     border-radius: $base-border-radius
     +media($medium-screen)
-      max-width: 31%
+      /* max-width: 31% */
       margin-right: 1em
       +flex(1 1 40em)
     +media($large-screen)

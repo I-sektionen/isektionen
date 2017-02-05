@@ -3162,6 +3162,10 @@ Main components
   -moz-flex-direction: row;
   flex-direction: row;
   -ms-flex-direction: row;
+  min-width: 500px;
+  max-width: 500px;
+  min-height: 200px;
+  max-height: 200px;
   background-color: #333;
   box-shadow: 1px 1px 5px #787878;
   margin-bottom: 1em;
@@ -3169,7 +3173,7 @@ Main components
 }
 @media screen and (min-width: 600px) {
   .image-list-contact .image-list-item {
-    max-width: 31%;
+    /* max-width: 31% */
     margin-right: 1em;
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
