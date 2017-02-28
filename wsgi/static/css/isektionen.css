@@ -3330,10 +3330,7 @@ Main components
   margin: 0;
   width: 100%;
   min-height: 500px;
-  background-image: url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/hero-images/nollep-karallen.jpg");
-}
-.foretag-information .section-header {
-  color: white;
+  background-color: white;
 }
 .foretag-information .foretag-information-content {
   margin-left: auto;
