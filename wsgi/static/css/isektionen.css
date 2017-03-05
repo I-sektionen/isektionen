@@ -3202,7 +3202,7 @@ Main components
     flex: 1 1 25em;
   }
 }
-.image-list-contact .card-caption {
+.image-list-contact .image-list-item .card-caption {
   padding: 1em;
   float: right;
   background-color: #333;
@@ -3210,24 +3210,24 @@ Main components
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 }
-.image-list-contact .card-caption .card-text {
+.image-list-contact .image-list-item .card-caption .card-text {
   font-size: small;
   color: white;
 }
-.image-list-contact .card-caption .contact-divider {
+.image-list-contact .image-list-item .card-caption .contact-divider {
   border: none;
   background-color: white;
   height: 3px;
   margin: 4px;
 }
-.image-list-contact .card-caption-link {
+.image-list-contact .image-list-item .card-caption-link {
   cursor: pointer;
   color: white;
   margin: 0;
   font-size: 1.4em;
   font-weight: 200;
 }
-.image-list-contact .card-caption-link:after {
+.image-list-contact .image-list-item .card-caption-link:after {
   font-family: FontAwesome;
   content: "";
   font-size: 0.8em;
@@ -3236,10 +3236,10 @@ Main components
   -moz-transition: all 0.15s ease-out 0s;
   transition: all 0.15s ease-out 0s;
 }
-.image-list-contact .card-caption-link:hover:after {
+.image-list-contact .image-list-item .card-caption-link:hover:after {
   margin-left: 1em;
 }
-.image-list-contact .card-caption-expanded {
+.image-list-contact .image-list-item .card-caption-expanded {
   padding: 1em;
   background-color: #333;
   color: #f7f7f7;
@@ -3249,6 +3249,7 @@ Main components
   max-width: 120px;
   margin-top: 1em;
   margin-left: 1em;
+  margin: auto;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
@@ -3261,7 +3262,7 @@ Main components
 .image-list-contact .card-image .offer-item-list .bullet-icon {
   background: #f7f7f7;
   border-radius: 50%;
-  float: left;
+  float: right;
   height: 20em;
   padding: 5em;
   width: 20em;
@@ -3275,7 +3276,7 @@ Main components
   padding: 2em;
   margin: 0;
   width: 100%;
-  min-height: 80vh;
+  min-height: 85vh;
   background-color: #f7f7f7;
 }
 .foretag-exponering .foretag-exponering-content {
@@ -3329,7 +3330,7 @@ Main components
   padding: 2em;
   margin: 0;
   width: 100%;
-  min-height: 500px;
+  min-height: 420px;
   background-color: white;
 }
 .foretag-information .foretag-information-content {
@@ -3402,11 +3403,69 @@ Main components
   background: #f7f7f7;
   border-radius: 50%;
   float: left;
+  margin: auto;
   height: 20em;
-  padding: 5em;
+  padding-top: 3.33333em;
+  padding-left: 1.66667em;
   width: 20em;
 }
 .foretag-erbjudande .foretag-erbjudande-content .offer-item-list .bullet-icon i {
+  color: #333;
+  font-size: 13em;
+}
+.foretag-erbjudande .foretag-erbjudande-content .offer-item-list .bullet-icon1 {
+  background: #f7f7f7;
+  border-radius: 50%;
+  float: left;
+  margin: auto;
+  height: 20em;
+  padding-top: 56px;
+  padding-left: 26.3px;
+  width: 20em;
+}
+.foretag-erbjudande .foretag-erbjudande-content .offer-item-list .bullet-icon1 i {
+  color: #333;
+  font-size: 13em;
+}
+.foretag-erbjudande .foretag-erbjudande-content .offer-item-list .bullet-icon2 {
+  background: #f7f7f7;
+  border-radius: 50%;
+  float: left;
+  margin: auto;
+  height: 20em;
+  padding-top: 56px;
+  padding-left: 48.55px;
+  width: 20em;
+}
+.foretag-erbjudande .foretag-erbjudande-content .offer-item-list .bullet-icon2 i {
+  color: #333;
+  font-size: 13em;
+}
+.foretag-erbjudande .foretag-erbjudande-content .offer-item-list .bullet-icon3 {
+  background: #f7f7f7;
+  border-radius: 50%;
+  float: left;
+  margin: auto;
+  height: 20em;
+  padding-top: 56px;
+  padding-left: 41.15px;
+  width: 20em;
+}
+.foretag-erbjudande .foretag-erbjudande-content .offer-item-list .bullet-icon3 i {
+  color: #333;
+  font-size: 13em;
+}
+.foretag-erbjudande .foretag-erbjudande-content .offer-item-list .bullet-icon4 {
+  background: #f7f7f7;
+  border-radius: 50%;
+  float: left;
+  margin: auto;
+  height: 20em;
+  padding-top: 56px;
+  padding-left: 56px;
+  width: 20em;
+}
+.foretag-erbjudande .foretag-erbjudande-content .offer-item-list .bullet-icon4 i {
   color: #333;
   font-size: 13em;
 }
