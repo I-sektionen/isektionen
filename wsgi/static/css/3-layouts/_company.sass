@@ -5,7 +5,7 @@
   margin: 0
   width: 100%
   min-height: 500px
-  background-color: #f7f7f7
+  background-color: white
 
   .foretag-contact-content
     max-width: 50em
@@ -18,93 +18,97 @@
       height: 4px
       margin: 2px
 
-.image-list-contact
-  +display(flex)
-  +flex-wrap(wrap)
-  +align-items(flex-start)
-  +justify-content(center)
-  .image-list-item
-    +display(flex)
-    +flex-direction(row)
-    min-width: 500px
-    max-width: 500px
-    min-height: 200px
-    max-height: 200px
+    .card-container
+      +display(flex)
+      +flex-wrap(wrap)
+      +align-items(flex-start)
+      +justify-content(center)
 
-    background-color: $dark-gray
-    box-shadow: 1px 1px 5px darken($light-gray, 50%)
-    margin-bottom: 1em
-    border-radius: $base-border-radius
-    +media($medium-screen)
-      /* max-width: 31% */
-      margin-right: 1em
-      +flex(1 1 40em)
-    +media($large-screen)
-      +flex(1 1 25em)
+      margin-top: 50px
 
+      .card
+        //+display(flex)
+        //+flex-direction(row)
+        width: 500px
+        height: 200px
 
-    .card-caption
-      padding: 1em
-      float: right
-      background-color: $dark-gray
-      color: white
-      border-bottom-left-radius: $base-border-radius
-      border-bottom-right-radius: $base-border-radius
-      .card-text
-        font-size: small
-        color: white
+        padding: 16px
+
+        //background-color: $dark-gray
+        background-color: white
+        color: $dark-gray
+        box-shadow: 1px 1px 5px darken($light-gray, 50%)
+        //border-radius: $base-border-radius
+
       .contact-divider
         border: none
-        background-color: white
+        background-color: $dark-gray
         height: 3px
-        margin: 4px
-    .card-caption-link
-      cursor: pointer
-      color: $white
-      margin: 0
-      font-size: 1.4em
-      font-weight: 200
-      &:after
-        font-family: FontAwesome
-        content: '\f054'
-        font-size: 0.8em
-        margin-left: 0.5em
-        +transition()
-      &:hover
-        &:after
-          margin-left: 1em
-    .card-caption-expanded
-      padding: 1em
-      background-color: $dark-gray
-      color: $light-gray
-      display: none
+        margin: 0px
 
-  .card-image
-    max-width: 120px
-    margin-top: 1em
-    margin-left: 1em
-    margin: auto
-    border-top-left-radius: $base-border-radius
-    border-top-right-radius: $base-border-radius
+      //  .card-caption
+      //    padding: 1em
+      //    float: right
+      //    background-color: $dark-gray
+      //    color: white
+      //    border-bottom-left-radius: $base-border-radius
+      //    border-bottom-right-radius: $base-border-radius
+      //    .card-text
+      //      font-size: small
+      //      color: white
+      //    .contact-divider
+      //      border: none
+      //      background-color: white
+      //      height: 3px
+      //      margin: 4px
+      //  .card-caption-link
+      //    cursor: pointer
+      //    color: $white
+      //    margin: 0
+      //    font-size: 1.4em
+      //    font-weight: 200
+      //    &:after
+      //      font-family: FontAwesome
+      //      content: '\f054'
+      //      font-size: 0.8em
+      //      margin-left: 0.5em
+      //      +transition()
+      //    &:hover
+      //      &:after
+      //        margin-left: 1em
+      //  .card-caption-expanded
+      //    padding: 1em
+      //    background-color: $dark-gray
+      //    color: $light-gray
+      //    display: none
+      //
+      //.card-image
+      //  max-width: 120px
+      //  margin-top: 1em
+      //  margin-left: 1em
+      //  margin: auto
+      //  border-top-left-radius: $base-border-radius
+      //  border-top-right-radius: $base-border-radius
+      //
+      //  .offer-item-list
+      //    background-color: $light-gray
+      //    box-shadow: 1px 1px 5px darken($light-gray, 50%)
+      //    margin-bottom: 1em
+      //    border-radius: $base-border-radius
+      //    $icon-bullet-size: 20em
+      //
+      //    .bullet-icon
+      //      background: $light-gray
+      //      border-radius: 50%
+      //      float: right
+      //      height: $icon-bullet-size
+      //      padding: $icon-bullet-size / 4
+      //      width: $icon-bullet-size
+      //
+      //      i
+      //        color: $light-gray
+      //        font-size: 13em
 
-    .offer-item-list
-      background-color: $light-gray
-      box-shadow: 1px 1px 5px darken($light-gray, 50%)
-      margin-bottom: 1em
-      border-radius: $base-border-radius
-      $icon-bullet-size: 20em
-
-      .bullet-icon
-        background: $light-gray
-        border-radius: 50%
-        float: right
-        height: $icon-bullet-size
-        padding: $icon-bullet-size / 4
-        width: $icon-bullet-size
-
-        i
-          color: $light-gray
-          font-size: 13em
 
 
 
