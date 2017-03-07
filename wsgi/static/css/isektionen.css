@@ -1438,6 +1438,96 @@ article.single_blog_entry p.author {
   }
 }
 
+.accordion-tabs {
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+  padding: 0;
+  text-align: left;
+}
+.accordion-tabs::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+@media screen and (max-width: 600px) {
+  .accordion-tabs {
+    border: 1px solid #f7f7f7;
+    border-radius: 3px;
+  }
+}
+.accordion-tabs .tab-header-and-content {
+  list-style: none;
+}
+@media screen and (min-width: 600px) {
+  .accordion-tabs .tab-header-and-content {
+    display: inline;
+  }
+}
+.accordion-tabs .tab-header-and-content:first-child .tab-link {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+@media screen and (max-width: 600px) {
+  .accordion-tabs .tab-header-and-content:first-child .tab-link {
+    border-top: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .accordion-tabs .tab-header-and-content:last-child .tab-link {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}
+.accordion-tabs .tab-link {
+  background-color: white;
+  border-top: 1px solid #f7f7f7;
+  color: #333;
+  display: block;
+  font-weight: bold;
+  padding: 0.75em 0.809em;
+  text-decoration: none;
+}
+@media screen and (min-width: 600px) {
+  .accordion-tabs .tab-link {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-top: 0;
+    display: inline-block;
+  }
+}
+.accordion-tabs .tab-link:hover {
+  color: #f9d026;
+}
+.accordion-tabs .tab-link:focus {
+  outline: none;
+}
+.accordion-tabs .tab-link.is-active {
+  background-color: white;
+}
+@media screen and (min-width: 600px) {
+  .accordion-tabs .tab-link.is-active {
+    background-color: white;
+    border: 1px solid #f7f7f7;
+    border-bottom-color: white;
+    margin-bottom: -1px;
+  }
+}
+.accordion-tabs .tab-content {
+  background: white;
+  display: none;
+  padding: 1.5em 1.618em;
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  .accordion-tabs .tab-content {
+    border: 1px solid #f7f7f7;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    float: left;
+  }
+}
+
 .container {
   margin-top: 80px;
 }
@@ -2990,6 +3080,276 @@ Main components
 }
 .FAQ-section .expander .expander-hidden + .expander-content {
   display: none;
+}
+
+.foretag-contact {
+  padding: 2em;
+  margin: 0;
+  width: 100%;
+  min-height: 350px;
+  background-color: white;
+}
+.foretag-contact .foretag-contact-content {
+  max-width: 50em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.foretag-contact .foretag-contact-content p {
+  text-align: center;
+}
+.foretag-contact .foretag-contact-content a {
+  color: #333;
+}
+.foretag-contact .foretag-contact-content .contact-divider {
+  border: none;
+  min-width: 100%;
+  background-color: #333;
+  height: 4px;
+  margin: 2px;
+}
+
+.foretag-exponering {
+  padding: 2em;
+  margin: 0;
+  width: 100%;
+  min-height: 85vh;
+  background-color: #f7f7f7;
+}
+.foretag-exponering .foretag-exponering-content {
+  padding: 2em;
+  text-align: center;
+  width: 60%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+@media screen and (min-width: 900px) {
+  .foretag-exponering .foretag-exponering-content {
+    width: 60%;
+  }
+}
+.foretag-exponering .foretag-exponering-content .exponering-heading {
+  color: dimgrey;
+  font-size: 2em;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 900px) {
+  .foretag-exponering .foretag-exponering-content .exponering-heading {
+    font-size: 3em;
+  }
+}
+.foretag-exponering .foretag-exponering-content .exponering-divider {
+  border: none;
+  background-color: dimgray;
+  height: 5px;
+  margin: 5px;
+}
+.foretag-exponering .foretag-exponering-content .exponering-text {
+  color: dimgrey;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+@media screen and (min-width: 900px) {
+  .foretag-exponering .foretag-exponering-content .exponering-text {
+    text-align: justify;
+  }
+}
+
+.foretag-information {
+  padding: 2em;
+  margin: 0;
+  width: 100%;
+  min-height: 420px;
+  background-color: white;
+}
+.foretag-information .foretag-information-content {
+  margin-left: auto;
+  margin-right: auto;
+}
+.foretag-information .foretag-information-content .fade-in-elements .fade-in-element {
+  max-width: 20em;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+.foretag-intervjuer {
+  padding: 2em;
+  margin: 0;
+  width: 100%;
+  min-height: 500px;
+  background-color: #f7f7f7;
+}
+.foretag-intervjuer .foretag-intervjuer-content {
+  max-width: 50em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.foretag-intervjuer .foretag-intervjuer-content .chart-canvas-company {
+  padding: 1em;
+  height: 300px;
+  width: 300px;
+}
+
+.foretag-statistik {
+  padding: 2em;
+  margin: 0;
+  width: 100%;
+  min-height: 500px;
+  background-color: #f7f7f7;
+}
+.foretag-statistik .foretag-statistik-content {
+  max-width: 50em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.foretag-statistik .foretag-statistik-content .chart-canvas-company {
+  padding: 1em;
+  height: 300px;
+  width: 300px;
+}
+
+.foretag-erbjudande {
+  padding: 2em;
+  margin: 0;
+  width: 100%;
+  min-height: 500px;
+  background-color: #f7f7f7;
+}
+.foretag-erbjudande .section-header {
+  color: white;
+}
+.foretag-erbjudande .foretag-erbjudande-content {
+  margin-left: auto;
+  margin-right: auto;
+}
+.foretag-erbjudande .foretag-erbjudande-content .offer-item-list {
+  background-color: #f7f7f7;
+  box-shadow: 1px 1px 5px #787878;
+  margin-bottom: 1em;
+  border-radius: 3px;
+}
+.foretag-erbjudande .foretag-erbjudande-content .offer-item-list .bullet-icon {
+  background: #f7f7f7;
+  border-radius: 50%;
+  float: left;
+  margin: auto;
+  height: 20em;
+  padding-top: 3.33333em;
+  padding-left: 1.66667em;
+  width: 20em;
+}
+.foretag-erbjudande .foretag-erbjudande-content .offer-item-list .bullet-icon i {
+  color: #333;
+  font-size: 13em;
+}
+.foretag-erbjudande .foretag-erbjudande-content .offer-item-list .bullet-icon1 {
+  background: #f7f7f7;
+  border-radius: 50%;
+  float: left;
+  margin: auto;
+  height: 20em;
+  padding-top: 56px;
+  padding-left: 26.3px;
+  width: 20em;
+}
+.foretag-erbjudande .foretag-erbjudande-content .offer-item-list .bullet-icon1 i {
+  color: #333;
+  font-size: 13em;
+}
+.foretag-erbjudande .foretag-erbjudande-content .offer-item-list .bullet-icon2 {
+  background: #f7f7f7;
+  border-radius: 50%;
+  float: left;
+  margin: auto;
+  height: 20em;
+  padding-top: 56px;
+  padding-left: 48.55px;
+  width: 20em;
+}
+.foretag-erbjudande .foretag-erbjudande-content .offer-item-list .bullet-icon2 i {
+  color: #333;
+  font-size: 13em;
+}
+.foretag-erbjudande .foretag-erbjudande-content .offer-item-list .bullet-icon3 {
+  background: #f7f7f7;
+  border-radius: 50%;
+  float: left;
+  margin: auto;
+  height: 20em;
+  padding-top: 56px;
+  padding-left: 41.15px;
+  width: 20em;
+}
+.foretag-erbjudande .foretag-erbjudande-content .offer-item-list .bullet-icon3 i {
+  color: #333;
+  font-size: 13em;
+}
+.foretag-erbjudande .foretag-erbjudande-content .offer-item-list .bullet-icon4 {
+  background: #f7f7f7;
+  border-radius: 50%;
+  float: left;
+  margin: auto;
+  height: 20em;
+  padding-top: 56px;
+  padding-left: 56px;
+  width: 20em;
+}
+.foretag-erbjudande .foretag-erbjudande-content .offer-item-list .bullet-icon4 i {
+  color: #333;
+  font-size: 13em;
+}
+.foretag-erbjudande .foretag-erbjudande-content .section-header {
+  text-align: center;
+  color: dimgrey;
+}
+
+.bullet-list {
+  margin-left: 2em;
+  list-style-type: disc;
+}
+
+.fade-in-elements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fade-in-element {
+  background: white;
+  border: 1px solid silver;
+  border-radius: 3px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  line-height: 1.5;
+  padding: 1.5em;
+  text-align: center;
+  min-width: 20em;
+  margin: 0.25em;
+}
+.fade-in-element::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.fade-in-element p {
+  color: #333;
+  line-height: 1.5;
+}
+
+.fade-element-hide {
+  opacity: 0;
+}
+
+.fade-element-show {
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
 }
 
 /*# sourceMappingURL=isektionen.css.map */
