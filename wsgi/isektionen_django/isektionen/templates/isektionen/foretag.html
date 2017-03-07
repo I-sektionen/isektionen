@@ -3,27 +3,33 @@
     <li class="nav-link"><a href="{% url 'blog' %}">Blogg</a></li>
     <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
     <li class="nav-link active-nav-item"><a href="{% url 'foretag' %}">Företag</a></li>
+    <li class="nav-link"><a onclick="anchor(this)" href="#contact-header">Kontakt</a></li>
 {% endblock %}
 {% block content %}
-    <section class="applicant-hero">
+    {% comment %}<section class="applicant-hero">
         <div class="hero-content">
             <h1 class="hero-heading">Sidan är under uppbyggnad</h1>
-            <p class="hero-text">Vill ert företag komma i kontakt med I-sektionen?
-                Vänligen maila oss i Näringslivsutskottet: foretag@isektionen.se
-            </p>
             <hr class="hero-divider">
-{#            <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In schola desinis.#}
-{#                Quod quidem iam fit etiam in Academia. Zenonis est, inquam, hoc Stoici. Nondum autem explanatum satis, erat,#}
-{#                quid maxime natura vellet. Duo Reges: constructio interrete. At ego quem huic anteponam non audeo dicere;#}
-{#            </p>#}
+            <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In schola desinis.
+                Quod quidem iam fit etiam in Academia. Zenonis est, inquam, hoc Stoici. Nondum autem explanatum satis, erat,
+                quid maxime natura vellet. Duo Reges: constructio interrete. At ego quem huic anteponam non audeo dicere;
+            </p>
         </div>
     </section>
 
-{#    <section class="">#}
+    {% endcomment %}
+
+    <section class="">
 {#        {% include 'isektionen/foretag/inledning.html' %}#}
-{#        {% include 'isektionen/foretag/exponering.html' %}#}
-{#        {% include 'isektionen/foretag/information.html' %}#}
-{#        {% include 'isektionen/foretag/statistik.html' %}#}
-{#        {% include 'isektionen/foretag/erbjudanden.html' %}#}
-{#    </section>#}
+        {% include 'isektionen/foretag/exponering.html' %}
+        {% include 'isektionen/foretag/information.html' %}
+        {% include 'isektionen/foretag/intervjuer.html' %}
+        {% include 'isektionen/foretag/erbjudanden.html' %}
+        {% include 'isektionen/foretag/kontakt.html' %}
+    </section>
 {% endblock %}
+
+{#
+{% block js_document_ready %}
+    createCompanyChart()
+{% endblock %}#}

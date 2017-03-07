@@ -1,11 +1,104 @@
 /**
+ * Created by henrikfredriksson on 2016-12-15.
+ */
+$(document).ready(function () {
+  $('.accordion-tabs').each(function(index) {
+    $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
+  });
+  $('.accordion-tabs').on('click', 'li > a.tab-link', function(event) {
+    if (!$(this).hasClass('is-active')) {
+      event.preventDefault();
+      var accordionTabs = $(this).closest('.accordion-tabs');
+      accordionTabs.find('.is-open').removeClass('is-open').hide();
+
+      $(this).next().toggleClass('is-open').toggle();
+      accordionTabs.find('.is-active').removeClass('is-active');
+      $(this).addClass('is-active');
+    } else {
+      event.preventDefault();
+    }
+  });
+});;/**
+ * Created by henrikfredriksson on 2016-11-22.
+ */
+
+function createCompanyChart () {
+
+    var companyCtx = $("#chart-company");
+
+    var companyChartLabels = [
+            "Scania",
+            "BCG",
+            "SAAB",
+            "Volvo",
+            "Google"
+        ];
+
+    var companyChartDataSet = [80, 30, 60, 15, 120];
+
+    var companyChartBackgroundColor = '#2D701E';
+    var companyChartBackgroundColorSet = generateChartColorSet(
+        companyChartBackgroundColor,
+        companyChartDataSet.length,
+        0.15
+    );
+
+    var companyChartDataSet = [
+        {
+            data: companyChartDataSet,
+            backgroundColor: companyChartBackgroundColorSet,
+            hoverBackgroundColor: shadeBlendConvert(-0.1, companyChartBackgroundColor) // shadeBlendConvert is defined in program-charts.js
+        }];
+
+    var companyChartData = {
+        labels: companyChartLabels,
+        datasets: companyChartDataSet
+    };
+
+    var companyChart = new Chart(companyCtx, {
+        type: 'doughnut',
+        data: companyChartData,
+    })
+
+}
+;/**
  * Created by elof on 2016-03-02.
  */
 $(document).ready(function() {
   $('.expander-trigger').click(function(){
     $(this).toggleClass("expander-hidden");
   });
-});;/**
+});;$(document).ready(function() {
+
+    var fadeInElements = $('.fade-in-element');
+    $(fadeInElements).addClass('fade-element-hide');
+
+    $(window).scroll(function() {
+
+        fadeInElements.each(function () {
+
+            if ($(this).length > 0) {
+                var elementTopToPageTop = $(this).offset().top;
+                var windowTopToPageTop = $(window).scrollTop();
+                var windowInnerHeight = window.innerHeight;
+                var elementTopToWindowTop = elementTopToPageTop - windowTopToPageTop;
+                var elementTopToWindowBottom = windowInnerHeight - elementTopToWindowTop;
+                var distanceFromBottomToAppear = 100;
+
+                if (elementTopToWindowBottom > distanceFromBottomToAppear) {
+                    $(this).addClass('fade-element-show');
+                }
+                else if (elementTopToWindowBottom < 0) {
+                    $(this).removeClass('fade-element-show');
+                    $(this).addClass('fade-element-hide');
+                }
+            }
+        });
+
+    });
+
+});
+;/**
  * Created by lehtonen on 15-11-16.
  */
 var load_instagram = function () {
@@ -1688,6 +1781,23 @@ industriellEkonomiInterLink.click(function() {
 };
 
 
+;/**
+ * Created by axel on 2016-12-21.
+ */
+
+var $root = $('html, body');
+
+function anchor(element) {
+    var href = $.attr(element, 'href');
+
+    console.log(href);
+    $root.animate({
+        scrollTop: $(href).offset().top - 100
+    }, 500, function () {
+        window.location.hash = href;
+    });
+    return false;
+};
 ;/**
  * Created by andreas on 29/03/16.
  */
