@@ -133,6 +133,7 @@
       width: 300px
 
 
+
 .foretag-erbjudande
   //+outer-container()
   padding: 2em
@@ -142,6 +143,9 @@
   background-color: #f7f7f7
   //background-image: url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/hero-images/nollep-karallen.jpg")
   .section-header
+    text-align: center
+    color: dimgrey
+  //.section-header
     color: white
 
   .foretag-erbjudande-content
@@ -149,93 +153,149 @@
     margin-left: auto
     margin-right: auto
 
-    .offer-item-list
-      background-color: $light-gray
-      box-shadow: 1px 1px 5px darken($light-gray, 50%)
-      margin-bottom: 1em
-      border-radius: $base-border-radius
-      $icon-bullet-size: 20em
-      $icon-bullet-width: 320px
+
+.erbjudande-image-gallery
+  padding: 1em
+  +media($large-screen)
+  padding: 4em
+
+.image-list-erbjudande
+  +display(flex)
+  +flex-wrap(wrap)
+  +align-items(flex-start)
+  +justify-content(center)
+  .image-list-item
+    +display(flex)
+    +flex-direction(column)
+    background-color: $dark-gray
+    box-shadow: 1px 1px 5px darken($light-gray, 50%)
+    margin-bottom: 1em
+    border-radius: $base-border-radius
+    +media($medium-screen)
+    max-width: 40em
+    margin-right: 1em
+    +flex(1 1 40em)
+    +media($large-screen)
+    +flex(1 1 25em)
+
+  .offer-item-list
+    background-color: $light-gray
+    box-shadow: 1px 1px 5px darken($light-gray, 50%)
+    margin-bottom: 1em
+    border-radius: $base-border-radius
+    $icon-bullet-size: 20em
+    $icon-bullet-width: 320px
 
 
-      .bullet-icon
-        background: $light-gray
-        border-radius: 50%
-        float: left
-        margin: auto
-        height: $icon-bullet-size
-        padding-top: $icon-bullet-size / 6
-        padding-left: $icon-bullet-size / 12
-        //padding-left: $icon-bullet-size
-        width: $icon-bullet-size
+    .bullet-icon
+      background: $light-gray
+      border-radius: 50%
+      float: left
+      margin: auto
+      height: $icon-bullet-size
+      padding-top: $icon-bullet-size / 6
+      padding-left: $icon-bullet-size / 12
+      //padding-left: $icon-bullet-size
+      width: $icon-bullet-size
 
-        i
-          color: $dark-gray
-          font-size: 13em
+      i
+        color: $dark-gray
+        font-size: 13em
 
-      .bullet-icon1
-        background: $light-gray
-        border-radius: 50%
-        float: left
-        margin: auto
-        height: $icon-bullet-size
-        padding-top: ($icon-bullet-width - 208px)/2
-        padding-left: ($icon-bullet-width - 267.4px)/2
-        //padding-left: $icon-bullet-size
-        width: $icon-bullet-size
+    .bullet-icon1
+      background: $light-gray
+      border-radius: 50%
+      float: left
+      margin: auto
+      height: $icon-bullet-size
+      padding-top: ($icon-bullet-width - 208px)/2
+      padding-left: ($icon-bullet-width - 267.4px)/2
+      //padding-left: $icon-bullet-size
+      width: $icon-bullet-size
 
-        i
-          color: $dark-gray
-          font-size: 13em
+      i
+        color: $dark-gray
+        font-size: 13em
 
-      .bullet-icon2
-        background: $light-gray
-        border-radius: 50%
-        float: left
-        margin: auto
-        height: $icon-bullet-size
-        padding-top: ($icon-bullet-width - 208px)/2
-        padding-left: ($icon-bullet-width - 222.9px)/2
-        //padding-left: $icon-bullet-size
-        width: $icon-bullet-size
+    .bullet-icon2
+      background: $light-gray
+      border-radius: 50%
+      float: left
+      margin: auto
+      height: $icon-bullet-size
+      padding-top: ($icon-bullet-width - 208px)/2
+      padding-left: ($icon-bullet-width - 222.9px)/2
+      //padding-left: $icon-bullet-size
+      width: $icon-bullet-size
 
-        i
-          color: $dark-gray
-          font-size: 13em
+      i
+        color: $dark-gray
+        font-size: 13em
 
-      .bullet-icon3
-        background: $light-gray
-        border-radius: 50%
-        float: left
-        margin: auto
-        height: $icon-bullet-size
-        padding-top: ($icon-bullet-width - 208px)/2
-        padding-left: ($icon-bullet-width - 237.7px)/2
-        //padding-left: $icon-bullet-size
-        width: $icon-bullet-size
+    .bullet-icon3
+      background: $light-gray
+      border-radius: 50%
+      float: left
+      margin: auto
+      height: $icon-bullet-size
+      padding-top: ($icon-bullet-width - 208px)/2
+      padding-left: ($icon-bullet-width - 237.7px)/2
+      //padding-left: $icon-bullet-size
+      width: $icon-bullet-size
 
-        i
-          color: $dark-gray
-          font-size: 13em
+      i
+        color: $dark-gray
+        font-size: 13em
 
-      .bullet-icon4
-        background: $light-gray
-        border-radius: 50%
-        float: left
-        margin: auto
-        height: $icon-bullet-size
-        padding-top: ($icon-bullet-width - 208px)/2
-        padding-left: ($icon-bullet-width - 208px)/2
-        //padding-left: $icon-bullet-size
-        width: $icon-bullet-size
+    .bullet-icon4
+      background: $light-gray
+      border-radius: 50%
+      float: left
+      margin: auto
+      height: $icon-bullet-size
+      padding-top: ($icon-bullet-width - 208px)/2
+      padding-left: ($icon-bullet-width - 208px)/2
+      //padding-left: $icon-bullet-size
+      width: $icon-bullet-size
 
-        i
-          color: $dark-gray
-          font-size: 13em
+      i
+        color: $dark-gray
+        font-size: 13em
 
-    .section-header
-      text-align: center
-      color: dimgrey
+  .card-caption
+    padding: 1em
+    background-color: $dark-gray
+    //border-bottom-left-radius: $base-border-radius
+    //border-bottom-right-radius: $base-border-radius
+  .card-caption-link
+    cursor: pointer
+    color: $white
+    margin: 0
+    font-size: 1.4em
+    font-weight: 200
+    &:after
+      font-family: FontAwesome
+      content: '\f054'
+      font-size: 0.8em
+      margin-left: 0.5em
+      +transition()
+    &:hover
+      &:after
+        margin-left: 1em
+  .card-caption-expanded
+    padding: 1em
+    background-color: $dark-gray
+    color: $light-gray
+    display: none
+    border-bottom-left-radius: $base-border-radius
+    border-bottom-right-radius: $base-border-radius
+
+  .card-image
+    max-width: 100%
+    border-top-left-radius: $base-border-radius
+    border-top-right-radius: $base-border-radius
+
+
 
 
 .bullet-list
