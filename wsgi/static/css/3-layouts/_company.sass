@@ -27,26 +27,26 @@
       margin: 2px
 
 .foretag-exponering
-  //+outer-container()
   padding: 2em
   margin: 0
   width: 100%
   min-height: 85vh
   background-color: #f7f7f7
 
+  display: table
+
+  .exponering-wrapper
+    display: table-cell
+    vertical-align: middle
+
   .foretag-exponering-content
-    padding: 2em
     text-align: center
-    width: 60%
-    //This positions the element rela
-    @include position(absolute)
-    left: 50%
-    top: 50%
-    @include transform(translate(-50%, -50%))
     width: 100%
 
     @include media($large-screen)
       width: 60%
+      margin-left: auto
+      margin-right: auto
 
     .exponering-heading
       color: dimgrey
