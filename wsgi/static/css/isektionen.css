@@ -1964,6 +1964,43 @@ article.single_blog_entry p.author {
   width: 72%;
 }
 
+.mapcontent {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.mapcontent::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.housing-queue {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+.housing-queue::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.housing-queue .section-header {
+  font-size: 2.5em;
+  color: #333;
+}
+.housing-queue .section-text {
+  line-height: 2em;
+  text-align: justify;
+}
+.housing-queue .queue-table {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
 .studentlife-hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://iportalen-us.s3.amazonaws.com:443/static/iportalen/HERO.jpg");
   background-position: center center;
