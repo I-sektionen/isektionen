@@ -2605,8 +2605,7 @@ Main components
     margin-right: auto; }
     .foretag-information .foretag-information-content .fade-in-elements .fade-in-element {
       max-width: 20em;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-      border-radius: 15px; }
+      box-shadow: 1px 1px 5px #787878; }
 
 .foretag-intervjuer {
   padding: 2em;
@@ -2833,9 +2832,7 @@ Main components
 
 .fade-in-element {
   background: white;
-  border: 1px solid silver;
   border-radius: 3px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   line-height: 1.5;
   padding: 1.5em;
   text-align: center;
