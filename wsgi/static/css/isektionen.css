@@ -2576,7 +2576,7 @@ Main components
   padding: 2em;
   margin: 0;
   width: 100%;
-  min-height: 420px;
+  min-height: 500px;
   background-color: white; }
   .foretag-information .foretag-information-content {
     margin-left: auto;
@@ -2595,6 +2595,62 @@ Main components
     text-align: center;
     color: dimgrey; }
   .foretag-erbjudande .foretag-erbjudande-content {
+    margin-left: auto;
+    margin-right: auto; }
+
+.foretag-samarbetsparnter {
+  padding: 2em;
+  margin: 0;
+  width: 100%;
+  min-height: 500px;
+  background-color: white; }
+  .foretag-samarbetsparnter .section-header {
+    text-align: center;
+    color: dimgrey; }
+  .foretag-samarbetsparnter .foretag-samarbetsparnter-content {
+    max-width: 50em;
+    margin-left: auto;
+    margin-right: auto; }
+
+.foretag-foretagspresentationer {
+  padding: 2em;
+  margin: 0;
+  width: 100%;
+  min-height: 500px;
+  background-color: #f7f7f7; }
+  .foretag-foretagspresentationer .section-header {
+    text-align: center;
+    color: dimgrey; }
+  .foretag-foretagspresentationer .foretag-foretagspresentationer-content {
+    max-width: 50em;
+    margin-left: auto;
+    margin-right: auto; }
+
+.foretag-marknadsforing {
+  padding: 2em;
+  margin: 0;
+  width: 100%;
+  min-height: 500px;
+  background-color: white; }
+  .foretag-marknadsforing .section-header {
+    text-align: center;
+    color: dimgrey; }
+  .foretag-marknadsforing .foretag-marknadsforing-content {
+    max-width: 50em;
+    margin-left: auto;
+    margin-right: auto; }
+
+.foretag-team {
+  padding: 2em;
+  margin: 0;
+  width: 100%;
+  min-height: 500px;
+  background-color: #f7f7f7; }
+  .foretag-team .section-header {
+    text-align: center;
+    color: dimgrey; }
+  .foretag-team .foretag-team-content {
+    max-width: 50em;
     margin-left: auto;
     margin-right: auto; }
 
