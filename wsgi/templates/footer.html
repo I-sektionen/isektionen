@@ -11,10 +11,11 @@
         </ul>
         <ul id="content-column">
             <li><h4>INNEHÅLL</h4></li>
-            <li><a href="javascript:void(0)">Efter Studierna</a></li>
-            <li><a href="javascript:void(0)">Utbildningen</a></li>
-            <li><a href="javascript:void(0)">Studentliv</a></li>
-            <li><a href="javascript:void(0)">Företag</a></li>
+            <li><a href="{% url "utbildning" %}">Utbildningen</a></li>
+            <li><a href="{% url "studentliv" %}">Studentliv</a></li>
+            <li><a href="{% url "i-resan" %}">I-Resan</a></li>
+            <li><a href="{% url "FAQ" %}">FAQ</a></li>
+            <li><a href="{% url "foretag" %}">Företag</a></li>
         </ul>
         <ul id="latest-entry-blog-column">
             <li><a href="{% url "blog" %}"><h4>SENASTE BLOGGINLÄGGEN</h4></a></li>

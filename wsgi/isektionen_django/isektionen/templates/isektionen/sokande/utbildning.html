@@ -2,6 +2,7 @@
 
 {% block links %}
     <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
+    <li class="nav-link"><a href="{% url 'i-resan' %}">I-Resan</a></li>
     {% if utbildning %}
         <li class="active-nav-item nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
     {% else %}
@@ -9,8 +10,9 @@
     {% endif %}
     <li class="nav-link"><a href="{% url 'bostad' %}">Bostad</a></li>
     <li class="nav-link"><a href="{% url 'studentliv' %}">Studentliv</a></li>
-    <li class="nav-link"><a href="{% url 'efterstudier' %}">Efter studierna</a></li>
-    <li class="nav-link"><a href="{% url 'kontakt' %}">Kontakt</a></li>
+    {% comment %}<li class="nav-link"><a href="{% url 'efterstudier' %}">Efter studierna</a></li> {% endcomment %}
+    <li class="nav-link"><a href="{% url 'FAQ' %}">FAQ</a></li>
+    {% comment %}<li class="nav-link"><a href="{% url 'kontakt' %}">Kontakt</a></li> {% endcomment %}
 {% endblock %}
 
 {% block content %}
@@ -20,7 +22,7 @@
             <h1 class="hero-heading">Utbildning</h1>
             <hr class="hero-divider">
             <p class="hero-text">
-                Denna sida är under uppbyggnad och innehållet kommer inom kort!
+                Vill du veta mer om hur det funkar att plugga? Här hittar du kurser, program och annat spännande!
             </p>
         </div>
     </section>
@@ -30,4 +32,12 @@
         {% include 'isektionen/sokande/utbildning/tekniska_profiler.html' %}
         {% include 'isektionen/sokande/utbildning/masterprofiler.html' %}
         {% include 'isektionen/sokande/utbildning/utlandsstudier.html' %}
+        <section class="link-promo">
+        <a href="{% url 'studentliv' %}">Läs vidare om studentlivet</a>
+        </section>
+
+{% endblock %}
+
+{% block js_document_ready %}
+    toggleProgramInfo()
 {% endblock %}

@@ -2,6 +2,7 @@
 
 {% block links %}
     <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
+    <li class="nav-link"><a href="{% url 'i-resan' %}">I-Resan</a></li>
     <li class="nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
     <li class="nav-link"><a href="{% url 'bostad' %}">Bostad</a></li>
     {% if studentliv %}
@@ -9,16 +10,112 @@
     {% else %}
         <li class="nav-link"><a href="{% url 'studentliv' %}">Studentliv</a></li>
     {% endif %}
-    <li class="nav-link"><a href="{% url 'efterstudier' %}">Efter studierna</a></li>
-    <li class="nav-link"><a href="{% url 'kontakt' %}">Kontakt</a></li>
+    {% comment %}<li class="nav-link"><a href="{% url 'efterstudier' %}">Efter studierna</a></li> {% endcomment %}
+    <li class="nav-link"><a href="{% url 'FAQ' %}">FAQ</a></li>
+    {% comment %}<li class="nav-link"><a href="{% url 'kontakt' %}">Kontakt</a></li> {% endcomment %}
 {% endblock %}
 
 {% block content %}
     <section class="studentlife-hero">
         <div class="hero-content">
-            <h1 class="hero-heading">Under uppbyggnad</h1>
+            <h1 class="hero-heading">Studentliv</h1>
             <hr class="hero-divider">
-            <p class="hero-text">Denna sida är under uppbyggnad och innehållet kommer inom kort!</p>
+            <p class="hero-text">
+                Hur är det egentligen att vara student? På denna sida hittar du lite information om vad som gör studentlivet i Linköping
+                unikt!
+            </p>
         </div>
     </section>
+
+    <section class="studentlife-image-gallery">
+        <ul class="image-list-gallery">
+            <li class="image-list-item">
+                <img class="card-image" src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/studentlife-gallery/fest.jpg">
+                <div class="card-caption">
+                    <a class="card-caption-link">Fester</a>
+                </div>
+                <div class="card-caption-expanded">
+                    Nästan varje helg annordnas fest i Campus vallas lokaler. Då är det någon sektions festeri som bjuder in till dans och skoj. Ofta är någon häftig artist på plats och spelar för alla glada studenter.
+                </div>
+            </li>
+            <li class="image-list-item">
+                <img class="card-image" src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/studentlife-gallery/baljan.jpg">
+                <div class="card-caption">
+                    <a class="card-caption-link">Sektionscafé baljan</a>
+                </div>
+                <div class="card-caption-expanded">
+                    Campus vallas egna, studentdrivna fik kallas för Baljan.
+                    Här kan den morgontrötte vakna till liv genom en
+                    kopp kaffe och den sötsugna stilla sitt sockerbegär med en chokladboll. Självklart till ett studentvänligt pris
+                </div>
+            </li>
+            <li class="image-list-item">
+                <img class="card-image" src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/studentlife-gallery/nollep.jpg">
+                <div class="card-caption">
+                    <a class="card-caption-link">Nolle-p</a>
+                </div>
+                <div class="card-caption-expanded">
+                    Under två intensiva veckor välkomnas alla nya studenter till Linköpings universitet under en nolle-period fylld med plugg, aktiviteter och fest. En otroligt kul tid där man lära känna många, nya och härliga kompisar och får en perfekt start på studietiden.
+                </div>
+            </li>
+            <li class="image-list-item">
+                <img class="card-image" src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/studentlife-gallery/cykla.jpg">
+                <div class="card-caption">
+                    <a class="card-caption-link">Cykla</a>
+                </div>
+                <div class="card-caption-expanded">
+                    Cykel är det optimala transportmedlet som student vid Linköpings universitet. Staden är platt och det blåser alltid medvind, oftast i alla fall.
+                </div>
+            </li>
+            <li class="image-list-item">
+                <img class="card-image" src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/studentlife-gallery/karallen.jpg">
+                <div class="card-caption">
+                    <a class="card-caption-link">Kårallen</a>
+                </div>
+                <div class="card-caption-expanded">
+                    Kårallen är Campus vallas egna kårhus. Kårallen fyller en viktig funktion som festlokal, mötesplats för studenter och här finns både kafé, restaurang och butiker.
+                </div>
+            </li>
+            <li class="image-list-item">
+                <img class="card-image" src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/studentlife-gallery/musikhjalpen.jpg">
+                <div class="card-caption">
+                    <a class="card-caption-link">Musikhjälpen</a>
+                </div>
+                <div class="card-caption-expanded">
+                    Under december månad 2015 gick Musikhjälpen av stapeln på Stora torget i Linköping. Linköpingsstudenterna var en starkt bidragande orsak till att alla tiders rekord i Musikhjälpens historia slogs!
+                </div>
+            </li>
+            <li class="image-list-item">
+                <img class="card-image" src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/studentlife-gallery/overall.jpg">
+                <div class="card-caption">
+                    <a class="card-caption-link">Overall</a>
+                </div>
+                <div class="card-caption-expanded">
+                    På Linköpings universitet finns en stark tradition av att ha Overall. Alla sektioner har sina egna färger och I- sektionens färg är gul. Overallen har man på sig när det är fest på universitetet. En fest när alla har overall på sig kallas för kravall, vilket står för krav på overall.
+                </div>
+            </li>
+
+            <!--
+            <li>
+                <img src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/studentlife-gallery/nollep.jpg">
+            </li>
+            <li>
+                <img src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/studentlife-gallery/cykla.jpg">
+            </li>
+            <li>
+                <img src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/studentlife-gallery/karallen.jpg">
+            </li>
+            <li>
+                <img src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/studentlife-gallery/fest.jpg">
+            </li>
+            <li>
+                <img src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/studentlife-gallery/overall.jpg">
+            </li>
+            -->
+        </ul>
+
+    </section>
+        <section class="link-promo">
+        <a href="{% url 'FAQ' %}">Fortfarande frågor? Kolla i vår FAQ</a>
+        </section>
 {% endblock %}

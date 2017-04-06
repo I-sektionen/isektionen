@@ -1,7 +1,7 @@
 .landing-hero
 
   @extend .top-hero
-  +section-cover-background('https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/liu_campusvalla.jpg')
+  +section-cover-background('https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/hero-images/corson.jpg')
   .hero-logo img
     max-height: 14em
   .hero-message
@@ -95,4 +95,20 @@
     .blog-entry-textbox
       +flex(4)
 
+.outer-social-media-container
+  background-color: $light-gray
+  padding: 4em
+  .social-media-container
+    text-align: center
+    width: auto
+    margin: auto
+    .social-media-title
+      font-size: 2em
+    .social-media-links
+      //@include display(flex)
+      //@include justify-content(center)
+    .social-media-icon
+      color: $dark-gray
+      font-size: 3em
+      +transition()
 

@@ -6,12 +6,13 @@
     {% else %}
         <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
     {% endif %}
-
+    <li class="nav-link"><a href="{% url 'i-resan' %}">I-Resan</a></li>
     <li class="nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
     <li class="nav-link"><a href="{% url 'bostad' %}">Bostad</a></li>
     <li class="nav-link"><a href="{% url 'studentliv' %}">Studentliv</a></li>
-    <li class="nav-link"><a href="{% url 'efterstudier' %}">Efter studierna</a></li>
-     <li class="nav-link"><a href="{% url 'kontakt' %}">Kontakt</a></li>
+    {% comment %}<li class="nav-link"><a href="{% url 'efterstudier' %}">Efter studierna</a></li> {% endcomment %}
+    <li class="nav-link"><a href="{% url 'FAQ' %}">FAQ</a></li>
+    {% comment %}<li class="nav-link"><a href="{% url 'kontakt' %}">Kontakt</a></li> {% endcomment %}
 {% endblock %}
 
 {% block content %}
@@ -25,7 +26,7 @@
         </div>
     </section>
     <section class="applicant-container">
-    <h1 CLASS="section-header">Vad vill du veta mer om?</h1>
+        <h1 CLASS="section-header">Vad vill du veta mer om?</h1>
         <ul class="bullets">
             <li class="bullet">
                 <div class="bullet-icon">
@@ -40,18 +41,20 @@
                     <a href="{% url 'utbildning' %}" class="action-button">Om utbildningen</a>
                 </div>
             </li>
-            <li class="bullet">
-                <div class="bullet-icon">
-                    <i class="fa fa-home"></i>
-                </div>
-                <div class="bullet-content">
-                    <h2>Var kan jag bo i Linköping?</h2>
-                    <p>
-                        Det finns flera olika bostadsköer och bostadsområden i Linköping. På denna sida hittar du all viktig information om hur du hittar så bra boende som möjlig i Linköping.
-                    </p>
-                    <a href="{% url 'utbildning' %}" class="action-button">Om bostad</a>
-                </div>
-            </li>
+            {% comment %}
+                <li class="bullet">
+                    <div class="bullet-icon">
+                        <i class="fa fa-home"></i>
+                    </div>
+                    <div class="bullet-content">
+                        <h2>Var kan jag bo i Linköping?</h2>
+                        <p>
+                            Det finns flera olika bostadsköer och bostadsområden i Linköping. På denna sida hittar du all viktig information om hur du hittar så bra boende som möjlig i Linköping.
+                        </p>
+                        <a href="{% url 'utbildning' %}" class="action-button">Om bostad</a>
+                    </div>
+                </li>
+            {% endcomment %}
             <li class="bullet">
                 <div class="bullet-icon">
                     <i class="fa fa-bicycle"></i>
@@ -61,64 +64,438 @@
                     <p>
                         Sektionen för Industriell Ekonomi (I-sektionen) är landets största studentsektion och det finns mängder av utskott och föreningar att engagera sig i som är kopplade vår sektion. På I-sektionen i Linköping är det över 200 aktiva I-studenter som arbetar ideellt med allt från näringslivssamarbeten till att främja kontakten med utexaminerade alumner och anordna resor och stora fester.
                     </p>
-                    <a href="{% url 'utbildning' %}" class="action-button">Om studentlivet</a>
+                    <a href="{% url 'studentliv' %}" class="action-button">Om studentlivet</a>
                 </div>
             </li>
-            <li class="bullet">
-                <div class="bullet-icon">
-                    <i class="fa fa-briefcase"></i>
+            {% comment %}
+                <li class="bullet">
+                    <div class="bullet-icon">
+                        <i class="fa fa-briefcase"></i>
+                    </div>
+                    <div class="bullet-content">
+                        <h2>Vad händer när jag är klar med utbildningen?</h2>
+                        <p>
+                            De flesta studenter har ofta sin första anställning klar redan innan examen. Intresset för civilingenjörer i industriell ekonomi med examen från Linköpings universitet är mycket stort i näringslivet. Detta tack vare deras driv, vana att arbeta i projekt samt förmåga till att lösa problem utifrån både ett tekniskt och ett ekonomiskt perspektiv.
+                        </p>
+                        <a href="{% url 'utbildning' %}" class="action-button">Om efter studierna</a>
+                    </div>
+                </li>
+            {% endcomment %}
+        </ul>
+    </section>
+    <section class="interview-container">
+        <h1 class="section-header">Intervju med studenter på Industriell Ekonomi</h1>
+
+        <ul class="interview-cards">
+            <li class="interview-card">
+                <div class="card-image">
+                    <img src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/interviews/bjorn.jpg">
                 </div>
-                <div class="bullet-content">
-                    <h2>Vad händer när jag är klar med utbildningen?</h2>
-                    <p>
-                        De flesta studenter har ofta sin första anställning klar redan innan examen. Intresset för civilingenjörer i industriell ekonomi med examen från Linköpings universitet är mycket stort i näringslivet. Detta tack vare deras driv, vana att arbeta i projekt samt förmåga till att lösa problem utifrån både ett tekniskt och ett ekonomiskt perspektiv.
+                <div class="interview-card-info">
+                    <h2 class="interview-name">Björn Runow</h2>
+                    <h2 class="interview-class">Årskurs 1</h2>
+                    <a href="javascript:void(0);" class="interview-link">Läs intervjun med Björn</a>
+                </div>
+                <!-- THIS CONTAINS ALL INTERVIEW MARKUP -->
+                <div class="interview-content">
+                    <h2 class="interview-question">Vem är du?</h2>
+                    <p>Namn: Björn Runow</p>
+                    <p>Årskurs: 1</p>
+                    <h3 class="interview-sub-question">Bakgrund</h3>
+                    <p class="interview-answer">Jag är 23 år gammal och uppvuxen i Södertälje. Matematik har alltid
+                        varit ett stort intresse och jag har de senaste åren jobbat en hel del med att lära ut matte
+                        på gymnasienivå, dels genom att jobba som långtidsvikarie på min gamla gymnasieskola och
+                        dels genom ett läxhjälpsföretag som jag startade. Utöver det gillar jag det mesta som har
+                        med bollar att göra och jag verkligen beundrar riktiga entreprenörer!</p>
+                    <h3 class="interview-sub-question">Varför du valde I Linköping?</h3>
+                    <p class="interview-answer">
+                        Jag valde Linköping för att det dels är nära hem med tåg och
+                        dels för att jag hört mycket gott om universitet, särskilt då I-linjen. Just I-linjen lät
+                        väldigt lockande på grund av kombinationen ekonomi- teknik. I efterhand har jag upptäckt
+                        att staden Linköping definitivt är en ort jag kan tänka mig att bo på en längre tid och det
+                        har varit en positiv överraskning.
                     </p>
-                    <a href="{% url 'utbildning' %}" class="action-button">Om efter studierna</a>
+                    <h2 class="interview-question">Hur är studierna?</h2>
+                    <h3 class="interview-sub-question">Vad lär du dig?</h3>
+                    <p class="interview-answer">
+                        Framför allt att tänka logiskt och göra korrekta slutledningar.
+                        Denna förmåga tränas mycket då vi räknar matte. Vi lär oss även att programmera och det är
+                        mycket roligare än vad jag innan föreställde mig att det skulle vara. Vi har även
+                        haft en grundkurs i ekonomi som varit toppen- där har vi fått en grov överblick över hur ett
+                        företag fungerar och vad som är viktigt att titta på när företags potential analyseras.
+                    </p>
+                    <h3 class="interview-sub-question">Vad är kul med utbildningen?</h3>
+                    <p class="interview-answer">Jag tycker det är superkul att det är mycket matte och att vi får gå
+                        in djupare på de områden som man bara snuddade vid i gymnasiet. Linjär algebra var tufft i början
+                        då allt var nytt men efter en termin på programmet är det den kurs jag gillat mest än så länge!
+                        Uppskattar även att studenter som pluggar denna utbildning, utöver att vara duktiga akademiker,
+                        generellt även är väldigt sociala och utåtriktade- det gör att det är lätt att få nya vänner.
+                    </p>
+
+                    <h2 class="interview-question">Hur är Studentlivet?</h2>
+                    <h3 class="interview-sub-question">Var bor du?</h3>
+                    <p class="interview-answer">Jag bor på Irrblosset i Valla.</p>
+                    <h3 class="interview-sub-question">Hur fixade du bostaden?</h3>
+                    <p>Jag ställde mig i Studentbostäders kö direkt efter att jag slutat gymnasiet och när det sen väl
+                        var dags för mig att börja plugga hade jag tillräckligt med poäng för att kunna få ett
+                        korridorsrum i en av studentbostäders fastigheter. Att ställa sig i kön snarast möjligt
+                        rekommenderas starkt, då det dessutom är gratis!
+                    </p>
+
+                    <h3 class="interview-question">Vad gör du på fritiden?</h3>
+                    <p class="interview-answer">Jag håller på en del med olika racketsporter, t.ex. tennis, badminton
+                        och squash. Bio är en annan aktivitet jag uppskattar, förutom självklart att hänga på Kårallen
+                        (lokala studentfeststället) tillsammans med klasskompisarna.</p>
+                    <h3 class="interview-sub-question">Är du (har varit) aktiv i någon förening?</h3>
+                    <p>Jag är ordförande för en del av LinTek som heter ”Mattehjälpen”. Vi hjälper studenter med matte
+                        genom att arrangera en mattestuga en gång i veckan. Jag älskar att hjälpa andra människor att
+                        lära sig matte och med tanke på det kändes ett engagemang i Mattehjälpen väldigt naturligt för
+                        min del. Sen har jag insett att jag lär mig själv överlägset bäst genom att försöka lära andra.
+                        Är det något jag inte kan så får jag omedelbart feedback eftersom jag inte kan förmedla
+                        kunskapen på ett bra sätt till den jag förklarar för. Slutligen så ligger det i mitt intresse
+                        att försöka utveckla Mattehjälpens verksamhet så att vi förutom mattestugor även kan erbjuda
+                        hjälp i den digitala världen i framtiden!
+                    </p>
+                    <h3 class="interview-sub-question">Vilket är ditt drömjobb?</h3>
+                    <p>Jag skulle vilja hålla på med utbildning i något som jag tycker är väldigt kul och som jag är
+                        expert på! Det vore häftigt att få åka världen över för att utbilda folk!</p>
+                    <h3 class="interview-sub-question">Var ser du dig om 10 år?</h3>
+                    <p>Om 10 år har jag varit med och skapat någonting som bidrar till att
+                        studenter över hela Sverige presterar bättre i matematik och jag har ett jobb där jag får
+                        lära folk något som jag själv är bra på, förhoppningsvis något som är relaterat till
+                        företagande.</p>
+
+                    <h2 class="interview-question">Fem snabba</h2>
+                    <p>Hemmakväll eller <strong>utekväll?</strong></p>
+                    <p><strong>Cykel</strong> eller buss?</p>
+                    <p><strong>Korridor</strong>, kollektiv eller lägenhet?</p>
+                    <p>Storstadsliv eller <strong>friluftsliv?</strong></p>
+                    <p><strong>Matematik</strong> & teknik eller ekonomi?</p>
+
+                </div>
+            </li>
+            <li class="interview-card">
+                <div class="card-image">
+                    <img src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/interviews/emelie.jpg">
+                </div>
+                <div class="interview-card-info">
+                    <h2 class="interview-name">Emelie Jönsson</h2>
+                    <p class="interview-class">Årskurs 2</p>
+                    <a class="interview-link" href="javascript:void(0);">Läs intervjun med Emelie</a>
+                </div>
+                <!-- THIS CONTAINS ALL INTERVIEW MARKUP -->
+                <div class="interview-content">
+                    <h2 class="interview-question">Vem är du?</h2>
+                    <p>Namn: Emelie Jönsson</p>
+                    <p>Årskurs: 2</p>
+                    <h3 class="interview-sub-question">Bakgrund</h3>
+                    <p class="interview-answer">  Uppvuxen i Danderyd, Stockholm med mamma, pappa, två småsystrar
+                        och en katt. Läste naturinriktning på gymnasiet men har utöver det alltid haft ett stort
+                        intresse av litteratur och skrivande.
+                    </p>
+                    <h3 class="interview-sub-question">Varför du valde I Linköping?</h3>
+                    <p class="interview-answer">
+                        Till att börja med hade min pappa och många av våra familjevännerna pluggat just I-linjen
+                        här i Linköping, så har väl alltid haft det som alternativ någonstans. Var dock länge starkt
+                        emot att plugga precis samma som pappa eftersom det kändes så grymt okreativt, men desto
+                        mer jag läste på om Linköping, I-linjen och studentlivet så insåg jag att det här nog
+                        verkligen var något för mig ändå.
+                    </p>
+                    <h2 class="interview-question">Hur är studierna?</h2>
+                    <p>Teknisk inriktning: Datateknik</p>
+                    <h3 class="interview-sub-question">Varför valde du din tekniska inriktning?</h3>
+                    <p>Framförallt gillar jag det sätt man jobbar med problemlösning i programmeringen, det blir hela tiden väldigt tydligt när man gör rätt och fel samtidigt som det finns 1000 sätt att lösa samma problem på. Så det blir både logiskt utmanande och ganska kreativt på ett sätt. Kandidatarbetet med att skapa en webbshop lockade också mycket, tycker det känns kul med att få vara med att skapa något så konkret.</p>
+                    <h3 class="interview-sub-question">Vad lär du dig?</h3>
+                    <p>På den teoretiska fronten är det ju alltid lite olika från termin till termin, i nuläget mycket om marginalkostnader, sorteringsalgoritmer och heltalsoptimeringen.
+                        Men annars, förutom det faktiskt teoretiska, känns det mycket som att det handlar om att lära sig prioritera den tid jag har, strukturera upp projektarbeten och fritid och bara allmänt lära mig hur jag ska göra för att kunna prestera mitt allra bästa.</p>
+                    <h3 class="interview-sub-question"> Vad är kul med utbildningen?</h3>
+                    <p>Att majoriteten av kurser jag har läst hittills (och förhoppningsvis även framöver!) är ganska direkt applicerbara på verkligheten. Från början hade jag lite svårt att förstår meningen med att  läsa så pass komplicerad matte som vi ändå gör, men sen märker man att mycket kommer tillbaka både inom ekonomin och det mer tekniska, i problem som är tagna direkt ur verkligheten. Jag känner att jag blir mer och mer kompetent och det tilltalar mig något enormt!</p>
+
+                    <h2 class="interview-question">Hur är studentlivet?</h2>
+                    <h3 class="interview-sub-question">Var bor du?</h3>
+                    <p>Första året bodde jag i en studentkorridor i Ryd, vilket var bra i början eftersom många jag kände mer eller mindre bodde i samma kvarter. Det här året bor jag istället i andra hand i en etta i studentboendet Fjärlien i Gottfridsberg, vilket passar mig om möjligt ännu bättre. Njuter järnet av att ha eget kök!!</p>
+                    <h3 class="interview-sub-question">Hur fixade du bostaden?</h3>
+                    <p>En tjej som skulle ta ett sabbatsår la ut en annons om att hon ville hyra ut sin lägenhet i en facebook-grupp jag är med i, och jag högg direkt!</p>
+                    <h3 class="interview-sub-question">Vad gör du på fritiden?</h3>
+                    <p>Tränar på campushallen, är med i en bokgrupp, skriver kortare och längre bitar,  drar ihop härliga middagar och bruncher med mina kompisar, slötittar på godtycklig serie (just nu Sherlock).</p>
+                    <h3 class="interview-sub-question">Är du (har varit) aktiv i någon förening?</h3>
+                    <p>
+                        Jaa! I ettan var jag till att börja med med i eventutskottet för Ingengörer utan Gränser (IUG) och en del av redaktionen för sektionstideningen ipikuré, och sen blev jag på våren dessutom blev vald till Klassförälder (KF) och då fick vara med att styra upp nolle-p för de nya I-arna som skulle börja till hösten.
+                        Nu i år har KF-arbetet fortsatt, dock lite på halvfart iom att majoriteten av arbete inför nollningen ligger under våren och sommaren,  men dessutom har jag fortsatt skriva för ipikuré.
+                        Att jag fick möjlighet att vara KF kan vara något av det bästa jag har gjort. Det var så sjukt kul att verkligen aktivt få vara med om att se till att den nya årskursen fick en så bra start som möjligt på sin tid här på sektionen. Det bästa med att vara engagerad generellt är att man verkligen får chans att lära känna så himla mycket härligt nytt folk, ofta utanför sin egen klass, årskurs eller sektion. Att engagera sig så mycket man bara orkar är något jag verkligen vill tipsa alla om!</p>
+
+
+                    <h2 class="interview-question">Vad ska du göra efter?</h2>
+                    <h3 class="interview-question">Vilket är ditt drömjobb?</h3>
+                    <p>Om jag bara visste haha. Men tänker mig en kombination av kreativa och utvecklande arbetsuppgifter i sällskap med bra folk. Jag gillar människor och tycker det är väldigt kul att se hur en grupp kan utvecklas och lära sig prestera bättre tillsammans så något som innehåller det elementet skulle nog passa mig också.</p>
+                    <h3 class="interview-sub-question">Var ser du dig om 10 år?</h3>
+                    <p>Lite visare, lite mer världsvan, lite bättre på att rocka kavajbyxor.</p>
+
+                    <h2 class="interview-question">Har du varit på utbyte?</h2>
+                    <p>Inte än, men åker dock till Skottland en termin i höst. Pepp!!</p>
+
+                    <h2 class="interview-question">Fem snabba</h2>
+                    <p>Hemmakväll eller <strong>utekväll?</strong>
+                    <p><strong>Cykel</strong> eller buss?</p>
+                    <p>Korridor, kollektiv eller <strong>lägenhet?</strong></p>
+                    <p>Storstadsliv eller <strong>friluftsliv?</strong></p>
+                    <p>Matematik & teknik eller <strong>ekonomi?</strong></p>
+                </div>
+            </li>
+            <li class="interview-card">
+                <div class="card-image">
+                    <img src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/interviews/lisa.jpg">
+                </div>
+                <div class="interview-card-info">
+                    <h2 class="interview-name">Lisa Boström</h2>
+                    <p class="interview-class">Årskurs 3</p>
+                    <a class="interview-link" href="javascript:void(0);">Läs intervjun med Lisa</a>
+                </div>
+                <div class="interview-content">
+                    <h2 class="interview-question">Vem är du?</h2>
+                    <p>Namn: Lisa Boström</p>
+                    <p>Årskurs: 3</p>
+                    <h3 class="interview-sub-question">Bakgrund</h3>
+                    <p>Jag kommer från Varberg och hade först inga stora planer på att någonsin lämna västkusten</p>
+                    <h3 class="interview-sub-question">Varför du valde I Linköping?</h3>
+                    <p>Industriell Ekonomi har sedan gymnasiet alltid lockat mig så när jag fick höra om hur bra just I var i Linköping och vilken grym studentstad det är så blev det en självklarhet, som jag aldrig ångrat!</p>
+
+
+                    <h2 class="interview-question">Hur är studierna?</h2>
+                    <p>Teknisk inriktning: Energiteknik</p>
+                    <h3 class="interview-sub-question"> Varför valde du din tekniska inriktning?</h3>
+                    <p>Jag tycker det är väldigt intressant och viktigt att blanda in energi- och miljöaspekter i ett tekniskt sammanhang. Energiteknik är en relativt ny inriktning som ligger väldigt rätt i tiden. Jag tror att alla företag har ett ökat behov inom detta område och tror därför att det kommer att vara en väldigt eftertraktad kompetens på arbetsmarknaden</p>
+                    <h3 class="interview-sub-question"> Vad lär du dig?</h3>
+                    <p>Vi lär oss att förstå och använda tekniska och miljömässiga aspekter inom energiområdet. Kurserna innehåller allt från energiförsörjning och värmeöverföring till produktutveckling sett från både ett hållbart miljömässigt perspektiv men även ekonomiskt.</p>
+                    <h3 class="interview-sub-question"> Vad är kul med utbildningen?</h3>
+                    <p>Det som är kul med energiteknik är att det ligger rätt i tiden då det pratas mycket om att göra miljövänliga val, att känna att man kommer kunna påverka med ett tekniskt perspektiv känns häftigt</p>
+                    <h3 class="interview-sub-question"> Vad ska ni göra i kandidatprojekt?</h3>
+                    <p>Vi ska utveckla och bygga ett solvärmesystem som ska kunna värma upp en vattentank</p>
+
+                    <h2 class="interview-question">Hur är studentlivet?</h2>
+                    <h3 class="interview-sub-question"> Var bor du?</h3>
+                    <p>Under de två första åren bodde jag i Ryd tillsammans med en kompis men nu har jag flyttat till en etta i T1.</p>
+                    <h3 class="interview-sub-question"> Hur fixade du bostaden?</h3>
+                    <p>Båda lägenheterna fick jag via studentbostäder</p>
+                    <h3 class="interview-sub-question"> Vad gör du på fritiden?</h3>
+                    <p>Det klassiska: Tränar, pluggar, festar, hänger med mina vänner och pojkvän</p>
+                    <h3 class="interview-sub-question"> Är du (har varit) aktiv i någon förening?</h3>
+                    <p>Jag har varit aktiv i två föreningar inom I-sektionen under årskurs 1 och 2. I båda föreningarna arrangerade vi bland annat olika fester, resor och sittningar av olika storlekar för studenter både inom sektionen men också för övriga studenter på universitetet. Jag valde att engagera mig för jag såg det som en möjlighet till massor av utmaningar, roligheter och nya vänner. Att vara engagerad i studentföreningar har varit det absolut roligaste under mina år på universitetet</p>
+
+                    <h2 class="interview-question">Vad ska du göra efter?</h2>
+                    <h3 class="interview-sub-question">Vilket är ditt drömjobb?</h3>
+                    <p>Jag har inget specifikt drömjobb utan ser snarare Industriell Ekonomi som en möjlighet att kunna välja bland diverse olika jobb och uppdrag i framtiden utan att behöva binda upp mig till en specifik bransch</p>
+                    <h3 class="interview-sub-question">Var ser du dig om 10 år?</h3>
+                    <p>Om 10 år hoppas jag att har ett jobb som jag brinner för och utmanas av och att jag umgås med alla mina grymma vänner från I Linköping!</p>
+
+                    <h2 class="interview-question">Har du varit på utbyte?</h2>
+                    <p>Jag gjorde en utlandstermin i New York under höstterminen i trean. Jag ordnade själv med utbytet och åkte inte via skolan men alla kurser kan tillgodoräknas till utbildningen i Linköping. Jag har alltid haft en dröm om att bo i New York och när jag såg chansen att göra en termin där tillsammans med min pojkvän var jag tvungen att ta den! Och det var så kul!</p>
+                    <h2 class="interview-question">Fem snabba</h2>
+                    <p>Hemmakväll eller <strong>utekväll</strong>?</p>
+                    <p><strong>Cykel </strong>eller buss?</p>
+                    <p>Korridor, kollektiv eller <strong>lägenhet</strong>?</p>
+                    <p><strong>Storstadsliv</strong> eller friluftsliv?</p>
+                    <p><strong>Matematik & teknik</strong> eller <strong>ekonomi</strong>? (Båda, hehe)</p>
+
+                </div>
+            </li>
+            <li class="interview-card">
+                <div class="card-image">
+                    <img src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/interviews/chia.jpg">
+                </div>
+                <div class="interview-card-info">
+                    <h2 class="interview-name">Chia Kattane</h2>
+                    <p class="interview-class">Årskurs 4</p>
+                    <a class="interview-link" href="javascript:void(0);">Läs intervjun med Chia</a>
+                </div>
+                <div class="interview-content">
+                    <h2 class="interview-question">Vem är du?</h2>
+                    <p>Namn: Chia Kattane</p>
+                    <p>Årskurs: 4</p>
+                    <h3 class="interview-sub-question">Bakgrund</h3>
+                    <p>Uppväxt i Kista, Stockholm, 22 år. Gillar att träna på fritiden, umgås med vänner.</p>
+                    <h3 class="interview-sub-question">Varför du valde I Linköping?</h3>
+                    <p>Jag har alltid velat veta lite om allt och aldrig velat fördjupa mig inom något specifikt ämnesområde. Jag valde därför Industriell ekonomi. Det ger mig möjligheten och verktygen för att i framtiden kunna jobba med olika typer av projekt och arbeten. Man blir helt enkelt duktig på att analysera och lösa alla olika typer av problem! Jag valde Linköping för det är relativt nära hemstaden och tyckte att det skulle bli kul med variation och en annan stad!</p>
+
+
+                    <h2 class="interview-question">Hur är studierna?</h2>
+                    <p>Teknisk inriktning: Maskinteknik</p>
+                    <p>Masterprofil: Strategi och styrning</p>
+                    <h3 class="interview-sub-question">Varför valde du dina inriktningar?</h3>
+                    <p>Jag har länge velat jobba med projektledning och styrning inom större internationella företag som sysslar med maskintekniska produkter och teknisk utveckling. Min tekniska inriktning i kombination med mina masterstudier ger mig goda förutsättningar för att jobba med det!</p>
+                    <h3 class="interview-sub-question">Vad lär du dig?</h3>
+                    <p>Från strategi & styrning – hur företag styrs och hur strategiska beslut implementeras i företag. Handlar mycket om att utveckla företag och lära sig att tillämpa verktyg i verkliga case!  Från Maskinteknik fördjupar man sig mer inom mekanik och matematik men även inom produktutveckling och produktkonstruktion. Det ger en kunskapsbas för att förstå hur typiska tekniska konstruktioner fungerar och är uppbyggda.</p>
+                    <h3 class="interview-sub-question">Vad är kul med utbildningen?</h3>
+                    <p>Strategi och styrning ger en möjligheten att prova på olika case och testar dina kunskaper om problemlösning och analysförmåga. Maskinteknik ger dig kunskapen om utvecklingsprocesser för olika typer av produkter och klassiska ingenjörskunskaper såsom mekanik och konstruktionsteknik.</p>
+                    <h3 class="interview-sub-question">Vad har du gjort för kandidatprojekt och vad ska du göra som exjobb?</h3>
+                    <p>Mitt kandidatprojekt handlade om produktutveckling. Vi utvecklade en skrivsbordsarmatur/skrivbordslampa. Exjobb är ännu Oklart. Skulle vara kul med ett nyare företag som skulle behöva lite riktlinjer och hjälp i sin organisationsstruktur och med strategiska frågor inom företaget.</p>
+
+                    <h2 class="interview-question">Hur är studentlivet?</h2>
+                    <h3 class="interview-sub-question">Var bor du?</h3>
+                    <p>Jag bor i studentområdet Irrblosset</p>
+                    <h3 class="interview-sub-question">Hur fixade du bostaden?</h3>
+                        <p>Via hyresvärden Studentbostäder</p>
+                    <h3 class="interview-sub-question">Vad gör du på fritiden?</h3>
+                    <p>Tränar, umgås med vänner, äter mycket (älskar mat!)</p>
+                    <h3 class="interview-sub-question">Är du (har varit) aktiv i någon förening?</h3>
+                    <p>
+                        Ja, Ingenjörer utan gränser. Sitter som projektledare för Tanzania Solar Panel project
+                        Ingenjörer utan gränser är en internationell och ideell förening. Föreningens syfte är att främja utbildning bland unga och utföra ingenjörsmässiga volontärprojekt både lokalt och utomlands för att främja utbildning  bland unga.. Min uppgift är att tillsammans med min projektgrupp om 10 personer, planera hur vi skall gå tillväga för att implementera ett solpanelssystem på en flickskola i Chonyonyo, Tanzania, sommaren 2016. Solpanelssystemet kommer ge möjligheten att använda belysning på internatskolan och hjälpa de studerande i sin utbildning.
+                    </P>
+                    <p>
+                        Jag tycker att man i Sverige tar mycket för givet och att det är lite av vår skyldighet att dela med oss av våra kunskaper och erfarenheter som vi besitter. Att donera pengar för att hjälpa andra har man gjort förut. Men att få sitta med i ett projekt där man tydligt kan se och vara en del av resultatet är otroligt kul och betydande. Dessutom är det ingenjörsmässiga problem och projekt man oftast sysslar med vilket också är ett plus!
+                    </p>
+
+
+                    <h2 class="interview-question">Vad ska du göra efter?</h2>
+                    <h3 class="interview-sub-question">Vilket är ditt drömjobb?</h3>
+                    <p>Ett jobb som projektledare i ett internationellt företag som tillåter en att resa mycket och stöta på nya miljöer, kulturer och situationer!</p>
+                    <h3 class="interview-sub-question">Var ser du dig om 10 år?</h3>
+                    <p>Egenföretagare</p>
+                    <h3 class="interview-sub-question">Har du varit på utbyte?</h3>
+                    <p>Jag var i Australien! Har alltid haft intresse för Australien, dess natur och hört hur varierande miljö det är där. Pratade med tidigare resenärer från skolan och kände direkt att det var dit jag ville åka!</p>
+                    <h2 class="interview-question">Fem snabba</h2>
+                    <p><strong>Hemmakväll</strong> eller utekväll?</p>
+                    <p><strong>Cykel</strong> eller buss?</p>
+                    <p>Korridor, kollektiv eller <strong>lägenhet?</strong></p>
+                    <p><strong>Storstadsliv</strong> eller friluftsliv?</p>
+                    <p><strong>Matematik & teknik</strong> eller ekonomi?</p>
+
+                </div>
+            </li>
+            <li class="interview-card">
+                <div class="card-image">
+                    <img src="https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/interviews/emma.jpg">
+                </div>
+                <div class="interview-card-info">
+                    <h2 class="interview-name">Emma Helsing Mork</h2>
+                    <p class="interview-class">Årskurs 5</p>
+                    <a class="interview-link" href="javascript:void(0);">Läs intervjun med Emma</a>
+                </div>
+                <div class="interview-content">
+                    <h2 class="interview-question"> Vem är du?</h2>
+                    <p>Namn: Emma Helsing Mork</p>
+                    <p>Årskurs: 5</p>
+                    <h3 class="interview-sub-question"> Bakgrund</h3>
+                    <p>Född och uppvuxen i Vasastan i Stockholm. Har alltid sjungit i körer och band och pluggade naturvetenskap-körsång på Kungsholmens Gymnasium.</p>
+                    <h3 class="interview-sub-question"> Varför du valde I Linköping?</h3>
+                    <p>Ärligt talat så är det är min studievägledare på gymnasiet som jag har att tacka för detta. Jag gick dit och sa ”Jag vill gå Handels men jag har inte alla MVG:n”. Då berättade hon för mig om I-linjen och Linköping och så blev det så helt enkelt. Hade inte ens varit i Linköping innan jag kom hit med flyttlasset men jag ångrar mig inte en sekund!</p>
+
+
+                    <h2 class="interview-question"> Hur är studierna?</h2>
+                    <p>Teknisk inriktning: Maskinteknik</p>
+                    <p>Masterprofil: Industriell Marknadsföring</p>
+                    <h3 class="interview-sub-question">Varför valde du dina inriktningar?</h3>
+                    <p>Maskinteknik valde jag för att det kändes ingenjörigt och bra. Och för att jag tyckte bättre om mekanikkursen än programmeringskursen, ungefär. Industriell marknadsföring valde jag för att jag tyckte försäljning, marknadsföring B2B och kundrelationer kändes spännande och för att det verkar kul att jobba på marknadsavdelningen på ett företag.</p>
+                    <h3 class="interview-sub-question"> Vad lär du dig?</h3>
+                    <p>På den tekniska sidan har jag läst kurser i hållfasthetslära, produktutveckling och industridesign bland annat. På den ekonomiska sidan har jag läst tjänsteutveckling, försäljning, marknadsanalys mm.</p>
+                    <h3 class="interview-sub-question"> Vad är kul med utbildningen?</h3>
+                    <p>Förutom att jag gillar vissa detaljer, som att presentera och jobba i grupp, lite extra mycket så är det också kul att man lär sig ett tankesätt och får en verktygslåda som man kan göra lite vad man vill med sedan, känns det som. Intrycket, så här efter fem år, är faktiskt att man har gått en utbildning som är populär bland arbetsgivarna och det är riktigt roligt!</p>
+                    <h3 class="interview-sub-question">Vad har du gjort för kandidatprojekt och vad ska du göra som exjobb?</h3>
+                    <p>Som kandidatprojekt byggde jag och tre andra, tro det eller ej, en mikrobiogasreaktor. Vi matade den med malda matrester från Kårallens matsal (restaurang på campus)och ja, den luktade extremt illa efter några veckor. Väldigt kul hade vi, men biogasreaktorn funkade sådär…</p>
+
+                    <p>Exjobb gör jag just nu på Saab Gripen här i Linköping. Jag och min exjobbspartner skriver om skapande av kundvärde i komplexa säljprocesser. Mycket spännande och lärorikt och en massa starwarsfeeling på Saab!</p>
+
+
+                    <h2 class="interview-question"> Hur är studentlivet?</h2>
+                    <h3 class="interview-sub-question"> Var bor du?</h3>
+                    <p>Efter att ha testat på de flesta olika boendeformer och stadsdelar bor jag nu i en Studentbostäder-etta på Fjärilen. Perfekt läge mittemellan skolan och stan.</p>
+                    <h3 class="interview-sub-question"> Hur fixade du bostaden?</h3>
+                    <p>Mitt första boende fick jag genom att ringa och gråta hos Studentbostäder. Killen i telefonen slängde på 300 poäng och någon vecka senare hade jag ett korridorsrum i Ryd.</p>
+                    <h3 class="interview-sub-question"> Vad gör du på fritiden?</h3>
+                    <p>Fixar roliga middagar, sjunger youtube-kareoke och joggar runt Stångån, typ.</p>
+                    <h3 class="interview-sub-question"> Är du (har varit) aktiv i någon förening?</h3>
+                    <p>Japp, jag har hunnit med en hel del! Jag har varit sångare i I-bandet, pubansvarig och ordförande för Alumniutskottet och styrelsemedlem i I-Styret. Och så har jag även varit med och startat en podcast på sektionen.</p>
+
+                    <p>I-bandet är I-sektionens egna band som spelar grymma covers på olika fester och Kravaller under året. Alumniutskottet är utskottet som har kontakt med gamla studenter som har tagit examen, så kallade alumner. Det anordnas pubar för alumnerna och en del kommer tillbaka hit och föreläser, för att nämna några event. I-Styret är sektionens styrelse som driver den övergripande verksamheten för hela sektionen.</p>
+
+                    <p>Att engagera sig i sektionen har varit otroligt kul tycker jag! Dels för att det socialt, man lär känna många bra, trevliga och inspirerande människor. Men dels också för att är det är väldigt lärorikt, man lär sig saker som man inte skulle lärt sig i utbildningen annars. Det är också väldigt roligt att man faktiskt kan vara med och påverka och utveckla sektionen. Jag uppmuntrar ALLA att gå på sektionens höst-, vinter- och vårmöten, det är årets höjdpunkter!</p>
+
+
+                    <h2 class="interview-question"> Vad ska du göra efter?</h2>
+                    <h3 class="interview-sub-question">Vilket är ditt drömjobb?</h3>
+                    <p>Marknadschef på ett svincoolt företag på Manhattan</p>
+                    <h3 class="interview-sub-question">Var ser du dig om 10 år?</h3>
+                    <p>Se ovan. PLUS gästföreläsandes på LiU om min spännande och unika och ledarskapskarriär, hehe.</p>
+
+                    <h2 class="interview-question"> Har du varit på utbyte?</h2>
+                    <p>Jag var en termin i Sydney i Australien. En himla bra termin! Skön skola, varmt väder, bra mat, kul folk och så hann vi resa längs Australiens östkust OCH bo i en campervan på Nya Zealand. Och hoppa fallskärm. Och dyka med Hitta Nemos osv osv osv.  Jag tog inget sabbatsår eller så efter gymnasiet så jag hade det där backapacka/turkost vatten/Känguru –suget kvar.</p>
+
+
+                    <h2 class="interview-question">Fem snabba</h2>
+                    <p>Hemmakväll eller <strong>utekväll</strong>?</p>
+                    <p><strong>Cykel</strong> eller buss?</p>
+                    <p>Korridor, kollektiv eller <strong>lägenhet</strong>?</p>
+                    <p><strong>Storstadsliv</strong> eller friluftsliv?</p>
+                    <p>Matematik & teknik eller <strong>ekonomi</strong>?</p>
+
                 </div>
             </li>
         </ul>
+
+        <div id="full-interview-container" class="interview-content">
+
+        </div>
     </section>
     <section class="latest">
-            <h1 class="section-header">Se vad som händer på sektionen</h1>
-            <hr>
-            <div class="blog-previews">
-                <h2>Senaste bloginläggen</h2>
-                {% load blog_tags %}
-                {% get_last_entries as entries %}
-                {% for entry in entries %}
-                    <div class="latest-blogs-preview">
-                        <div class="blog-entry-datebox">
-                            <p class="blog-date">
-                                {{ entry.publishedDate|date:"d b Y" }}
-                            </p>
-                        </div>
-                        <div class="blog-entry-textbox">
-                            <h2 class="blog-title">
-                                <a href="{% url "view_one_blog_entry" entry.pk %}">{{ entry.title }}</a>
-                            </h2>
-                            <p class="blog-text">
-                                {{ entry.lead|truncatechars:200 }}
-                            </p>
-                        </div>
+        <h1 class="section-header">Se vad som händer på sektionen</h1>
+        <hr>
+        <div class="blog-previews">
+            <h2>Senaste bloginläggen</h2>
+            {% load blog_tags %}
+            {% get_last_entries as entries %}
+            {% for entry in entries %}
+                <div class="latest-blogs-preview">
+                    <div class="blog-entry-datebox">
+                        <p class="blog-date">
+                            {{ entry.publishedDate|date:"d b Y" }}
+                        </p>
                     </div>
-
-                {% endfor %}
-            </div>
-            <div class="instagram">
-                <div class="instagram-content">
-                    <p class="instagram-account-link">
-                        <i class="fa fa-instagram"></i>
-                        <a href="https://www.instagram.com/industriellekonomi_liu/">@industriellekonomi_liu</a>
-                    </p>
-                    <div class="instagram-feed">
-                        <ul class="instagram-pictures">
-                        </ul>
+                    <div class="blog-entry-textbox">
+                        <h2 class="blog-title">
+                            <a href="{% url "view_one_blog_entry" entry.pk %}">{{ entry.title }}</a>
+                        </h2>
+                        <p class="blog-text">
+                            {{ entry.lead|truncatechars:200 }}
+                        </p>
                     </div>
-                    </a>
                 </div>
-            </div>
 
+            {% endfor %}
+        </div>
+  <!--
+       <div class="instagram">
+            <div class="instagram-content">
+                <p class="instagram-account-link">
+                    <i class="fa fa-instagram"></i>
+                    <a href="https://www.instagram.com/industriellekonomi_liu/">@industriellekonomi_liu</a>
+                </p>
+                <div class="instagram-feed">
+                    <ul class="instagram-pictures">
+                    </ul>
+                </div>
+                </a>
+            </div>
+        </div>
+
+-->
+
+        <section class="outer-social-media-container">
+            <table class="social-media-container">
+                <tr>
+                    <td colspan="4"><h1 class = "social-media-title">Vi finns överallt på nätet, följ oss</h1></td>
+                </tr>
+                <tr class = "social-media-links">
+                    <td><a href="https://www.facebook.com/Industriell-ekonomi-Link%C3%B6ping-109690162408268/?fref=ts/"  target="_blank"><i class="fa fa-facebook-official social-media-icon"></i></a></td>
+                    <td><a href="https://instagram.com/industriellekonomi_liu/"  target="_blank"><i class="fa fa-instagram social-media-icon"></i></a></td>
+                    <td><a href="https://www.linkedin.com/grps/Industriell-ekonomi-Sverige-ISverige-4435021/about?" target="_blank"><i class="fa fa-linkedin social-media-icon"></i></a></td>
+                    <td><a href="https://twitter.com/i_sektionen/" target="_blank"><i class="fa fa-twitter social-media-icon"></i></a></td>
+                </tr>
+            </table>
         </section>
+    </section>
+
+
 
 
 {% endblock %}

@@ -1,91 +1,81 @@
 {% extends 'master.html' %}
 
 {% block links %}
-    <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
-    {% if utbildning %}
-        <li class="active-nav-item nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
+    <li class="nav-item nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
+    {% if i_resan %}
+        <li class="active-nav-item nav-link"><a href="{% url 'i-resan' %}">I-Resan</a></li>
     {% else %}
-        <li class="nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
+        <li class="nav-link"><a href="{% url 'i-resan' %}">I-Resan</a></li>
     {% endif %}
+    <li class="nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
     <li class="nav-link"><a href="{% url 'studentliv' %}">Studentliv</a></li>
-    <li class="nav-link"><a href="{% url 'efterstudier' %}">Efter studierna</a></li>
-    <li class="nav-link"><a href="{% url 'kontakt' %}">Kontakt</a></li>
+    <li class="nav-link"><a href="{% url 'FAQ' %}">FAQ</a></li>
 {% endblock %}
 
 {% block content %}
-
     <section class="education-hero">
         <div class="hero-content">
             <h1 class="hero-heading">I-resan</h1>
             <hr class="hero-divider">
             <p class="hero-text">
-                Funderar du på att söka Industriell Ekonomi eller har du redan bestämt dig? Då är I-resan något för dig!
-                I-resan är ett kostnadsfritt heldagsevenemang för 200 potentiella I-studenter.
+                Funderar du på att söka Industriell Ekonomi eller har du redan bestämt dig? Då är I-resan något för
+                dig! I-resan är ett tvådagarsevenemang för 60 potentiella I-studenter.
                 Vi riktar oss i första hand till dig som är studerande gymnasieelev i årskurs 3.
-                Då det finns begränsat antal platser gäller först till kvarn.
             </p>
         </div>
     </section>
     <section class="i-resan">
-        <h1 class="section-header">Den 3:e februari 2016 går I-resan av stapeln i Linköping!</h1>
+        <h1 class="section-header">Den 7-8 februari 2017 går I-resan av stapeln i Linköping!</h1>
         <h2>Vad ingår?</h2>
         <ul class="bullet-list">
             <li>
-                Bussresa tur och retur från Stockholm, Göteborg eller Malmö. Du som inte har möjlighet att åka med bussarna är givetvis också välkommen, men får då ordna resan själv.
+                Två heldagar på Linköpings universitet
             </li>
             <li>
-Heldag på Linköpings universitet
+                Inspirationsföreläsning
             </li>
             <li>
-Inspirationsföreläsning
+                Lunch + fika både dagarna
             </li>
             <li>
-Caselösning
+                Caselösning
             </li>
             <li>
-Lunchsittning
+                Matematikföreläsning
             </li>
             <li>
-Rundvandring på campus med mingel och aktiviteter med I-sektionens föreningar och studenter
+                Kvällssittning
             </li>
             <li>
-Träffa många härliga studenter och mycket mer!
+                Rundvandring på campus med mingel och aktiviteter med I-sektionens föreningar och studenter
+            </li>
+            <li>
+                Mingel och frågestund med studenter
+            </li>
+            <li>
+                Boende på Scandic Väst
+            </li>
+            <li>
+                Reseersättning upp till 500 kr
             </li>
         </ul>
-        <p></p>
-        <p class="section-text">
-            Nytt för i år är att du som gymnasieelev har möjlighet att delta i Linköpings Universitets ”Skugga en student”. Detta innebär att man följer med en student under en dag på universitetet.
-            För att delta i <em>”Skugga en student”</em> behöver du, utöver anmälan till I-resan, anmäla dig <a href="https://www.liu.se/utbildning/kontakt/skugga?l=sv">här</a>
-        </p>
-        <p>
-            Det finns ett begränsat antal sovplatser för de elever som vill skugga dagen efter. Behöver du sovplats? Kontakta oss på  anmalan@i-resan.se!
-            Vi rekommenderar att du ordnat sovplats, antingen på egen hand eller via oss, innan du ansöker om att skugga en student.
-            Observera att vi tyvärr inte har möjlighet att ordna hemresan om du väljer att skugga en student.
-        </p>
         <p> </p>
         <p><b>
-            Anmälan gör du <a href="http://goo.gl/forms/kS16pZWFW8">här!</a>
+            Nu är anmälan för I-resan 2017 stängd och alla som har kommit med skall ha blivit kontaktade via mail. Om du är intresserad av att skriva upp dig på vår reservlista, hör av dig till <a href="mailto:projektledare@i-resan.se">projektledare@i-resan.se</a>!
         </b></p>
         <p>
             <em>Tänk på att anmälan är bindande!</em>
         </p>
         <p></p>
         <p>
-Vi kan stolt presentera vår samarbetspartner Gränges som kommer vara del av case-lösningen. Gränges är en ledande global leverantör av valsade produkter till industrin för lödda värmeväxlare i aluminium. Bolaget utvecklar, producerar och marknadsför avancerade material som ökar effektiviteten i kundernas tillverkningsprocesser och prestandan hos slutprodukten; den lödda värmeväxlaren. Bolagets geografiska marknader är Europa, Asien och Nord- och Sydamerika. Produktionsanläggningarna är belägna i Sverige och Kina och har totalt en årlig kapacitet på 220 000 ton. Gränges har omkring 950 anställda och under 2014 uppgick nettoomsättningen till 4 748 MSEK. Sedan oktober 2014 är bolagets aktier noterade på Nasdaq Stockholm.
-Mer information om Gränges finns på <a href="http://www.granges.com">www.granges.com</a>!
+            Undrar du över något?
+            Tveka inte att kontakta oss på <a href="mailto:info@i-resan.se">info@i-resan.se</a>!
         </p>
-
-<p>
-Undrar du över något?
-Tveka inte att kontakta oss på <a href="mailto:info@i-resan.se">info@i-resan.se</a>!
-Passa på att ta den här chansen att få uppleva en dag i riktig studentanda!
-</p>
         <p>
-Varmt välkomna, vi ses i Linköping!
-            </p><p>
-<em>/Projektgruppen för I-resan</em>
-
-        </p>
+            Varmt välkomna, vi ses i Linköping!
+        </p><p>
+        <em>/Projektgruppen för I-resan</em>
+    </p>
 
 
     </section>
