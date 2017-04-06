@@ -31,6 +31,11 @@ def show_utbildning_page(request):
         'utbildning': True,
     })
 
+def show_bostad_page(request):
+    return render(request, "isektionen/sokande/bostad.html", {
+        'bostad': True,
+    })
+
 
 def show_efterstudier_page(request):
     return render(request, "isektionen/sokande/efterstudier.html", {

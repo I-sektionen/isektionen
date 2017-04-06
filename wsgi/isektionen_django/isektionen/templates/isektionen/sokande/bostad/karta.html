@@ -1,0 +1,359 @@
+
+{% block content %}
+
+    <div class = mapcontent>
+
+        <h1 class="section-header">Bostadsområden i Linköping</h1>
+
+
+        <div id="map" style = 'height:400px'></div>
+        <script>
+            // This example displays a marker at the center of Australia.
+            // When the user clicks the marker, an info window opens.
+            function initMap() {
+                var ryd = {lat: 58.409291, lng: 15.565224};
+                var irrblosset = {lat: 58.40289, lng: 15.59835};
+                var lambohov = {lat: 58.384918, lng:15.571977};
+                var flamman = {lat: 58.411764,lng: 15.602623};
+                var T1 = {lat: 58.40322943611773, lng: 15.607532858848572};
+                var colonia = {lat: 58.403198, lng: 15.583598};
+                var fjarilen = {lat: 58.41329002630203, lng: 15.605505108833313};
+                var mapcenter = {lat: 58.397844, lng: 15.575953};
+
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 13,
+                    center: mapcenter,
+                    scrollwheel:  false
+                });
+
+                // Define the LatLng coordinates for the polygon's path.
+                var rydCoords = [
+                    {lat: 58.40666, lng: 15.57722},
+                    {lat: 58.40534, lng: 15.56885},
+                    {lat: 58.40511, lng: 15.56203},
+                    {lat: 58.40594, lng: 15.55859},
+                    {lat: 58.40824, lng: 15.55576},
+                    {lat: 58.41228, lng: 15.55730},
+                    {lat: 58.41467, lng: 15.56589},
+                    {lat: 58.41426, lng: 15.57456}
+                ];
+
+                var rydArea = new google.maps.Polygon({
+                    paths:rydCoords,
+                    strokeColor: '#FF0000',
+                    strokeOpacity: 0.8,
+                    strokeWeight: 2,
+                    fillColor: '#FF0000',
+                    fillOpacity: 0.35
+                });
+                rydArea.setMap(map);
+
+                var coloniaCoords = [
+                    {lat: 58.40479, lng: 15.58069},
+                    {lat: 58.40517, lng: 15.58220},
+                    {lat: 58.40515, lng: 15.58524},
+                    {lat: 58.40155, lng: 15.58687},
+                    {lat: 58.40144, lng: 15.58142}
+                ];
+
+                var coloniaArea = new google.maps.Polygon({
+                    paths:coloniaCoords,
+                    strokeColor: '#FF0000',
+                    strokeOpacity: 0.8,
+                    strokeWeight: 2,
+                    fillColor: '#FF0000',
+                    fillOpacity: 0.35
+                });
+                coloniaArea.setMap(map);
+
+
+                var lambohovCoords = [
+                    {lat: 58.39029, lng: 15.55516},
+                    {lat: 58.38849, lng: 15.57992},
+                    {lat: 58.38201, lng: 15.58069},
+                    {lat: 58.38197, lng: 15.56336},
+                    {lat: 58.38404, lng: 15.56327},
+                    {lat: 58.38413, lng: 15.55477},
+                ];
+
+                var lambohovArea = new google.maps.Polygon({
+                    paths:lambohovCoords,
+                    strokeColor: '#FF0000',
+                    strokeOpacity: 0.8,
+                    strokeWeight: 2,
+                    fillColor: '#FF0000',
+                    fillOpacity: 0.35
+                });
+                lambohovArea.setMap(map);
+
+                var T1Coords = [
+                    {lat: 58.40352173958393, lng: 15.60632050037384},
+                    {lat: 58.40399953810664, lng: 15.608755946159363},
+                    {lat: 58.40419627679206, lng: 15.608766674995422},
+                    {lat: 58.40457288778354, lng: 15.610880255699158},
+                    {lat: 58.40344304273537, lng: 15.611631274223328},
+                    {lat: 58.40296523666821, lng: 15.608208775520325},
+                    {lat: 58.402656064584725,lng: 15.607436299324036},
+                ];
+
+
+                var T1Area = new google.maps.Polygon({
+                    paths:T1Coords,
+                    strokeColor: '#FF0000',
+                    strokeOpacity: 0.8,
+                    strokeWeight: 2,
+                    fillColor: '#FF0000',
+                    fillOpacity: 0.35
+                });
+
+                T1Area.setMap(map);
+
+                var flammanCoords = [
+                    {lat: 58.41155, lng: 15.60506},
+                    {lat: 58.41077, lng: 15.60159},
+                    {lat: 58.41212, lng: 15.59938},
+                    {lat: 58.41296, lng: 15.60466}
+                ];
+
+
+                var flammanArea = new google.maps.Polygon({
+                    paths:flammanCoords,
+                    strokeColor: '#FF0000',
+                    strokeOpacity: 0.8,
+                    strokeWeight: 2,
+                    fillColor: '#FF0000',
+                    fillOpacity: 0.35
+                });
+
+                flammanArea.setMap(map);
+
+
+                var irrblossetCoords = [
+                    {lat: 58.40307, lng: 15.59568},
+                    {lat: 58.40460, lng: 15.60044},
+                    {lat: 58.40309, lng: 15.60237},
+                    {lat: 58.40180, lng: 15.59746}
+                ];
+
+
+                var irrblossetArea = new google.maps.Polygon({
+                    paths:irrblossetCoords,
+                    strokeColor: '#FF0000',
+                    strokeOpacity: 0.8,
+                    strokeWeight: 2,
+                    fillColor: '#FF0000',
+                    fillOpacity: 0.35
+                });
+
+                irrblossetArea.setMap(map);
+
+
+                var fjarilenCoords = [
+                    {lat: 58.4127561565406, lng: 15.605451464653015},
+                    {lat: 58.414121723074544, lng: 15.605108141899109},
+                    {lat: 58.41431278577586, lng: 15.607457756996155},
+                    {lat: 58.41310457772297, lng: 15.607672333717346}
+                ];
+
+
+                var fjarilenArea = new google.maps.Polygon({
+                    paths:fjarilenCoords,
+                    strokeColor: '#FF0000',
+                    strokeOpacity: 0.8,
+                    strokeWeight: 2,
+                    fillColor: '#FF0000',
+                    fillOpacity: 0.35
+                });
+
+                fjarilenArea.setMap(map);
+
+
+
+                var rydContent = '<div id="content">'+
+                        '<div id="siteNotice">'+
+                        '</div>'+
+                        '<h1 id="firstHeading" class="firstHeading">Ryd</h1>'+
+                        '<div id="bodyContent">'+
+                        '<p><b>Ryd</b> ' +
+                        ' är ett större område med ett eget centrum. Där har man bland annat tillgång till livsmedelsaffär, konditori, frisör och cykelverkstad. I Ryd bor ungefär 3000 studenter i korridorrum, ettor, tvåor eller treor. Mitt i Ryd ligger Herrgårn, även kallat [hg], som är studenternas eget uteställe. Herrgårn drivs av studenter för studenter och där kan man både äta och dricka gott, dansa eller lyssna på livemusik.</p>'+
+                        '</div>'+
+                        '</div>';
+
+                var coloniaContent = '<div id="content">'+
+                        '<div id="siteNotice">'+
+                        '</div>'+
+                        '<h1 id="firstHeading" class="firstHeading">Colonia</h1>'+
+                        '<div id="bodyContent">'+
+                        '<p><b>Colonia</b> ' +
+                        ' är Linköpings nyaste och modernaste studentområde och ligger så nära skolan man kan komma. Det korta avståndet innebär att du bara har några minuters gångavstånd till föreläsningslokaler, caféer och biblioteket.</p>'+
+                        '</div>'+
+                        '</div>';
+
+                var lambohovContent = '<div id="content">'+
+                        '<div id="siteNotice">'+
+                        '</div>'+
+                        '<h1 id="firstHeading" class="firstHeading">Lambohov</h1>'+
+                        '<div id="bodyContent">'+
+                        '<p><b>Lambohov</b> ' +
+                        'Bor man i Lambohov har man nära till universitetet och en lite längre cykelväg til Linköpings centrum. Lambohov kompenserar detta med att ha ett eget centrum med matbutiker, restauranger, bibliotek och Systembolag. Här finns omöblerade ettor och tvåor att hyra. Dessutom har varje hus ett gemensamt allrum och en gemensam tvättstuga. I ett av husen finns en större samlingslokal och bastu att boka.</p>'+
+                        '</div>'+
+                        '</div>';
+
+                var flammanContent = '<div id="content">'+
+                        '<div id="siteNotice">'+
+                        '</div>'+
+                        '<h1 id="firstHeading" class="firstHeading">Flamman</h1>'+
+                        '<div id="bodyContent">'+
+                        '<p><b>Flamman</b> ' +
+                        'är beläget mitt mellan centrum och universitetsområdet. Här finns i huvudsak korridorrum att hyra, men även en del lägenheter. Korridorrummen finns att hyra både möblerade eller omöblerade. I ett av husen finns bastu att tillgå. I källaren på ett annat hus finns den studentdrivna puben/nattklubben Flamman, ett studentställe som är väl värt att besöka. Förutom närheten till universitetet och centrum är det inte långt till Rydsskogen med motionsspår och fotbollsplaner.</p>'+
+                        '</div>'+
+                        '</div>';
+
+
+                var irrblossetContent = '<div id="content">'+
+                        '<div id="siteNotice">'+
+                        '</div>'+
+                        '<h1 id="firstHeading" class="firstHeading">irrblosset</h1>'+
+                        '<div id="bodyContent">'+
+                        '<p><b>Irrblosset</b> ' +
+                        'har nära till universitetsområdet och centrum. Varje hus på Irrblosset har flera studierum som går att boka. Dessutom finns det en bastu, ett gym, en volleybollplan och ett biljardrum. Här finns både korridorrum, ettor och tvåor att hyra. Korridorrummen har ett stort och fräscht gemensamt utrymme som antingen har balkong eller uteplats.</p>'+
+                        '</div>'+
+                        '</div>';
+
+                var T1Content = '<div id="content">'+
+                        '<div id="siteNotice">'+
+                        '</div>'+
+                        '<h1 id="firstHeading" class="firstHeading">T1</h1>'+
+                        '<div id="bodyContent">'+
+                        '<p><b>T1</b> ' +
+                        'är ett av Linköpings nyaste studentbostadsområden. Området är beläget mitt mellan city och universitetet och ligger dessutom nära Hälsouniversitetet. I området finns tillgång till bland annat bastu och studierum, som de boende har möjlighet att hyra.</p>'+
+                        '</div>'+
+                        '</div>';
+
+                var fjarilenContent = '<div id="content">'+
+                        '<div id="siteNotice">'+
+                        '</div>'+
+                        '<h1 id="firstHeading" class="firstHeading">Fjärilen</h1>'+
+                        '<div id="bodyContent">'+
+                        '<p><b>Fjarilen</b> ' +
+                        'är en förre detta kontorsbyggnad ombyggd till att rymma sextio lägenheter. Området är lite lugnare och ligger nära city. Lägenheterna här är ofta populära då de har en hög standard. </p>'+
+                        '</div>'+
+                        '</div>';
+
+                var rydInfoWindow = new google.maps.InfoWindow({
+                    content: rydContent
+                });
+                var latestInfoWindow = rydInfoWindow;
+
+                var coloniaInfoWindow = new google.maps.InfoWindow({
+                    content: coloniaContent
+                });
+
+                var lambohovInfoWindow = new google.maps.InfoWindow({
+                    content: lambohovContent
+                });
+
+                var flammanInfoWindow = new google.maps.InfoWindow({
+                    content: flammanContent
+                });
+
+                var fjarilenInfoWindow = new google.maps.InfoWindow({
+                    content: fjarilenContent
+                });
+
+
+
+                var irrblossetInfoWindow = new google.maps.InfoWindow({
+                    content: irrblossetContent
+                });
+
+                var T1InfoWindow = new google.maps.InfoWindow({
+                    content: T1Content
+                });
+
+
+                google.maps.event.addListener(rydArea, 'click', function() {
+                    latestInfoWindow.close();
+                    latestInfoWindow = rydInfoWindow;
+                    rydInfoWindow.setPosition(new google.maps.LatLng(ryd));
+                    rydInfoWindow.open(map);
+                });
+
+
+
+
+                coloniaArea.addListener('click', function() {
+                    latestInfoWindow.close();
+                    latestInfoWindow = coloniaInfoWindow;
+                    coloniaInfoWindow.setPosition(new google.maps.LatLng(colonia));
+                    coloniaInfoWindow.open(map);
+                });
+
+
+
+                lambohovArea.addListener('click', function() {
+                    latestInfoWindow.close();
+                    latestInfoWindow = lambohovInfoWindow;
+                    lambohovInfoWindow.setPosition(new google.maps.LatLng(lambohov));
+                    lambohovInfoWindow.open(map);
+                });
+
+                T1Area.addListener('click', function() {
+                    latestInfoWindow.close();
+                    latestInfoWindow = T1InfoWindow;
+                    T1InfoWindow.setPosition(new google.maps.LatLng(T1));
+                    T1InfoWindow.open(map);
+                });
+
+                flammanArea.addListener('click', function() {
+                    latestInfoWindow.close();
+                    latestInfoWindow = flammanInfoWindow;
+                    flammanInfoWindow.setPosition(new google.maps.LatLng(flamman));
+                    flammanInfoWindow.open(map);
+                });
+
+
+                irrblossetArea.addListener('click', function() {
+                    latestInfoWindow.close();
+                    latestInfoWindow = irrblossetInfoWindow;
+                    irrblossetInfoWindow.setPosition(new google.maps.LatLng(irrblosset));
+                    irrblossetInfoWindow.open(map);
+                });
+
+                fjarilenArea.addListener('click', function() {
+                    latestInfoWindow.close();
+                    latestInfoWindow = fjarilenInfoWindow;
+                    fjarilenInfoWindow.setPosition(new google.maps.LatLng(fjarilen));
+                    fjarilenInfoWindow.open(map);
+                });
+
+
+
+
+                google.maps.event.addListener(map, "click", function(event) {
+                    rydInfoWindow.close();
+                    coloniaInfoWindow.close();
+                    lambohovInfoWindow.close();
+                    irrblossetInfoWindow.close();
+                    T1InfoWindow.close();
+                    flammanInfoWindow.close();
+                    fjarilenInfoWindow.close();
+                });
+
+
+
+
+            }
+        </script>
+
+
+
+
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAprhl-FD9HEtL-xIOss8kjhSSCGsDIV-A&callback=initMap">
+        </script>
+    </div>
+{% endblock %}
+
+
+<!-- gammal API AIzaSyCzvVbf7okh24tzAmHCbmworZs9lCO2H1Q -->
