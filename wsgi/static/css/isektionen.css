@@ -2597,14 +2597,26 @@ Main components
   .foretag-erbjudande .foretag-erbjudande-content {
     margin-left: auto;
     margin-right: auto; }
-    .foretag-erbjudande .foretag-erbjudande-content .action-button {
-      display: inline-table; }
-      .foretag-erbjudande .foretag-erbjudande-content .action-button .action-button-icon {
-        display: table-cell;
-        vertical-align: middle; }
-      .foretag-erbjudande .foretag-erbjudande-content .action-button .action-button-text {
-        display: table-cell;
-        vertical-align: middle; }
+    .foretag-erbjudande .foretag-erbjudande-content .buttonContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
+      .foretag-erbjudande .foretag-erbjudande-content .buttonContainer .action-button {
+        display: inline-table;
+        width: 250px;
+        margin: 8px;
+        text-align: center;
+        border-spacing: 8px;
+        padding: 0;
+        color: #2D701E;
+        background-color: whitesmoke;
+        box-shadow: 0px 3px 0px whitesmoke; }
+        .foretag-erbjudande .foretag-erbjudande-content .buttonContainer .action-button .action-button-icon {
+          display: table-row;
+          vertical-align: middle; }
+        .foretag-erbjudande .foretag-erbjudande-content .buttonContainer .action-button .action-button-text {
+          display: table-row;
+          vertical-align: middle; }
 
 .foretag-samarbetsparnter {
   padding: 2em;

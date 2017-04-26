@@ -88,16 +88,32 @@
     margin-left: auto
     margin-right: auto
 
-    .action-button
-      display: inline-table
+    .buttonContainer
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
 
-      .action-button-icon
-        display: table-cell
-        vertical-align: middle
+      .action-button
+        display: inline-table
+        width: 250px
+        margin: 8px
+        text-align: center
 
-      .action-button-text
-        display: table-cell
-        vertical-align: middle
+        border-spacing: 8px
+        padding: 0
+
+        color: #2D701E
+        background-color: whitesmoke
+        box-shadow: 0px 3px 0px whitesmoke
+
+        .action-button-icon
+          display: table-row
+          vertical-align: middle
+
+
+        .action-button-text
+          display: table-row
+          vertical-align: middle
 
 
 .foretag-samarbetsparnter
