@@ -1,0 +1,24 @@
+{% extends 'master.html' %}
+
+{% block links %}
+    <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
+    <li class="nav-link"><a href="{% url 'i-resan' %}">I-Resan</a></li>
+    <li class="nav-link"><a href="{% url 'utbildning' %}">Utbildning</a></li>
+    {% if bostad %}
+        <li class="active-nav-item nav-link"><a href="{% url 'bostad' %}">Bostad</a></li>
+    {% else %}
+        <li class="nav-link"><a href="{% url 'bostad' %}">Bostad</a></li>
+    {% endif %}
+    <li class="nav-link"><a href="{% url 'studentliv' %}">Studentliv</a></li>
+    {% comment %}<li class="nav-link"><a href="{% url 'efterstudier' %}">Efter studierna</a></li> {% endcomment %}
+    <li class="nav-link"><a href="{% url 'FAQ' %}">FAQ</a></li>
+{% endblock %}
+
+{% block content %}
+
+        {% include 'isektionen/sokande/bostad/inledning.html' %}
+        {% include 'isektionen/sokande/bostad/hitta_bostad.html' %}
+        {% include 'isektionen/sokande/bostad/karta.html' %}
+        {% include 'isektionen/sokande/bostad/bostadsko.html' %}
+
+{% endblock %}
