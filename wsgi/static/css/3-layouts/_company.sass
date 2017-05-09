@@ -1,32 +1,7 @@
+html, content
+  background-color: #f7f7f7
 
-.foretag-contact
-  //+outer-container()
-  padding: 2em
-  margin: 0
-  width: 100%
-  min-height: 350px
-  background-color: white
-
-  .foretag-contact-content
-    max-width: 50em
-    margin-left: auto
-    margin-right: auto
-    text-align: center
-
-    p
-      text-align: center
-
-    a
-      color: $dark-gray
-
-    .contact-divider
-      border: none
-      min-width: 100%
-      background-color: $dark-gray
-      height: 4px
-      margin: 2px
-
-.foretag-exponering
+.foretag-inledning
   padding: 2em
   margin: 0
   width: 100%
@@ -35,11 +10,11 @@
 
   display: table
 
-  .exponering-wrapper
+  .inledning-wrapper
     display: table-cell
     vertical-align: middle
 
-  .foretag-exponering-content
+  .foretag-inledning-content
     text-align: center
     width: 100%
 
@@ -48,7 +23,7 @@
       margin-left: auto
       margin-right: auto
 
-    .exponering-heading
+    .inledning-heading
       color: dimgrey
       font-size: 2em
       text-transform: uppercase
@@ -57,13 +32,13 @@
         font-size: 3em
 
 
-    .exponering-divider
+    .inledning-divider
       border: none
       background-color: dimgray
       height: 5px
       margin: 5px
 
-    .exponering-text
+    .inledning-text
       color: dimgrey
       font-weight: bold
       font-size: 1.2em
@@ -76,7 +51,7 @@
   padding: 2em
   margin: 0
   width: 100%
-  min-height: 420px
+  min-height: 500px
   background-color: white
   //color: white
   .section-header
@@ -91,55 +66,18 @@
     .fade-in-elements
       .fade-in-element
         max-width: 20em
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2)
-        border-radius: 15px
-
-
-.foretag-intervjuer
-  //+outer-container()
-  padding: 2em
-  margin: 0
-  width: 100%
-  min-height: 500px
-  background-color: #f7f7f7
-
-  .foretag-intervjuer-content
-    max-width: 50em
-    margin-left: auto
-    margin-right: auto
-
-    .chart-canvas-company
-      padding: 1em
-      height: 300px
-      width: 300px
-
-
-.foretag-statistik
-  //+outer-container()
-  padding: 2em
-  margin: 0
-  width: 100%
-  min-height: 500px
-  background-color: #f7f7f7
-
-  .foretag-statistik-content
-    max-width: 50em
-    margin-left: auto
-    margin-right: auto
-
-    .chart-canvas-company
-      padding: 1em
-      height: 300px
-      width: 300px
-
+        //box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2)
+        box-shadow: 1px 1px 5px darken($light-gray, 50%)
+        //border-radius: 15px
 
 
 .foretag-erbjudande
   //+outer-container()
   padding: 2em
+  padding-bottom: 4em
   margin: 0
   width: 100%
-  min-height: 500px
+  //min-height: 500px
   background-color: #f7f7f7
   //background-image: url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/hero-images/nollep-karallen.jpg")
   .section-header
@@ -152,6 +90,135 @@
     //max-width: 50em
     margin-left: auto
     margin-right: auto
+
+    .buttonContainer
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+
+      .action-button
+        display: inline-table
+        width: 250px
+        margin: 8px
+        text-align: center
+
+        border-spacing: 8px
+        padding: 0
+
+        color: $isektionen-green
+        background-color: #f7f7f7
+        box-shadow: 0px 3px 0px #f7f7f7
+
+        .action-button-icon
+          display: table-row
+          vertical-align: middle
+
+
+        .action-button-text
+          display: table-row
+          vertical-align: middle
+
+
+.foretag-samarbetsparnter
+  //+outer-container()
+  padding: 0em 2em
+  padding-bottom: 2em
+  margin: 0
+  width: 100%
+  //min-height: 500px
+  background-color: #f7f7f7
+
+  .section-header
+    text-align: center
+    color: dimgrey
+
+  .foretag-samarbetsparnter-content
+    max-width: 50em
+    margin-left: auto
+    margin-right: auto
+
+  h1
+    display: inline
+    margin-left: 0.5em
+
+  i
+    color: $isektionen-green
+
+.foretag-foretagspresentationer
+  //+outer-container()
+  padding: 0em 2em
+  padding-bottom: 2em
+  margin: 0
+  width: 100%
+  //min-height: 500px
+  background-color: #f7f7f7
+
+  .section-header
+    text-align: center
+    color: dimgrey
+
+  .foretag-foretagspresentationer-content
+    max-width: 50em
+    margin-left: auto
+    margin-right: auto
+
+  h1
+    display: inline
+    margin-left: 0.5em
+
+  i
+    color: $isektionen-green
+
+
+.foretag-marknadsforing
+  //+outer-container()
+  padding: 0em 2em
+  padding-bottom: 2em
+  margin: 0
+  width: 100%
+  //min-height: 500px
+  background-color: #f7f7f7
+
+  .section-header
+    text-align: center
+    color: dimgrey
+
+  .foretag-marknadsforing-content
+    max-width: 50em
+    margin-left: auto
+    margin-right: auto
+
+  h1
+    display: inline
+    margin-left: 0.5em
+
+  i
+    color: $isektionen-green
+
+.foretag-team
+  //+outer-container()
+  padding: 0em 2em
+  padding-bottom: 4em
+  margin: 0
+  width: 100%
+  //min-height: 500px
+  background-color: #f7f7f7
+
+  .section-header
+    text-align: center
+    color: dimgrey
+
+  .foretag-team-content
+    max-width: 50em
+    margin-left: auto
+    margin-right: auto
+
+  h1
+    display: inline
+    margin-left: 0.5em
+
+  i
+    color: $isektionen-green
 
 
 .erbjudande-image-gallery
@@ -297,7 +364,34 @@
 
 
 
-
 .bullet-list
   margin-left: 2em
   list-style-type: disc
+
+
+.foretag-contact
+  //+outer-container()
+  padding: 2em
+  margin: 0
+  width: 100%
+  min-height: 500px
+  background-color: white
+
+  .foretag-contact-content
+    max-width: 50em
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+
+    p
+      text-align: center
+
+    a
+      color: $dark-gray
+
+    .contact-divider
+      border: none
+      min-width: 100%
+      background-color: $dark-gray
+      height: 4px
+      margin: 2px

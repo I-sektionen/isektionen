@@ -3134,34 +3134,11 @@ Main components
   display: none;
 }
 
-.foretag-contact {
-  padding: 2em;
-  margin: 0;
-  width: 100%;
-  min-height: 350px;
-  background-color: white;
-}
-.foretag-contact .foretag-contact-content {
-  max-width: 50em;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-.foretag-contact .foretag-contact-content p {
-  text-align: center;
-}
-.foretag-contact .foretag-contact-content a {
-  color: #333;
-}
-.foretag-contact .foretag-contact-content .contact-divider {
-  border: none;
-  min-width: 100%;
-  background-color: #333;
-  height: 4px;
-  margin: 2px;
+html, content {
+  background-color: #f7f7f7;
 }
 
-.foretag-exponering {
+.foretag-inledning {
   padding: 2em;
   margin: 0;
   width: 100%;
@@ -3169,45 +3146,45 @@ Main components
   background-color: #f7f7f7;
   display: table;
 }
-.foretag-exponering .exponering-wrapper {
+.foretag-inledning .inledning-wrapper {
   display: table-cell;
   vertical-align: middle;
 }
-.foretag-exponering .foretag-exponering-content {
+.foretag-inledning .foretag-inledning-content {
   text-align: center;
   width: 100%;
 }
 @media screen and (min-width: 900px) {
-  .foretag-exponering .foretag-exponering-content {
+  .foretag-inledning .foretag-inledning-content {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
   }
 }
-.foretag-exponering .foretag-exponering-content .exponering-heading {
+.foretag-inledning .foretag-inledning-content .inledning-heading {
   color: dimgrey;
   font-size: 2em;
   text-transform: uppercase;
   margin-bottom: 0;
 }
 @media screen and (min-width: 900px) {
-  .foretag-exponering .foretag-exponering-content .exponering-heading {
+  .foretag-inledning .foretag-inledning-content .inledning-heading {
     font-size: 3em;
   }
 }
-.foretag-exponering .foretag-exponering-content .exponering-divider {
+.foretag-inledning .foretag-inledning-content .inledning-divider {
   border: none;
   background-color: dimgray;
   height: 5px;
   margin: 5px;
 }
-.foretag-exponering .foretag-exponering-content .exponering-text {
+.foretag-inledning .foretag-inledning-content .inledning-text {
   color: dimgrey;
   font-weight: bold;
   font-size: 1.2em;
 }
 @media screen and (min-width: 900px) {
-  .foretag-exponering .foretag-exponering-content .exponering-text {
+  .foretag-inledning .foretag-inledning-content .inledning-text {
     text-align: justify;
   }
 }
@@ -3216,7 +3193,7 @@ Main components
   padding: 2em;
   margin: 0;
   width: 100%;
-  min-height: 420px;
+  min-height: 500px;
   background-color: white;
 }
 .foretag-information .foretag-information-content {
@@ -3225,51 +3202,14 @@ Main components
 }
 .foretag-information .foretag-information-content .fade-in-elements .fade-in-element {
   max-width: 20em;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 15px;
-}
-
-.foretag-intervjuer {
-  padding: 2em;
-  margin: 0;
-  width: 100%;
-  min-height: 500px;
-  background-color: #f7f7f7;
-}
-.foretag-intervjuer .foretag-intervjuer-content {
-  max-width: 50em;
-  margin-left: auto;
-  margin-right: auto;
-}
-.foretag-intervjuer .foretag-intervjuer-content .chart-canvas-company {
-  padding: 1em;
-  height: 300px;
-  width: 300px;
-}
-
-.foretag-statistik {
-  padding: 2em;
-  margin: 0;
-  width: 100%;
-  min-height: 500px;
-  background-color: #f7f7f7;
-}
-.foretag-statistik .foretag-statistik-content {
-  max-width: 50em;
-  margin-left: auto;
-  margin-right: auto;
-}
-.foretag-statistik .foretag-statistik-content .chart-canvas-company {
-  padding: 1em;
-  height: 300px;
-  width: 300px;
+  box-shadow: 1px 1px 5px #787878;
 }
 
 .foretag-erbjudande {
   padding: 2em;
+  padding-bottom: 4em;
   margin: 0;
   width: 100%;
-  min-height: 500px;
   background-color: #f7f7f7;
 }
 .foretag-erbjudande .section-header {
@@ -3279,6 +3219,126 @@ Main components
 .foretag-erbjudande .foretag-erbjudande-content {
   margin-left: auto;
   margin-right: auto;
+}
+.foretag-erbjudande .foretag-erbjudande-content .buttonContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.foretag-erbjudande .foretag-erbjudande-content .buttonContainer .action-button {
+  display: inline-table;
+  width: 250px;
+  margin: 8px;
+  text-align: center;
+  border-spacing: 8px;
+  padding: 0;
+  color: #2D701E;
+  background-color: #f7f7f7;
+  box-shadow: 0px 3px 0px #f7f7f7;
+}
+.foretag-erbjudande .foretag-erbjudande-content .buttonContainer .action-button .action-button-icon {
+  display: table-row;
+  vertical-align: middle;
+}
+.foretag-erbjudande .foretag-erbjudande-content .buttonContainer .action-button .action-button-text {
+  display: table-row;
+  vertical-align: middle;
+}
+
+.foretag-samarbetsparnter {
+  padding: 0em 2em;
+  padding-bottom: 2em;
+  margin: 0;
+  width: 100%;
+  background-color: #f7f7f7;
+}
+.foretag-samarbetsparnter .section-header {
+  text-align: center;
+  color: dimgrey;
+}
+.foretag-samarbetsparnter .foretag-samarbetsparnter-content {
+  max-width: 50em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.foretag-samarbetsparnter h1 {
+  display: inline;
+  margin-left: 0.5em;
+}
+.foretag-samarbetsparnter i {
+  color: #2D701E;
+}
+
+.foretag-foretagspresentationer {
+  padding: 0em 2em;
+  padding-bottom: 2em;
+  margin: 0;
+  width: 100%;
+  background-color: #f7f7f7;
+}
+.foretag-foretagspresentationer .section-header {
+  text-align: center;
+  color: dimgrey;
+}
+.foretag-foretagspresentationer .foretag-foretagspresentationer-content {
+  max-width: 50em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.foretag-foretagspresentationer h1 {
+  display: inline;
+  margin-left: 0.5em;
+}
+.foretag-foretagspresentationer i {
+  color: #2D701E;
+}
+
+.foretag-marknadsforing {
+  padding: 0em 2em;
+  padding-bottom: 2em;
+  margin: 0;
+  width: 100%;
+  background-color: #f7f7f7;
+}
+.foretag-marknadsforing .section-header {
+  text-align: center;
+  color: dimgrey;
+}
+.foretag-marknadsforing .foretag-marknadsforing-content {
+  max-width: 50em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.foretag-marknadsforing h1 {
+  display: inline;
+  margin-left: 0.5em;
+}
+.foretag-marknadsforing i {
+  color: #2D701E;
+}
+
+.foretag-team {
+  padding: 0em 2em;
+  padding-bottom: 4em;
+  margin: 0;
+  width: 100%;
+  background-color: #f7f7f7;
+}
+.foretag-team .section-header {
+  text-align: center;
+  color: dimgrey;
+}
+.foretag-team .foretag-team-content {
+  max-width: 50em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.foretag-team h1 {
+  display: inline;
+  margin-left: 0.5em;
+}
+.foretag-team i {
+  color: #2D701E;
 }
 
 .erbjudande-image-gallery {
@@ -3477,6 +3537,33 @@ Main components
   list-style-type: disc;
 }
 
+.foretag-contact {
+  padding: 2em;
+  margin: 0;
+  width: 100%;
+  min-height: 500px;
+  background-color: white;
+}
+.foretag-contact .foretag-contact-content {
+  max-width: 50em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.foretag-contact .foretag-contact-content p {
+  text-align: center;
+}
+.foretag-contact .foretag-contact-content a {
+  color: #333;
+}
+.foretag-contact .foretag-contact-content .contact-divider {
+  border: none;
+  min-width: 100%;
+  background-color: #333;
+  height: 4px;
+  margin: 2px;
+}
+
 .fade-in-elements {
   display: flex;
   flex-wrap: wrap;
@@ -3485,9 +3572,7 @@ Main components
 
 .fade-in-element {
   background: white;
-  border: 1px solid silver;
   border-radius: 3px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   line-height: 1.5;
   padding: 1.5em;
   text-align: center;
