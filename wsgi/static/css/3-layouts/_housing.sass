@@ -1,0 +1,25 @@
+.housing-hero
+  @extend .top-hero
+  +section-cover-background('https://iportalen-us.s3.amazonaws.com:443/static/iportalen/HERO.jpg')
+  .hero-content
+    width: 72%
+
+.mapcontent
+  +outer-container()
+  padding-left: 1em
+  padding-right: 1em
+
+
+.housing-queue
+  +outer-container()
+  padding: 1em
+  .section-header
+    font-size: 2.5em
+    color: $dark-gray
+  .section-text
+    line-height: 2em
+    text-align: justify
+  .queue-table
+    padding-left: 15%
+    padding-right: 15%
+    //padding o margin måste vara anpassade för olika storlekar

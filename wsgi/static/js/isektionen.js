@@ -99,6 +99,9 @@ $(document).ready(function() {
 
 });
 ;/**
+ * Created by OscarD on 2016-04-18.
+ */
+;/**
  * Created by lehtonen on 15-11-16.
  */
 var load_instagram = function () {
