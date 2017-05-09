@@ -2,6 +2,40 @@
   @extend .top-hero
   +section-cover-background('https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/hero-images/studenter.jpg')
 
+
+.masterprofiler-section
+  max-width: 900px
+  margin-left: auto
+  margin-right: auto
+  padding: 1em
+
+.masterprofiler-container
+  @include outer-container()
+
+.masterprofiler-text
+  @media only screen and (min-width: 768px)
+    @include span-columns(6)
+    p
+      margin-right: 4em
+      margin-top: 1em
+  
+.masterprofiler-list
+  margin-top: 2em
+  @media only screen and (min-width: 768px)
+    @include span-columns(6)
+    text-align: center
+    border-left: solid transparentize($dark-gray,0.60)
+    border-width: 1px
+    margin-top: 0em
+    ul
+      margin-left: 5em
+      text-align: left
+.masterprofiler-header
+  font-size: 1.5em
+  font-weight: 400
+  color: transparentize($dark-gray,0.15)
+
+
 .utbildning-intro
   +outer-container()
   padding: 1em
@@ -16,6 +50,8 @@
 
 .link-promo
   padding: 2em
+  @media only screen and (min-width: 768px)
+    margin-top: 15em
   +outer-container()
   text-align: center
   a
