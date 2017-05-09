@@ -2533,6 +2533,9 @@ Main components
     .FAQ-section .expander .expander-hidden + .expander-content {
       display: none; }
 
+html, content {
+  background-color: #f7f7f7; }
+
 .foretag-inledning {
   padding: 2em;
   margin: 0;
@@ -2587,9 +2590,9 @@ Main components
 
 .foretag-erbjudande {
   padding: 2em;
+  padding-bottom: 4em;
   margin: 0;
   width: 100%;
-  min-height: 500px;
   background-color: #f7f7f7; }
   .foretag-erbjudande .section-header {
     text-align: center;
@@ -2609,8 +2612,8 @@ Main components
         border-spacing: 8px;
         padding: 0;
         color: #2D701E;
-        background-color: whitesmoke;
-        box-shadow: 0px 3px 0px whitesmoke; }
+        background-color: #f7f7f7;
+        box-shadow: 0px 3px 0px #f7f7f7; }
         .foretag-erbjudande .foretag-erbjudande-content .buttonContainer .action-button .action-button-icon {
           display: table-row;
           vertical-align: middle; }
@@ -2619,11 +2622,11 @@ Main components
           vertical-align: middle; }
 
 .foretag-samarbetsparnter {
-  padding: 2em;
+  padding: 0em 2em;
+  padding-bottom: 2em;
   margin: 0;
   width: 100%;
-  min-height: 500px;
-  background-color: white; }
+  background-color: #f7f7f7; }
   .foretag-samarbetsparnter .section-header {
     text-align: center;
     color: dimgrey; }
@@ -2631,12 +2634,17 @@ Main components
     max-width: 50em;
     margin-left: auto;
     margin-right: auto; }
+  .foretag-samarbetsparnter h1 {
+    display: inline;
+    margin-left: 0.5em; }
+  .foretag-samarbetsparnter i {
+    color: #2D701E; }
 
 .foretag-foretagspresentationer {
-  padding: 2em;
+  padding: 0em 2em;
+  padding-bottom: 2em;
   margin: 0;
   width: 100%;
-  min-height: 500px;
   background-color: #f7f7f7; }
   .foretag-foretagspresentationer .section-header {
     text-align: center;
@@ -2645,13 +2653,18 @@ Main components
     max-width: 50em;
     margin-left: auto;
     margin-right: auto; }
+  .foretag-foretagspresentationer h1 {
+    display: inline;
+    margin-left: 0.5em; }
+  .foretag-foretagspresentationer i {
+    color: #2D701E; }
 
 .foretag-marknadsforing {
-  padding: 2em;
+  padding: 0em 2em;
+  padding-bottom: 2em;
   margin: 0;
   width: 100%;
-  min-height: 500px;
-  background-color: white; }
+  background-color: #f7f7f7; }
   .foretag-marknadsforing .section-header {
     text-align: center;
     color: dimgrey; }
@@ -2659,12 +2672,17 @@ Main components
     max-width: 50em;
     margin-left: auto;
     margin-right: auto; }
+  .foretag-marknadsforing h1 {
+    display: inline;
+    margin-left: 0.5em; }
+  .foretag-marknadsforing i {
+    color: #2D701E; }
 
 .foretag-team {
-  padding: 2em;
+  padding: 0em 2em;
+  padding-bottom: 4em;
   margin: 0;
   width: 100%;
-  min-height: 500px;
   background-color: #f7f7f7; }
   .foretag-team .section-header {
     text-align: center;
@@ -2673,6 +2691,11 @@ Main components
     max-width: 50em;
     margin-left: auto;
     margin-right: auto; }
+  .foretag-team h1 {
+    display: inline;
+    margin-left: 0.5em; }
+  .foretag-team i {
+    color: #2D701E; }
 
 .erbjudande-image-gallery {
   padding: 1em;
