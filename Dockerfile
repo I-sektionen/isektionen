@@ -41,6 +41,7 @@ RUN /usr/bin/pip3 install -r requirements.txt
 RUN /usr/bin/pip3 install gunicorn
 
 RUN ["cp", "./django_nginx.conf", "/etc/nginx/sites-available/"]
+#COPY ./django_nginx_local.conf /etc/nginx/sites-available/django_nginx.conf
 RUN ["chmod", "+x", "/etc/my_init.d/docker-entrypoint.sh"]
 
 WORKDIR /srv/wsgi

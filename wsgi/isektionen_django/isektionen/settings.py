@@ -19,8 +19,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ON_PASS = 'OPENSHIFT_REPO_DIR' in os.environ
 ON_JENKINS = 'JENKINS_SERVER_IPORTALEN' in os.environ
 ON_AWS = 'ON_AWS' in os.environ
+ON_LOCAL_DOCKER = 'ON_LOCAL_DOCKER' in os.environ
 
-if ON_AWS or ON_PASS or ON_JENKINS:
+if ON_AWS or ON_PASS or ON_JENKINS or ON_LOCAL_DOCKER:
     ALLOWED_HOSTS = ['*']
     DEBUG = False
 
@@ -91,7 +92,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'isektionen.wsgi.application'
 
-if ON_AWS:
+if ON_AWS or ON_LOCAL_DOCKER:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
