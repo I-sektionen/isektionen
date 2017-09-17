@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-git pull origin docker
+git pull origin master
 /usr/bin/pip3 install -r ../requirements.txt
 export PYTHONPATH=$PYTHONPATH:/srv/wsgi:/srv/wsgi/isektionen_django
-/usr/bin/python3 isektionen_django/manage.py migrate        # Apply database migrations
+/usr/bin/python3 isektionen_django/manage.py migrate --noinput       # Apply database migrations
 /usr/bin/python3 isektionen_django/manage.py collectstatic --noinput  # collect static files
 # Prepare log files and start outputting logs to stdout
 touch /srv/logs/gunicorn.log
