@@ -686,7 +686,7 @@ header.navigation .active-nav-items {
   padding: 0em;
   float: left;
   display: block;
-  margin-right: 2.35765%;
+  margin-right: 2.3576515979%;
   width: 100%;
 }
 .instagram .instagram-pictures .instagram-picture:last-child {
@@ -696,14 +696,14 @@ header.navigation .active-nav-items {
   .instagram .instagram-pictures .instagram-picture {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 31.76157%;
+    margin-right: 2.3576515979%;
+    width: 31.7615656014%;
   }
   .instagram .instagram-pictures .instagram-picture:last-child {
     margin-right: 0;
   }
   .instagram .instagram-pictures .instagram-picture:nth-child(3n) {
-    margin-right: 2.35765%;
+    margin-right: 2.3576515979%;
   }
   .instagram .instagram-pictures .instagram-picture:nth-child(3n+1) {
     clear: none;
@@ -1224,11 +1224,11 @@ header.navigation .active-nav-items {
   overflow: hidden;
 }
 
-.top-hero, .landing-hero, .applicant-hero, .blog-hero, .education-hero, .housing-hero, .studentlife-hero, .after-studies-hero {
+.top-hero, .landing-hero, .applicant-hero, .blog-hero, .education-hero, .iresan-hero, .housing-hero, .studentlife-hero, .after-studies-hero {
   min-height: 80vh;
   position: relative;
 }
-.top-hero .hero-content, .landing-hero .hero-content, .applicant-hero .hero-content, .blog-hero .hero-content, .education-hero .hero-content, .housing-hero .hero-content, .studentlife-hero .hero-content, .after-studies-hero .hero-content {
+.top-hero .hero-content, .landing-hero .hero-content, .applicant-hero .hero-content, .blog-hero .hero-content, .education-hero .hero-content, .iresan-hero .hero-content, .housing-hero .hero-content, .studentlife-hero .hero-content, .after-studies-hero .hero-content {
   padding: 2em;
   text-align: center;
   width: 60%;
@@ -1243,34 +1243,34 @@ header.navigation .active-nav-items {
   width: 100%;
 }
 @media screen and (min-width: 900px) {
-  .top-hero .hero-content, .landing-hero .hero-content, .applicant-hero .hero-content, .blog-hero .hero-content, .education-hero .hero-content, .housing-hero .hero-content, .studentlife-hero .hero-content, .after-studies-hero .hero-content {
+  .top-hero .hero-content, .landing-hero .hero-content, .applicant-hero .hero-content, .blog-hero .hero-content, .education-hero .hero-content, .iresan-hero .hero-content, .housing-hero .hero-content, .studentlife-hero .hero-content, .after-studies-hero .hero-content {
     width: auto;
   }
 }
-.top-hero .hero-heading, .landing-hero .hero-heading, .applicant-hero .hero-heading, .blog-hero .hero-heading, .education-hero .hero-heading, .housing-hero .hero-heading, .studentlife-hero .hero-heading, .after-studies-hero .hero-heading {
+.top-hero .hero-heading, .landing-hero .hero-heading, .applicant-hero .hero-heading, .blog-hero .hero-heading, .education-hero .hero-heading, .iresan-hero .hero-heading, .housing-hero .hero-heading, .studentlife-hero .hero-heading, .after-studies-hero .hero-heading {
   color: #f7f7f7;
   font-size: 2em;
   text-transform: uppercase;
   margin-bottom: 0;
 }
 @media screen and (min-width: 900px) {
-  .top-hero .hero-heading, .landing-hero .hero-heading, .applicant-hero .hero-heading, .blog-hero .hero-heading, .education-hero .hero-heading, .housing-hero .hero-heading, .studentlife-hero .hero-heading, .after-studies-hero .hero-heading {
+  .top-hero .hero-heading, .landing-hero .hero-heading, .applicant-hero .hero-heading, .blog-hero .hero-heading, .education-hero .hero-heading, .iresan-hero .hero-heading, .housing-hero .hero-heading, .studentlife-hero .hero-heading, .after-studies-hero .hero-heading {
     font-size: 3em;
   }
 }
-.top-hero .hero-divider, .landing-hero .hero-divider, .applicant-hero .hero-divider, .blog-hero .hero-divider, .education-hero .hero-divider, .housing-hero .hero-divider, .studentlife-hero .hero-divider, .after-studies-hero .hero-divider {
+.top-hero .hero-divider, .landing-hero .hero-divider, .applicant-hero .hero-divider, .blog-hero .hero-divider, .education-hero .hero-divider, .iresan-hero .hero-divider, .housing-hero .hero-divider, .studentlife-hero .hero-divider, .after-studies-hero .hero-divider {
   border: none;
   background-color: #f7f7f7;
   height: 5px;
   margin: 5px;
 }
-.top-hero .hero-text, .landing-hero .hero-text, .applicant-hero .hero-text, .blog-hero .hero-text, .education-hero .hero-text, .housing-hero .hero-text, .studentlife-hero .hero-text, .after-studies-hero .hero-text {
+.top-hero .hero-text, .landing-hero .hero-text, .applicant-hero .hero-text, .blog-hero .hero-text, .education-hero .hero-text, .iresan-hero .hero-text, .housing-hero .hero-text, .studentlife-hero .hero-text, .after-studies-hero .hero-text {
   color: #f7f7f7;
   font-weight: bold;
   font-size: 1.2em;
 }
 @media screen and (min-width: 900px) {
-  .top-hero .hero-text, .landing-hero .hero-text, .applicant-hero .hero-text, .blog-hero .hero-text, .education-hero .hero-text, .housing-hero .hero-text, .studentlife-hero .hero-text, .after-studies-hero .hero-text {
+  .top-hero .hero-text, .landing-hero .hero-text, .applicant-hero .hero-text, .blog-hero .hero-text, .education-hero .hero-text, .iresan-hero .hero-text, .housing-hero .hero-text, .studentlife-hero .hero-text, .after-studies-hero .hero-text {
     text-align: justify;
   }
 }
@@ -1603,7 +1603,7 @@ article.single_blog_entry p.author {
   text-align: center;
   float: left;
   display: block;
-  margin-right: 2.35765%;
+  margin-right: 2.3576515979%;
   width: 100%;
   padding: 2em;
 }
@@ -1644,8 +1644,8 @@ article.single_blog_entry p.author {
   .landing-content .sokande-foretag .sokande-foretag-description {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
+    margin-right: 2.3576515979%;
+    width: 48.821174201%;
     margin-right: 0;
   }
   .landing-content .sokande-foretag .sokande-foretag-description:last-child {
@@ -1891,8 +1891,8 @@ article.single_blog_entry p.author {
 .applicant-container .bullets h2 {
   display: inline-block;
   font-size: 1.6em;
-  margin: 0 0 0.66667em 0;
-  padding-top: 0.57143em;
+  margin: 0 0 0.6666666667em 0;
+  padding-top: 0.5714285714em;
 }
 .applicant-container .bullets li {
   list-style: none;
@@ -1907,7 +1907,7 @@ article.single_blog_entry p.author {
 .applicant-container .student-life {
   float: left;
   display: block;
-  margin-right: 2.35765%;
+  margin-right: 2.3576515979%;
   width: 100%;
 }
 .applicant-container .student-life:last-child {
@@ -1917,8 +1917,8 @@ article.single_blog_entry p.author {
   .applicant-container .student-life {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
+    margin-right: 2.3576515979%;
+    width: 48.821174201%;
   }
   .applicant-container .student-life:last-child {
     margin-right: 0;
@@ -1938,7 +1938,7 @@ article.single_blog_entry p.author {
 .applicant-container .after-studies {
   float: left;
   display: block;
-  margin-right: 2.35765%;
+  margin-right: 2.3576515979%;
   width: 100%;
 }
 .applicant-container .after-studies:last-child {
@@ -2105,7 +2105,7 @@ article.single_blog_entry p.author {
 .blog-entry {
   float: left;
   display: block;
-  margin-right: 2.35765%;
+  margin-right: 2.3576515979%;
   width: 100%;
 }
 .blog-entry:last-child {
@@ -2115,9 +2115,9 @@ article.single_blog_entry p.author {
   .blog-entry {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 65.88078%;
-    margin-left: 17.05961%;
+    margin-right: 2.3576515979%;
+    width: 65.8807828007%;
+    margin-left: 17.0596085997%;
   }
   .blog-entry:last-child {
     margin-right: 0;
@@ -2154,6 +2154,18 @@ article.single_blog_entry p.author {
 }
 @media screen and (min-width: 900px) {
   .education-hero {
+    background-attachment: fixed;
+  }
+}
+
+.iresan-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/hero-images/hero_iresan.jpg");
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+}
+@media screen and (min-width: 900px) {
+  .iresan-hero {
     background-attachment: fixed;
   }
 }
@@ -2284,7 +2296,7 @@ article.single_blog_entry p.author {
   text-align: center;
   float: left;
   display: block;
-  margin-right: 2.35765%;
+  margin-right: 2.3576515979%;
   width: 100%;
   display: -webkit-box;
   display: -moz-box;
@@ -2635,7 +2647,7 @@ article.single_blog_entry p.author {
   padding: 1em;
   float: left;
   display: block;
-  margin-right: 2.35765%;
+  margin-right: 2.3576515979%;
   width: 100%;
 }
 .contacts-section .contacts-form:last-child {
@@ -2645,9 +2657,9 @@ article.single_blog_entry p.author {
   .contacts-section .contacts-form {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-    margin-left: 25.58941%;
+    margin-right: 2.3576515979%;
+    width: 48.821174201%;
+    margin-left: 25.5894128995%;
   }
   .contacts-section .contacts-form:last-child {
     margin-right: 0;
@@ -3431,8 +3443,8 @@ html, content {
   float: left;
   margin: auto;
   height: 20em;
-  padding-top: 3.33333em;
-  padding-left: 1.66667em;
+  padding-top: 3.3333333333em;
+  padding-left: 1.6666666667em;
   width: 20em;
 }
 .image-list-erbjudande .offer-item-list .bullet-icon i {
