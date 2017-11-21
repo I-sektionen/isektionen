@@ -7,6 +7,11 @@ __author__ = 'MagnusForzelius'
 from django.shortcuts import render
 from blog.models import BlogEntry
 
+def render_TEMPORARY(request):
+    return render(request, "isektionen/TEMPORARY.html", {})
+
+
+
 
 def render_home_page(request):
     return render(request, "isektionen/home.html", {})
