@@ -8,10 +8,6 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', view=views.render_home_page, name='home'),
     url(r'^blog/', include(blog_urls)),
-
-        url(r'^temp/', view=views.render_TEMPORARY, name='TEMP'),
-
-
     url(r'^foretag/$', view=views.show_foretag_page, name='foretag'),
     url(r'^sokande/$', view=views.show_sokande_page, name='sokande'),
     url(r'^sokande/utbildning$', view=views.show_utbildning_page, name='utbildning'),
