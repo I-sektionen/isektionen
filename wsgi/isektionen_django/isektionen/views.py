@@ -61,7 +61,7 @@ def show_contact_page(request):
         meddelande = request.POST.get("meddelande")
         subject = request.POST.get("subject")
         print(name)
-        send_mail(subject, meddelande, name + " @ " + epost, [settings.EMAIL_HOST_USER], fail_silently=False)
+        send_mail(subject, meddelande, name + " @ " + epost, "pr@i-sektionen.se", fail_silently=False)
     return render(request, "isektionen/sokande/kontakt.html", {
         'kontakt': True,
     })
