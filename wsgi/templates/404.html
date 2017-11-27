@@ -1,5 +1,15 @@
 {% extends "master.html" %}
 
+{% block links %}
+    <li class="nav-link"><a href="{% url 'blog' %}">Blogg</a></li>
+    <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
+    <li class="nav-link"><a href="{% url 'foretag' %}">Företag</a></li>
+{% endblock %}
 {% block content %}
-404
+    <div class="text_layout">
+ <h1>404 - Sidan finns inte</h1>
+     <p >Kontrollera att adressen stämmer! Vid eventuellt fel, vänligen <a href="mailto:webgroup@isektionen.se"> kontakta Webgroup genom att klicka här!</a></p>
+     <p><i>“Aw Geez, Rick, there's like, nothing here”</i> - Mortimer Smith Jr. (20XX) </p>
+     <br>
+ </div>
 {% endblock %}
