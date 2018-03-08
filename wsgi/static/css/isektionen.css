@@ -3155,7 +3155,8 @@ html, content {
   margin: 0;
   width: 100%;
   min-height: 85vh;
-  background-color: #f7f7f7;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/company_profile.jpg");
+  background-size: cover;
   display: table;
 }
 .foretag-inledning .inledning-wrapper {
@@ -3174,7 +3175,7 @@ html, content {
   }
 }
 .foretag-inledning .foretag-inledning-content .inledning-heading {
-  color: dimgrey;
+  color: white;
   font-size: 2em;
   text-transform: uppercase;
   margin-bottom: 0;
@@ -3186,12 +3187,12 @@ html, content {
 }
 .foretag-inledning .foretag-inledning-content .inledning-divider {
   border: none;
-  background-color: dimgray;
+  background-color: white;
   height: 5px;
   margin: 5px;
 }
 .foretag-inledning .foretag-inledning-content .inledning-text {
-  color: dimgrey;
+  color: white;
   font-weight: bold;
   font-size: 1.2em;
 }
