@@ -18,13 +18,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Used to determined if being run on Openshift, Jenkins or local. Determines DB-connection settings.
 ON_PASS = 'OPENSHIFT_REPO_DIR' in os.environ
 ON_JENKINS = 'JENKINS_SERVER_IPORTALEN' in os.environ
+ON_AWS = 'ON_AWS' in os.environ
+ON_LOCAL_DOCKER = 'ON_LOCAL_DOCKER' in os.environ
 
-if ON_PASS:
+if ON_AWS or ON_PASS or ON_JENKINS or ON_LOCAL_DOCKER:
     ALLOWED_HOSTS = ['*']
-    DEBUG = False
-
-elif ON_JENKINS:
-    ALLOWED_HOSTS = ['*']  # TODO: Should only allow localhost, and what about production?
     DEBUG = False
 
 else:
@@ -36,7 +34,11 @@ else:
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '^+^i^1i94%j-hikdsafl324+107xw(vf^mz4hg--#w0mw93+kc#&4vc=#=@'  # TODO: Make use of os.envion on openshift.
+if not (ON_PASS or ON_AWS):
+    SECRET_KEY = '^+^i^1i94%j-hikdsafl324+107xw(vf^mz4hg--#w0mw93+kc#&4vc=#=@'
+else:
+    SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+
 
 if ON_PASS:
     SECURE_SSL_REDIRECT = True
@@ -90,7 +92,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'isektionen.wsgi.application'
 
-if ON_PASS:
+if ON_AWS or ON_LOCAL_DOCKER:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': os.environ['AWS_DB_NAME'],
+            'USER': os.environ['AWS_DB_USERNAME'],
+            'PASSWORD': os.environ['AWS_DB_PASSWORD'],
+            'HOST': os.environ['AWS_DB_HOSTNAME'],
+            'PORT': os.environ['AWS_DB_PORT']
+        }
+    }
+elif ON_PASS:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
@@ -145,7 +158,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # Extra locations where staticfiles can be found:
-if not ON_PASS:
+if not (ON_PASS or ON_AWS):
     STATICFILES_DIRS = (
         os.path.join(BASE_DIR, "static"),
         os.path.join(os.path.dirname(BASE_DIR), 'static')
@@ -153,7 +166,7 @@ if not ON_PASS:
 
 # This is where all static files are put by 'collectstatic', it is
 # always done before the app is deployed on openshift.
-if ON_PASS:
+if ON_PASS or ON_AWS:
     STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, "../static/"))
 
 """
@@ -163,14 +176,14 @@ if ON_PASS:
 STATIC_URL = '/static/'
 
 #  This url is where you can log in. The login_required decorator uses this constant.
-LOGIN_URL = 'login_view' #  TODO: Use a named view instead.
+LOGIN_URL = 'login_view'  # TODO: Use a named view instead.
 
 # Email settings:
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # This is a dummy backend which prints emails as a
                                                                   # normal print() statement (i.e. to stdout)
 EMAIL_HOST_USER = 'noreply@i-portalen.se'
 
-if ON_PASS:
+if ON_PASS or ON_AWS:
     send_email = False
     try:
         s = str(os.environ.get('SEND_EMAIL'))
