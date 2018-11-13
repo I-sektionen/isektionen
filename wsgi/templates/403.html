@@ -1,5 +1,16 @@
 {% extends "master.html" %}
 
+    {% block links %}
+    <li class="nav-link"><a href="{% url 'blog' %}">Blogg</a></li>
+    <li class="nav-link"><a href="{% url 'sokande' %}">Sökande</a></li>
+    <li class="nav-link"><a href="{% url 'foretag' %}">Företag</a></li>
+{% endblock %}
 {% block content %}
-403
+    <div class="text_layout">
+ <h1>403 - Nekad åtkomst</h1>
+     <p >Bör du ha åtkomst till sidan? Vänligen <a href="mailto:webgroup@isektionen.se"> kontakta Webgroup genom att klicka här!</a></p>
+          <p><i>“Åtkomst erhålls när åtkomst behövs!”</i> - Erik Lundin (2017) </p>
+     <br>
+ </div>
+
 {% endblock %}

@@ -6,7 +6,8 @@ html, content
   margin: 0
   width: 100%
   min-height: 85vh
-  background-color: #f7f7f7
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/company_profile.jpg')
+  background-size: cover
 
   display: table
 
@@ -24,7 +25,7 @@ html, content
       margin-right: auto
 
     .inledning-heading
-      color: dimgrey
+      color: white
       font-size: 2em
       text-transform: uppercase
       margin-bottom: 0
@@ -34,12 +35,12 @@ html, content
 
     .inledning-divider
       border: none
-      background-color: dimgray
+      background-color: white
       height: 5px
       margin: 5px
 
     .inledning-text
-      color: dimgrey
+      color: white
       font-weight: bold
       font-size: 1.2em
       @include media ($large-screen)
@@ -54,8 +55,8 @@ html, content
   min-height: 500px
   background-color: white
   //color: white
-  .section-header
-    //color: white
+  //.section-header
+  //color: white
 
   .foretag-information-content
     //max-width: 50em
@@ -68,305 +69,64 @@ html, content
         max-width: 20em
         //box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2)
         box-shadow: 1px 1px 5px darken($light-gray, 50%)
-        //border-radius: 15px
+//border-radius: 15px
 
 
-.foretag-erbjudande
-  //+outer-container()
+.foretag-erbjudande-container
+  +outer-container()
   padding: 2em
-  padding-bottom: 4em
-  margin: 0
-  width: 100%
-  //min-height: 500px
-  background-color: #f7f7f7
-  //background-image: url("https://s3.eu-central-1.amazonaws.com/isektionen-bildbank/hero-images/nollep-karallen.jpg")
-  .section-header
+
+  .foretag-erbjudande-cards
+    @include display(flex)
+    @include flex-wrap(wrap)
+
+  .foretag-erbjudande-card
+    @include flex(1 1 20em)
     text-align: center
-    color: dimgrey
-  //.section-header
+    margin-bottom: 2em
     color: white
-
-  .foretag-erbjudande-content
-    //max-width: 50em
-    margin-left: auto
-    margin-right: auto
-
-    .buttonContainer
-      display: flex
-      flex-wrap: wrap
-      justify-content: center
-
-      .action-button
-        display: inline-table
-        width: 250px
-        margin: 8px
-        text-align: center
-
-        border-spacing: 8px
-        padding: 0
-
-        color: $isektionen-green
-        background-color: #f7f7f7
-        box-shadow: 0px 3px 0px #f7f7f7
-
-        .action-button-icon
-          display: table-row
-          vertical-align: middle
-
-
-        .action-button-text
-          display: table-row
-          vertical-align: middle
-
-
-.foretag-samarbetsparnter
-  //+outer-container()
-  padding: 0em 2em
-  padding-bottom: 2em
-  margin: 0
-  width: 100%
-  //min-height: 500px
-  background-color: #f7f7f7
-
-  .section-header
-    text-align: center
-    color: dimgrey
-
-  .foretag-samarbetsparnter-content
-    max-width: 50em
-    margin-left: auto
-    margin-right: auto
-
-  h1
-    display: inline
-    margin-left: 0.5em
-
-  i
-    color: $isektionen-green
-
-.foretag-foretagspresentationer
-  //+outer-container()
-  padding: 0em 2em
-  padding-bottom: 2em
-  margin: 0
-  width: 100%
-  //min-height: 500px
-  background-color: #f7f7f7
-
-  .section-header
-    text-align: center
-    color: dimgrey
-
-  .foretag-foretagspresentationer-content
-    max-width: 50em
-    margin-left: auto
-    margin-right: auto
-
-  h1
-    display: inline
-    margin-left: 0.5em
-
-  i
-    color: $isektionen-green
-
-
-.foretag-marknadsforing
-  //+outer-container()
-  padding: 0em 2em
-  padding-bottom: 2em
-  margin: 0
-  width: 100%
-  //min-height: 500px
-  background-color: #f7f7f7
-
-  .section-header
-    text-align: center
-    color: dimgrey
-
-  .foretag-marknadsforing-content
-    max-width: 50em
-    margin-left: auto
-    margin-right: auto
-
-  h1
-    display: inline
-    margin-left: 0.5em
-
-  i
-    color: $isektionen-green
-
-.foretag-team
-  //+outer-container()
-  padding: 0em 2em
-  padding-bottom: 4em
-  margin: 0
-  width: 100%
-  //min-height: 500px
-  background-color: #f7f7f7
-
-  .section-header
-    text-align: center
-    color: dimgrey
-
-  .foretag-team-content
-    max-width: 50em
-    margin-left: auto
-    margin-right: auto
-
-  h1
-    display: inline
-    margin-left: 0.5em
-
-  i
-    color: $isektionen-green
-
-
-.erbjudande-image-gallery
-  padding: 1em
-  +media($large-screen)
-  padding: 4em
-
-.image-list-erbjudande
-  +display(flex)
-  +flex-wrap(wrap)
-  +align-items(flex-start)
-  +justify-content(center)
-  .image-list-item
-    +display(flex)
-    +flex-direction(column)
-    background-color: $dark-gray
-    box-shadow: 1px 1px 5px darken($light-gray, 50%)
-    margin-bottom: 1em
-    border-radius: $base-border-radius
-    +media($medium-screen)
-    max-width: 40em
-    margin-right: 1em
-    +flex(1 1 40em)
-    +media($large-screen)
-    +flex(1 1 25em)
-
-  .offer-item-list
-    background-color: $light-gray
-    box-shadow: 1px 1px 5px darken($light-gray, 50%)
-    margin-bottom: 1em
-    border-radius: $base-border-radius
-    $icon-bullet-size: 20em
-    $icon-bullet-width: 320px
-
-
-    .bullet-icon
-      background: $light-gray
-      border-radius: 50%
-      float: left
-      margin: auto
-      height: $icon-bullet-size
-      padding-top: $icon-bullet-size / 6
-      padding-left: $icon-bullet-size / 12
-      //padding-left: $icon-bullet-size
-      width: $icon-bullet-size
-
-      i
-        color: $dark-gray
-        font-size: 13em
-
-    .bullet-icon1
-      background: $light-gray
-      border-radius: 50%
-      float: left
-      margin: auto
-      height: $icon-bullet-size
-      padding-top: ($icon-bullet-width - 208px)/2
-      padding-left: ($icon-bullet-width - 267.4px)/2
-      //padding-left: $icon-bullet-size
-      width: $icon-bullet-size
-
-      i
-        color: $dark-gray
-        font-size: 13em
-
-    .bullet-icon2
-      background: $light-gray
-      border-radius: 50%
-      float: left
-      margin: auto
-      height: $icon-bullet-size
-      padding-top: ($icon-bullet-width - 208px)/2
-      padding-left: ($icon-bullet-width - 222.9px)/2
-      //padding-left: $icon-bullet-size...
-      width: $icon-bullet-size
-
-      i
-        color: $dark-gray
-        font-size: 13em
-
-    .bullet-icon3
-      background: $light-gray
-      border-radius: 50%
-      float: left
-      margin: auto
-      height: $icon-bullet-size
-      padding-top: ($icon-bullet-width - 208px)/2
-      padding-left: ($icon-bullet-width - 237.7px)/2
-      //padding-left: $icon-bullet-size
-      width: $icon-bullet-size
-
-      i
-        color: $dark-gray
-        font-size: 13em
-
-    .bullet-icon4
-      background: $light-gray
-      border-radius: 50%
-      float: left
-      margin: auto
-      height: $icon-bullet-size
-      padding-top: ($icon-bullet-width - 208px)/2
-      padding-left: ($icon-bullet-width - 208px)/2
-      //padding-left: $icon-bullet-size
-      width: $icon-bullet-size
-
-      i
-        color: $dark-gray
-        font-size: 13em
-
-  .card-caption
+    background-color: $isektionen-yellow
     padding: 1em
-    background-color: $dark-gray
-    //border-bottom-left-radius: $base-border-radius
-    //border-bottom-right-radius: $base-border-radius
-  .card-caption-link
-    cursor: pointer
-    color: $white
-    margin: 0
-    font-size: 1.4em
-    font-weight: 200
-    &:after
-      font-family: FontAwesome
-      content: '\f054'
-      font-size: 0.8em
-      margin-left: 0.5em
-      +transition()
-    &:hover
+    @include border-bottom-radius($base-border-radius)
+
+    @include media($large-screen)
+      margin-right: 2em
+
+    @include media($medium-screen)
+      margin-right: 1em
+
+  .action-button-icon
+    margin-bottom: 1em
+
+  .foretag-erbjudande-card-info
+    height: inherit
+    color: white
+    background-color: $isektionen-yellow
+    padding: 1em
+    @include border-bottom-radius($base-border-radius)
+
+    .foretag-erbjudande-big-title
+      font-size: 2em
+      margin: 0
+
+    a
+      color: white
       &:after
-        margin-left: 1em
-  .card-caption-expanded
-    padding: 1em
-    background-color: $dark-gray
-    color: $light-gray
-    display: none
-    border-bottom-left-radius: $base-border-radius
-    border-bottom-right-radius: $base-border-radius
 
-  .card-image
-    max-width: 100%
-    border-top-left-radius: $base-border-radius
-    border-top-right-radius: $base-border-radius
+        font-family: 'FontAwesome'
+        content: '\f054'
+        position: relative
+        left: 8px
+        top: 1px
+        +transition()
 
+      &:hover
+        &:after
+          left: 15px
 
-
-.bullet-list
-  margin-left: 2em
-  list-style-type: disc
+    .foretag-erbjudande-small-title
+      font-size: 1.8em
+      font-weight: 300
 
 
 .foretag-contact

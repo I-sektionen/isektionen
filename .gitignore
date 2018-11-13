@@ -180,3 +180,4 @@ mysql_credentials
 .sass-cache
 *.css.map
 wsgi/isektionen_django/isektionen/mysql_credentials
+/env-variables.conf

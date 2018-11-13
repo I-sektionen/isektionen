@@ -37,14 +37,14 @@ var toggleProgramInfo = function() {
     var industriellEkonomiInternationellctx = $("#chart-industriell-ekonomi-internationell");
 
     industriellEkonomiLabels = [
-        "Teknik och fyisk",
+        "Teknik och fysik",
         "Matematik",
         "Industriell ekonomi & Management",
         "Ledarskap och kommunikation",
         "Masterprofil"
     ]
 
-    industriellEkonomiChartdataSet = [80, 30, 60, 15, 120];
+    industriellEkonomiChartdataSet = [75, 30, 60, 15, 120];
     industriellEkonomiChartBackgroundColor = '#2D701E';
     industriellEkonomiChartBackgroundColorSet = generateChartColorSet(
         industriellEkonomiChartBackgroundColor,

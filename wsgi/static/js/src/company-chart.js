@@ -14,7 +14,7 @@ function createCompanyChart () {
             "Google"
         ];
 
-    var companyChartDataSet = [80, 30, 60, 15, 120];
+    var companyChartDataSet = [75, 30, 60, 15, 120];
 
     var companyChartBackgroundColor = '#2D701E';
     var companyChartBackgroundColorSet = generateChartColorSet(
