@@ -19,6 +19,7 @@
                 var colonia = {lat: 58.403198, lng: 15.583598};
                 var fjarilen = {lat: 58.41329002630203, lng: 15.605505108833313};
                 var mapcenter = {lat: 58.397844, lng: 15.575953};
+                var gnistan = {lat: 58.393737, lng:15.578679};
 
                 var map = new google.maps.Map(document.getElementById('map'), {
                     zoom: 13,
@@ -167,7 +168,23 @@
 
                 fjarilenArea.setMap(map);
 
+                var gnistanCoords = [
+                    {lat:58.393848, lng:15.577789},
+                    {lat:58.393331, lng: 15.577789},
+                    {lat:58.393176, lng: 15.580369},
+                    {lat:58.393722, lng: 15.580525},
+                    {lat:58.393826, lng: 15.579082}
+                ];
 
+                var gnistanArea = new google.maps.Polygon({
+                    paths:gnistanCoords,
+                    strokeColor: '#FF0000',
+                    strokeOpacity: 0.8,
+                    strokeWeight: 2,
+                    fillColor: '#FF0000',
+                    fillOpacity: 0.35
+                });
+                gnistanArea.setMap(map);
 
                 var rydContent = '<div id="content">'+
                         '<div id="siteNotice">'+
@@ -185,7 +202,9 @@
                         '<h1 id="firstHeading" class="firstHeading">Colonia</h1>'+
                         '<div id="bodyContent">'+
                         '<p><b>Colonia</b> ' +
-                        ' är Linköpings nyaste och modernaste studentområde och ligger så nära skolan man kan komma. Det korta avståndet innebär att du bara har några minuters gångavstånd till föreläsningslokaler, caféer och biblioteket.</p>'+
+                        ' ligger så nära skolan man kan komma. Här finns 1:or, 2:or och ' +
+                    'kollektivlägenheter. Det korta avståndet innebär att du bara har några minuters ' +
+                    'gångavstånd till föreläsningslokaler, caféer och biblioteket.</p>'+
                         '</div>'+
                         '</div>';
 
@@ -240,6 +259,19 @@
                         '</div>'+
                         '</div>';
 
+                var gnistanContent = '<div id="content">'+
+                        '<div id="siteNotice">'+
+                        '</div>'+
+                        '<h1 id="firstHeading" class="firstHeading">Gnistan</h1>'+
+                        '<div id="bodyContent">'+
+                        '<p><b>Gnistan</b> ' +
+                        ' är det nyaste studentområdet i Linköping. I och med byggande av den nya ' +
+                    'stadsdelen Vallastaden har Gnistan uppkommit. Vallastaden är en unik stadsdel där ' +
+                    'människor, samspel och hållbarhet står i centrum. Från Gnistan är det nära till ' +
+                    'campus Valla och cykelavstånd till sjukhuset och city.</p>'+
+                        '</div>'+
+                        '</div>';
+
                 var rydInfoWindow = new google.maps.InfoWindow({
                     content: rydContent
                 });
@@ -271,6 +303,9 @@
                     content: T1Content
                 });
 
+                var gnistanInfoWindow = new google.maps.InfoWindow({
+                    content: gnistanContent
+                });
 
                 google.maps.event.addListener(rydArea, 'click', function() {
                     latestInfoWindow.close();
@@ -279,17 +314,12 @@
                     rydInfoWindow.open(map);
                 });
 
-
-
-
                 coloniaArea.addListener('click', function() {
                     latestInfoWindow.close();
                     latestInfoWindow = coloniaInfoWindow;
                     coloniaInfoWindow.setPosition(new google.maps.LatLng(colonia));
                     coloniaInfoWindow.open(map);
                 });
-
-
 
                 lambohovArea.addListener('click', function() {
                     latestInfoWindow.close();
@@ -312,7 +342,6 @@
                     flammanInfoWindow.open(map);
                 });
 
-
                 irrblossetArea.addListener('click', function() {
                     latestInfoWindow.close();
                     latestInfoWindow = irrblossetInfoWindow;
@@ -327,7 +356,12 @@
                     fjarilenInfoWindow.open(map);
                 });
 
-
+                google.maps.event.addListener(gnistanArea, 'click', function() {
+                    latestInfoWindow.close();
+                    latestInfoWindow = gnistanInfoWindow;
+                    gnistanInfoWindow.setPosition(new google.maps.LatLng(gnistan));
+                    gnistanInfoWindow.open(map);
+                });
 
 
                 google.maps.event.addListener(map, "click", function(event) {
@@ -338,6 +372,7 @@
                     T1InfoWindow.close();
                     flammanInfoWindow.close();
                     fjarilenInfoWindow.close();
+                    gnistanInfoWindow.close();
                 });
 
 
