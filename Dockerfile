@@ -15,6 +15,7 @@ RUN apt-get update && apt-get -y upgrade \
   util-linux=2.27.1-6ubuntu3.2
 RUN apt-get install -y python3 python3-pip
 RUN apt-get install -y python3-dev
+RUN apt-get install -y libpcap-dev libpq-dev
 RUN apt-get install -y libmysqlclient-dev
 RUN apt-get install -y git
 RUN apt-get install -y nginx
@@ -33,7 +34,7 @@ RUN rm -f /etc/service/nginx/down &&\
   rm /etc/nginx/sites-enabled/default
 
 # Install Python dependencies
-#RUN pip3 $DOCKYARD_SRVPROJ/requirement.txt
+# RUN pip3 $DOCKYARD_SRVPROJ/requirement.txt
 # Port to expose
 EXPOSE 80
 # Copy entrypoint script into the image
