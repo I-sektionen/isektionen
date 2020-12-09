@@ -17,17 +17,6 @@
             <li><a href="{% url "FAQ" %}">FAQ</a></li>
             <li><a href="{% url "foretag" %}">Företag</a></li>
         </ul>
-        <ul id="latest-entry-blog-column">
-            <li><a href="{% url "blog" %}"><h4>SENASTE BLOGGINLÄGGEN</h4></a></li>
-                {% load blog_tags %}
-                {% get_last_entries as entries %}
-                {% for entry in entries %}
-                <div class="latest-blogs">
-                    <li><a href="{% url "view_one_blog_entry" entry.pk %}">{{ entry.title }}</a></li>
-                    <p id="footer-date">{{ entry.publishedDate }}</p>
-                </div>
-                {% endfor %}
-        </ul>
         <ul id="social-media-column">
             <li><h4>FÖLJ OSS</h4></li>
             <div class="social-media-box-collector">
